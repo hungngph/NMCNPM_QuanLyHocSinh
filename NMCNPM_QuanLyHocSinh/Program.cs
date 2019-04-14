@@ -16,9 +16,15 @@ namespace NMCNPM_QuanLyHocSinh
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmManHinhChinh());
-            Application.Run(new frmBaoCao());
-            Application.Run(new frmChinhSuaDiem());
+            //Application.Run(new frmManHinhChinh());
+            //Application.Run(new frmBaoCao());
+            //Application.Run(new frmChinhSuaDiem());
+            //int x = 0;
+            //if (DatabaseConnection.Connected())
+            //    x = 1;
+            //else
+            //    x = 2;
+
         }
     }
 }
