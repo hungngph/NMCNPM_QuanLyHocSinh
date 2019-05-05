@@ -488,7 +488,7 @@
             this.Controls.Add(this.groupBoxTTCT);
             this.Controls.Add(this.button2);
             this.Name = "frmChinhSuaDiem";
-            this.Text = "frmChinhSuaDiem";
+            this.Text = "Chỉnh Sửa Điểm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBoxTTCT.ResumeLayout(false);
             this.groupBoxTTCT.PerformLayout();

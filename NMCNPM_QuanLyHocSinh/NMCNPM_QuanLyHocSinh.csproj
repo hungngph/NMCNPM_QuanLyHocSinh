@@ -33,9 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\NMCNPM\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
@@ -49,13 +60,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseConnection.cs" />
-    <Compile Include="frmBaoCao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBaoCao.Designer.cs">
-      <DependentUpon>frmBaoCao.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmChinhSuaDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,18 +77,6 @@
     </Compile>
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmHocTap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHocTap.Designer.cs">
-      <DependentUpon>frmHocTap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmHoSo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHoSo.Designer.cs">
-      <DependentUpon>frmHoSo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInBangDiemLop.cs">
       <SubType>Form</SubType>
@@ -116,12 +108,6 @@
     <Compile Include="frmInDanhSachLop.Designer.cs">
       <DependentUpon>frmInDanhSachLop.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManHinhChinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManHinhChinh.Designer.cs">
-      <DependentUpon>frmManHinhChinh.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmThemMoiHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,11 +132,14 @@
     <Compile Include="frmXemDiemGVCN.Designer.cs">
       <DependentUpon>frmXemDiemGVCN.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManHinhChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManHinhChinh.Designer.cs">
+      <DependentUpon>frmManHinhChinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBaoCao.resx">
-      <DependentUpon>frmBaoCao.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmChinhSuaDiem.resx">
       <DependentUpon>frmChinhSuaDiem.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,12 +148,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmHocTap.resx">
-      <DependentUpon>frmHocTap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmHoSo.resx">
-      <DependentUpon>frmHoSo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInBangDiemLop.resx">
       <DependentUpon>frmInBangDiemLop.cs</DependentUpon>
@@ -181,9 +164,6 @@
     <EmbeddedResource Include="frmInDanhSachLop.resx">
       <DependentUpon>frmInDanhSachLop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManHinhChinh.resx">
-      <DependentUpon>frmManHinhChinh.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmThemMoiHocSinh.resx">
       <DependentUpon>frmThemMoiHocSinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmXemDiemGVCN.resx">
       <DependentUpon>frmXemDiemGVCN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManHinhChinh.resx">
+      <DependentUpon>frmManHinhChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
