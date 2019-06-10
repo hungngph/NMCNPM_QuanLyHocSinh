@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NMCNPM_QLHS
+namespace NMCNPM_QLHS.GUI
 {
     static class Program
     {
@@ -16,9 +16,9 @@ namespace NMCNPM_QLHS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmManHinhChinh());
+            Application.Run(new frmManHinhChinh());
             //Application.Run(new frmNhapDiemChung());
-            Application.Run(new frmNhapDiemChiTiet());
+            //Application.Run(new frmNhapDiemChiTiet());
             //Application.Run(new frmPhanLop());
         }
     }

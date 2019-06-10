@@ -49,6 +49,7 @@
             this.btnQuyDinhSiSo = new DevExpress.XtraBars.BarButtonItem();
             this.btnQuyDinhDiem = new DevExpress.XtraBars.BarButtonItem();
             this.btnTraCuuDiem = new DevExpress.XtraBars.BarButtonItem();
+            this.barLenLop = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageQuanLy = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -63,6 +64,8 @@
             this.ribbonPageQuyDinh = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -91,17 +94,17 @@
             this.btnQuyDinhTuoi,
             this.btnQuyDinhSiSo,
             this.btnQuyDinhDiem,
-            this.btnTraCuuDiem});
+            this.btnTraCuuDiem,
+            this.barLenLop});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbon.MaxItemId = 26;
+            this.ribbon.MaxItemId = 27;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageQuanLy,
             this.ribbonPageThongKe,
             this.ribbonPageTraCuu,
             this.ribbonPageQuyDinh});
-            this.ribbon.Size = new System.Drawing.Size(1070, 178);
+            this.ribbon.Size = new System.Drawing.Size(917, 143);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnLop
@@ -275,6 +278,15 @@
             this.btnTraCuuDiem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnTraCuuDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTraCuuDiem_ItemClick);
             // 
+            // barLenLop
+            // 
+            this.barLenLop.Caption = "Lên lớp";
+            this.barLenLop.Id = 26;
+            this.barLenLop.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.hocluc;
+            this.barLenLop.Name = "barLenLop";
+            this.barLenLop.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barLenLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLenLop_ItemClick);
+            // 
             // ribbonPageQuanLy
             // 
             this.ribbonPageQuanLy.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -310,6 +322,7 @@
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.barHocSinh);
             this.ribbonPageGroup4.ItemLinks.Add(this.barPhanLop);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barLenLop);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Học Sinh";
             // 
@@ -374,11 +387,22 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 625);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 507);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1070, 37);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(917, 31);
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "ribbonPage1";
+            // 
+            // ribbonPageCategory1
+            // 
+            this.ribbonPageCategory1.Name = "ribbonPageCategory1";
+            this.ribbonPageCategory1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage1});
+            this.ribbonPageCategory1.Text = "ribbonPageCategory1";
             // 
             // xtraTabbedMdiManager1
             // 
@@ -387,14 +411,13 @@
             // 
             // frmManHinhChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 662);
+            this.ClientSize = new System.Drawing.Size(917, 538);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmManHinhChinh";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
@@ -441,7 +464,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
-        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarButtonItem btnTraCuuDiem;
+        private DevExpress.XtraBars.BarButtonItem barLenLop;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }

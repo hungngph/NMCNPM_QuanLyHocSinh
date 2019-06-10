@@ -369,6 +369,20 @@ namespace NMCNPM_QLHS.GUI
                 f.Show();
             }
         }
+        private void barLenLop_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmLenLop));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmLenLop f = new frmLenLop
+                {
+                    MdiParent = this
+                };
+                f.Show();
+            }
+        }
 
         #endregion
 
@@ -483,5 +497,6 @@ namespace NMCNPM_QLHS.GUI
 
         #endregion -Show form-
 
+        
     }
 }

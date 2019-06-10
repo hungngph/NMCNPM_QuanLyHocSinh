@@ -53,20 +53,32 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.cboNamHoc = new DevExpress.XtraEditors.LookUpEdit();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.gridControlKhoiLop = new DevExpress.XtraGrid.GridControl();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumnMaKhoi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnTenKhoi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumnSoLop = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlKhoiLop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboNamHoc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlKhoiLop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraOpenFileDialog1
@@ -273,19 +285,76 @@
             this.bindingNavigator2.TabIndex = 2;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
-            // gridView1
+            // groupControl1
             // 
-            this.gridView1.GridControl = this.gridControlKhoiLop;
-            this.gridView1.Name = "gridView1";
+            this.groupControl1.Controls.Add(this.gridControlKhoiLop);
+            this.groupControl1.Controls.Add(this.layoutControl1);
+            this.groupControl1.Controls.Add(this.bindingNavigator2);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(464, 266);
+            this.groupControl1.TabIndex = 4;
+            this.groupControl1.Text = "Danh sách khối lớp";
+            // 
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.cboNamHoc);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.layoutControl1.Location = new System.Drawing.Point(2, 51);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(460, 54);
+            this.layoutControl1.TabIndex = 3;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.emptySpaceItem1});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(460, 54);
+            this.Root.TextVisible = false;
+            // 
+            // cboNamHoc
+            // 
+            this.cboNamHoc.Location = new System.Drawing.Point(57, 12);
+            this.cboNamHoc.MenuManager = this.barManager1;
+            this.cboNamHoc.Name = "cboNamHoc";
+            this.cboNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboNamHoc.Size = new System.Drawing.Size(391, 20);
+            this.cboNamHoc.StyleController = this.layoutControl1;
+            this.cboNamHoc.TabIndex = 4;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.cboNamHoc;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(440, 24);
+            this.layoutControlItem1.Text = "Năm học";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(41, 13);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 24);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(440, 10);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // gridControlKhoiLop
             // 
             this.gridControlKhoiLop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlKhoiLop.Location = new System.Drawing.Point(2, 51);
+            this.gridControlKhoiLop.Location = new System.Drawing.Point(2, 105);
             this.gridControlKhoiLop.MainView = this.gridView;
             this.gridControlKhoiLop.Name = "gridControlKhoiLop";
-            this.gridControlKhoiLop.Size = new System.Drawing.Size(460, 213);
-            this.gridControlKhoiLop.TabIndex = 3;
+            this.gridControlKhoiLop.Size = new System.Drawing.Size(460, 159);
+            this.gridControlKhoiLop.TabIndex = 4;
             this.gridControlKhoiLop.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView,
             this.gridView1});
@@ -294,7 +363,8 @@
             // 
             this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumnMaKhoi,
-            this.gridColumnTenKhoi});
+            this.gridColumnTenKhoi,
+            this.gridColumnSoLop});
             this.gridView.GridControl = this.gridControlKhoiLop;
             this.gridView.Name = "gridView";
             this.gridView.OptionsView.ShowGroupPanel = false;
@@ -313,16 +383,17 @@
             this.gridColumnTenKhoi.Visible = true;
             this.gridColumnTenKhoi.VisibleIndex = 1;
             // 
-            // groupControl1
+            // gridView1
             // 
-            this.groupControl1.Controls.Add(this.gridControlKhoiLop);
-            this.groupControl1.Controls.Add(this.bindingNavigator2);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(464, 266);
-            this.groupControl1.TabIndex = 4;
-            this.groupControl1.Text = "Danh sách khối lớp";
+            this.gridView1.GridControl = this.gridControlKhoiLop;
+            this.gridView1.Name = "gridView1";
+            // 
+            // gridColumnSoLop
+            // 
+            this.gridColumnSoLop.Caption = "Số lớp";
+            this.gridColumnSoLop.Name = "gridColumnSoLop";
+            this.gridColumnSoLop.Visible = true;
+            this.gridColumnSoLop.VisibleIndex = 2;
             // 
             // frmKhoilop
             // 
@@ -340,12 +411,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlKhoiLop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboNamHoc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlKhoiLop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,11 +439,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraGrid.GridControl gridControlKhoiLop;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaKhoi;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnTenKhoi;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.BindingNavigator bindingNavigator2;
         private System.Windows.Forms.ToolStripButton btnThem;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
@@ -382,5 +454,16 @@
         private System.Windows.Forms.ToolStripButton btnSua;
         private System.Windows.Forms.ToolStripButton btnLuu;
         private DevExpress.XtraBars.BarButtonItem BILuuDanhSach;
+        private DevExpress.XtraGrid.GridControl gridControlKhoiLop;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaKhoi;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnTenKhoi;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraEditors.LookUpEdit cboNamHoc;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnSoLop;
     }
 }
