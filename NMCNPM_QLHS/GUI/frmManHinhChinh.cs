@@ -434,7 +434,17 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnTraCuuHS_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
+            Form frm = this.KiemTraTonTai(typeof(frmTraCuuHocSinh));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmTraCuuHocSinh f = new frmTraCuuHocSinh
+                {
+                    MdiParent = this
+                };
+                f.Show();
+            }
         }
 
         private void btnTraCuuDiem_ItemClick(object sender, ItemClickEventArgs e)
