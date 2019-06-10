@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NMCNPM_QLHS.GUI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,8 +17,8 @@ namespace NMCNPM_QLHS.GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmManHinhChinh());
-            //Application.Run(new frmNhapDiemChung());
+            //Application.Run(new frmManHinhChinh());
+            Application.Run(new frmNhapDiemChung());
             //Application.Run(new frmNhapDiemChiTiet());
             //Application.Run(new frmPhanLop());
         }
