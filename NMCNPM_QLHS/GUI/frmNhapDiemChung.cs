@@ -73,11 +73,22 @@ namespace NMCNPM_QLHS.GUI
             {
                 //maHS, maMon, mahocky, maNamHoc, diemMieng, diem15P, diem1Tiet, diemThi
                 maHS = dgvDiem.GetFocusedRowCellDisplayText(col_maHS);
-                diemMieng = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diemMieng));
-                diem15P = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diem15Phut));
-                diem1Tiet = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diem1Tiet));
-                diemThi = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diemThi));
-
+                if (dgvDiem.GetFocusedRowCellDisplayText(col_diemMieng) != "")
+                    diemMieng = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diemMieng));
+                else
+                    diemMieng = -1;
+                if (dgvDiem.GetFocusedRowCellDisplayText(col_diem15Phut) != "")
+                    diem15P = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diem15Phut));
+                else
+                    diem15P = -1;
+                if (dgvDiem.GetFocusedRowCellDisplayText(col_diem15Phut) != "")
+                    diem1Tiet = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diem1Tiet));
+                else
+                    diem1Tiet = -1;
+                if (dgvDiem.GetFocusedRowCellDisplayText(col_diemThi) != "")
+                    diemThi = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diemThi));
+                else
+                    diemThi = -1;
                 HOCTAP_BUS.SuaDiem(maHS, maMonHoc, maHocKy, maNamHoc, diemMieng, diem15P, diem1Tiet, diemThi);
                 bindingNavigatorDiem.BindingSource.MoveNext();
             }
