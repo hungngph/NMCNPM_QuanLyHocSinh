@@ -46,16 +46,11 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnChuyen = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.btnThemLop = new System.Windows.Forms.Button();
-            this.btnThemNamHoc = new System.Windows.Forms.Button();
-            this.btnThemKhoi = new System.Windows.Forms.Button();
             this.cboKhoi2 = new DevExpress.XtraEditors.LookUpEdit();
             this.cboNamHoc2 = new DevExpress.XtraEditors.LookUpEdit();
             this.cboLop2 = new DevExpress.XtraEditors.LookUpEdit();
@@ -63,6 +58,11 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnChuyen = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThemLop = new System.Windows.Forms.Button();
+            this.btnThemNamHoc = new System.Windows.Forms.Button();
+            this.btnThemKhoi = new System.Windows.Forms.Button();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -278,22 +278,6 @@
             this.panel1.Size = new System.Drawing.Size(80, 397);
             this.panel1.TabIndex = 2;
             // 
-            // btnLuu
-            // 
-            this.btnLuu.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
-            this.btnLuu.Location = new System.Drawing.Point(20, 207);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(42, 44);
-            this.btnLuu.TabIndex = 1;
-            // 
-            // btnChuyen
-            // 
-            this.btnChuyen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChuyen.ImageOptions.Image")));
-            this.btnChuyen.Location = new System.Drawing.Point(20, 124);
-            this.btnChuyen.Name = "btnChuyen";
-            this.btnChuyen.Size = new System.Drawing.Size(42, 44);
-            this.btnChuyen.TabIndex = 0;
-            // 
             // groupControl3
             // 
             this.groupControl3.Controls.Add(this.listView1);
@@ -344,33 +328,6 @@
             this.layoutControl2.Size = new System.Drawing.Size(343, 93);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
-            // 
-            // btnThemLop
-            // 
-            this.btnThemLop.Image = global::NMCNPM_QLHS.Properties.Resources.add;
-            this.btnThemLop.Location = new System.Drawing.Point(307, 60);
-            this.btnThemLop.Name = "btnThemLop";
-            this.btnThemLop.Size = new System.Drawing.Size(24, 21);
-            this.btnThemLop.TabIndex = 9;
-            this.btnThemLop.UseVisualStyleBackColor = true;
-            // 
-            // btnThemNamHoc
-            // 
-            this.btnThemNamHoc.Image = global::NMCNPM_QLHS.Properties.Resources.add;
-            this.btnThemNamHoc.Location = new System.Drawing.Point(307, 12);
-            this.btnThemNamHoc.Name = "btnThemNamHoc";
-            this.btnThemNamHoc.Size = new System.Drawing.Size(24, 20);
-            this.btnThemNamHoc.TabIndex = 8;
-            this.btnThemNamHoc.UseVisualStyleBackColor = true;
-            // 
-            // btnThemKhoi
-            // 
-            this.btnThemKhoi.Image = global::NMCNPM_QLHS.Properties.Resources.add;
-            this.btnThemKhoi.Location = new System.Drawing.Point(307, 36);
-            this.btnThemKhoi.Name = "btnThemKhoi";
-            this.btnThemKhoi.Size = new System.Drawing.Size(24, 20);
-            this.btnThemKhoi.TabIndex = 7;
-            this.btnThemKhoi.UseVisualStyleBackColor = true;
             // 
             // cboKhoi2
             // 
@@ -445,6 +402,49 @@
             this.layoutControlItem6.Size = new System.Drawing.Size(295, 24);
             this.layoutControlItem6.Text = "Khối: ";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(48, 13);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
+            this.btnLuu.Location = new System.Drawing.Point(20, 207);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(42, 44);
+            this.btnLuu.TabIndex = 1;
+            // 
+            // btnChuyen
+            // 
+            this.btnChuyen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChuyen.ImageOptions.Image")));
+            this.btnChuyen.Location = new System.Drawing.Point(20, 124);
+            this.btnChuyen.Name = "btnChuyen";
+            this.btnChuyen.Size = new System.Drawing.Size(42, 44);
+            this.btnChuyen.TabIndex = 0;
+            // 
+            // btnThemLop
+            // 
+            this.btnThemLop.Image = global::NMCNPM_QLHS.Properties.Resources.add;
+            this.btnThemLop.Location = new System.Drawing.Point(307, 60);
+            this.btnThemLop.Name = "btnThemLop";
+            this.btnThemLop.Size = new System.Drawing.Size(24, 21);
+            this.btnThemLop.TabIndex = 9;
+            this.btnThemLop.UseVisualStyleBackColor = true;
+            // 
+            // btnThemNamHoc
+            // 
+            this.btnThemNamHoc.Image = global::NMCNPM_QLHS.Properties.Resources.add;
+            this.btnThemNamHoc.Location = new System.Drawing.Point(307, 12);
+            this.btnThemNamHoc.Name = "btnThemNamHoc";
+            this.btnThemNamHoc.Size = new System.Drawing.Size(24, 20);
+            this.btnThemNamHoc.TabIndex = 8;
+            this.btnThemNamHoc.UseVisualStyleBackColor = true;
+            // 
+            // btnThemKhoi
+            // 
+            this.btnThemKhoi.Image = global::NMCNPM_QLHS.Properties.Resources.add;
+            this.btnThemKhoi.Location = new System.Drawing.Point(307, 36);
+            this.btnThemKhoi.Name = "btnThemKhoi";
+            this.btnThemKhoi.Size = new System.Drawing.Size(24, 20);
+            this.btnThemKhoi.TabIndex = 7;
+            this.btnThemKhoi.UseVisualStyleBackColor = true;
             // 
             // layoutControlItem7
             // 
