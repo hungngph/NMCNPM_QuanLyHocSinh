@@ -89,114 +89,114 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SQL_QLHS.dbml</DependentUpon>
     </Compile>
-    <Compile Include="frmHocKy.cs">
+    <Compile Include="GUI\frmHocKy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHocKy.Designer.cs">
+    <Compile Include="GUI\frmHocKy.Designer.cs">
       <DependentUpon>frmHocKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHocSinh.cs">
+    <Compile Include="GUI\frmHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHocSinh.Designer.cs">
+    <Compile Include="GUI\frmHocSinh.Designer.cs">
       <DependentUpon>frmHocSinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKhoilop.cs">
+    <Compile Include="GUI\frmKhoilop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKhoilop.Designer.cs">
+    <Compile Include="GUI\frmKhoilop.Designer.cs">
       <DependentUpon>frmKhoilop.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLop.cs">
+    <Compile Include="GUI\frmLop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLop.Designer.cs">
+    <Compile Include="GUI\frmLop.Designer.cs">
       <DependentUpon>frmLop.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManHinhChinh.cs">
+    <Compile Include="GUI\frmManHinhChinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManHinhChinh.Designer.cs">
+    <Compile Include="GUI\frmManHinhChinh.Designer.cs">
       <DependentUpon>frmManHinhChinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMonHoc.cs">
+    <Compile Include="GUI\frmMonHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMonHoc.Designer.cs">
+    <Compile Include="GUI\frmMonHoc.Designer.cs">
       <DependentUpon>frmMonHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNamHoc.cs">
+    <Compile Include="GUI\frmNamHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNamHoc.Designer.cs">
+    <Compile Include="GUI\frmNamHoc.Designer.cs">
       <DependentUpon>frmNamHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDiemChi Tiet.cs">
+    <Compile Include="GUI\frmNhapDiemChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDiemChi Tiet.Designer.cs">
-      <DependentUpon>frmDiemChi Tiet.cs</DependentUpon>
+    <Compile Include="GUI\frmNhapDiemChiTiet.Designer.cs">
+      <DependentUpon>frmNhapDiemChiTiet.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNhapDiemChung.cs">
+    <Compile Include="GUI\frmNhapDiemChung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNhapDiemChung.Designer.cs">
+    <Compile Include="GUI\frmNhapDiemChung.Designer.cs">
       <DependentUpon>frmNhapDiemChung.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPhanLop.cs">
+    <Compile Include="GUI\frmPhanLop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPhanLop.designer.cs">
+    <Compile Include="GUI\frmPhanLop.designer.cs">
       <DependentUpon>frmPhanLop.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuyDinh.cs">
+    <Compile Include="GUI\frmQuyDinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuyDinh.designer.cs">
+    <Compile Include="GUI\frmQuyDinh.designer.cs">
       <DependentUpon>frmQuyDinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmrpTongKetMon.cs">
+    <Compile Include="GUI\frmrpTongKetMon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmrpTongKetMon.designer.cs">
+    <Compile Include="GUI\frmrpTongKetMon.designer.cs">
       <DependentUpon>frmrpTongKetMon.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmHocKy.resx">
+    <EmbeddedResource Include="GUI\frmHocKy.resx">
       <DependentUpon>frmHocKy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHocSinh.resx">
+    <EmbeddedResource Include="GUI\frmHocSinh.resx">
       <DependentUpon>frmHocSinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKhoilop.resx">
+    <EmbeddedResource Include="GUI\frmKhoilop.resx">
       <DependentUpon>frmKhoilop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLop.resx">
+    <EmbeddedResource Include="GUI\frmLop.resx">
       <DependentUpon>frmLop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManHinhChinh.resx">
+    <EmbeddedResource Include="GUI\frmManHinhChinh.resx">
       <DependentUpon>frmManHinhChinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMonHoc.resx">
+    <EmbeddedResource Include="GUI\frmMonHoc.resx">
       <DependentUpon>frmMonHoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNamHoc.resx">
+    <EmbeddedResource Include="GUI\frmNamHoc.resx">
       <DependentUpon>frmNamHoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDiemChi Tiet.resx">
-      <DependentUpon>frmDiemChi Tiet.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmNhapDiemChiTiet.resx">
+      <DependentUpon>frmNhapDiemChiTiet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNhapDiemChung.resx">
+    <EmbeddedResource Include="GUI\frmNhapDiemChung.resx">
       <DependentUpon>frmNhapDiemChung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPhanLop.resx">
+    <EmbeddedResource Include="GUI\frmPhanLop.resx">
       <DependentUpon>frmPhanLop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuyDinh.resx">
+    <EmbeddedResource Include="GUI\frmQuyDinh.resx">
       <DependentUpon>frmQuyDinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmrpTongKetMon.resx">
+    <EmbeddedResource Include="GUI\frmrpTongKetMon.resx">
       <DependentUpon>frmrpTongKetMon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
