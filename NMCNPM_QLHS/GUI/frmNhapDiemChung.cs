@@ -71,6 +71,7 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorDiem.BindingSource.MoveFirst();
             for (int i = 0; i < dgvDiem.RowCount; i++)
             {
+                //hmbmnbm
                 //maHS, maMon, mahocky, maNamHoc, diemMieng, diem15P, diem1Tiet, diemThi
                 maHS = dgvDiem.GetFocusedRowCellDisplayText(col_maHS);
                 if (dgvDiem.GetFocusedRowCellDisplayText(col_diemMieng) != "")
