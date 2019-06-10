@@ -107,6 +107,12 @@
     <Compile Include="GUI\frmKhoilop.Designer.cs">
       <DependentUpon>frmKhoilop.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmLenLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLenLop.Designer.cs">
+      <DependentUpon>frmLenLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmLop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmKhoilop.resx">
       <DependentUpon>frmKhoilop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLenLop.resx">
+      <DependentUpon>frmLenLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLop.resx">
       <DependentUpon>frmLop.cs</DependentUpon>

@@ -117,10 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>297, 17</value>
-  </metadata>
-  <metadata name="xtraOpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>422, 17</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnChuyen.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAsRJREFUWEft
+        l0trU1EUheMDFHyCOtOZWkGxvtCBDqIDMQPFooG8CfkJgqB2EgSLg9IiqGAVX6CIQ51Yq5PW/yDVgaA4
+        UOrA+uyg6rfiSgm9uclNSBGhCza5WXvtdfY599ybk9g8/ivkcrku4hwxlslkxrPZ7ITC16PE2UKhsNny
+        zoEBd2E+QvyOGMM0tcPl7SMejy/G7BIxbeMPxBANHU+n01uTyeQ6ha7hexj0OrmP1k5zPSAP27WGYrG4
+        GsOnMuPzJ599pVJphdOhQLeSgS+6prIaNLnK6WhIJBJLKHxhgzfMcLtTkUET3aqVB9dj8nSqOSga8uDv
+        iPWmW0YqldpA/Xt50cRV043B0u2l4BfxDYOdpkORz+e3lcvlhf4aAPk9eH2XJ967TYcD4TNC9/28qVAw
+        qyNop/h82Giz4XVBnsSwqfrAqMvCiYgb7jCh2WmJb4SthDYhmk/S0cwm00Eg6LXZNVNNwQY9QM2k6ogH
+        YSuhBq05YyoIunsuEeJjpiKBmv1EtYnb9VYCvsf5EVNBkHwtEQ1sNBUZ1NU2cWt2E3hWbi+THDcVBIIv
+        EnHPlpuqwKatxmVKF/x1iMW0p8xPmgqC5FeJeHSWmarAha3GXSayyBaRG3glUcOdGgI241FqpzzIFaiZ
+        2Qvktzj30lQQ7W5C6akLHVyAb74JMTotEY3cNNUUUQYX8LwjDfpTpoIg2faLSAPU3vNaRH4RCYgqBw+E
+        TV/FbNZ9aD8ToTMXyPfJk3hiKhz6AUKoA0gnf4x+yJMV7jbdGIgHCXXcsZ9jot90c2hGFDx2oQ6dB52K
+        DGZ+SLXyYOaPGq1SXWjjMHDtkayfE+8ap0PB876WAQfQV5+M1o9kVdQ5lOpdf48BTuj4zblxqULX8CeJ
+        +9ZIq5rBtg+ltWDAf3Msnw0amfljwiBvCS2zQtejys3JH5N5zB1isT9JABndPp/qWQAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
 </root>
