@@ -369,7 +369,7 @@ namespace NMCNPM_QLHS.GUI
                 f.Show();
             }
         }
-        private void barLenLop_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnLenLop_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form frm = this.KiemTraTonTai(typeof(frmLenLop));
             if (frm != null)
@@ -503,10 +503,10 @@ namespace NMCNPM_QLHS.GUI
             }
             return null;
         }
+
         #endregion
 
         #endregion -Show form-
 
-        
     }
 }

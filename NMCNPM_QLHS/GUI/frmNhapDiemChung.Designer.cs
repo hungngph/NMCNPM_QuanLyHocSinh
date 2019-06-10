@@ -35,10 +35,10 @@
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.navCapNhat = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.cboMonHoc = new System.Windows.Forms.ComboBox();
-            this.cboLop = new System.Windows.Forms.ComboBox();
-            this.cboNamHoc = new System.Windows.Forms.ComboBox();
-            this.cboHocKy = new System.Windows.Forms.ComboBox();
+            this.cboMonHoc = new DevExpress.XtraEditors.LookUpEdit();
+            this.cboLop = new DevExpress.XtraEditors.LookUpEdit();
+            this.cboHocKy = new DevExpress.XtraEditors.LookUpEdit();
+            this.cboNamHoc = new DevExpress.XtraEditors.LookUpEdit();
             this.btnHienThi = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -82,6 +82,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.navCapNhat)).BeginInit();
             this.navCapNhat.SuspendLayout();
             this.navigationPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboMonHoc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboLop.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboHocKy.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboNamHoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlHocSinh)).BeginInit();
             this.groupControlHocSinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDiemControl)).BeginInit();
@@ -158,8 +162,8 @@
             this.navigationPage2.Caption = "Cập nhật bảng điểm";
             this.navigationPage2.Controls.Add(this.cboMonHoc);
             this.navigationPage2.Controls.Add(this.cboLop);
-            this.navigationPage2.Controls.Add(this.cboNamHoc);
             this.navigationPage2.Controls.Add(this.cboHocKy);
+            this.navigationPage2.Controls.Add(this.cboNamHoc);
             this.navigationPage2.Controls.Add(this.btnHienThi);
             this.navigationPage2.Controls.Add(this.simpleButton3);
             this.navigationPage2.Controls.Add(this.labelControl5);
@@ -176,39 +180,59 @@
             // 
             // cboMonHoc
             // 
-            this.cboMonHoc.FormattingEnabled = true;
-            this.cboMonHoc.Location = new System.Drawing.Point(20, 264);
+            this.cboMonHoc.Location = new System.Drawing.Point(20, 269);
+            this.cboMonHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboMonHoc.Name = "cboMonHoc";
-            this.cboMonHoc.Size = new System.Drawing.Size(117, 30);
-            this.cboMonHoc.TabIndex = 162;
-            this.cboMonHoc.TextChanged += new System.EventHandler(this.comBoBox_ValueMemberChanged);
+            this.cboMonHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboMonHoc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENMONHOC", "")});
+            this.cboMonHoc.Properties.NullText = "";
+            this.cboMonHoc.Size = new System.Drawing.Size(117, 22);
+            this.cboMonHoc.TabIndex = 166;
+            this.cboMonHoc.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
             // 
             // cboLop
             // 
-            this.cboLop.FormattingEnabled = true;
-            this.cboLop.Location = new System.Drawing.Point(20, 188);
+            this.cboLop.Location = new System.Drawing.Point(20, 120);
+            this.cboLop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboLop.Name = "cboLop";
-            this.cboLop.Size = new System.Drawing.Size(117, 30);
-            this.cboLop.TabIndex = 161;
-            this.cboLop.TextChanged += new System.EventHandler(this.comBoBox_ValueMemberChanged);
-            // 
-            // cboNamHoc
-            // 
-            this.cboNamHoc.FormattingEnabled = true;
-            this.cboNamHoc.Location = new System.Drawing.Point(20, 46);
-            this.cboNamHoc.Name = "cboNamHoc";
-            this.cboNamHoc.Size = new System.Drawing.Size(117, 30);
-            this.cboNamHoc.TabIndex = 160;
-            this.cboNamHoc.TextChanged += new System.EventHandler(this.comBoBox_ValueMemberChanged);
+            this.cboLop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboLop.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENLOP", "")});
+            this.cboLop.Properties.NullText = "";
+            this.cboLop.Size = new System.Drawing.Size(117, 22);
+            this.cboLop.TabIndex = 165;
+            this.cboLop.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
             // 
             // cboHocKy
             // 
-            this.cboHocKy.FormattingEnabled = true;
-            this.cboHocKy.Location = new System.Drawing.Point(20, 113);
+            this.cboHocKy.Location = new System.Drawing.Point(20, 195);
+            this.cboHocKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboHocKy.Name = "cboHocKy";
-            this.cboHocKy.Size = new System.Drawing.Size(117, 30);
-            this.cboHocKy.TabIndex = 159;
-            this.cboHocKy.TextChanged += new System.EventHandler(this.comBoBox_ValueMemberChanged);
+            this.cboHocKy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboHocKy.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENHOCKY", "")});
+            this.cboHocKy.Properties.NullText = "";
+            this.cboHocKy.Size = new System.Drawing.Size(117, 22);
+            this.cboHocKy.TabIndex = 164;
+            this.cboHocKy.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
+            // 
+            // cboNamHoc
+            // 
+            this.cboNamHoc.Location = new System.Drawing.Point(20, 50);
+            this.cboNamHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboNamHoc.Name = "cboNamHoc";
+            this.cboNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboNamHoc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNAMHOC", "")});
+            this.cboNamHoc.Properties.NullText = "";
+            this.cboNamHoc.Size = new System.Drawing.Size(117, 22);
+            this.cboNamHoc.TabIndex = 163;
+            this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
             // 
             // btnHienThi
             // 
@@ -223,7 +247,7 @@
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.add;
-            this.simpleButton3.Location = new System.Drawing.Point(143, 265);
+            this.simpleButton3.Location = new System.Drawing.Point(143, 266);
             this.simpleButton3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(28, 28);
@@ -241,7 +265,7 @@
             // simpleButton4
             // 
             this.simpleButton4.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.add;
-            this.simpleButton4.Location = new System.Drawing.Point(143, 189);
+            this.simpleButton4.Location = new System.Drawing.Point(143, 192);
             this.simpleButton4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(28, 28);
@@ -252,14 +276,14 @@
             this.labelControl6.Location = new System.Drawing.Point(20, 164);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(28, 17);
+            this.labelControl6.Size = new System.Drawing.Size(48, 17);
             this.labelControl6.TabIndex = 153;
-            this.labelControl6.Text = "Lớp:";
+            this.labelControl6.Text = "Học kỳ:";
             // 
             // simpleButton5
             // 
             this.simpleButton5.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.add;
-            this.simpleButton5.Location = new System.Drawing.Point(143, 114);
+            this.simpleButton5.Location = new System.Drawing.Point(143, 117);
             this.simpleButton5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(28, 28);
@@ -270,9 +294,9 @@
             this.labelControl7.Location = new System.Drawing.Point(20, 92);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(48, 17);
+            this.labelControl7.Size = new System.Drawing.Size(28, 17);
             this.labelControl7.TabIndex = 150;
-            this.labelControl7.Text = "Học kỳ:";
+            this.labelControl7.Text = "Lớp:";
             // 
             // simpleButton6
             // 
@@ -574,6 +598,10 @@
             this.navCapNhat.ResumeLayout(false);
             this.navigationPage2.ResumeLayout(false);
             this.navigationPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboMonHoc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboLop.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboHocKy.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboNamHoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlHocSinh)).EndInit();
             this.groupControlHocSinh.ResumeLayout(false);
             this.groupControlHocSinh.PerformLayout();
@@ -631,15 +659,15 @@
         private DevExpress.XtraGrid.Columns.GridColumn col_diem15Phut;
         private DevExpress.XtraGrid.Columns.GridColumn col_diem1Tiet;
         private DevExpress.XtraGrid.Columns.GridColumn col_diemThi;
-        private System.Windows.Forms.ComboBox cboMonHoc;
-        private System.Windows.Forms.ComboBox cboLop;
-        private System.Windows.Forms.ComboBox cboNamHoc;
-        private System.Windows.Forms.ComboBox cboHocKy;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_maHS_edit;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_hoTen_edit;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_diemMieng_edit;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_diem15Phut_edit;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_diem1Tiet_edit;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_diemThi_edit;
+        private DevExpress.XtraEditors.LookUpEdit cboMonHoc;
+        private DevExpress.XtraEditors.LookUpEdit cboLop;
+        private DevExpress.XtraEditors.LookUpEdit cboHocKy;
+        private DevExpress.XtraEditors.LookUpEdit cboNamHoc;
     }
 }

@@ -75,6 +75,7 @@
     <Compile Include="BUS\MONHOC_BUS.cs" />
     <Compile Include="BUS\NAMHOC_BUS.cs" />
     <Compile Include="BUS\QUATRINHHOC_BUS.cs" />
+    <Compile Include="BUS\THAMSO_BUS.cs" />
     <Compile Include="DAL\BAOCAO_DAL.cs" />
     <Compile Include="DAL\HOCKY_DAL.cs" />
     <Compile Include="DAL\HOCSINH_DAL.cs" />
@@ -89,6 +90,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SQL_QLHS.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DAL\THAMS_DAL.cs" />
     <Compile Include="GUI\frmHocKy.cs">
       <SubType>Form</SubType>
     </Compile>

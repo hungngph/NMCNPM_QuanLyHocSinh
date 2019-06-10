@@ -14,6 +14,13 @@ namespace NMCNPM_QLHS.GUI
 {
     public partial class frmNhapDiemChung : DevExpress.XtraEditors.XtraForm
     {
+
+        #region -Fields-
+
+        bool state = false; // Đã thay đổi dữ liệu hay chưa
+
+        #endregion -Fields-
+
         #region -Constructor-
 
         public frmNhapDiemChung()
@@ -30,7 +37,6 @@ namespace NMCNPM_QLHS.GUI
         private void frmNhapDiemChung_Load(object sender, EventArgs e)
         {
             bindingNavigatorXemDiemItem.Enabled = false;
-            load_cboLop();
             load_cboMonHoc();
             load_cboHocKy();
             load_cboNamHoc();
@@ -38,7 +44,11 @@ namespace NMCNPM_QLHS.GUI
 
         private void frmNhapDiemChung_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            if (state == true)
+            {
+                if (MessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    this.bindingNavigatorSaveItem_Click(sender, e);
+            }
         }
 
         #endregion -Form-
@@ -51,8 +61,8 @@ namespace NMCNPM_QLHS.GUI
         {
             string maHS = dgvDiem.GetFocusedRowCellDisplayText(col_maHS);
             string hoTen = dgvDiem.GetFocusedRowCellDisplayText(col_hoTen);
-            string maHocKy = cboHocKy.SelectedValue.ToString();
-            string maNamHoc = cboNamHoc.SelectedValue.ToString();
+            string maHocKy = cboHocKy.EditValue.ToString();
+            string maNamHoc = cboNamHoc.EditValue.ToString();
             frmNhapDiemChiTiet frm = new frmNhapDiemChiTiet(maHS, maHocKy, maNamHoc);
             frm.Show();
         }
@@ -65,9 +75,9 @@ namespace NMCNPM_QLHS.GUI
         {
             string maHS, maMonHoc, maHocKy, maNamHoc;
             float diemMieng, diem15P, diem1Tiet, diemThi;
-            maMonHoc = cboMonHoc.SelectedValue.ToString();
-            maHocKy = cboHocKy.SelectedValue.ToString();
-            maNamHoc = cboNamHoc.SelectedValue.ToString();
+            maMonHoc = cboMonHoc.EditValue.ToString();
+            maHocKy = cboHocKy.EditValue.ToString();
+            maNamHoc = cboNamHoc.EditValue.ToString();
             bindingNavigatorDiem.BindingSource.MoveFirst();
             for (int i = 0; i < dgvDiem.RowCount; i++)
             {
@@ -93,6 +103,7 @@ namespace NMCNPM_QLHS.GUI
                 HOCTAP_BUS.SuaDiem(maHS, maMonHoc, maHocKy, maNamHoc, diemMieng, diem15P, diem1Tiet, diemThi);
                 bindingNavigatorDiem.BindingSource.MoveNext();
             }
+            state = false;
             //string maLop = cboLop.SelectedValue.ToString();
             //bindingSourceDiem.DataSource = HOCTAP_BUS.LayDiemMonHocTheoLop(maLop, maMonHoc, maHocKy, maNamHoc);
         }
@@ -108,9 +119,15 @@ namespace NMCNPM_QLHS.GUI
 
         #endregion -bindingNavigatorItems_Click-
 
-        #region -comBoBox_ValueMemberChanged-
+        #region -comBoBox_EditValueChanged-
 
-        private void comBoBox_ValueMemberChanged(object sender, EventArgs e)
+        private void cboNamHoc_EditValueChanged(object sender, EventArgs e)
+        {
+            load_cboLop();
+            load_BangDiem();
+        }
+
+        private void comBoBox_EditValueChanged(object sender, EventArgs e)
         {
             load_BangDiem();
         }
@@ -125,44 +142,53 @@ namespace NMCNPM_QLHS.GUI
 
         private void load_cboNamHoc()
         {
-            cboNamHoc.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
-            cboNamHoc.DisplayMember = "TENNAMHOC";
-            cboNamHoc.ValueMember = "MANAMHOC";
+            cboNamHoc.Properties.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
+            cboNamHoc.Properties.DisplayMember = "TENNAMHOC";
+            cboNamHoc.Properties.ValueMember = "MANAMHOC";
         }
         private void load_cboHocKy()
         {
-            cboHocKy.DataSource = HOCKY_BUS.LayTatCaHocKy();
-            cboHocKy.DisplayMember = "TENHOCKY";
-            cboHocKy.ValueMember = "MAHK";
+            cboHocKy.Properties.DataSource = HOCKY_BUS.LayTatCaHocKy();
+            cboHocKy.Properties.DisplayMember = "TENHOCKY";
+            cboHocKy.Properties.ValueMember = "MAHK";
         }
         private void load_cboLop()
         {
-            cboLop.DataSource = LOP_BUS.LayTatCaLop();
-            cboLop.DisplayMember = "TENLOP";
-            cboLop.ValueMember = "MALOP";
+            if (cboNamHoc.Text != "")
+            {
+                cboLop.Properties.DataSource = LOP_BUS.LayLopTheoNamHoc(cboNamHoc.EditValue.ToString());
+                cboLop.Properties.DisplayMember = "TENLOP";
+                cboLop.Properties.ValueMember = "MALOP";
+                cboLop.EditValue = null;
+            }
+            else
+                cboLop.Properties.DataSource = null;
         }
         private void load_cboMonHoc()
         {
-            cboMonHoc.DataSource = MONHOC_BUS.LayTatCaMonHoc();
-            cboMonHoc.DisplayMember = "TENMONHOC";
-            cboMonHoc.ValueMember = "MAMONHOC";
+            cboMonHoc.Properties.DataSource = MONHOC_BUS.LayTatCaMonHoc();
+            cboMonHoc.Properties.DisplayMember = "TENMONHOC";
+            cboMonHoc.Properties.ValueMember = "MAMONHOC";
         }
 
         private void load_BangDiem()
         {
             if (cboLop.Text != "" && cboMonHoc.Text != "" && cboHocKy.Text != "" && cboNamHoc.Text != "")
             {
-                string maLop = cboLop.SelectedValue.ToString();
-                string maMonHoc = cboMonHoc.SelectedValue.ToString();
-                string maHocKy = cboHocKy.SelectedValue.ToString();
-                string maNamHoc = cboNamHoc.SelectedValue.ToString();
+                string maLop = cboLop.EditValue.ToString();
+                string maMonHoc = cboMonHoc.EditValue.ToString();
+                string maHocKy = cboHocKy.EditValue.ToString();
+                string maNamHoc = cboNamHoc.EditValue.ToString();
                 bindingSourceDiem.DataSource = HOCTAP_BUS.LayDiemMonHocTheoLop(maLop, maMonHoc, maHocKy, maNamHoc);
                 bindingNavigatorXemDiemItem.Enabled = true;
             }
+            else
+                bindingSourceDiem.DataSource = null;
         }
 
         #endregion -Load-
 
         #endregion -Methods-
+
     }
 }

@@ -58,15 +58,15 @@ namespace NMCNPM_QLHS.GUI
 
         private void cboNamHoc_EditValueChanged(object sender, EventArgs e)
         {
-            load_DSLop();
             load_cboKhoiLop();
             load_cboLop();
+            load_DSLop();
         }
 
         private void cboKhoiLop_EditValueChanged(object sender, EventArgs e)
         {
-            load_DSLop();
             load_cboLop();
+            load_DSLop();
         }
 
         private void cboLop_EditValueChanged(object sender, EventArgs e)
@@ -175,6 +175,7 @@ namespace NMCNPM_QLHS.GUI
                 cboLop.Properties.DataSource = LOP_BUS.LayLopTheoKhoi(maKhoi);
                 cboLop.Properties.DisplayMember = "TENLOP";
                 cboLop.Properties.ValueMember = "MALOP";
+                cboLop.EditValue = null;
             }
             else
                 cboLop.Properties.DataSource = null;
@@ -215,6 +216,8 @@ namespace NMCNPM_QLHS.GUI
                 btnDanhSach.Enabled = true;
                 btnChuyen.Enabled = true;
             }
+            else
+                lstvDSLop.Items.Clear();
         }
 
         #endregion -load_listView

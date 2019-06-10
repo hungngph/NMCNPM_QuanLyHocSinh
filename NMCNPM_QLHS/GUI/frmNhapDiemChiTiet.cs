@@ -74,7 +74,7 @@ namespace NMCNPM_QLHS.GUI
 
         #endregion -button_Click-
 
-        #region -comBoBox_ValueChanged-
+        #region -comBoBox_EditValueChanged-
 
         private void cboHocSinh_EditValueChanged(object sender, EventArgs e)
         {

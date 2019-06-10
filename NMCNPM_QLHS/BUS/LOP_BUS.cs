@@ -15,7 +15,13 @@ namespace NMCNPM_QLHS.BUS
             return LOP_DAL.LayTatCaLop();
         }
 
-        // Lấy lớp theo Khối
+        // Lấy ds lớp theo năm học
+        public static List<LOP> LayLopTheoNamHoc(string maNamHoc)
+        {
+            return LOP_DAL.LayLopTheoNamHoc(maNamHoc);
+        }
+
+        // Lấy ds lớp theo Khối
         public static List<LOP> LayLopTheoKhoi(string maKhoi)
         {
             return LOP_DAL.LayLopTheoKhoi(maKhoi);

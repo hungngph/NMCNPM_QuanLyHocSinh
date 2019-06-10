@@ -46,18 +46,18 @@
             this.cboNamHoc = new DevExpress.XtraEditors.LookUpEdit();
             this.cboHocSinh = new DevExpress.XtraEditors.LookUpEdit();
             this.btnLuuDiem = new DevExpress.XtraEditors.SimpleButton();
-            this.cboMonHoc = new System.Windows.Forms.ComboBox();
             this.btnXemDiem = new DevExpress.XtraEditors.SimpleButton();
             this.cboHocKy = new DevExpress.XtraEditors.LookUpEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.cboMonHoc = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlDiemCT)).BeginInit();
             this.groupControlDiemCT.SuspendLayout();
@@ -74,11 +74,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -281,14 +281,6 @@
             this.btnLuuDiem.Text = "Lưu điểm";
             this.btnLuuDiem.Click += new System.EventHandler(this.btnLuuDiem_Click);
             // 
-            // cboMonHoc
-            // 
-            this.cboMonHoc.FormattingEnabled = true;
-            this.cboMonHoc.Location = new System.Drawing.Point(574, 99);
-            this.cboMonHoc.Name = "cboMonHoc";
-            this.cboMonHoc.Size = new System.Drawing.Size(432, 24);
-            this.cboMonHoc.TabIndex = 11;
-            // 
             // btnXemDiem
             // 
             this.btnXemDiem.Location = new System.Drawing.Point(250, 99);
@@ -359,15 +351,6 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.cboMonHoc;
-            this.layoutControlItem2.Location = new System.Drawing.Point(487, 52);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(499, 47);
-            this.layoutControlItem2.Text = "Môn học";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 17);
-            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnLuuDiem;
@@ -407,6 +390,23 @@
             this.layoutControlItem3.Text = "Học kỳ:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(60, 17);
             // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.cboMonHoc;
+            this.layoutControlItem2.Location = new System.Drawing.Point(487, 52);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(499, 47);
+            this.layoutControlItem2.Text = "Môn học";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 17);
+            // 
+            // cboMonHoc
+            // 
+            this.cboMonHoc.FormattingEnabled = true;
+            this.cboMonHoc.Location = new System.Drawing.Point(574, 99);
+            this.cboMonHoc.Name = "cboMonHoc";
+            this.cboMonHoc.Size = new System.Drawing.Size(432, 24);
+            this.cboMonHoc.TabIndex = 11;
+            // 
             // frmNhapDiemChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -433,11 +433,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -464,8 +464,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private System.Windows.Forms.BindingSource bindingSourceDiemChiTiet;
         private DevExpress.XtraEditors.LookUpEdit cboHocSinh;
-        private System.Windows.Forms.ComboBox cboMonHoc;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.SimpleButton btnLuuDiem;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.LookUpEdit cboNamHoc;
@@ -473,5 +471,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraEditors.LookUpEdit cboHocKy;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private System.Windows.Forms.ComboBox cboMonHoc;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

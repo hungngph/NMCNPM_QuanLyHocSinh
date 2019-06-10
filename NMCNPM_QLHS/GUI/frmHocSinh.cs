@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using NMCNPM_QLHS.BUS;
+using System.Globalization;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -33,6 +34,11 @@ namespace NMCNPM_QLHS.GUI
         {
             btnHoanTat.Visible = false;
             load_dgvHocSinh();
+        }
+
+        private void frmHocSinh_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
 
         #endregion -Form-
@@ -100,7 +106,7 @@ namespace NMCNPM_QLHS.GUI
             disableAllTextBox();
             txtMaHS.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_maHS);
             txtHoTen.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_hoTen);
-            mskNgaySinh.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_ngaySinh);
+            dtpNgaySinh.EditValue = dgvHocSinh.GetFocusedRowCellValue(col_ngaySinh);
             cboGioiTinh.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_gioiTinh);
             txtDiaChi.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_diaChi);
             txtEmail.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_email);
@@ -111,7 +117,7 @@ namespace NMCNPM_QLHS.GUI
             string maHS = txtMaHS.Text;
             string hoTen = txtHoTen.Text;
             string gioiTinh = cboGioiTinh.Text;
-            DateTime ngaySinh = DateTime.Parse(mskNgaySinh.Text);
+            DateTime ngaySinh = DateTime.ParseExact(dtpNgaySinh.Text.ToString(), "dd/MM/yyyy", CultureInfo.CreateSpecificCulture("en-GB"));
             string email = txtEmail.Text;
             string diaChi = txtDiaChi.Text;
             try
@@ -167,7 +173,7 @@ namespace NMCNPM_QLHS.GUI
             txtHoTen.Text = null;
             txtDiaChi.Text = null;
             txtEmail.Text = null;
-            mskNgaySinh.Text = null;
+            dtpNgaySinh.Text = null;
             cboGioiTinh.Text = null;
         }
 
@@ -176,7 +182,7 @@ namespace NMCNPM_QLHS.GUI
             txtHoTen.ReadOnly = false;
             txtEmail.ReadOnly = false;
             txtDiaChi.ReadOnly = false;
-            mskNgaySinh.ReadOnly = false;
+            dtpNgaySinh.ReadOnly = false;
             cboGioiTinh.Enabled = true;
         }
 
@@ -185,7 +191,7 @@ namespace NMCNPM_QLHS.GUI
             txtHoTen.ReadOnly = true;
             txtEmail.ReadOnly = true;
             txtDiaChi.ReadOnly = true;
-            mskNgaySinh.ReadOnly = true;
+            dtpNgaySinh.ReadOnly = true;
             cboGioiTinh.Enabled = false;
         }
 
