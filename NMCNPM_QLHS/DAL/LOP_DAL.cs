@@ -11,11 +11,6 @@ namespace NMCNPM_QLHS.DAL
         // Lấy tất cả các lớp
         public static List<LOP> LayTatCaLop()
         {
-            //using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
-            //{
-            //    List<LOP> lst = db.LOPs.ToList();
-            //    return lst;
-            //}
             List<LOP> lst = new List<LOP>();
 
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
@@ -35,7 +30,28 @@ namespace NMCNPM_QLHS.DAL
             return lst;
         }
 
-        // Lấy lớp theo Khối
+        // Lấy ds lớp theo năm học
+        public static List<LOP> LayLopTheoNamHoc(string maNamHoc)
+        {
+            List<LOP> lst = new List<LOP>();
+
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                var ds = db.LOPs.Where(a => a.KHOILOP.MANAM == maNamHoc).ToList();
+                foreach (var x in ds)
+                {
+                    LOP lop = new LOP();
+                    {
+                        lop.MALOP = x.MALOP;
+                        lop.TENLOP = x.TENLOP;
+                        lst.Add(lop);
+                    }
+                }
+            }
+            return lst;
+        }
+
+        // Lấy ds lớp theo Khối
         public static List<LOP> LayLopTheoKhoi(string maKhoi)
         {
             List<LOP> lst = new List<LOP>();

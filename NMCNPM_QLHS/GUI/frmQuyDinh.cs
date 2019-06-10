@@ -13,25 +13,82 @@ namespace NMCNPM_QLHS.GUI
 {
     public partial class frmQuyDinh : DevExpress.XtraEditors.XtraForm
     {
+        #region -Constructor-
+
         public frmQuyDinh()
         {
             InitializeComponent();
         }
+
         public frmQuyDinh(string s)
         {
             InitializeComponent();
             switch (s)
             {
                 case "QuyDinhTuoi":
-                    tabPane1.SelectedPage = tabTuoi;
+                    tabQuyDinh.SelectedPage = tabTuoi;
                     break;
                 case "QuyDinhSiSo":
-                    tabPane1.SelectedPage = tabSiSo;
+                    tabQuyDinh.SelectedPage = tabSiSo;
                     break;
                 case "QuyDinhDiem":
-                    tabPane1.SelectedPage = tabDiem;
+                    tabQuyDinh.SelectedPage = tabDiem;
                     break;
             }
         }
+
+        private void loadQuyDinh()
+        {
+
+        }
+
+
+        #endregion -Constructor-
+
+        #region -Button_click-
+
+        #region -tabDoTuoi-
+
+        private void btnDongY1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHuy1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion -tabDoTuoi-
+
+        #region -tabSiSo-
+
+        private void btnDongY2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHuy2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion-tabSiSo-
+
+        #region -tabDiem
+
+        private void btnDongY3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHuy3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion-tabDiem
+
+        #endregion-Button_click-
     }
 }
