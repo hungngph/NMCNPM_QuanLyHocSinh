@@ -16,6 +16,7 @@ namespace NMCNPM_QLHS.GUI
         public frmHocKy()
         {
             InitializeComponent();
+            //hello
         }
     }
 }
