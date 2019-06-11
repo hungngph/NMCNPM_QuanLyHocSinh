@@ -126,7 +126,7 @@
             // 
             // bindingSourceDiemChiTiet
             // 
-            this.bindingSourceDiemChiTiet.DataSource = typeof(NMCNPM_QLHS.DAL.sp_LayDiemChiTietHocSinhTheoMonResult);
+            this.bindingSourceDiemChiTiet.DataSource = typeof(NMCNPM_QLHS.DAL.sp_LayDiemChiTietHocSinhResult);
             // 
             // dgvDiem
             // 

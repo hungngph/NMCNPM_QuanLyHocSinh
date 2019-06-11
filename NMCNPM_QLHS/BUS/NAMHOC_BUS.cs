@@ -38,5 +38,17 @@ namespace NMCNPM_QLHS.BUS
                 return null;
             return dt;
         }
+
+        // Lấy năm học tiếp theo
+        public static List<NAMHOC> LayNamHocTiepTheo(string maNamHocCu)
+        {
+            List<NAMHOC> namHoc = new List<NAMHOC>();
+            namHoc = NAMHOC_DAL.LayNamHocTiepTheo(maNamHocCu);
+            if (namHoc != null)
+                return namHoc;
+            else
+                return null;
+
+        }
     }
 }

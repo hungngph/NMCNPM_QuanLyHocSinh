@@ -21,5 +21,26 @@ namespace NMCNPM_QLHS.BUS
         {
             return KHOILOP_DAL.LayKhoiTheoNamHoc(maNamHoc);
         }
+
+        // Lấy khối 10 & 11 theo năm học
+        public static List<KHOILOP> LayKhoi1011(string maNamHoc)
+        {
+            return KHOILOP_DAL.LayKhoi1011(maNamHoc);
+        }
+
+        // Lấy khối lớp tiếp theo
+        public static List<KHOILOP> LayKhoiLopTiepTheo(string tenKhoiLopCu, string maNamHoc)
+        {
+            int khoiMoi = int.Parse(tenKhoiLopCu) + 1;
+            string tenKhoiLopMoi = khoiMoi.ToString();
+            return KHOILOP_DAL.LayKhoiTheoMaKhoiMaNam(tenKhoiLopMoi, maNamHoc);
+        }
+
+        // Lấy Cùng khối lớp năm sau
+        public static List<KHOILOP> LayCungKhoiLopNamSau(string tenKhoiLopCu, string maNamHoc)
+        {
+            return KHOILOP_DAL.LayKhoiTheoMaKhoiMaNam(tenKhoiLopCu, maNamHoc);
+        }
+
     }
 }

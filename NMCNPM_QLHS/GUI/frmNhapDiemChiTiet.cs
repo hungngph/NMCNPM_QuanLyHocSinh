@@ -26,6 +26,8 @@ namespace NMCNPM_QLHS.GUI
             InitializeComponent();
             dgvDiem.OptionsBehavior.ReadOnly = true;
             cboHocSinh.ReadOnly = true;
+            cboNamHoc.ReadOnly = true;
+            cboHocKy.ReadOnly = true;
             cboHocSinh.EditValue = maHS;
             cboHocKy.EditValue = maHocKy;
             cboNamHoc.EditValue = maNamHoc;
@@ -66,7 +68,7 @@ namespace NMCNPM_QLHS.GUI
                 string maHS = cboHocSinh.EditValue.ToString();
                 string maHocKy = cboHocKy.EditValue.ToString();
                 string maNamHoc = cboNamHoc.EditValue.ToString();
-                bindingSourceDiemChiTiet.DataSource = HOCTAP_BUS.LayDiemChiTietHocSinhTheoMon(maHS, maHocKy, maNamHoc);
+                bindingSourceDiemChiTiet.DataSource = HOCTAP_BUS.LayDiemChiTietHocSinh(maHS, maHocKy, maNamHoc);
             }
         }
 
@@ -107,7 +109,7 @@ namespace NMCNPM_QLHS.GUI
                 string maHS = cboHocSinh.EditValue.ToString();
                 string maHocKy = cboHocKy.EditValue.ToString();
                 string maNamHoc = cboNamHoc.EditValue.ToString();
-                bindingSourceDiemChiTiet.DataSource = HOCTAP_BUS.LayDiemChiTietHocSinhTheoMon(maHS, maHocKy, maNamHoc);
+                bindingSourceDiemChiTiet.DataSource = HOCTAP_BUS.LayDiemChiTietHocSinh(maHS, maHocKy, maNamHoc);
             }
         }
 
