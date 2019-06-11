@@ -420,7 +420,17 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnDSHocSinh_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            Form frm = this.KiemTraTonTai(typeof(frmrpDanhSachHocSinh));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmrpDanhSachHocSinh f = new frmrpDanhSachHocSinh
+                {
+                    MdiParent = this
+                };
+                f.Show();
+            }
         }
 
         private void btnDSLopHoc_ItemClick(object sender, ItemClickEventArgs e)
