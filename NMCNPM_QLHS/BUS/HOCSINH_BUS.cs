@@ -43,9 +43,9 @@ namespace NMCNPM_QLHS.BUS
         }
 
         // Lấy danh sách học sinh theo MaLop
-        public static List<HOCSINH> LayHocSinhTheoLop(string maLop)
+        public static List<HOCSINH> LayHocSinhTheoLop(string maLop, string maHocKy)
         {
-            return HOCSINH_DAL.LayHocSinhTheoLop(maLop);
+            return HOCSINH_DAL.LayHocSinhTheoLop(maLop, maHocKy);
         }
 
         // Lấy danh sách Mã HS, họ tên học sinh đã được phân lớp
@@ -77,10 +77,55 @@ namespace NMCNPM_QLHS.BUS
             return HOCSINH_DAL.LayHocSinhChuaPhanLop();
         }
 
+        // Lấy danh sách học sinh được lên lớp
+        public static List<HOCSINH> LayDSHocSinhDuocLenLop(string maLop, string maNam)
+        {
+            List<HOCSINH> lst = new List<HOCSINH>();
+
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                var ds = HOCSINH_DAL.LayHocSinhTheoLop(maLop, "HK02");
+                foreach (var x in ds)
+                {
+                    if (HOCTAP_BUS.KiemTraDieuKienLenLop(x.MAHS.ToString(), maNam) == true)
+                    {
+                        HOCSINH hs = new HOCSINH();
+                        hs.MAHS = x.MAHS;
+                        hs.HOTEN = x.HOTEN;
+                        lst.Add(hs);
+                    }
+                }
+            }
+            return lst;
+        }
+
+        // Lấy danh sách học sinh không được lên lớp
+        public static List<HOCSINH> LayDSHocSinhKhongDuocLenLop(string maLop, string maNam)
+        {
+            List<HOCSINH> lst = new List<HOCSINH>();
+
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                var ds = HOCSINH_DAL.LayHocSinhTheoLop(maLop, "HK02");
+                foreach (var x in ds)
+                {
+                    if (HOCTAP_BUS.KiemTraDieuKienLenLop(x.MAHS.ToString(), maNam) == false)
+                    {
+                        HOCSINH hs = new HOCSINH();
+                        hs.MAHS = x.MAHS;
+                        hs.HOTEN = x.HOTEN;
+                        lst.Add(hs);
+                    }
+                }
+            }
+            return lst;
+        }
+
         // Tìm kiếm thông tin học sinh theo tên
         public static List<HOCSINH> timTTHSTheoTen(string ten)
         {
             return HOCSINH_DAL.timTTHSTheoTen(ten);
         }
+
     }
 }

@@ -101,7 +101,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SQL_QLHS.dbml</DependentUpon>
     </Compile>
-    <Compile Include="DAL\THAMS_DAL.cs" />
+    <Compile Include="DAL\THAMSO_DAL.cs" />
     <Compile Include="GUI\frmHocKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,8 +269,10 @@
     </None>
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.CT_DIEMMON.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.HOCSINH.datasource" />
+    <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.QUATRINHHOC.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayDiemChiTietHocSinhTheoMonResult.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayDiemMonHocTheoLopResult.datasource" />
+    <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayQTHCuaHocSinhResult.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayTatCaHocSinhResult.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

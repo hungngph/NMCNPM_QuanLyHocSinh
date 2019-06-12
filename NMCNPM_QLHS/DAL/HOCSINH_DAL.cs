@@ -87,13 +87,13 @@ namespace NMCNPM_QLHS.DAL
         }
 
         // Lấy danh sách học sinh theo lớp
-        public static List<HOCSINH> LayHocSinhTheoLop(string maLop)
+        public static List<HOCSINH> LayHocSinhTheoLop(string maLop, string maHocKy)
         {
             List<HOCSINH> lst = new List<HOCSINH>();
 
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                var ds = db.sp_LayHocSinhTheoLop(maLop);
+                var ds = db.sp_LayHocSinhTheoLop(maLop, maHocKy);
                 foreach (var x in ds)
                 {
                     HOCSINH hs = new HOCSINH();
@@ -107,7 +107,7 @@ namespace NMCNPM_QLHS.DAL
             return lst;
         }
 
-        // Lấy danh sách Mã HS, họ tên học sinh đã được phân lớp
+        // Lấy danh sách học sinh đã được phân lớp
         public static List<HOCSINH> LayDSHocSinhDaPhanLop()
         {
             List<HOCSINH> lst = new List<HOCSINH>();
@@ -169,5 +169,6 @@ namespace NMCNPM_QLHS.DAL
             }
             return lst;
         }
+
     }
 }

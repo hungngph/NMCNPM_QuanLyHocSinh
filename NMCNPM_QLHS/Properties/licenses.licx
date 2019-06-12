@@ -1,3 +1,4 @@
+DevExpress.Patch.InMemoryPatch, DevExpress.Patch.Common, Version=6.2.0.0, Culture=neutral, PublicKeyToken=87f9927a37ac6066
 DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraBars.BarManager, DevExpress.XtraBars.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a

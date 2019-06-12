@@ -73,11 +73,11 @@ namespace NMCNPM_QLHS.GUI
 
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            string maHS, maMonHoc, maHocKy, maNamHoc;
+            string maHS, maMonHoc, maHocKy, maLop;
             float diemMieng, diem15P, diem1Tiet, diemThi;
             maMonHoc = cboMonHoc.EditValue.ToString();
             maHocKy = cboHocKy.EditValue.ToString();
-            maNamHoc = cboNamHoc.EditValue.ToString();
+            maLop = cboLop.EditValue.ToString();
             bindingNavigatorDiem.BindingSource.MoveFirst();
             for (int i = 0; i < dgvDiem.RowCount; i++)
             {
@@ -100,7 +100,7 @@ namespace NMCNPM_QLHS.GUI
                     diemThi = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diemThi));
                 else
                     diemThi = -1;
-                HOCTAP_BUS.SuaDiem(maHS, maMonHoc, maHocKy, maNamHoc, diemMieng, diem15P, diem1Tiet, diemThi);
+                HOCTAP_BUS.SuaDiem(maHS, maMonHoc, maHocKy, maLop, diemMieng, diem15P, diem1Tiet, diemThi);
                 bindingNavigatorDiem.BindingSource.MoveNext();
             }
             state = false;

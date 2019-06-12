@@ -39,6 +39,7 @@ namespace NMCNPM_QLHS.GUI
         {
             load_DSHS();
             load_cboNamHoc();
+            load_cboHocKy();
             btnChuyen.Enabled = false;
             btnDanhSach.Enabled = false;
         }
@@ -70,6 +71,11 @@ namespace NMCNPM_QLHS.GUI
         }
 
         private void cboLop_EditValueChanged(object sender, EventArgs e)
+        {
+            load_DSLop();
+        }
+
+        private void cboHocKy_EditValueChanged(object sender, EventArgs e)
         {
             load_DSLop();
         }
@@ -119,7 +125,8 @@ namespace NMCNPM_QLHS.GUI
         {
             string maLop = cboLop.EditValue.ToString();
             string maNamHoc = cboNamHoc.EditValue.ToString();
-            QUATRINHHOC_BUS.LuuPhanLopHS(lstvDSLop, maLop, maNamHoc);
+            string maHocKy = cboHocKy.EditValue.ToString();
+            QUATRINHHOC_BUS.LuuPhanLopHS(lstvDSLop, maLop, maHocKy);
             MessageBox.Show("Đã lưu vào bảng phân lớp!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
             state = false;
         }
@@ -128,7 +135,8 @@ namespace NMCNPM_QLHS.GUI
         {
             lstvDSLop.Items.Clear();
             string maLop = cboLop.EditValue.ToString();
-            var lst = HOCSINH_BUS.LayHocSinhTheoLop(maLop);
+            string maHocKy = cboHocKy.EditValue.ToString();
+            var lst = HOCSINH_BUS.LayHocSinhTheoLop(maLop, maHocKy);
             foreach (var i in lst)
             {
                 ListViewItem item = new ListViewItem();
@@ -153,7 +161,6 @@ namespace NMCNPM_QLHS.GUI
             cboNamHoc.Properties.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
             cboNamHoc.Properties.DisplayMember = "TENNAMHOC";
             cboNamHoc.Properties.ValueMember = "MANAMHOC";
-            
         }
 
         private void load_cboKhoiLop()
@@ -181,6 +188,13 @@ namespace NMCNPM_QLHS.GUI
                 cboLop.Properties.DataSource = null;
         }
 
+        private void load_cboHocKy()
+        {
+            cboHocKy.Properties.DataSource = HOCKY_BUS.LayTatCaHocKy();
+            cboHocKy.Properties.DisplayMember = "TENHOCKY";
+            cboHocKy.Properties.ValueMember = "MAHK";
+        }
+
 
         #endregion
 
@@ -201,11 +215,12 @@ namespace NMCNPM_QLHS.GUI
 
         private void load_DSLop()
         {
-            if (cboNamHoc.Text != "" && cboKhoiLop.Text != "" && cboLop.Text != "")
+            if (cboNamHoc.Text != "" && cboKhoiLop.Text != "" && cboLop.Text != "" && cboHocKy.Text != "")
             {
                 string maLop = cboLop.EditValue.ToString();
+                string maHocKy = cboHocKy.EditValue.ToString();
                 lstvDSLop.Items.Clear();
-                var lst = HOCSINH_BUS.LayHocSinhTheoLop(maLop);
+                var lst = HOCSINH_BUS.LayHocSinhTheoLop(maLop, maHocKy);
                 foreach (var i in lst)
                 {
                     ListViewItem item = new ListViewItem();
