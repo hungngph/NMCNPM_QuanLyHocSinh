@@ -120,23 +120,32 @@ namespace NMCNPM_QLHS.GUI
             DateTime ngaySinh = DateTime.ParseExact(dtpNgaySinh.Text.ToString(), "dd/MM/yyyy", CultureInfo.CreateSpecificCulture("en-GB"));
             string email = txtEmail.Text;
             string diaChi = txtDiaChi.Text;
-            try
-            {
-                if (btnHoanTat.Text == "Lưu")
-                {
-                    HOCSINH_BUS.Insert(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi);
-                    bindingNavigatorHocSinh.BindingSource.MoveLast();
-                }
-                else
-                    HOCSINH_BUS.Update(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi);
-                load_dgvHocSinh();
 
-            }
-            catch (Exception ex)
+            if (HOCSINH_BUS.KiemTraTuoi(ngaySinh) == true)
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    if (btnHoanTat.Text == "Lưu")
+                    {
+                        HOCSINH_BUS.Insert(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi);
+                        bindingNavigatorHocSinh.BindingSource.MoveLast();
+                    }
+                    else
+                        HOCSINH_BUS.Update(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi);
+                    load_dgvHocSinh();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                bindingNavigatorAddNewItem.Enabled = true;
             }
-            bindingNavigatorAddNewItem.Enabled = true;
+            else
+            {
+                MessageBox.Show("Tuổi không hợp lệ", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dtpNgaySinh.Focus();
+            }
         }
 
         #endregion -Nhập liệu Events-

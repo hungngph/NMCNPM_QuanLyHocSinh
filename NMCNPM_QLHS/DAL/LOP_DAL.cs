@@ -71,5 +71,18 @@ namespace NMCNPM_QLHS.DAL
             }
             return lst;
         }
+
+        // Lấy sĩ số lớp
+        public static int LaySiSoLop(string maLop)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                LOP lop = db.LOPs.Where(a => a.MALOP == maLop).FirstOrDefault();
+                if (lop != null)
+                    return lop.SISO.Value;
+                else
+                    return 0;
+            }
+        }
     }
 }

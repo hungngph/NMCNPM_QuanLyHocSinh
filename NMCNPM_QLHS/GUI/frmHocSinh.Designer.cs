@@ -237,7 +237,6 @@
             // 
             // dtpNgaySinh
             // 
-            this.dtpNgaySinh.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSourceHocSinh, "NGAYSINH", true));
             this.dtpNgaySinh.EditValue = null;
             this.dtpNgaySinh.Location = new System.Drawing.Point(12, 414);
             this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -252,7 +251,6 @@
             // 
             // cboGioiTinh
             // 
-            this.cboGioiTinh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceHocSinh, "GIOITINH", true));
             this.cboGioiTinh.FormattingEnabled = true;
             this.cboGioiTinh.Items.AddRange(new object[] {
             "Nam",
@@ -279,7 +277,6 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceHocSinh, "EMAIL", true));
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.Location = new System.Drawing.Point(12, 664);
@@ -302,7 +299,6 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceHocSinh, "DIACHI", true));
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.ForeColor = System.Drawing.Color.Black;
             this.txtDiaChi.Location = new System.Drawing.Point(13, 575);
@@ -313,7 +309,6 @@
             // 
             // txtHoTen
             // 
-            this.txtHoTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceHocSinh, "HOTEN", true));
             this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.ForeColor = System.Drawing.Color.Black;
             this.txtHoTen.Location = new System.Drawing.Point(13, 332);
@@ -324,7 +319,6 @@
             // 
             // txtMaHS
             // 
-            this.txtMaHS.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceHocSinh, "MAHS", true));
             this.txtMaHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHS.ForeColor = System.Drawing.Color.Black;
             this.txtMaHS.Location = new System.Drawing.Point(13, 252);

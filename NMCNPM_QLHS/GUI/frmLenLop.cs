@@ -16,15 +16,23 @@ namespace NMCNPM_QLHS.GUI
     public partial class frmLenLop : DevExpress.XtraEditors.XtraForm
     {
 
+        #region -Fields-
+
         bool state = false; // Đã thay đổi dữ liệu hay chưa
+
+        #endregion -Fields-
+
+        #region -Constructor-
 
         public frmLenLop()
         {
             InitializeComponent();
         }
 
+        #endregion -Constructor-
+
         #region -Methods-
-        
+
         #region -Load-
 
         #region -Load DSHS-
@@ -77,6 +85,7 @@ namespace NMCNPM_QLHS.GUI
                     item.SubItems.Add(i.HOTEN);
                     lstvDSHSMoi.Items.Add(item);
                 }
+                btnChuyen.Enabled = true;
             }
             else
                 lstvDSHSMoi.Items.Clear();
@@ -248,6 +257,16 @@ namespace NMCNPM_QLHS.GUI
         private void frmLenLop_Load(object sender, EventArgs e)
         {
             load_cboNamHocCu();
+            btnChuyen.Enabled = false;
+        }
+
+        private void frmLenLop_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (state == true)
+            {
+                if (MessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    this.btnLuu_Click(sender, e);
+            }
         }
 
         #endregion -Form-
@@ -325,24 +344,51 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnChuyen_Click(object sender, EventArgs e)
         {
-            state = true;
-            IEnumerator ie = lstvDSHSCu.SelectedItems.GetEnumerator();
-            while (ie.MoveNext())
+            if (QUATRINHHOC_BUS.KiemTraSiSo(cboLopMoi.EditValue.ToString(), lstvDSHSMoi.SelectedItems.Count) == true)
             {
-                ListViewItem olditem = (ListViewItem)ie.Current;
-                ListViewItem newitem = new ListViewItem();
-                newitem = olditem;
-                lstvDSHSCu.Items.Remove(olditem);
-                lstvDSHSMoi.Items.Add(newitem);
+                IEnumerator ie = lstvDSHSCu.SelectedItems.GetEnumerator();
+                if (lstvDSHSCu.SelectedItems.Count != 0)
+                    state = true;
+                while (ie.MoveNext())
+                {
+                    ListViewItem olditem = (ListViewItem)ie.Current;
+                    ListViewItem newitem = new ListViewItem();
+
+                    //Trạng thái học sinh đã được phân lớp hay chưa?
+                    bool stateHS = false;
+
+                    foreach (ListViewItem item in lstvDSHSMoi.Items)
+                    {
+                        if (item.SubItems[0].Text == olditem.SubItems[0].Text)
+                        {
+                            MessageBox.Show("Học sinh " + olditem.SubItems[1].Text + " hiện đã được phân vào lớp " + cboLopMoi.Text, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            stateHS = true;
+                            goto Cont;
+                        }
+                    }
+
+                    newitem = olditem;
+                    lstvDSHSCu.Items.Remove(olditem);
+                    lstvDSHSMoi.Items.Add(newitem);
+
+                Cont:
+                    if (stateHS == true)
+                        break;
+                }
             }
+            else
+                MessageBox.Show("Vượt quá sĩ số tối đa", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            string maLop = cboLopMoi.EditValue.ToString();
-            QUATRINHHOC_BUS.LuuPhanLopHS(lstvDSHSMoi, maLop, "HK01");
-            MessageBox.Show("Đã lưu vào bảng phân lớp!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            state = false;
+            if (state == true)
+            {
+                string maLop = cboLopMoi.EditValue.ToString();
+                QUATRINHHOC_BUS.LuuPhanLopHS(lstvDSHSMoi, maLop, "HK01");
+                MessageBox.Show("Đã lưu vào bảng phân lớp!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                state = false;
+            }
         }
 
         #endregion -Button_Click-

@@ -86,49 +86,36 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnChuyen_Click(object sender, EventArgs e)
         {
-            state = true;
-            IEnumerator ie = lstvDSHS.SelectedItems.GetEnumerator();
-            while (ie.MoveNext())
+            if (QUATRINHHOC_BUS.KiemTraSiSo(cboLop.EditValue.ToString(), lstvDSHS.SelectedItems.Count) == true)
             {
-                ListViewItem olditem = (ListViewItem)ie.Current;
-                ListViewItem newitem = new ListViewItem();
-
-                //Trạng thái học sinh đã được phân lớp hay chưa?
-                bool state = false;
-
-                foreach (ListViewItem item in lstvDSLop.Items)
+                IEnumerator ie = lstvDSHS.SelectedItems.GetEnumerator();
+                if (lstvDSHS.SelectedItems.Count != 0)
+                    state = true;
+                while (ie.MoveNext())
                 {
-                    if (item.SubItems[0].Text == olditem.SubItems[0].Text)
-                    {
-                        MessageBox.Show("Học sinh " + olditem.SubItems[1].Text + " hiện đã được phân vào lớp " + cboLop.Text, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        state = true;
-                        goto Cont;
-                    }
+                    ListViewItem olditem = (ListViewItem)ie.Current;
+                    ListViewItem newitem = new ListViewItem();
+
+                    newitem = olditem;
+                    lstvDSHS.Items.Remove(olditem);
+                    lstvDSLop.Items.Add(newitem);
                 }
-                newitem = olditem;
-                lstvDSHS.Items.Remove(olditem);
-                lstvDSLop.Items.Add(newitem);
-
-            //newitem.SubItems.Add(olditem.SubItems[1].Text);
-            //newitem.Tag = olditem.Tag;
-            //lstvDSLop.Items.Add(newitem);
-            //lstvDSLop.Items[lstvDSLop.Items.IndexOf(newitem)].Text = olditem.SubItems[0].Text;
-            //lstvDSHS.Items.Remove(olditem);
-
-            Cont:
-                if (state == true)
-                    break;
             }
+            else
+                MessageBox.Show("Vượt quá sĩ số tối đa", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            string maLop = cboLop.EditValue.ToString();
-            string maNamHoc = cboNamHoc.EditValue.ToString();
-            string maHocKy = cboHocKy.EditValue.ToString();
-            QUATRINHHOC_BUS.LuuPhanLopHS(lstvDSLop, maLop, maHocKy);
-            MessageBox.Show("Đã lưu vào bảng phân lớp!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            state = false;
+            if (state == true)
+            {
+                string maLop = cboLop.EditValue.ToString();
+                string maNamHoc = cboNamHoc.EditValue.ToString();
+                string maHocKy = cboHocKy.EditValue.ToString();
+                QUATRINHHOC_BUS.LuuPhanLopHS(lstvDSLop, maLop, maHocKy);
+                MessageBox.Show("Đã lưu vào bảng phân lớp!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                state = false;
+            }
         }
 
         private void btnDanhSach_Click(object sender, EventArgs e)

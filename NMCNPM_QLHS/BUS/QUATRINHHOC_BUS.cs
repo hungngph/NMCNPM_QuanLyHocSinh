@@ -20,10 +20,22 @@ namespace NMCNPM_QLHS.BUS
         // Lưu phân lớp
         public static void LuuPhanLopHS(ListView hocSinh, string maLop, string maHocKy)
         {
-            foreach (ListViewItem item in hocSinh.Items)
-            {
-                QUATRINHHOC_DAL.LuuPhanLopHS(item.SubItems[0].Text.ToString(), maLop, maHocKy);
-            }
+            
+                foreach (ListViewItem item in hocSinh.Items)
+                {
+                    QUATRINHHOC_DAL.LuuPhanLopHS(item.SubItems[0].Text.ToString(), maLop, maHocKy);
+                }
+            
+        }
+
+        // Kiểm tra sĩ số
+        public static bool KiemTraSiSo(string maLop, int soHS)
+        {
+            int siSoHienTai = LOP_DAL.LaySiSoLop(maLop);
+            double siSoToiDa = THAMSO_BUS.LayThamSo("SISOTOIDA");
+            if (siSoHienTai + soHS > siSoToiDa)
+                return false;
+            return true;
         }
     }
 }

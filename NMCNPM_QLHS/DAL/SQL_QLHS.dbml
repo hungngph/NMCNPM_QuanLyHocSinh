@@ -270,19 +270,6 @@
       <Column Name="DIEMTBHK" Type="System.Single" DbType="Real" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.sp_LayDiemChiTietHocSinh" Method="sp_LayDiemChiTietHocSinh">
-    <Parameter Name="mahs" Type="System.String" DbType="Char(5)" />
-    <Parameter Name="mahocky" Type="System.String" DbType="Char(4)" />
-    <Parameter Name="manamhoc" Type="System.String" DbType="Char(4)" />
-    <ElementType Name="sp_LayDiemChiTietHocSinhResult">
-      <Column Name="TENMONHOC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="DIEMMIENG" Type="System.Single" DbType="Real" CanBeNull="true" />
-      <Column Name="DIEM15P" Type="System.Single" DbType="Real" CanBeNull="true" />
-      <Column Name="DIEM1TIET" Type="System.Single" DbType="Real" CanBeNull="true" />
-      <Column Name="DIEMTHI" Type="System.Single" DbType="Real" CanBeNull="true" />
-      <Column Name="DIEMTBHK" Type="System.Single" DbType="Real" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.sp_LayHocSinhTheoLop" Method="sp_LayHocSinhTheoLop">
     <Parameter Name="malop" Type="System.String" DbType="Char(5)" />
     <Parameter Name="mahk" Type="System.String" DbType="Char(4)" />
@@ -324,6 +311,19 @@
       <Column Name="MAHS" Type="System.String" DbType="Char(5)" CanBeNull="true" />
       <Column Name="MALOP" Type="System.String" DbType="Char(5)" CanBeNull="true" />
       <Column Name="MAHK" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="DIEMTBHK" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_LayDiemChiTietHocSinh" Method="sp_LayDiemChiTietHocSinh">
+    <Parameter Name="mahs" Type="System.String" DbType="Char(5)" />
+    <Parameter Name="mahocky" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="manamhoc" Type="System.String" DbType="Char(4)" />
+    <ElementType Name="sp_LayDiemChiTietHocSinhResult">
+      <Column Name="TENMONHOC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIEMMIENG" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DIEM15P" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DIEM1TIET" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DIEMTHI" Type="System.Single" DbType="Real" CanBeNull="true" />
       <Column Name="DIEMTBHK" Type="System.Single" DbType="Real" CanBeNull="true" />
     </ElementType>
   </Function>

@@ -534,6 +534,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLenLop";
             this.Text = "Lên lớp";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLenLop_FormClosing);
             this.Load += new System.EventHandler(this.frmLenLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
