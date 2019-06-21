@@ -21,11 +21,13 @@ namespace NMCNPM_QLHS.BUS
         }
 
         // Lưu quy định
-        public static void LuuQuyDinh(double tuoiToiThieu, double tuoiToiDa, double siSoToiDa, 
+        public static void LuuQuyDinh(double tuoiToiThieu, double tuoiToiDa, double siSoToiDa,
                                     double diemToiThieu, double diemToiDa, double diemDatMon, double diemDatHK)
         {
             THAMSO_DAL.LuuQuyDinh(tuoiToiThieu, tuoiToiDa, siSoToiDa, diemToiThieu, diemToiDa, diemDatMon, diemDatHK);
         }
+
+        // Kiểm tra sự hợp lý của các giá trị tham số
 
         public static bool KiemTraTuoi(double tuoiToiThieu, double TuoiToiDa)
         {
@@ -45,5 +47,60 @@ namespace NMCNPM_QLHS.BUS
             else
                 return 1;
         }
+
+        // Kiểm tra giá trị tham số hợp lệ với dữ liệu ko
+
+        //#region -Tuổi-
+
+        //public static bool KiemTraDuLieuTuoi(double tuoiToiThieu, double tuoiToiDa)
+        //{
+        //    List<HOCSINH> lst = HOCSINH_BUS.LayTatCaHocSinh();
+        //    int tuoi;
+        //    foreach (var hs in lst)
+        //    {
+        //        tuoi = HOCSINH_BUS.TinhTuoi(hs.NGAYSINH.Value);
+        //        if (tuoi < tuoiToiThieu || tuoi > tuoiToiDa)
+        //            return false;
+        //    }
+        //    return true;
+        //}
+
+        //#endregion -Tuổi-
+
+        //#region -Sĩ số-
+
+        //public static bool KiemTraDuLieuSiSo(double siSoToiDa)
+        //{
+        //    List<LOP> lst = LOP_BUS.LayTatCaLop();
+        //    foreach (var lop in lst)
+        //    {
+        //        if (lop.SISO.Value > siSoToiDa)
+        //            return false;
+        //    }
+        //    return true;
+        //}
+
+        //#endregion -Sĩ số-
+
+        //#region -Điểm-
+
+        //public static bool KiemTraDuLieuDiem(double diemToiDa, double diemToiThieu)
+        //{
+        //    using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+        //    {
+        //        var lst = db.CT_DIEMMONs.ToList();
+        //        double diem;
+        //        foreach (var diemChiTiet in lst)
+        //        {
+        //            diem = diemChiTiet.DIEM.Value;
+        //            if (diem > diemToiDa || diem < diemToiThieu)
+        //                return false;
+        //        }
+        //        return true;
+        //    }
+        //}
+
+        //#endregion -Điểm-
+
     }
 }

@@ -49,26 +49,9 @@ namespace NMCNPM_QLHS.BUS
         }
 
         // Lấy danh sách Mã HS, họ tên học sinh đã được phân lớp
-        public static DataTable LayDSHocSinhDaPhanLop()
+        public static List<HOCSINH> LayDSHocSinhDaPhanLop()
         {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("MAHS", typeof(string));
-            dt.Columns.Add("HOTEN", typeof(string));
-
-            SQL_QLHSDataContext db = new SQL_QLHSDataContext();
-            var lst = HOCSINH_DAL.LayDSHocSinhDaPhanLop();
-            foreach (var i in lst)
-            {
-                DataRow r = dt.NewRow();
-                if (i.MAHS != null)
-                    r["MAHS"] = i.MAHS;
-                if (i.HOTEN != null)
-                    r["HOTEN"] = i.HOTEN;
-                dt.Rows.Add(r);
-            }
-            if (dt.Rows.Count == 0)
-                return null;
-            return dt;
+            return HOCSINH_DAL.LayDSHocSinhDaPhanLop();
         }
 
         // Lấy danh sách học sinh chưa phân lớp
@@ -125,6 +108,29 @@ namespace NMCNPM_QLHS.BUS
         public static List<HOCSINH> timTTHSTheoTen(string ten)
         {
             return HOCSINH_DAL.timTTHSTheoTen(ten);
+        }
+
+        public static bool KiemTraTuoi(DateTime ngaySinh)
+        {
+            // Tính tuổi học sinh
+            int tuoi = TinhTuoi(ngaySinh);
+
+            // Kiểm tra tuổi hợp lệ
+            double tuoiToiDa = THAMSO_BUS.LayThamSo("TUOITOIDA");
+            double tuoiToiThieu = THAMSO_BUS.LayThamSo("TUOITOITHIEU");
+            if (tuoi < tuoiToiThieu || tuoi > tuoiToiDa)
+                return false;
+            return true;
+        }
+
+        public static int TinhTuoi(DateTime ngaySinh)
+        {
+            int tuoi;
+            if ((DateTime.Today.Month > ngaySinh.Month) || (DateTime.Today.Month == ngaySinh.Month && DateTime.Today.Day > ngaySinh.Day))
+                tuoi = DateTime.Today.Year - ngaySinh.Year;
+            else
+                tuoi = DateTime.Today.Year - ngaySinh.Year - 1;
+            return tuoi;
         }
 
     }

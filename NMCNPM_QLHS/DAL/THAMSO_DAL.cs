@@ -26,5 +26,6 @@ namespace NMCNPM_QLHS.DAL
                 db.sp_LuuQuyDinh(tuoiToiThieu, tuoiToiDa, siSoToiDa, diemToiThieu, diemToiDa, diemDatMon, diemDatHK);
             }
         }
+        
     }
 }

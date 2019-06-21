@@ -120,20 +120,31 @@ namespace NMCNPM_QLHS.GUI
 
         private void TextBoxTuoi_EditValueChanged(object sender, EventArgs e)
         {
-            int tuoiToiThieu = int.Parse(txtTuoiToiThieu.Text);
-            int tuoiToiDa = int.Parse(txtTuoiToiDa.Text);
+            double tuoiToiThieu = double.Parse(txtTuoiToiThieu.Text);
+            double tuoiToiDa = double.Parse(txtTuoiToiDa.Text);
+
             if (THAMSO_BUS.KiemTraTuoi(tuoiToiThieu, tuoiToiDa) != true)
                 labelTuoi.Text = "Tuổi tối thiếu phải nhỏ hơn tuổi tối đa!";
             else
                 labelTuoi.Text = "";
         }
-        
+
         #endregion -tabTuoi
 
+        #region -tabSiSo-
+
+        private void txtSiSoToiDa_EditValueChanged(object sender, EventArgs e)
+        {
+            //state = true;
+        }
+
+        #endregion -tabSiSo-
+
         #region -tabDiem
-        
+
         private void TextBoxDiem_EditValueChanged(object sender, EventArgs e)
         {
+            //state = true;
             double diemToiThieu = double.Parse(txtDiemToiThieu.Text);
             double diemToiDa = double.Parse(txtDiemToiDa.Text);
             double diemDatMon = double.Parse(txtDatMon.Text);
