@@ -75,6 +75,10 @@ namespace NMCNPM_QLHS.GUI
         // Sửa học sinh
         private void bindingNavigatorEditItem_Click(object sender, EventArgs e)
         {
+            // Chuyển sang panel nhập liệu
+            dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
+            navPanelChucNang.SelectedPage = navNhapLieu;
+
             btnHoanTat.Text = "Hoàn tất";
             btnHoanTat.Visible = true;
             enableAllTextBox();
@@ -128,11 +132,14 @@ namespace NMCNPM_QLHS.GUI
                     if (btnHoanTat.Text == "Lưu")
                     {
                         HOCSINH_BUS.Insert(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi);
+                        load_dgvHocSinh();
                         bindingNavigatorHocSinh.BindingSource.MoveLast();
                     }
                     else
+                    {
                         HOCSINH_BUS.Update(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi);
-                    load_dgvHocSinh();
+                        load_dgvHocSinh();
+                    }
 
                 }
                 catch (Exception ex)
