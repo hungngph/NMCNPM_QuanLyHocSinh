@@ -62,5 +62,21 @@ namespace NMCNPM_QLHS.DAL
             }
             return namHoc;
         }
+
+        // Lấy năm học hiện tại
+        public static NAMHOC LayNamHocHienTai()
+        {
+            NAMHOC namHoc = new NAMHOC();
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                var ds = db.sp_LayNamHocHienTai();
+                foreach (var x in ds)
+                {
+                        namHoc.MANAMHOC = x.MANAMHOC;
+                        namHoc.TENNAMHOC = x.TENNAMHOC;
+                }
+            }
+            return namHoc;
+        }
     }
 }

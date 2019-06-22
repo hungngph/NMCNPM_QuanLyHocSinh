@@ -11,11 +11,22 @@ namespace NMCNPM_QLHS.DAL
         // Lấy tất cả các học kỳ
         public static List<HOCKY> LayTatCaHocKy()
         {
+            List<HOCKY> lst = new List<HOCKY>();
+
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                List<HOCKY> lst = db.HOCKies.ToList();
-                return lst;
+                var ds = db.HOCKies.ToList();
+                foreach (var x in ds)
+                {
+                    HOCKY hocKy = new HOCKY();
+                    {
+                        hocKy.MAHK = x.MAHK;
+                        hocKy.TENHOCKY = x.TENHOCKY;
+                        lst.Add(hocKy);
+                    }
+                }
             }
+            return lst;
         }
     }
 }

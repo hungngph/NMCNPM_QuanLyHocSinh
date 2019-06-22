@@ -11,11 +11,20 @@ namespace NMCNPM_QLHS.DAL
         // Lấy tất cả các môn học
         public static List<MONHOC> LayTatCaMonHoc()
         {
+            List<MONHOC> lst = new List<MONHOC>();
+
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                List<MONHOC> lst = db.MONHOCs.ToList();
-                return lst;
+                var ds = db.MONHOCs.ToList();
+                foreach (var x in ds)
+                {
+                    MONHOC monHoc = new MONHOC();
+                    monHoc.MAMONHOC = x.MAMONHOC;
+                    monHoc.TENMONHOC = x.TENMONHOC;
+                    lst.Add(monHoc);
+                }
             }
+            return lst;
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using NMCNPM_QLHS.BUS;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -16,6 +17,23 @@ namespace NMCNPM_QLHS.GUI
         public frmKhoilop()
         {
             InitializeComponent();
+        }
+
+        private void frmKhoilop_Load(object sender, EventArgs e)
+        {
+            load_cboNamHoc();
+        }
+
+        private void load_cboNamHoc()
+        {
+            cboNamHoc.Properties.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
+            cboNamHoc.Properties.DisplayMember = "TENNAMHOC";
+            cboNamHoc.Properties.ValueMember = "MANAMHOC";
+        }
+
+        private void cboNamHoc_EditValueChanged(object sender, EventArgs e)
+        {
+            bindingSourceKhoiLop.DataSource = KHOILOP_BUS.LayKhoiTheoNamHoc(cboNamHoc.EditValue.ToString());
         }
     }
 }

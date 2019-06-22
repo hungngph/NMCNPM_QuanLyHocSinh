@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using NMCNPM_QLHS.BUS;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -28,6 +29,29 @@ namespace NMCNPM_QLHS.GUI
         {
             dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
             navPanelChucNang.SelectedPage = navThem;
+        }
+
+        private void frmLop_Load(object sender, EventArgs e)
+        {
+            load_cboNamHoc();
+        }
+
+        private void load_cboNamHoc()
+        {
+            cboNamHoc.Properties.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
+            cboNamHoc.Properties.DisplayMember = "TENNAMHOC";
+            cboNamHoc.Properties.ValueMember = "MANAMHOC";
+        }
+
+        private void load_DSLop()
+        {
+            string maNamHoc = cboNamHoc.EditValue.ToString();
+            bindingSourceLop.DataSource = LOP_BUS.LayLopTheoNamHoc(maNamHoc);
+        }
+
+        private void cboNamHoc_EditValueChanged(object sender, EventArgs e)
+        {
+            load_DSLop();
         }
     }
 }

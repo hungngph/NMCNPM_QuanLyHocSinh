@@ -25,6 +25,7 @@ namespace NMCNPM_QLHS.GUI
             //Application.Run(new frmQuyDinh());
             //Application.Run(new frmTraCuuHocSinh());
             //Application.Run(new frmLenLop());
+            //Application.Run(new frmLop);
         }
     }
 }

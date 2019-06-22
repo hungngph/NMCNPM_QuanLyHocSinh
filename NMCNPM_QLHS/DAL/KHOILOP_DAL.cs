@@ -29,11 +29,11 @@ namespace NMCNPM_QLHS.DAL
                 foreach (var x in ds)
                 {
                     KHOILOP khoiLop = new KHOILOP();
-                    {
-                        khoiLop.MAKHOI = x.MAKHOI;
-                        khoiLop.TENKHOI = x.TENKHOI;
-                        lst.Add(khoiLop);
-                    }
+                    khoiLop.MAKHOI = x.MAKHOI;
+                    khoiLop.TENKHOI = x.TENKHOI;
+                    khoiLop.MANAM = x.MANAM;
+                    khoiLop.SOLOP = x.SOLOP;
+                    lst.Add(khoiLop);
                 }
             }
             return lst;

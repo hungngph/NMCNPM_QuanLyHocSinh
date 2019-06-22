@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using NMCNPM_QLHS.BUS;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -17,6 +18,11 @@ namespace NMCNPM_QLHS.GUI
         {
             InitializeComponent();
             //hello
+        }
+
+        private void frmHocKy_Load(object sender, EventArgs e)
+        {
+            bindingSourceHocKy.DataSource = HOCKY_BUS.LayTatCaHocKy();
         }
     }
 }

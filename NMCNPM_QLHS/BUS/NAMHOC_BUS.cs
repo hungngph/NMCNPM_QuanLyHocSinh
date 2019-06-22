@@ -33,5 +33,11 @@ namespace NMCNPM_QLHS.BUS
                 return null;
 
         }
+
+        // Lấy năm học hiện tại
+        public static NAMHOC LayNamHocHienTai()
+        {
+            return NAMHOC_DAL.LayNamHocHienTai();
+        }
     }
 }

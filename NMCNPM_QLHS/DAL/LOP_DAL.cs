@@ -44,6 +44,8 @@ namespace NMCNPM_QLHS.DAL
                     {
                         lop.MALOP = x.MALOP;
                         lop.TENLOP = x.TENLOP;
+                        lop.MAKHOI = x.MAKHOI;
+                        lop.SISO = x.SISO;
                         lst.Add(lop);
                     }
                 }
