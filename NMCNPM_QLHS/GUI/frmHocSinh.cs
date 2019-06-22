@@ -51,7 +51,7 @@ namespace NMCNPM_QLHS.GUI
             // Chuyển sang panel nhập liệu
             dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
             navPanelChucNang.SelectedPage = navNhapLieu;
-
+            
             bindingNavigatorAddNewItem.Enabled = false;
             btnHoanTat.Visible = true;
             btnHoanTat.Text = "Lưu";
@@ -99,7 +99,7 @@ namespace NMCNPM_QLHS.GUI
 
         #region -Nhập liệu Events-
 
-        private void dgvHocSinh_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        private void dgvHocSinh_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             bindingNavigatorAddNewItem.Enabled = true;
             btnHoanTat.Visible = false;
@@ -173,6 +173,11 @@ namespace NMCNPM_QLHS.GUI
         public void load_dgvHocSinh()
         {
             bindingSourceHocSinh.DataSource = HOCSINH_BUS.LayTatCaHocSinh();
+            if (bindingSourceHocSinh.DataSource == null)
+            {
+                bindingNavigatorEditItem.Enabled = false;
+                bindingNavigatorDeleteItem.Enabled = false;
+            }
         }
 
         #endregion -Load-
@@ -206,5 +211,6 @@ namespace NMCNPM_QLHS.GUI
 
         #endregion -Methods-
 
+        
     }
 }
