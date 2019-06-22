@@ -17,14 +17,17 @@ namespace NMCNPM_QLHS.GUI
         public frmrpDanhSachHocSinh()
         {
             InitializeComponent();
-            ReportDSHS();
         }
-        public void ReportDSHS()
+        public void ReportDSHS(string namhoc)
         {
-            rpDanhSachHocSinh rp = new rpDanhSachHocSinh();
+            rpDanhSachHocSinh rp = new rpDanhSachHocSinh(namhoc);
             documentViewer1.DocumentSource = rp;
             rp.CreateDocument();
         }
 
+        private void btnDongY_Click(object sender, EventArgs e)
+        {
+            ReportDSHS(cboNamHoc.Text);
+        }
     }
 }
