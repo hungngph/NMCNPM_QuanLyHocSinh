@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using NMCNPM_QLHS.BUS;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -16,6 +17,11 @@ namespace NMCNPM_QLHS.GUI
         public frmNamHoc()
         {
             InitializeComponent();
+        }
+
+        private void frmNamHoc_Load(object sender, EventArgs e)
+        {
+            bindingSourceNamHoc.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
         }
     }
 }

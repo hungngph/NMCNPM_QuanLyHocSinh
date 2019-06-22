@@ -40,6 +40,7 @@ namespace NMCNPM_QLHS.GUI
             load_cboMonHoc();
             load_cboHocKy();
             load_cboNamHoc();
+            load_cboLop();
         }
 
         private void frmNhapDiemChung_FormClosing(object sender, FormClosingEventArgs e)
@@ -81,7 +82,6 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorDiem.BindingSource.MoveFirst();
             for (int i = 0; i < dgvDiem.RowCount; i++)
             {
-                //hmbmnbmhghnghj
                 //maHS, maMon, mahocky, maNamHoc, diemMieng, diem15P, diem1Tiet, diemThi
                 maHS = dgvDiem.GetFocusedRowCellDisplayText(col_maHS);
                 if (dgvDiem.GetFocusedRowCellDisplayText(col_diemMieng) != "")
@@ -123,8 +123,8 @@ namespace NMCNPM_QLHS.GUI
 
         private void cboNamHoc_EditValueChanged(object sender, EventArgs e)
         {
-            load_cboLop();
-            load_BangDiem();
+            //load_cboLop();
+            //load_BangDiem();
         }
 
         private void comBoBox_EditValueChanged(object sender, EventArgs e)
@@ -142,9 +142,10 @@ namespace NMCNPM_QLHS.GUI
 
         private void load_cboNamHoc()
         {
-            cboNamHoc.Properties.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
-            cboNamHoc.Properties.DisplayMember = "TENNAMHOC";
-            cboNamHoc.Properties.ValueMember = "MANAMHOC";
+            cboNamHoc.Text = NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC;
+            //cboNamHoc.Properties.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
+            //cboNamHoc.Properties.DisplayMember = "TENNAMHOC";
+            //cboNamHoc.Properties.ValueMember = "MANAMHOC";
         }
         private void load_cboHocKy()
         {
@@ -156,7 +157,8 @@ namespace NMCNPM_QLHS.GUI
         {
             if (cboNamHoc.Text != "")
             {
-                cboLop.Properties.DataSource = LOP_BUS.LayLopTheoNamHoc(cboNamHoc.EditValue.ToString());
+                cboLop.Properties.DataSource = LOP_BUS.LayLopTheoNamHoc(NAMHOC_BUS.LayNamHocHienTai().MANAMHOC);
+                //cboLop.Properties.DataSource = LOP_BUS.LayLopTheoNamHoc(cboNamHoc.EditValue.ToString());
                 cboLop.Properties.DisplayMember = "TENLOP";
                 cboLop.Properties.ValueMember = "MALOP";
                 cboLop.EditValue = null;
@@ -173,12 +175,14 @@ namespace NMCNPM_QLHS.GUI
 
         private void load_BangDiem()
         {
-            if (cboLop.Text != "" && cboMonHoc.Text != "" && cboHocKy.Text != "" && cboNamHoc.Text != "")
+            //if (cboLop.Text != "" && cboMonHoc.Text != "" && cboHocKy.Text != "" && cboNamHoc.Text != "")
+            if (cboLop.Text != "" && cboMonHoc.Text != "" && cboHocKy.Text != "")
             {
                 string maLop = cboLop.EditValue.ToString();
                 string maMonHoc = cboMonHoc.EditValue.ToString();
                 string maHocKy = cboHocKy.EditValue.ToString();
-                string maNamHoc = cboNamHoc.EditValue.ToString();
+                //string maNamHoc = cboNamHoc.EditValue.ToString();
+                string maNamHoc = NAMHOC_BUS.LayNamHocHienTai().MANAMHOC;
                 bindingSourceDiem.DataSource = HOCTAP_BUS.LayDiemMonHocTheoLop(maLop, maMonHoc, maHocKy, maNamHoc);
                 bindingNavigatorXemDiemItem.Enabled = true;
             }

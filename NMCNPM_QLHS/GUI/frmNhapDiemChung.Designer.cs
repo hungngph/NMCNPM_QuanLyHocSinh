@@ -38,7 +38,6 @@
             this.cboMonHoc = new DevExpress.XtraEditors.LookUpEdit();
             this.cboLop = new DevExpress.XtraEditors.LookUpEdit();
             this.cboHocKy = new DevExpress.XtraEditors.LookUpEdit();
-            this.cboNamHoc = new DevExpress.XtraEditors.LookUpEdit();
             this.btnHienThi = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -76,6 +75,7 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorXemDiemItem = new System.Windows.Forms.ToolStripButton();
+            this.cboNamHoc = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanelChucNang.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -85,7 +85,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cboMonHoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboLop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboHocKy.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboNamHoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlHocSinh)).BeginInit();
             this.groupControlHocSinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDiemControl)).BeginInit();
@@ -99,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.col_diemThi_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorDiem)).BeginInit();
             this.bindingNavigatorDiem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboNamHoc.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -163,7 +163,6 @@
             this.navigationPage2.Controls.Add(this.cboMonHoc);
             this.navigationPage2.Controls.Add(this.cboLop);
             this.navigationPage2.Controls.Add(this.cboHocKy);
-            this.navigationPage2.Controls.Add(this.cboNamHoc);
             this.navigationPage2.Controls.Add(this.btnHienThi);
             this.navigationPage2.Controls.Add(this.simpleButton3);
             this.navigationPage2.Controls.Add(this.labelControl5);
@@ -173,6 +172,7 @@
             this.navigationPage2.Controls.Add(this.labelControl7);
             this.navigationPage2.Controls.Add(this.simpleButton6);
             this.navigationPage2.Controls.Add(this.labelControl8);
+            this.navigationPage2.Controls.Add(this.cboNamHoc);
             this.navigationPage2.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Update_32px;
             this.navigationPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navigationPage2.Name = "navigationPage2";
@@ -219,20 +219,6 @@
             this.cboHocKy.Size = new System.Drawing.Size(117, 22);
             this.cboHocKy.TabIndex = 164;
             this.cboHocKy.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
-            // 
-            // cboNamHoc
-            // 
-            this.cboNamHoc.Location = new System.Drawing.Point(20, 50);
-            this.cboNamHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cboNamHoc.Name = "cboNamHoc";
-            this.cboNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboNamHoc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNAMHOC", "")});
-            this.cboNamHoc.Properties.NullText = "";
-            this.cboNamHoc.Size = new System.Drawing.Size(117, 22);
-            this.cboNamHoc.TabIndex = 163;
-            this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
             // 
             // btnHienThi
             // 
@@ -579,6 +565,19 @@
             this.bindingNavigatorXemDiemItem.Text = "Xem điểm";
             this.bindingNavigatorXemDiemItem.Click += new System.EventHandler(this.bindingNavigatorXemDiemItem_Click);
             // 
+            // cboNamHoc
+            // 
+            this.cboNamHoc.Location = new System.Drawing.Point(20, 50);
+            this.cboNamHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboNamHoc.Name = "cboNamHoc";
+            this.cboNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboNamHoc.Properties.PopupSizeable = true;
+            this.cboNamHoc.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboNamHoc.Size = new System.Drawing.Size(117, 22);
+            this.cboNamHoc.TabIndex = 163;
+            this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
+            // 
             // frmNhapDiemChung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -601,7 +600,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cboMonHoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboLop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboHocKy.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboNamHoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlHocSinh)).EndInit();
             this.groupControlHocSinh.ResumeLayout(false);
             this.groupControlHocSinh.PerformLayout();
@@ -617,6 +615,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorDiem)).EndInit();
             this.bindingNavigatorDiem.ResumeLayout(false);
             this.bindingNavigatorDiem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboNamHoc.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -668,6 +667,6 @@
         private DevExpress.XtraEditors.LookUpEdit cboMonHoc;
         private DevExpress.XtraEditors.LookUpEdit cboLop;
         private DevExpress.XtraEditors.LookUpEdit cboHocKy;
-        private DevExpress.XtraEditors.LookUpEdit cboNamHoc;
+        private DevExpress.XtraEditors.ComboBoxEdit cboNamHoc;
     }
 }

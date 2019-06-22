@@ -32,8 +32,8 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlHocKy = new DevExpress.XtraGrid.GridControl();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumnMaHocKy = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumnTenHocKy = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_maHocKy = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_tenHocKy = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnHeSo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -45,12 +45,14 @@
             this.BIXoa = new DevExpress.XtraBars.BarButtonItem();
             this.BILuuDanhSach = new DevExpress.XtraBars.BarButtonItem();
             this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
+            this.bindingSourceHocKy = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHocKy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHocKy)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -58,18 +60,22 @@
             this.groupControl1.Controls.Add(this.gridControlHocKy);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(563, 359);
+            this.groupControl1.Size = new System.Drawing.Size(657, 442);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách học kỳ";
             // 
             // gridControlHocKy
             // 
+            this.gridControlHocKy.DataSource = this.bindingSourceHocKy;
             this.gridControlHocKy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlHocKy.Location = new System.Drawing.Point(2, 20);
+            this.gridControlHocKy.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControlHocKy.Location = new System.Drawing.Point(2, 25);
             this.gridControlHocKy.MainView = this.gridView;
+            this.gridControlHocKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlHocKy.Name = "gridControlHocKy";
-            this.gridControlHocKy.Size = new System.Drawing.Size(559, 337);
+            this.gridControlHocKy.Size = new System.Drawing.Size(653, 415);
             this.gridControlHocKy.TabIndex = 3;
             this.gridControlHocKy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView,
@@ -78,36 +84,46 @@
             // gridView
             // 
             this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumnMaHocKy,
-            this.gridColumnTenHocKy,
+            this.col_maHocKy,
+            this.col_tenHocKy,
             this.gridColumnHeSo});
+            this.gridView.DetailHeight = 431;
             this.gridView.GridControl = this.gridControlHocKy;
             this.gridView.Name = "gridView";
             this.gridView.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumnMaHocKy
+            // col_maHocKy
             // 
-            this.gridColumnMaHocKy.Caption = "Mã học kỳ";
-            this.gridColumnMaHocKy.Name = "gridColumnMaHocKy";
-            this.gridColumnMaHocKy.Visible = true;
-            this.gridColumnMaHocKy.VisibleIndex = 0;
+            this.col_maHocKy.Caption = "Mã học kỳ";
+            this.col_maHocKy.FieldName = "MAHK";
+            this.col_maHocKy.MinWidth = 23;
+            this.col_maHocKy.Name = "col_maHocKy";
+            this.col_maHocKy.Visible = true;
+            this.col_maHocKy.VisibleIndex = 0;
+            this.col_maHocKy.Width = 201;
             // 
-            // gridColumnTenHocKy
+            // col_tenHocKy
             // 
-            this.gridColumnTenHocKy.Caption = "Tên học kỳ";
-            this.gridColumnTenHocKy.Name = "gridColumnTenHocKy";
-            this.gridColumnTenHocKy.Visible = true;
-            this.gridColumnTenHocKy.VisibleIndex = 1;
+            this.col_tenHocKy.Caption = "Tên học kỳ";
+            this.col_tenHocKy.FieldName = "TENHOCKY";
+            this.col_tenHocKy.MinWidth = 23;
+            this.col_tenHocKy.Name = "col_tenHocKy";
+            this.col_tenHocKy.Visible = true;
+            this.col_tenHocKy.VisibleIndex = 1;
+            this.col_tenHocKy.Width = 226;
             // 
             // gridColumnHeSo
             // 
             this.gridColumnHeSo.Caption = "Hệ số";
+            this.gridColumnHeSo.MinWidth = 23;
             this.gridColumnHeSo.Name = "gridColumnHeSo";
             this.gridColumnHeSo.Visible = true;
             this.gridColumnHeSo.VisibleIndex = 2;
+            this.gridColumnHeSo.Width = 1413;
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gridControlHocKy;
             this.gridView1.Name = "gridView1";
             // 
@@ -117,7 +133,8 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(563, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(657, 0);
             // 
             // barManager1
             // 
@@ -136,9 +153,10 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 359);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 442);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(563, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(657, 0);
             // 
             // barDockControlLeft
             // 
@@ -146,15 +164,17 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 359);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 442);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(563, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(657, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 359);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 442);
             // 
             // BIThemMoi
             // 
@@ -185,24 +205,31 @@
             // 
             this.xtraOpenFileDialog1.FileName = "xtraOpenFileDialog1";
             // 
+            // bindingSourceHocKy
+            // 
+            this.bindingSourceHocKy.DataSource = typeof(NMCNPM_QLHS.DAL.HOCKY);
+            // 
             // frmHocKy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 359);
+            this.ClientSize = new System.Drawing.Size(657, 442);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmHocKy";
             this.Text = "Học kỳ";
+            this.Load += new System.EventHandler(this.frmHocKy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHocKy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHocKy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,9 +248,10 @@
         private DevExpress.XtraEditors.XtraOpenFileDialog xtraOpenFileDialog1;
         private DevExpress.XtraGrid.GridControl gridControlHocKy;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaHocKy;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnTenHocKy;
+        private DevExpress.XtraGrid.Columns.GridColumn col_maHocKy;
+        private DevExpress.XtraGrid.Columns.GridColumn col_tenHocKy;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnHeSo;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.BindingSource bindingSourceHocKy;
     }
 }

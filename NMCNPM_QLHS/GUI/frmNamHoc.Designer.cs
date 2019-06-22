@@ -35,13 +35,16 @@
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanelChucNang = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.navThem = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtMaNam = new System.Windows.Forms.TextBox();
-            this.txtNam1 = new System.Windows.Forms.TextBox();
-            this.btnHoanTat = new System.Windows.Forms.Button();
             this.navPanelChucNang = new DevExpress.XtraBars.Navigation.NavigationPane();
+            this.navThem = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNam2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnHoanTat = new System.Windows.Forms.Button();
+            this.txtNam1 = new System.Windows.Forms.TextBox();
+            this.txtMaNam = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.BILuuDanhSach = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -63,29 +66,32 @@
             this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorNamHoc = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingSourceNamHoc = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControlNamHoc = new DevExpress.XtraGrid.GridControl();
-            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumnMaNamHoc = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumnTenNamHoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dgvNamHoc = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.col_maNamHoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_maNamHoc_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.col_tenNamHoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_tenNamHoc_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.txtNam2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanelChucNang.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
-            this.navThem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navPanelChucNang)).BeginInit();
             this.navPanelChucNang.SuspendLayout();
+            this.navThem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
-            this.bindingNavigator2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorNamHoc)).BeginInit();
+            this.bindingNavigatorNamHoc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceNamHoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlNamHoc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNamHoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_maNamHoc_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_tenNamHoc_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
@@ -131,18 +137,36 @@
             this.dockPanelChucNang.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanelChucNang.ID = new System.Guid("82d9e114-83dd-4036-84fe-2a0f6543e3ab");
             this.dockPanelChucNang.Location = new System.Drawing.Point(0, 0);
+            this.dockPanelChucNang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockPanelChucNang.Name = "dockPanelChucNang";
             this.dockPanelChucNang.OriginalSize = new System.Drawing.Size(288, 200);
-            this.dockPanelChucNang.Size = new System.Drawing.Size(288, 392);
+            this.dockPanelChucNang.Size = new System.Drawing.Size(288, 482);
             this.dockPanelChucNang.Text = "Chức năng";
             // 
             // dockPanel1_Container
             // 
             this.dockPanel1_Container.Controls.Add(this.navPanelChucNang);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(5, 25);
+            this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(279, 365);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(276, 452);
             this.dockPanel1_Container.TabIndex = 0;
+            // 
+            // navPanelChucNang
+            // 
+            this.navPanelChucNang.Controls.Add(this.navThem);
+            this.navPanelChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navPanelChucNang.Location = new System.Drawing.Point(0, 0);
+            this.navPanelChucNang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.navPanelChucNang.Name = "navPanelChucNang";
+            this.navPanelChucNang.PageProperties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.Image;
+            this.navPanelChucNang.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.navThem});
+            this.navPanelChucNang.RegularSize = new System.Drawing.Size(276, 452);
+            this.navPanelChucNang.SelectedPage = this.navThem;
+            this.navPanelChucNang.Size = new System.Drawing.Size(276, 452);
+            this.navPanelChucNang.TabIndex = 0;
+            this.navPanelChucNang.Text = "navigationPane1";
             // 
             // navThem
             // 
@@ -156,80 +180,100 @@
             this.navThem.Controls.Add(this.label2);
             this.navThem.Controls.Add(this.label6);
             this.navThem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
+            this.navThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navThem.Name = "navThem";
-            this.navThem.Size = new System.Drawing.Size(213, 305);
+            this.navThem.Size = new System.Drawing.Size(202, 382);
             // 
-            // label6
+            // label3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(11, 76);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 17);
-            this.label6.TabIndex = 117;
-            this.label6.Text = "Năm 1:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(113, 130);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(15, 20);
+            this.label3.TabIndex = 137;
+            this.label3.Text = "-";
             // 
-            // label2
+            // txtNam2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(11, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 17);
-            this.label2.TabIndex = 119;
-            this.label2.Text = "Mã năm:";
+            this.txtNam2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNam2.ForeColor = System.Drawing.Color.Black;
+            this.txtNam2.Location = new System.Drawing.Point(148, 127);
+            this.txtNam2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtNam2.Name = "txtNam2";
+            this.txtNam2.Size = new System.Drawing.Size(77, 26);
+            this.txtNam2.TabIndex = 136;
             // 
-            // txtMaNam
+            // label1
             // 
-            this.txtMaNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNam.ForeColor = System.Drawing.Color.Black;
-            this.txtMaNam.Location = new System.Drawing.Point(14, 39);
-            this.txtMaNam.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.txtMaNam.Name = "txtMaNam";
-            this.txtMaNam.Size = new System.Drawing.Size(180, 23);
-            this.txtMaNam.TabIndex = 120;
-            // 
-            // txtNam1
-            // 
-            this.txtNam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNam1.ForeColor = System.Drawing.Color.Black;
-            this.txtNam1.Location = new System.Drawing.Point(15, 103);
-            this.txtNam1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.txtNam1.Name = "txtNam1";
-            this.txtNam1.Size = new System.Drawing.Size(67, 23);
-            this.txtNam1.TabIndex = 121;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(143, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 20);
+            this.label1.TabIndex = 135;
+            this.label1.Text = "Năm 2:";
             // 
             // btnHoanTat
             // 
             this.btnHoanTat.BackColor = System.Drawing.Color.Green;
             this.btnHoanTat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoanTat.ForeColor = System.Drawing.Color.White;
-            this.btnHoanTat.Location = new System.Drawing.Point(59, 145);
+            this.btnHoanTat.Location = new System.Drawing.Point(69, 178);
             this.btnHoanTat.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnHoanTat.Name = "btnHoanTat";
-            this.btnHoanTat.Size = new System.Drawing.Size(88, 29);
+            this.btnHoanTat.Size = new System.Drawing.Size(103, 36);
             this.btnHoanTat.TabIndex = 134;
             this.btnHoanTat.Text = "Hoàn tất";
             this.btnHoanTat.UseVisualStyleBackColor = false;
             // 
-            // navPanelChucNang
+            // txtNam1
             // 
-            this.navPanelChucNang.Controls.Add(this.navThem);
-            this.navPanelChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navPanelChucNang.Location = new System.Drawing.Point(0, 0);
-            this.navPanelChucNang.Name = "navPanelChucNang";
-            this.navPanelChucNang.PageProperties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.Image;
-            this.navPanelChucNang.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.navThem});
-            this.navPanelChucNang.RegularSize = new System.Drawing.Size(279, 365);
-            this.navPanelChucNang.SelectedPage = this.navThem;
-            this.navPanelChucNang.Size = new System.Drawing.Size(279, 365);
-            this.navPanelChucNang.TabIndex = 0;
-            this.navPanelChucNang.Text = "navigationPane1";
+            this.txtNam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNam1.ForeColor = System.Drawing.Color.Black;
+            this.txtNam1.Location = new System.Drawing.Point(17, 127);
+            this.txtNam1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtNam1.Name = "txtNam1";
+            this.txtNam1.Size = new System.Drawing.Size(77, 26);
+            this.txtNam1.TabIndex = 121;
+            // 
+            // txtMaNam
+            // 
+            this.txtMaNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNam.ForeColor = System.Drawing.Color.Black;
+            this.txtMaNam.Location = new System.Drawing.Point(16, 48);
+            this.txtMaNam.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtMaNam.Name = "txtMaNam";
+            this.txtMaNam.Size = new System.Drawing.Size(209, 26);
+            this.txtMaNam.TabIndex = 120;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(13, 14);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.TabIndex = 119;
+            this.label2.Text = "Mã năm:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(13, 94);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 20);
+            this.label6.TabIndex = 117;
+            this.label6.Text = "Năm 1:";
             // 
             // BILuuDanhSach
             // 
@@ -243,9 +287,10 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 392);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 482);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(757, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(883, 0);
             // 
             // barManager1
             // 
@@ -264,7 +309,8 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(757, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(883, 0);
             // 
             // barDockControlLeft
             // 
@@ -272,15 +318,17 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 392);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 482);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(757, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(883, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 392);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 482);
             // 
             // xtraOpenFileDialog1
             // 
@@ -308,7 +356,7 @@
             this.btnLuu.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
             this.btnLuu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(55, 28);
+            this.btnLuu.Size = new System.Drawing.Size(61, 28);
             this.btnLuu.Text = "Lưu";
             // 
             // btnSua
@@ -316,7 +364,7 @@
             this.btnSua.Image = global::NMCNPM_QLHS.Properties.Resources.Edit_32px;
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(54, 28);
+            this.btnSua.Size = new System.Drawing.Size(62, 28);
             this.btnSua.Text = "Sửa";
             // 
             // toolStripSeparator3
@@ -375,13 +423,13 @@
             this.btnDelete.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.RightToLeftAutoMirrorImage = true;
-            this.btnDelete.Size = new System.Drawing.Size(55, 28);
+            this.btnDelete.Size = new System.Drawing.Size(63, 28);
             this.btnDelete.Text = "Xóa";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(35, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(45, 28);
             this.toolStripLabel1.Text = "of {0}";
             this.toolStripLabel1.ToolTipText = "Total number of items";
             // 
@@ -390,16 +438,17 @@
             this.btnThem.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
             this.btnThem.Name = "btnThem";
             this.btnThem.RightToLeftAutoMirrorImage = true;
-            this.btnThem.Size = new System.Drawing.Size(66, 28);
+            this.btnThem.Size = new System.Drawing.Size(74, 28);
             this.btnThem.Text = "Thêm";
             // 
-            // bindingNavigator2
+            // bindingNavigatorNamHoc
             // 
-            this.bindingNavigator2.AddNewItem = null;
-            this.bindingNavigator2.CountItem = this.toolStripLabel1;
-            this.bindingNavigator2.DeleteItem = this.btnDelete;
-            this.bindingNavigator2.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.bindingNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorNamHoc.AddNewItem = this.btnThem;
+            this.bindingNavigatorNamHoc.BindingSource = this.bindingSourceNamHoc;
+            this.bindingNavigatorNamHoc.CountItem = this.toolStripLabel1;
+            this.bindingNavigatorNamHoc.DeleteItem = this.btnDelete;
+            this.bindingNavigatorNamHoc.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorNamHoc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
             this.toolStripSeparator1,
@@ -413,138 +462,140 @@
             this.btnDelete,
             this.btnSua,
             this.btnLuu});
-            this.bindingNavigator2.Location = new System.Drawing.Point(2, 20);
-            this.bindingNavigator2.MoveFirstItem = this.toolStripButton1;
-            this.bindingNavigator2.MoveLastItem = this.toolStripButton4;
-            this.bindingNavigator2.MoveNextItem = this.toolStripButton3;
-            this.bindingNavigator2.MovePreviousItem = this.toolStripButton2;
-            this.bindingNavigator2.Name = "bindingNavigator2";
-            this.bindingNavigator2.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator2.Size = new System.Drawing.Size(465, 31);
-            this.bindingNavigator2.TabIndex = 2;
-            this.bindingNavigator2.Text = "bindingNavigator2";
+            this.bindingNavigatorNamHoc.Location = new System.Drawing.Point(2, 25);
+            this.bindingNavigatorNamHoc.MoveFirstItem = this.toolStripButton1;
+            this.bindingNavigatorNamHoc.MoveLastItem = this.toolStripButton4;
+            this.bindingNavigatorNamHoc.MoveNextItem = this.toolStripButton3;
+            this.bindingNavigatorNamHoc.MovePreviousItem = this.toolStripButton2;
+            this.bindingNavigatorNamHoc.Name = "bindingNavigatorNamHoc";
+            this.bindingNavigatorNamHoc.PositionItem = this.toolStripTextBox1;
+            this.bindingNavigatorNamHoc.Size = new System.Drawing.Size(591, 31);
+            this.bindingNavigatorNamHoc.TabIndex = 2;
+            this.bindingNavigatorNamHoc.Text = "bindingNavigator2";
+            // 
+            // bindingSourceNamHoc
+            // 
+            this.bindingSourceNamHoc.DataSource = typeof(NMCNPM_QLHS.DAL.NAMHOC);
             // 
             // toolStripTextBox1
             // 
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(58, 27);
             this.toolStripTextBox1.Text = "0";
             this.toolStripTextBox1.ToolTipText = "Current position";
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gridControlNamHoc;
             this.gridView1.Name = "gridView1";
             // 
             // gridControlNamHoc
             // 
+            this.gridControlNamHoc.DataSource = this.bindingSourceNamHoc;
             this.gridControlNamHoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlNamHoc.Location = new System.Drawing.Point(2, 51);
-            this.gridControlNamHoc.MainView = this.gridView;
+            this.gridControlNamHoc.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControlNamHoc.Location = new System.Drawing.Point(2, 56);
+            this.gridControlNamHoc.MainView = this.dgvNamHoc;
+            this.gridControlNamHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlNamHoc.Name = "gridControlNamHoc";
-            this.gridControlNamHoc.Size = new System.Drawing.Size(465, 339);
+            this.gridControlNamHoc.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.col_maNamHoc_edit,
+            this.col_tenNamHoc_edit});
+            this.gridControlNamHoc.Size = new System.Drawing.Size(591, 424);
             this.gridControlNamHoc.TabIndex = 3;
             this.gridControlNamHoc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView,
+            this.dgvNamHoc,
             this.gridView1});
             // 
-            // gridView
+            // dgvNamHoc
             // 
-            this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumnMaNamHoc,
-            this.gridColumnTenNamHoc});
-            this.gridView.GridControl = this.gridControlNamHoc;
-            this.gridView.Name = "gridView";
-            this.gridView.OptionsView.ShowGroupPanel = false;
+            this.dgvNamHoc.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.col_maNamHoc,
+            this.col_tenNamHoc});
+            this.dgvNamHoc.DetailHeight = 431;
+            this.dgvNamHoc.GridControl = this.gridControlNamHoc;
+            this.dgvNamHoc.Name = "dgvNamHoc";
+            this.dgvNamHoc.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumnMaNamHoc
+            // col_maNamHoc
             // 
-            this.gridColumnMaNamHoc.Caption = "Mã năm học";
-            this.gridColumnMaNamHoc.Name = "gridColumnMaNamHoc";
-            this.gridColumnMaNamHoc.Visible = true;
-            this.gridColumnMaNamHoc.VisibleIndex = 0;
+            this.col_maNamHoc.Caption = "Mã năm học";
+            this.col_maNamHoc.ColumnEdit = this.col_maNamHoc_edit;
+            this.col_maNamHoc.FieldName = "MANAMHOC";
+            this.col_maNamHoc.MinWidth = 23;
+            this.col_maNamHoc.Name = "col_maNamHoc";
+            this.col_maNamHoc.Visible = true;
+            this.col_maNamHoc.VisibleIndex = 0;
+            this.col_maNamHoc.Width = 101;
             // 
-            // gridColumnTenNamHoc
+            // col_maNamHoc_edit
             // 
-            this.gridColumnTenNamHoc.Caption = "Tên năm học";
-            this.gridColumnTenNamHoc.Name = "gridColumnTenNamHoc";
-            this.gridColumnTenNamHoc.Visible = true;
-            this.gridColumnTenNamHoc.VisibleIndex = 1;
+            this.col_maNamHoc_edit.AutoHeight = false;
+            this.col_maNamHoc_edit.Name = "col_maNamHoc_edit";
+            // 
+            // col_tenNamHoc
+            // 
+            this.col_tenNamHoc.Caption = "Tên năm học";
+            this.col_tenNamHoc.ColumnEdit = this.col_tenNamHoc_edit;
+            this.col_tenNamHoc.FieldName = "TENNAMHOC";
+            this.col_tenNamHoc.MinWidth = 23;
+            this.col_tenNamHoc.Name = "col_tenNamHoc";
+            this.col_tenNamHoc.Visible = true;
+            this.col_tenNamHoc.VisibleIndex = 1;
+            this.col_tenNamHoc.Width = 472;
+            // 
+            // col_tenNamHoc_edit
+            // 
+            this.col_tenNamHoc_edit.AutoHeight = false;
+            this.col_tenNamHoc_edit.Name = "col_tenNamHoc_edit";
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.gridControlNamHoc);
-            this.groupControl1.Controls.Add(this.bindingNavigator2);
+            this.groupControl1.Controls.Add(this.bindingNavigatorNamHoc);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(288, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(469, 392);
+            this.groupControl1.Size = new System.Drawing.Size(595, 482);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Danh sách năm học";
             // 
-            // txtNam2
-            // 
-            this.txtNam2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNam2.ForeColor = System.Drawing.Color.Black;
-            this.txtNam2.Location = new System.Drawing.Point(127, 103);
-            this.txtNam2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.txtNam2.Name = "txtNam2";
-            this.txtNam2.Size = new System.Drawing.Size(67, 23);
-            this.txtNam2.TabIndex = 136;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(123, 76);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 17);
-            this.label1.TabIndex = 135;
-            this.label1.Text = "Năm 2:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(97, 106);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 17);
-            this.label3.TabIndex = 137;
-            this.label3.Text = "-";
-            // 
             // frmNamHoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 392);
+            this.ClientSize = new System.Drawing.Size(883, 482);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.dockPanelChucNang);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmNamHoc";
             this.Text = "Năm học";
+            this.Load += new System.EventHandler(this.frmNamHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanelChucNang.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
-            this.navThem.ResumeLayout(false);
-            this.navThem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navPanelChucNang)).EndInit();
             this.navPanelChucNang.ResumeLayout(false);
+            this.navThem.ResumeLayout(false);
+            this.navThem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
-            this.bindingNavigator2.ResumeLayout(false);
-            this.bindingNavigator2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorNamHoc)).EndInit();
+            this.bindingNavigatorNamHoc.ResumeLayout(false);
+            this.bindingNavigatorNamHoc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceNamHoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlNamHoc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNamHoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_maNamHoc_edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_tenNamHoc_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -568,11 +619,11 @@
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraGrid.GridControl gridControlNamHoc;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaNamHoc;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnTenNamHoc;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvNamHoc;
+        private DevExpress.XtraGrid.Columns.GridColumn col_maNamHoc;
+        private DevExpress.XtraGrid.Columns.GridColumn col_tenNamHoc;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.BindingNavigator bindingNavigator2;
+        private System.Windows.Forms.BindingNavigator bindingNavigatorNamHoc;
         private System.Windows.Forms.ToolStripButton btnThem;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton btnDelete;
@@ -598,5 +649,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNam2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource bindingSourceNamHoc;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_maNamHoc_edit;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_tenNamHoc_edit;
     }
 }
