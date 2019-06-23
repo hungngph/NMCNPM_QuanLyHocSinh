@@ -201,6 +201,12 @@
     <Compile Include="GUI\frmrpDanhSachHocSinh.Designer.cs">
       <DependentUpon>frmrpDanhSachHocSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmrpDanhSachLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmrpDanhSachLop.Designer.cs">
+      <DependentUpon>frmrpDanhSachLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmrpTongKetMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmrpDanhSachHocSinh.resx">
       <DependentUpon>frmrpDanhSachHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmrpDanhSachLop.resx">
+      <DependentUpon>frmrpDanhSachLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmrpTongKetMon.resx">
       <DependentUpon>frmrpTongKetMon.cs</DependentUpon>
