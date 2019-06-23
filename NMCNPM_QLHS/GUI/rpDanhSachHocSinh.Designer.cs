@@ -208,7 +208,7 @@
             this.xrLabel1.SizeF = new System.Drawing.SizeF(100F, 23F);
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.Text = "xrLabel1";
-            this.xrLabel1.TextFormatString = "{0:#### - ####}";
+            this.xrLabel1.TextFormatString = "{0}";
             // 
             // xrRichText3
             // 
