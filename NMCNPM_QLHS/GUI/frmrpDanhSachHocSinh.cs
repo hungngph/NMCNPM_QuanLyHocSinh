@@ -76,7 +76,6 @@ namespace NMCNPM_QLHS.GUI
         private void frmrpDanhSachHocSinh_Load(object sender, EventArgs e)
         {
             load_cboNamHoc();
-            NgayLap.EditValue = DateTime.Today;
         }
     }
 }
