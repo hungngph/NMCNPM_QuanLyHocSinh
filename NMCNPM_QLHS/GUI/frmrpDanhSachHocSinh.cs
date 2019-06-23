@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using NMCNPM_QLHS.BUS;
+using DevExpress.XtraReports.UI;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -21,10 +22,13 @@ namespace NMCNPM_QLHS.GUI
 
         public void ReportDSHS(string tenNamHoc, string tenLop, string maLop, DateTime ngayLap)
         {
-
-            rpDanhSachHocSinh rp = new rpDanhSachHocSinh(tenNamHoc, tenLop, maLop, ngayLap);
-            documentViewer1.DocumentSource = rp;
-            rp.CreateDocument();
+            //rpDanhSachHocSinh rp = new rpDanhSachHocSinh(tenNamHoc, tenLop, maLop, ngayLap);
+            ////documentViewer1.DocumentSource = rp;
+            //rp.CreateDocument();
+            //using (ReportPrintTool printTool = new ReportPrintTool(rp))
+            //{
+            //    printTool.ShowPreviewDialog();
+            //}
         }
 
         private void btnDongY_Click(object sender, EventArgs e)
@@ -34,6 +38,14 @@ namespace NMCNPM_QLHS.GUI
             string maLop = cboLop.EditValue.ToString();
             DateTime ngayLap = DateTime.Parse(NgayLap.EditValue.ToString());
             ReportDSHS(tenNamHoc, tenLop, maLop, ngayLap);
+
+            rpDanhSachHocSinh rp = new rpDanhSachHocSinh(tenNamHoc, tenLop, maLop, ngayLap);
+            //documentViewer1.DocumentSource = rp;
+            rp.CreateDocument();
+            using (ReportPrintTool printTool = new ReportPrintTool(rp))
+            {
+                printTool.ShowPreviewDialog();
+            }
         }
 
         private void load_cboNamHoc()
@@ -64,6 +76,7 @@ namespace NMCNPM_QLHS.GUI
         private void frmrpDanhSachHocSinh_Load(object sender, EventArgs e)
         {
             load_cboNamHoc();
+            NgayLap.EditValue = DateTime.Today;
         }
     }
 }

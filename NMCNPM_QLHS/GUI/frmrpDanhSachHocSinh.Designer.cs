@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmrpDanhSachHocSinh));
-            this.documentViewerBarManager1 = new DevExpress.XtraPrinting.Preview.DocumentViewerBarManager();
+            this.documentViewerBarManager1 = new DevExpress.XtraPrinting.Preview.DocumentViewerBarManager(this.components);
             this.previewBar1 = new DevExpress.XtraPrinting.Preview.PreviewBar();
             this.bbiDocumentMap = new DevExpress.XtraPrinting.Preview.PrintPreviewBarItem();
             this.bbiParameters = new DevExpress.XtraPrinting.Preview.PrintPreviewBarItem();
@@ -248,6 +249,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.bbiSendFile),
             new DevExpress.XtraBars.LinkPersistInfo(this.bbiClosePreview, true)});
             this.previewBar1.Text = "Toolbar";
+            this.previewBar1.Visible = false;
             // 
             // bbiDocumentMap
             // 
@@ -535,11 +537,12 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.progressBarEditItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.printPreviewBarItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.printPreviewStaticItem2, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.zoomTrackBarEditItem1)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.zoomTrackBarEditItem1, true)});
             this.previewBar2.OptionsBar.AllowQuickCustomization = false;
             this.previewBar2.OptionsBar.DrawDragBorder = false;
             this.previewBar2.OptionsBar.UseWholeRow = true;
             this.previewBar2.Text = "Status Bar";
+            this.previewBar2.Visible = false;
             // 
             // printPreviewStaticItem1
             // 
@@ -617,6 +620,7 @@
             this.previewBar3.OptionsBar.MultiLine = true;
             this.previewBar3.OptionsBar.UseWholeRow = true;
             this.previewBar3.Text = "Main Menu";
+            this.previewBar3.Visible = false;
             // 
             // miFile
             // 
@@ -936,7 +940,7 @@
             // 
             // cboLop
             // 
-            this.cboLop.Location = new System.Drawing.Point(358, 12);
+            this.cboLop.Location = new System.Drawing.Point(350, 12);
             this.cboLop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboLop.MenuManager = this.documentViewerBarManager1;
             this.cboLop.Name = "cboLop";
@@ -945,7 +949,7 @@
             this.cboLop.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENLOP", "")});
             this.cboLop.Properties.NullText = "";
-            this.cboLop.Size = new System.Drawing.Size(178, 22);
+            this.cboLop.Size = new System.Drawing.Size(186, 22);
             this.cboLop.StyleController = this.layoutControl1;
             this.cboLop.TabIndex = 16;
             // 
@@ -996,7 +1000,7 @@
             this.cboNamHoc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNAMHOC", "")});
             this.cboNamHoc.Properties.NullText = "";
-            this.cboNamHoc.Size = new System.Drawing.Size(216, 22);
+            this.cboNamHoc.Size = new System.Drawing.Size(208, 22);
             this.cboNamHoc.StyleController = this.layoutControl1;
             this.cboNamHoc.TabIndex = 4;
             this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
@@ -1038,7 +1042,7 @@
             this.layoutControlItem1.Control = this.cboNamHoc;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(283, 40);
+            this.layoutControlItem1.Size = new System.Drawing.Size(275, 40);
             this.layoutControlItem1.Text = "Năm học:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(60, 17);
             // 
@@ -1054,16 +1058,15 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.cboLop;
-            this.layoutControlItem5.Location = new System.Drawing.Point(283, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(275, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(245, 40);
+            this.layoutControlItem5.Size = new System.Drawing.Size(253, 40);
             this.layoutControlItem5.Text = "Lớp:";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 17);
             // 
             // documentViewer1
             // 
             this.documentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.documentViewer1.DocumentSource = typeof(NMCNPM_QLHS.GUI.rpDanhSachHocSinh);
             this.documentViewer1.IsMetric = true;
             this.documentViewer1.Location = new System.Drawing.Point(0, 126);
             this.documentViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

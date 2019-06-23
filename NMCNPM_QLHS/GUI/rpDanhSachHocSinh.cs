@@ -12,6 +12,7 @@ namespace NMCNPM_QLHS.GUI
         public rpDanhSachHocSinh()
         {
             InitializeComponent();
+            bindingSourceDiemTongKet.DataSource = HOCTAP_BUS.LayDiemHocSinhTheoLop(pLop.Value.ToString());
         }
 
         public void load_rpDanhSachHocSinh(string tenNamHoc, string tenLop, string maLop, DateTime ngayLap)
@@ -34,6 +35,5 @@ namespace NMCNPM_QLHS.GUI
             pNgayLap.Value = ngayLap;
             bindingSourceDiemTongKet.DataSource = HOCTAP_BUS.LayDiemHocSinhTheoLop(maLop);
         }
-
     }
 }
