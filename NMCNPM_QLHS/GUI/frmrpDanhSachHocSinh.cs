@@ -23,7 +23,6 @@ namespace NMCNPM_QLHS.GUI
         {
 
             rpDanhSachHocSinh rp = new rpDanhSachHocSinh(tenNamHoc, tenLop, maLop, ngayLap);
-            documentViewer1.DocumentSource = rp;
             rp.CreateDocument();
         }
 
@@ -32,7 +31,7 @@ namespace NMCNPM_QLHS.GUI
             string tenNamHoc = cboNamHoc.Text;
             string tenLop = cboLop.Text;
             string maLop = cboLop.EditValue.ToString();
-            DateTime ngayLap = DateTime.Parse(NgayLap.EditValue.ToString());
+            DateTime ngayLap = DateTime.Now;
             ReportDSHS(tenNamHoc, tenLop, maLop, ngayLap);
         }
 
