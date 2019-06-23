@@ -268,7 +268,44 @@ namespace NMCNPM_QLHS.GUI
                     this.btnLuu_Click(sender, e);
             }
         }
+        private void btnThemNam_Click(object sender, EventArgs e)
+        {
+            var frm = new frmNamHoc();
+            if (Application.OpenForms[frm.Name] == null)
+            {
+                frm.Show();
+            }
+            else
+            {
+                Application.OpenForms[frm.Name].Focus();
+            }
+        }
 
+        private void btnThemKhoi_Click(object sender, EventArgs e)
+        {
+            var frm = new frmKhoilop();
+            if (Application.OpenForms[frm.Name] == null)
+            {
+                frm.Show();
+            }
+            else
+            {
+                Application.OpenForms[frm.Name].Focus();
+            }
+        }
+
+        private void btnThemLop_Click(object sender, EventArgs e)
+        {
+            var frm = new frmLop();
+            if (Application.OpenForms[frm.Name] == null)
+            {
+                frm.Show();
+            }
+            else
+            {
+                Application.OpenForms[frm.Name].Focus();
+            }
+        }
         #endregion -Form-
 
         #region -ComBoBox_editValueChanged-
@@ -394,6 +431,7 @@ namespace NMCNPM_QLHS.GUI
         #endregion -Button_Click-
 
         #endregion -Events-
+
 
     }
 }

@@ -507,8 +507,15 @@ namespace NMCNPM_QLHS.GUI
 
         private void load_menuQuyDinh(string s)
         {
-            frmQuyDinh frm = new frmQuyDinh(s);
-            frm.Show();
+            var frm = new frmQuyDinh(s);
+            if (Application.OpenForms[frm.Name] == null)
+            {
+                frm.Show();
+            }
+            else
+            {
+                Application.OpenForms[frm.Name].Focus();
+            }
         }
 
         #endregion
