@@ -100,6 +100,10 @@ namespace NMCNPM_QLHS.DAL
                     {
                         hs.MAHS = x.MAHS;
                         hs.HOTEN = x.HOTEN;
+                        hs.GIOITINH = x.GIOITINH;
+                        hs.NGAYSINH = x.NGAYSINH;
+                        hs.DIACHI = x.DIACHI;
+                        hs.EMAIL = x.EMAIL;
                         lst.Add(hs);
                     }
                 }

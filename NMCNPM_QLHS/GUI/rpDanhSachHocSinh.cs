@@ -16,22 +16,14 @@ namespace NMCNPM_QLHS.GUI
                 p.Visible = false;
         }
 
-        public void load_rpDanhSachHocSinh(string tenNamHoc, string tenLop, string maLop, DateTime ngayLap)
-        {
-            pNamHoc.Value = tenNamHoc;
-            pLop.Value = tenLop;
-            pNgayLap.Value = ngayLap;
-            bindingSourceDiemTongKet.DataSource = HOCTAP_BUS.LayDiemHocSinhTheoLop(maLop);
-        }
-
-        public rpDanhSachHocSinh(string tenNamHoc, string tenLop, string maLop, DateTime ngayLap)
+        public rpDanhSachHocSinh(string tenNamHoc, string tenLop, string maLop)
         {
             InitializeComponent();
             foreach (DevExpress.XtraReports.Parameters.Parameter p in Parameters)
                 p.Visible = false;
             pNamHoc.Value = tenNamHoc;
             pLop.Value = tenLop;
-            pNgayLap.Value = ngayLap.ToShortDateString();
+            pNgayLap.Value = DateTime.Today;
             bindingSourceDiemTongKet.DataSource = HOCTAP_BUS.LayDiemHocSinhTheoLop(maLop);
         }
 

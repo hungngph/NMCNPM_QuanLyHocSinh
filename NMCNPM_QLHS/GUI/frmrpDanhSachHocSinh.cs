@@ -20,31 +20,6 @@ namespace NMCNPM_QLHS.GUI
             InitializeComponent();
         }
 
-        public void ReportDSHS(string tenNamHoc, string tenLop, string maLop, DateTime ngayLap)
-        {
-
-            //rpDanhSachHocSinh rp = new rpDanhSachHocSinh(tenNamHoc, tenLop, maLop, ngayLap);
-            //rp.CreateDocument();
-        }
-
-        private void btnDongY_Click(object sender, EventArgs e)
-        {
-            
-            string tenNamHoc = cboNamHoc.Text;
-            string tenLop = cboLop.Text;
-            string maLop = cboLop.EditValue.ToString();
-            DateTime ngayLap = DateTime.Now;
-            ReportDSHS(tenNamHoc, tenLop, maLop, ngayLap);
-
-            rpDanhSachHocSinh rp = new rpDanhSachHocSinh(tenNamHoc, tenLop, maLop, ngayLap);
-            //documentViewer1.DocumentSource = rp;
-            rp.CreateDocument();
-            using (ReportPrintTool printTool = new ReportPrintTool(rp))
-            {
-                printTool.ShowPreviewDialog();
-            }
-        }
-
         private void load_cboNamHoc()
         {
             cboNamHoc.Properties.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
@@ -73,6 +48,29 @@ namespace NMCNPM_QLHS.GUI
         private void frmrpDanhSachHocSinh_Load(object sender, EventArgs e)
         {
             load_cboNamHoc();
+        }
+
+        private void cboLop_EditValueChanged(object sender, EventArgs e)
+        {
+            if (cboLop.Text != null)
+                bindingSourceDiemTongKet.DataSource = HOCTAP_BUS.LayDiemHocSinhTheoLop(cboLop.EditValue.ToString());
+            else
+                bindingSourceDiemTongKet.DataSource = null;
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            string tenNamHoc = cboNamHoc.Text;
+            string tenLop = cboLop.Text;
+            string maLop = cboLop.EditValue.ToString();
+
+            rpDanhSachHocSinh rp = new rpDanhSachHocSinh(tenNamHoc, tenLop, maLop);
+            //documentViewer1.DocumentSource = rp;
+            rp.CreateDocument();
+            using (ReportPrintTool printTool = new ReportPrintTool(rp))
+            {
+                printTool.ShowPreviewDialog();
+            }
         }
     }
 }
