@@ -9,13 +9,30 @@ namespace NMCNPM_QLHS.GUI
 {
     public partial class rpDanhSachHocSinh : DevExpress.XtraReports.UI.XtraReport
     {
-        public rpDanhSachHocSinh(string namhoc)
+        public rpDanhSachHocSinh()
+        {
+            InitializeComponent();
+        }
+
+        public void load_rpDanhSachHocSinh(string tenNamHoc, string tenLop, string maLop, DateTime ngayLap)
+        {
+            foreach (DevExpress.XtraReports.Parameters.Parameter p in Parameters)
+                p.Visible = false;
+            pNamHoc.Value = tenNamHoc;
+            pLop.Value = tenLop;
+            pNgayLap.Value = ngayLap;
+            bindingSourceDiemTongKet.DataSource = HOCTAP_BUS.LayDiemHocSinhTheoLop(maLop);
+        }
+
+        public rpDanhSachHocSinh(string tenNamHoc, string tenLop, string maLop, DateTime ngayLap)
         {
             InitializeComponent();
             foreach (DevExpress.XtraReports.Parameters.Parameter p in Parameters)
                 p.Visible = false;
-            pNamHoc.Value = namhoc;
-            bindingSource1.DataSource = HOCSINH_BUS.LayTatCaHocSinh();
+            pNamHoc.Value = tenNamHoc;
+            pLop.Value = tenLop;
+            pNgayLap.Value = ngayLap;
+            bindingSourceDiemTongKet.DataSource = HOCTAP_BUS.LayDiemHocSinhTheoLop(maLop);
         }
 
     }

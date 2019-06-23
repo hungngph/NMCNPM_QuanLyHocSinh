@@ -10,17 +10,18 @@ namespace NMCNPM_QLHS.DAL
     class HOCTAP_DAL
     {
         // Lấy điểm học sinh theo lớp
-        public static DataTable LayDiemHocSinhTheoLop(string tenLop, string maNamHoc)
+        public static DataTable LayDiemHocSinhTheoLop(string maLop)
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("STT", typeof(int));
             dt.Columns.Add("MAHS", typeof(string));
             dt.Columns.Add("HOTEN", typeof(string));
-            dt.Columns.Add("DIEMTBHKI", typeof(float));
-            dt.Columns.Add("DIEMTBHKII", typeof(float));
+            dt.Columns.Add("DIEMTBHK1", typeof(float));
+            dt.Columns.Add("DIEMTBHK2", typeof(float));
+            dt.Columns.Add("DIEMCANAM", typeof(float));
 
             SQL_QLHSDataContext db = new SQL_QLHSDataContext();
-            var lst = db.sp_LayDiemHocSinhTheoLop(tenLop);
+            var lst = db.sp_LayDiemHocSinhTheoLop(maLop);
             foreach (var i in lst)
             {
                 DataRow r = dt.NewRow();
@@ -29,9 +30,11 @@ namespace NMCNPM_QLHS.DAL
                 if (i.HOTEN != null)
                     r["HOTEN"] = i.HOTEN;
                 if (i.DIEMTBHK1 != null)
-                    r["DIEMTBHK1"] = i.DIEMTBHK1;
+                    r["DIEMTBHK1"] = i.DIEMTBHK1.Value;
                 if (i.DIEMTBHK2 != null)
-                    r["DIEMTBHK2"] = i.DIEMTBHK1;
+                    r["DIEMTBHK2"] = i.DIEMTBHK2.Value;
+                if (i.DIEMCANAM != null)
+                    r["DIEMCANAM"] = i.DIEMCANAM.Value;
                 dt.Rows.Add(r);
             }
             if (dt.Rows.Count == 0)
