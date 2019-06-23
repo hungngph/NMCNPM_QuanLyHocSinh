@@ -12,9 +12,9 @@ namespace NMCNPM_QLHS.BUS
     class HOCTAP_BUS
     {
         // Lấy điểm học sinh theo lớp
-        public static DataTable LayDiemHocSinhTheoLop(string tenLop, string maNamHoc)
+        public static DataTable LayDiemHocSinhTheoLop(string maLop)
         {
-            return HOCTAP_DAL.LayDiemHocSinhTheoLop(tenLop, maNamHoc);
+            return HOCTAP_DAL.LayDiemHocSinhTheoLop(maLop);
         }
 
         // Lấy điểm chi tiết học sinh

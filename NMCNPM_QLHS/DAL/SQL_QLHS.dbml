@@ -159,15 +159,6 @@
       <Column Name="DIEMTBHK" Type="System.Single" DbType="Real" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.sp_LayDiemHocSinhTheoLop" Method="sp_LayDiemHocSinhTheoLop">
-    <Parameter Name="malop" Type="System.String" DbType="Char(5)" />
-    <ElementType Name="sp_LayDiemHocSinhTheoLopResult">
-      <Column Name="MAHS" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
-      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="DIEMTBHK1" Type="System.Single" DbType="Real" CanBeNull="true" />
-      <Column Name="DIEMTBHK2" Type="System.Single" DbType="Real" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.sp_LayDiemMonHocTheoLop" Method="sp_LayDiemMonHocTheoLop">
     <Parameter Name="malop" Type="System.String" DbType="Char(5)" />
     <Parameter Name="mahocky" Type="System.String" DbType="Char(4)" />
@@ -332,6 +323,16 @@
       <Column Name="TENNAMHOC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="NAM1" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NAM2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_LayDiemHocSinhTheoLop" Method="sp_LayDiemHocSinhTheoLop">
+    <Parameter Name="malop" Type="System.String" DbType="Char(5)" />
+    <ElementType Name="sp_LayDiemHocSinhTheoLopResult">
+      <Column Name="MAHS" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIEMTBHK1" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DIEMTBHK2" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DIEMCANAM" Type="System.Single" DbType="Real" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>
