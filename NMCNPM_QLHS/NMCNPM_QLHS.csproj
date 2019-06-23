@@ -207,6 +207,12 @@
     <Compile Include="GUI\frmrpDanhSachLop.Designer.cs">
       <DependentUpon>frmrpDanhSachLop.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmrpHocKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmrpHocKy.Designer.cs">
+      <DependentUpon>frmrpHocKy.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmrpTongKetMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmrpDanhSachLop.resx">
       <DependentUpon>frmrpDanhSachLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmrpHocKy.resx">
+      <DependentUpon>frmrpHocKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmrpTongKetMon.resx">
       <DependentUpon>frmrpTongKetMon.cs</DependentUpon>
