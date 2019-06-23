@@ -37,6 +37,7 @@
     <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Dialogs.v18.2.Core, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -212,6 +213,12 @@
     <Compile Include="GUI\frmTraCuuHocSinh.Designer.cs">
       <DependentUpon>frmTraCuuHocSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmXemDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmXemDiem.Designer.cs">
+      <DependentUpon>frmXemDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\rpDanhSachHocSinh.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -273,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTraCuuHocSinh.resx">
       <DependentUpon>frmTraCuuHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmXemDiem.resx">
+      <DependentUpon>frmXemDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\rpDanhSachHocSinh.resx">
       <DependentUpon>rpDanhSachHocSinh.cs</DependentUpon>

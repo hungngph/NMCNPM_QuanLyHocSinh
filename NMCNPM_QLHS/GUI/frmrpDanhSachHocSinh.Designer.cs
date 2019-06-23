@@ -587,6 +587,7 @@
             this.zoomTrackBarEditItem1.Edit = this.repositoryItemZoomTrackBar1;
             this.zoomTrackBarEditItem1.EditValue = 90;
             this.zoomTrackBarEditItem1.EditWidth = 140;
+            this.zoomTrackBarEditItem1.Enabled = false;
             this.zoomTrackBarEditItem1.Id = 4;
             this.zoomTrackBarEditItem1.Name = "zoomTrackBarEditItem1";
             this.zoomTrackBarEditItem1.Range = new int[] {
