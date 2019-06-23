@@ -49,12 +49,12 @@
             this.colMaHS1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colHoTen1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnChuyen = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.lstvDSLop = new System.Windows.Forms.ListView();
             this.colMaHS2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colHoTen2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnChuyen = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboHocKy.Properties)).BeginInit();
@@ -98,7 +98,7 @@
             // 
             // cboHocKy
             // 
-            this.cboHocKy.Location = new System.Drawing.Point(573, 62);
+            this.cboHocKy.Location = new System.Drawing.Point(573, 48);
             this.cboHocKy.Name = "cboHocKy";
             this.cboHocKy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -112,7 +112,7 @@
             // 
             // btnDanhSach
             // 
-            this.btnDanhSach.Location = new System.Drawing.Point(814, 38);
+            this.btnDanhSach.Location = new System.Drawing.Point(814, 24);
             this.btnDanhSach.Name = "btnDanhSach";
             this.btnDanhSach.Size = new System.Drawing.Size(114, 22);
             this.btnDanhSach.StyleController = this.layoutControl1;
@@ -122,7 +122,7 @@
             // 
             // cboLop
             // 
-            this.cboLop.Location = new System.Drawing.Point(573, 38);
+            this.cboLop.Location = new System.Drawing.Point(573, 24);
             this.cboLop.Name = "cboLop";
             this.cboLop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -136,7 +136,7 @@
             // 
             // cboKhoiLop
             // 
-            this.cboKhoiLop.Location = new System.Drawing.Point(315, 38);
+            this.cboKhoiLop.Location = new System.Drawing.Point(315, 24);
             this.cboKhoiLop.Name = "cboKhoiLop";
             this.cboKhoiLop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -150,7 +150,7 @@
             // 
             // cboNamHoc
             // 
-            this.cboNamHoc.Location = new System.Drawing.Point(70, 38);
+            this.cboNamHoc.Location = new System.Drawing.Point(70, 24);
             this.cboNamHoc.Name = "cboNamHoc";
             this.cboNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -302,24 +302,6 @@
             this.panel1.Size = new System.Drawing.Size(80, 366);
             this.panel1.TabIndex = 0;
             // 
-            // btnLuu
-            // 
-            this.btnLuu.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
-            this.btnLuu.Location = new System.Drawing.Point(20, 207);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(42, 44);
-            this.btnLuu.TabIndex = 1;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnChuyen
-            // 
-            this.btnChuyen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChuyen.ImageOptions.Image")));
-            this.btnChuyen.Location = new System.Drawing.Point(20, 124);
-            this.btnChuyen.Name = "btnChuyen";
-            this.btnChuyen.Size = new System.Drawing.Size(42, 44);
-            this.btnChuyen.TabIndex = 0;
-            this.btnChuyen.Click += new System.EventHandler(this.btnChuyen_Click);
-            // 
             // groupControl3
             // 
             this.groupControl3.Controls.Add(this.lstvDSLop);
@@ -353,6 +335,24 @@
             // 
             this.colHoTen2.Text = "Họ tên";
             this.colHoTen2.Width = 330;
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
+            this.btnLuu.Location = new System.Drawing.Point(20, 207);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(42, 44);
+            this.btnLuu.TabIndex = 1;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnChuyen
+            // 
+            this.btnChuyen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChuyen.ImageOptions.Image")));
+            this.btnChuyen.Location = new System.Drawing.Point(20, 124);
+            this.btnChuyen.Name = "btnChuyen";
+            this.btnChuyen.Size = new System.Drawing.Size(42, 44);
+            this.btnChuyen.TabIndex = 0;
+            this.btnChuyen.Click += new System.EventHandler(this.btnChuyen_Click);
             // 
             // frmPhanLop
             // 
