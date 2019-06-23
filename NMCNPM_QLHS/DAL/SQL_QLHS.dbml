@@ -1,11 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLHS" Class="SQL_QLHSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PHBLNHE\SQLEXPRESS;Initial Catalog=QLHS;Integrated Security=True" SettingsObjectName="NMCNPM_QLHS.Properties.Settings" SettingsPropertyName="QLHSConnectionString1" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.THAMSO" Member="THAMSOs">
-    <Type Name="THAMSO">
-      <Column Name="TENTHAMSO" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="GIATRI" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
+  <Connection Mode="AppSettings" ConnectionString="Data Source=VIETHOANG2603;Initial Catalog=QLHS;Integrated Security=True" SettingsObjectName="NMCNPM_QLHS.Properties.Settings" SettingsPropertyName="QLHSConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BANGDIEMMON" Member="BANGDIEMMONs">
     <Type Name="BANGDIEMMON">
       <Column Name="MABANGDIEMMON" Type="System.String" DbType="Char(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -17,14 +11,10 @@
       <Association Name="QUATRINHHOC_BANGDIEMMON" Member="QUATRINHHOC" ThisKey="MAQTHOC" OtherKey="MAQTHOC" Type="QUATRINHHOC" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.BAOCAOTONGKETHK" Member="BAOCAOTONGKETHKs">
-    <Type Name="BAOCAOTONGKETHK">
-      <Column Name="MAHK" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MALOP" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="SOLUONGDAT" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TYLE" Type="System.Single" DbType="Real" CanBeNull="true" />
-      <Association Name="HOCKY_BAOCAOTONGKETHK" Member="HOCKY" ThisKey="MAHK" OtherKey="MAHK" Type="HOCKY" IsForeignKey="true" />
-      <Association Name="LOP_BAOCAOTONGKETHK" Member="LOP" ThisKey="MALOP" OtherKey="MALOP" Type="LOP" IsForeignKey="true" />
+  <Table Name="dbo.THAMSO" Member="THAMSOs">
+    <Type Name="THAMSO">
+      <Column Name="TENTHAMSO" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GIATRI" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.BAOCAOTONGKETMON" Member="BAOCAOTONGKETMONs">
@@ -37,10 +27,22 @@
       <Association Name="MONHOC_BAOCAOTONGKETMON" Member="MONHOC" ThisKey="MAMONHOC" OtherKey="MAMONHOC" Type="MONHOC" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.BAOCAOTONGKETHK" Member="BAOCAOTONGKETHKs">
+    <Type Name="BAOCAOTONGKETHK">
+      <Column Name="MAHK" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MALOP" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SISO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SOLUONGDAT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TYLE" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Association Name="HOCKY_BAOCAOTONGKETHK" Member="HOCKY" ThisKey="MAHK" OtherKey="MAHK" Type="HOCKY" IsForeignKey="true" />
+      <Association Name="LOP_BAOCAOTONGKETHK" Member="LOP" ThisKey="MALOP" OtherKey="MALOP" Type="LOP" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.CT_BCTKMON" Member="CT_BCTKMONs">
     <Type Name="CT_BCTKMON">
       <Column Name="MABCTKMON" Type="System.String" DbType="Char(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MALOP" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SISO" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SOLUONGDAT" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TYLE" Type="System.Single" DbType="Real" CanBeNull="true" />
       <Association Name="BAOCAOTONGKETMON_CT_BCTKMON" Member="BAOCAOTONGKETMON" ThisKey="MABCTKMON" OtherKey="MABCTKMON" Type="BAOCAOTONGKETMON" IsForeignKey="true" />
@@ -60,8 +62,8 @@
     <Type Name="HOCKY">
       <Column Name="MAHK" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TENHOCKY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="HOCKY_BAOCAOTONGKETHK" Member="BAOCAOTONGKETHKs" ThisKey="MAHK" OtherKey="MAHK" Type="BAOCAOTONGKETHK" />
       <Association Name="HOCKY_BAOCAOTONGKETMON" Member="BAOCAOTONGKETMONs" ThisKey="MAHK" OtherKey="MAHOCKY" Type="BAOCAOTONGKETMON" />
+      <Association Name="HOCKY_BAOCAOTONGKETHK" Member="BAOCAOTONGKETHKs" ThisKey="MAHK" OtherKey="MAHK" Type="BAOCAOTONGKETHK" />
       <Association Name="HOCKY_QUATRINHHOC" Member="QUATRINHHOCs" ThisKey="MAHK" OtherKey="MAHK" Type="QUATRINHHOC" />
     </Type>
   </Table>
@@ -136,15 +138,36 @@
       <Association Name="LOP_QUATRINHHOC" Member="LOP" ThisKey="MALOP" OtherKey="MALOP" Type="LOP" IsForeignKey="true" />
     </Type>
   </Table>
-  <Function Name="dbo.sp_LayDanhSachHocSinhChuaPhanLop" Method="sp_LayDanhSachHocSinhChuaPhanLop">
-    <ElementType Name="sp_LayDanhSachHocSinhChuaPhanLopResult">
-      <Column Name="MAHS" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
-      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+  <Function Name="dbo.sp_LayBaoCaoTongKetHocKy" Method="sp_LayBaoCaoTongKetHocKy">
+    <Parameter Name="mahocky" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="manamhoc" Type="System.String" DbType="Char(4)" />
+    <ElementType Name="sp_LayBaoCaoTongKetHocKyResult">
+      <Column Name="TENLOP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SISO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SOLUONGDAT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TYLE" Type="System.Single" DbType="Real" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.sp_XoaQuaTrinhHoc" Method="sp_XoaQuaTrinhHoc">
     <Parameter Name="mahs" Type="System.String" DbType="Char(5)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_LayBaoCaoTongKetMon" Method="sp_LayBaoCaoTongKetMon">
+    <Parameter Name="mamonhoc" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="mahocky" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="manamhoc" Type="System.String" DbType="Char(4)" />
+    <ElementType Name="sp_LayBaoCaoTongKetMonResult">
+      <Column Name="TENLOP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SISO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SOLUONGDAT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TYLE" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_LayDanhSachHocSinhChuaPhanLop" Method="sp_LayDanhSachHocSinhChuaPhanLop">
+    <ElementType Name="sp_LayDanhSachHocSinhChuaPhanLopResult">
+      <Column Name="MAHS" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
   </Function>
   <Function Name="dbo.sp_LayDiemChiTietHocSinh" Method="sp_LayDiemChiTietHocSinh">
     <Parameter Name="mahs" Type="System.String" DbType="Char(5)" />
@@ -254,6 +277,17 @@
       <Column Name="DIEMTBHK" Type="System.Single" DbType="Real" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.sp_TimHSTheoTen" Method="sp_TimHSTheoTen">
+    <Parameter Name="s" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_TimHSTheoTenResult">
+      <Column Name="MAHS" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GIOITINH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NGAYSINH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.sp_ThemQTH" Method="sp_ThemQTH">
     <Parameter Name="mahs" Type="System.String" DbType="Char(6)" />
     <Parameter Name="malop" Type="System.String" DbType="Char(5)" />
@@ -275,17 +309,6 @@
       <Column Name="MALOP" Type="System.String" DbType="Char(5)" CanBeNull="true" />
       <Column Name="MAHK" Type="System.String" DbType="Char(4)" CanBeNull="true" />
       <Column Name="DIEMTBHK" Type="System.Single" DbType="Real" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.sp_TimHSTheoTen" Method="sp_TimHSTheoTen">
-    <Parameter Name="s" Type="System.String" DbType="NVarChar(50)" />
-    <ElementType Name="sp_TimHSTheoTenResult">
-      <Column Name="MAHS" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
-      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="GIOITINH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="NGAYSINH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="EMAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.sp_XoaHocSinh" Method="sp_XoaHocSinh">

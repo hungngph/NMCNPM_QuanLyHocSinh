@@ -22,17 +22,14 @@ namespace NMCNPM_QLHS.GUI
 
         public void ReportDSHS(string tenNamHoc, string tenLop, string maLop, DateTime ngayLap)
         {
+
             //rpDanhSachHocSinh rp = new rpDanhSachHocSinh(tenNamHoc, tenLop, maLop, ngayLap);
-            ////documentViewer1.DocumentSource = rp;
             //rp.CreateDocument();
-            //using (ReportPrintTool printTool = new ReportPrintTool(rp))
-            //{
-            //    printTool.ShowPreviewDialog();
-            //}
         }
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
+            
             string tenNamHoc = cboNamHoc.Text;
             string tenLop = cboLop.Text;
             string maLop = cboLop.EditValue.ToString();
