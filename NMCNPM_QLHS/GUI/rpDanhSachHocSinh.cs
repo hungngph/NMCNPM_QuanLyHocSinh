@@ -12,12 +12,12 @@ namespace NMCNPM_QLHS.GUI
         public rpDanhSachHocSinh()
         {
             InitializeComponent();
+            foreach (DevExpress.XtraReports.Parameters.Parameter p in Parameters)
+                p.Visible = false;
         }
 
         public void load_rpDanhSachHocSinh(string tenNamHoc, string tenLop, string maLop, DateTime ngayLap)
         {
-            foreach (DevExpress.XtraReports.Parameters.Parameter p in Parameters)
-                p.Visible = false;
             pNamHoc.Value = tenNamHoc;
             pLop.Value = tenLop;
             pNgayLap.Value = ngayLap;
@@ -31,7 +31,7 @@ namespace NMCNPM_QLHS.GUI
                 p.Visible = false;
             pNamHoc.Value = tenNamHoc;
             pLop.Value = tenLop;
-            pNgayLap.Value = ngayLap;
+            pNgayLap.Value = ngayLap.ToShortDateString();
             bindingSourceDiemTongKet.DataSource = HOCTAP_BUS.LayDiemHocSinhTheoLop(maLop);
         }
 

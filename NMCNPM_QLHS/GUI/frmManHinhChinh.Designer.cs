@@ -35,7 +35,7 @@
             this.btnHocky = new DevExpress.XtraBars.BarButtonItem();
             this.btnNamHoc = new DevExpress.XtraBars.BarButtonItem();
             this.btnMonHoc = new DevExpress.XtraBars.BarButtonItem();
-            this.btnDiem = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNhapDiem = new DevExpress.XtraBars.BarButtonItem();
             this.btnHocSinh = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhanLop = new DevExpress.XtraBars.BarButtonItem();
             this.btnKQHKTheoLop = new DevExpress.XtraBars.BarButtonItem();
@@ -50,14 +50,15 @@
             this.btnQuyDinhDiem = new DevExpress.XtraBars.BarButtonItem();
             this.btnTraCuuDiem = new DevExpress.XtraBars.BarButtonItem();
             this.btnLenLop = new DevExpress.XtraBars.BarButtonItem();
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.ribbonPageQuanLy = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageThongKe = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageTraCuu = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -67,8 +68,7 @@
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.btnXemDiem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +83,7 @@
             this.btnHocky,
             this.btnNamHoc,
             this.btnMonHoc,
-            this.btnDiem,
+            this.btnNhapDiem,
             this.btnHocSinh,
             this.btnPhanLop,
             this.btnKQHKTheoLop,
@@ -98,9 +98,10 @@
             this.btnQuyDinhDiem,
             this.btnTraCuuDiem,
             this.btnLenLop,
-            this.skinRibbonGalleryBarItem1});
+            this.skinRibbonGalleryBarItem1,
+            this.btnXemDiem});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 28;
+            this.ribbon.MaxItemId = 29;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageQuanLy,
@@ -155,14 +156,14 @@
             this.btnMonHoc.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnMonHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMonHoc_ItemClick);
             // 
-            // btnDiem
+            // btnNhapDiem
             // 
-            this.btnDiem.Caption = "Điểm";
-            this.btnDiem.Id = 8;
-            this.btnDiem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.diem;
-            this.btnDiem.Name = "btnDiem";
-            this.btnDiem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btnDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDiem_ItemClick);
+            this.btnNhapDiem.Caption = "Nhập điểm";
+            this.btnNhapDiem.Id = 8;
+            this.btnNhapDiem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.diem;
+            this.btnNhapDiem.Name = "btnNhapDiem";
+            this.btnNhapDiem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnNhapDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDiem_ItemClick);
             // 
             // btnHocSinh
             // 
@@ -290,6 +291,12 @@
             this.btnLenLop.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnLenLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLenLop_ItemClick);
             // 
+            // skinRibbonGalleryBarItem1
+            // 
+            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
+            this.skinRibbonGalleryBarItem1.Id = 27;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            // 
             // ribbonPageQuanLy
             // 
             this.ribbonPageQuanLy.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -312,15 +319,16 @@
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnHocky);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnNamHoc);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnMonHoc);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Năm học";
+            this.ribbonPageGroup2.Text = "Năm học - Môn học";
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnMonHoc);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnDiem);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnNhapDiem);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnXemDiem);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Môn học";
+            this.ribbonPageGroup3.Text = "Điểm";
             // 
             // ribbonPageGroup4
             // 
@@ -330,11 +338,16 @@
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Học Sinh";
             // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            this.ribbonPageGroup10.Text = "Giao diện";
+            // 
             // ribbonPageThongKe
             // 
             this.ribbonPageThongKe.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5,
-            this.ribbonPageGroup6,
             this.ribbonPageGroup7});
             this.ribbonPageThongKe.Name = "ribbonPageThongKe";
             this.ribbonPageThongKe.Text = "Thống kê";
@@ -345,13 +358,6 @@
             this.ribbonPageGroup5.ItemLinks.Add(this.KQHKTheoMon);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Kết quả Học kỳ";
-            // 
-            // ribbonPageGroup6
-            // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.KQCNTheoLop);
-            this.ribbonPageGroup6.ItemLinks.Add(this.KQCNTheoMon);
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.Text = "Kết quả cuối năm";
             // 
             // ribbonPageGroup7
             // 
@@ -413,17 +419,14 @@
             this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // ribbonPageGroup10
+            // btnXemDiem
             // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
-            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
-            this.ribbonPageGroup10.Text = "Giao diện";
-            // 
-            // skinRibbonGalleryBarItem1
-            // 
-            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
-            this.skinRibbonGalleryBarItem1.Id = 27;
-            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            this.btnXemDiem.Caption = "Xem điểm";
+            this.btnXemDiem.Id = 28;
+            this.btnXemDiem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.xemdiem;
+            this.btnXemDiem.Name = "btnXemDiem";
+            this.btnXemDiem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnXemDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemDiem_ItemClick);
             // 
             // frmManHinhChinh
             // 
@@ -459,7 +462,7 @@
         private DevExpress.XtraBars.BarButtonItem btnHocky;
         private DevExpress.XtraBars.BarButtonItem btnNamHoc;
         private DevExpress.XtraBars.BarButtonItem btnMonHoc;
-        private DevExpress.XtraBars.BarButtonItem btnDiem;
+        private DevExpress.XtraBars.BarButtonItem btnNhapDiem;
         private DevExpress.XtraBars.BarButtonItem btnHocSinh;
         private DevExpress.XtraBars.BarButtonItem btnPhanLop;
         private DevExpress.XtraBars.BarButtonItem btnKQHKTheoLop;
@@ -476,7 +479,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
@@ -487,5 +489,6 @@
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraBars.BarButtonItem btnXemDiem;
     }
 }

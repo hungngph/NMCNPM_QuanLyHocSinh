@@ -383,6 +383,20 @@ namespace NMCNPM_QLHS.GUI
                 f.Show();
             }
         }
+        private void btnXemDiem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmXemDiem));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmXemDiem f = new frmXemDiem
+                {
+                    MdiParent = this
+                };
+                f.Show();
+            }
+        }
 
         #endregion
 

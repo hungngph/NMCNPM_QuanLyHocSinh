@@ -233,6 +233,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="DAL\SQL_QLHS.dbml.layout">
+      <DependentUpon>SQL_QLHS.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="GUI\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,9 +314,6 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>SQL_QLHS.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </None>
-    <None Include="DAL\SQL_QLHS.dbml.layout">
-      <DependentUpon>SQL_QLHS.dbml</DependentUpon>
     </None>
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.CT_DIEMMON.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.HOCKY.datasource" />
