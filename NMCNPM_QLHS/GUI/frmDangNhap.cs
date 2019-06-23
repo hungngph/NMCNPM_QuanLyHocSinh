@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using NMCNPM_QLHS.BUS;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -21,6 +22,14 @@ namespace NMCNPM_QLHS.GUI
         private void textEdit2_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            if (NGUOIDUNG_BUS.KiemTraNguoiDung(txtTaiKhoan.Text))
+                MessageBox.Show("OK");
+            else
+                MessageBox.Show("FAILED");
         }
     }
 }

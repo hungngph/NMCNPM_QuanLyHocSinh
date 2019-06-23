@@ -30,12 +30,12 @@ namespace NMCNPM_QLHS.DAL
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertTHAMSO(THAMSO instance);
-    partial void UpdateTHAMSO(THAMSO instance);
-    partial void DeleteTHAMSO(THAMSO instance);
     partial void InsertBANGDIEMMON(BANGDIEMMON instance);
     partial void UpdateBANGDIEMMON(BANGDIEMMON instance);
     partial void DeleteBANGDIEMMON(BANGDIEMMON instance);
+    partial void InsertTHAMSO(THAMSO instance);
+    partial void UpdateTHAMSO(THAMSO instance);
+    partial void DeleteTHAMSO(THAMSO instance);
     partial void InsertBAOCAOTONGKETHK(BAOCAOTONGKETHK instance);
     partial void UpdateBAOCAOTONGKETHK(BAOCAOTONGKETHK instance);
     partial void DeleteBAOCAOTONGKETHK(BAOCAOTONGKETHK instance);
@@ -60,6 +60,9 @@ namespace NMCNPM_QLHS.DAL
     partial void InsertLOAIHINHKIEMTRA(LOAIHINHKIEMTRA instance);
     partial void UpdateLOAIHINHKIEMTRA(LOAIHINHKIEMTRA instance);
     partial void DeleteLOAIHINHKIEMTRA(LOAIHINHKIEMTRA instance);
+    partial void InsertLOAINGUOIDUNG(LOAINGUOIDUNG instance);
+    partial void UpdateLOAINGUOIDUNG(LOAINGUOIDUNG instance);
+    partial void DeleteLOAINGUOIDUNG(LOAINGUOIDUNG instance);
     partial void InsertLOP(LOP instance);
     partial void UpdateLOP(LOP instance);
     partial void DeleteLOP(LOP instance);
@@ -69,13 +72,16 @@ namespace NMCNPM_QLHS.DAL
     partial void InsertNAMHOC(NAMHOC instance);
     partial void UpdateNAMHOC(NAMHOC instance);
     partial void DeleteNAMHOC(NAMHOC instance);
+    partial void InsertNGUOIDUNG(NGUOIDUNG instance);
+    partial void UpdateNGUOIDUNG(NGUOIDUNG instance);
+    partial void DeleteNGUOIDUNG(NGUOIDUNG instance);
     partial void InsertQUATRINHHOC(QUATRINHHOC instance);
     partial void UpdateQUATRINHHOC(QUATRINHHOC instance);
     partial void DeleteQUATRINHHOC(QUATRINHHOC instance);
     #endregion
 		
 		public SQL_QLHSDataContext() : 
-				base(global::NMCNPM_QLHS.Properties.Settings.Default.QLHSConnectionString1, mappingSource)
+				base(global::NMCNPM_QLHS.Properties.Settings.Default.QLHSConnectionString3, mappingSource)
 		{
 			OnCreated();
 		}
@@ -104,19 +110,19 @@ namespace NMCNPM_QLHS.DAL
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<THAMSO> THAMSOs
-		{
-			get
-			{
-				return this.GetTable<THAMSO>();
-			}
-		}
-		
 		public System.Data.Linq.Table<BANGDIEMMON> BANGDIEMMONs
 		{
 			get
 			{
 				return this.GetTable<BANGDIEMMON>();
+			}
+		}
+		
+		public System.Data.Linq.Table<THAMSO> THAMSOs
+		{
+			get
+			{
+				return this.GetTable<THAMSO>();
 			}
 		}
 		
@@ -184,6 +190,14 @@ namespace NMCNPM_QLHS.DAL
 			}
 		}
 		
+		public System.Data.Linq.Table<LOAINGUOIDUNG> LOAINGUOIDUNGs
+		{
+			get
+			{
+				return this.GetTable<LOAINGUOIDUNG>();
+			}
+		}
+		
 		public System.Data.Linq.Table<LOP> LOPs
 		{
 			get
@@ -208,6 +222,14 @@ namespace NMCNPM_QLHS.DAL
 			}
 		}
 		
+		public System.Data.Linq.Table<NGUOIDUNG> NGUOIDUNGs
+		{
+			get
+			{
+				return this.GetTable<NGUOIDUNG>();
+			}
+		}
+		
 		public System.Data.Linq.Table<QUATRINHHOC> QUATRINHHOCs
 		{
 			get
@@ -216,11 +238,11 @@ namespace NMCNPM_QLHS.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_LayDanhSachHocSinhChuaPhanLop")]
-		public ISingleResult<sp_LayDanhSachHocSinhChuaPhanLopResult> sp_LayDanhSachHocSinhChuaPhanLop()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_KiemTraLoaiNguoiDung")]
+		public ISingleResult<sp_KiemTraLoaiNguoiDungResult> sp_KiemTraLoaiNguoiDung([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(50)")] string tenDangNhap)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<sp_LayDanhSachHocSinhChuaPhanLopResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tenDangNhap);
+			return ((ISingleResult<sp_KiemTraLoaiNguoiDungResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_XoaQuaTrinhHoc")]
@@ -228,6 +250,27 @@ namespace NMCNPM_QLHS.DAL
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mahs);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_LayBaoCaoTongKetHocKy")]
+		public ISingleResult<sp_LayBaoCaoTongKetHocKyResult> sp_LayBaoCaoTongKetHocKy([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(4)")] string mahocky, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(4)")] string manamhoc)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mahocky, manamhoc);
+			return ((ISingleResult<sp_LayBaoCaoTongKetHocKyResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_LayBaoCaoTongKetMon")]
+		public ISingleResult<sp_LayBaoCaoTongKetMonResult> sp_LayBaoCaoTongKetMon([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(4)")] string mamonhoc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(4)")] string mahocky, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(4)")] string manamhoc)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mamonhoc, mahocky, manamhoc);
+			return ((ISingleResult<sp_LayBaoCaoTongKetMonResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_LayDanhSachHocSinhChuaPhanLop")]
+		public ISingleResult<sp_LayDanhSachHocSinhChuaPhanLopResult> sp_LayDanhSachHocSinhChuaPhanLop()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<sp_LayDanhSachHocSinhChuaPhanLopResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_LayDiemChiTietHocSinh")]
@@ -298,6 +341,13 @@ namespace NMCNPM_QLHS.DAL
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mahs, mamon, mahocky, malop, mieng, diem15p, diem1tiet, diemthi);
 			return ((ISingleResult<sp_SuaDiemResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ThemNguoiDung")]
+		public ISingleResult<sp_ThemNguoiDungResult> sp_ThemNguoiDung([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(50)")] string tendangnhap, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(20)")] string matkhau)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tendangnhap, matkhau);
+			return ((ISingleResult<sp_ThemNguoiDungResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ThemQTH")]
@@ -399,91 +449,12 @@ namespace NMCNPM_QLHS.DAL
 		{
 			return ((System.Nullable<double>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mahs, mahocky, manamhoc).ReturnValue));
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.THAMSO")]
-	public partial class THAMSO : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _TENTHAMSO;
-		
-		private System.Nullable<int> _GIATRI;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnTENTHAMSOChanging(string value);
-    partial void OnTENTHAMSOChanged();
-    partial void OnGIATRIChanging(System.Nullable<int> value);
-    partial void OnGIATRIChanged();
-    #endregion
-		
-		public THAMSO()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_KiemTraDangNhap")]
+		public ISingleResult<sp_KiemTraDangNhapResult> sp_KiemTraDangNhap([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(50)")] string tendangnhap)
 		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTHAMSO", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string TENTHAMSO
-		{
-			get
-			{
-				return this._TENTHAMSO;
-			}
-			set
-			{
-				if ((this._TENTHAMSO != value))
-				{
-					this.OnTENTHAMSOChanging(value);
-					this.SendPropertyChanging();
-					this._TENTHAMSO = value;
-					this.SendPropertyChanged("TENTHAMSO");
-					this.OnTENTHAMSOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIATRI", DbType="Int")]
-		public System.Nullable<int> GIATRI
-		{
-			get
-			{
-				return this._GIATRI;
-			}
-			set
-			{
-				if ((this._GIATRI != value))
-				{
-					this.OnGIATRIChanging(value);
-					this.SendPropertyChanging();
-					this._GIATRI = value;
-					this.SendPropertyChanged("GIATRI");
-					this.OnGIATRIChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tendangnhap);
+			return ((ISingleResult<sp_KiemTraDangNhapResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -731,6 +702,92 @@ namespace NMCNPM_QLHS.DAL
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.THAMSO")]
+	public partial class THAMSO : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _TENTHAMSO;
+		
+		private System.Nullable<int> _GIATRI;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTENTHAMSOChanging(string value);
+    partial void OnTENTHAMSOChanged();
+    partial void OnGIATRIChanging(System.Nullable<int> value);
+    partial void OnGIATRIChanged();
+    #endregion
+		
+		public THAMSO()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTHAMSO", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string TENTHAMSO
+		{
+			get
+			{
+				return this._TENTHAMSO;
+			}
+			set
+			{
+				if ((this._TENTHAMSO != value))
+				{
+					this.OnTENTHAMSOChanging(value);
+					this.SendPropertyChanging();
+					this._TENTHAMSO = value;
+					this.SendPropertyChanged("TENTHAMSO");
+					this.OnTENTHAMSOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIATRI", DbType="Int")]
+		public System.Nullable<int> GIATRI
+		{
+			get
+			{
+				return this._GIATRI;
+			}
+			set
+			{
+				if ((this._GIATRI != value))
+				{
+					this.OnGIATRIChanging(value);
+					this.SendPropertyChanging();
+					this._GIATRI = value;
+					this.SendPropertyChanged("GIATRI");
+					this.OnGIATRIChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BAOCAOTONGKETHK")]
 	public partial class BAOCAOTONGKETHK : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -740,6 +797,8 @@ namespace NMCNPM_QLHS.DAL
 		private string _MAHK;
 		
 		private string _MALOP;
+		
+		private System.Nullable<int> _SISO;
 		
 		private System.Nullable<int> _SOLUONGDAT;
 		
@@ -757,6 +816,8 @@ namespace NMCNPM_QLHS.DAL
     partial void OnMAHKChanged();
     partial void OnMALOPChanging(string value);
     partial void OnMALOPChanged();
+    partial void OnSISOChanging(System.Nullable<int> value);
+    partial void OnSISOChanged();
     partial void OnSOLUONGDATChanging(System.Nullable<int> value);
     partial void OnSOLUONGDATChanged();
     partial void OnTYLEChanging(System.Nullable<float> value);
@@ -814,6 +875,26 @@ namespace NMCNPM_QLHS.DAL
 					this._MALOP = value;
 					this.SendPropertyChanged("MALOP");
 					this.OnMALOPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SISO", DbType="Int")]
+		public System.Nullable<int> SISO
+		{
+			get
+			{
+				return this._SISO;
+			}
+			set
+			{
+				if ((this._SISO != value))
+				{
+					this.OnSISOChanging(value);
+					this.SendPropertyChanging();
+					this._SISO = value;
+					this.SendPropertyChanged("SISO");
+					this.OnSISOChanged();
 				}
 			}
 		}
@@ -1177,6 +1258,8 @@ namespace NMCNPM_QLHS.DAL
 		
 		private string _MALOP;
 		
+		private System.Nullable<int> _SISO;
+		
 		private System.Nullable<int> _SOLUONGDAT;
 		
 		private System.Nullable<float> _TYLE;
@@ -1193,6 +1276,8 @@ namespace NMCNPM_QLHS.DAL
     partial void OnMABCTKMONChanged();
     partial void OnMALOPChanging(string value);
     partial void OnMALOPChanged();
+    partial void OnSISOChanging(System.Nullable<int> value);
+    partial void OnSISOChanged();
     partial void OnSOLUONGDATChanging(System.Nullable<int> value);
     partial void OnSOLUONGDATChanged();
     partial void OnTYLEChanging(System.Nullable<float> value);
@@ -1250,6 +1335,26 @@ namespace NMCNPM_QLHS.DAL
 					this._MALOP = value;
 					this.SendPropertyChanged("MALOP");
 					this.OnMALOPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SISO", DbType="Int")]
+		public System.Nullable<int> SISO
+		{
+			get
+			{
+				return this._SISO;
+			}
+			set
+			{
+				if ((this._SISO != value))
+				{
+					this.OnSISOChanging(value);
+					this.SendPropertyChanging();
+					this._SISO = value;
+					this.SendPropertyChanged("SISO");
+					this.OnSISOChanged();
 				}
 			}
 		}
@@ -2296,6 +2401,120 @@ namespace NMCNPM_QLHS.DAL
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LOAINGUOIDUNG")]
+	public partial class LOAINGUOIDUNG : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MALND;
+		
+		private string _TENLOAIND;
+		
+		private EntitySet<NGUOIDUNG> _NGUOIDUNGs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMALNDChanging(string value);
+    partial void OnMALNDChanged();
+    partial void OnTENLOAINDChanging(string value);
+    partial void OnTENLOAINDChanged();
+    #endregion
+		
+		public LOAINGUOIDUNG()
+		{
+			this._NGUOIDUNGs = new EntitySet<NGUOIDUNG>(new Action<NGUOIDUNG>(this.attach_NGUOIDUNGs), new Action<NGUOIDUNG>(this.detach_NGUOIDUNGs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALND", DbType="Char(6) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MALND
+		{
+			get
+			{
+				return this._MALND;
+			}
+			set
+			{
+				if ((this._MALND != value))
+				{
+					this.OnMALNDChanging(value);
+					this.SendPropertyChanging();
+					this._MALND = value;
+					this.SendPropertyChanged("MALND");
+					this.OnMALNDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENLOAIND", DbType="NVarChar(50)")]
+		public string TENLOAIND
+		{
+			get
+			{
+				return this._TENLOAIND;
+			}
+			set
+			{
+				if ((this._TENLOAIND != value))
+				{
+					this.OnTENLOAINDChanging(value);
+					this.SendPropertyChanging();
+					this._TENLOAIND = value;
+					this.SendPropertyChanged("TENLOAIND");
+					this.OnTENLOAINDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LOAINGUOIDUNG_NGUOIDUNG", Storage="_NGUOIDUNGs", ThisKey="MALND", OtherKey="MALND")]
+		public EntitySet<NGUOIDUNG> NGUOIDUNGs
+		{
+			get
+			{
+				return this._NGUOIDUNGs;
+			}
+			set
+			{
+				this._NGUOIDUNGs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_NGUOIDUNGs(NGUOIDUNG entity)
+		{
+			this.SendPropertyChanging();
+			entity.LOAINGUOIDUNG = this;
+		}
+		
+		private void detach_NGUOIDUNGs(NGUOIDUNG entity)
+		{
+			this.SendPropertyChanging();
+			entity.LOAINGUOIDUNG = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LOP")]
 	public partial class LOP : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -2859,6 +3078,181 @@ namespace NMCNPM_QLHS.DAL
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.NGUOIDUNG")]
+	public partial class NGUOIDUNG : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MAND;
+		
+		private string _TENDANGNHAP;
+		
+		private string _MATKHAU;
+		
+		private string _MALND;
+		
+		private EntityRef<LOAINGUOIDUNG> _LOAINGUOIDUNG;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMANDChanging(string value);
+    partial void OnMANDChanged();
+    partial void OnTENDANGNHAPChanging(string value);
+    partial void OnTENDANGNHAPChanged();
+    partial void OnMATKHAUChanging(string value);
+    partial void OnMATKHAUChanged();
+    partial void OnMALNDChanging(string value);
+    partial void OnMALNDChanged();
+    #endregion
+		
+		public NGUOIDUNG()
+		{
+			this._LOAINGUOIDUNG = default(EntityRef<LOAINGUOIDUNG>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAND", DbType="Char(6) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MAND
+		{
+			get
+			{
+				return this._MAND;
+			}
+			set
+			{
+				if ((this._MAND != value))
+				{
+					this.OnMANDChanging(value);
+					this.SendPropertyChanging();
+					this._MAND = value;
+					this.SendPropertyChanged("MAND");
+					this.OnMANDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENDANGNHAP", DbType="Char(50)")]
+		public string TENDANGNHAP
+		{
+			get
+			{
+				return this._TENDANGNHAP;
+			}
+			set
+			{
+				if ((this._TENDANGNHAP != value))
+				{
+					this.OnTENDANGNHAPChanging(value);
+					this.SendPropertyChanging();
+					this._TENDANGNHAP = value;
+					this.SendPropertyChanged("TENDANGNHAP");
+					this.OnTENDANGNHAPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATKHAU", DbType="Char(20)")]
+		public string MATKHAU
+		{
+			get
+			{
+				return this._MATKHAU;
+			}
+			set
+			{
+				if ((this._MATKHAU != value))
+				{
+					this.OnMATKHAUChanging(value);
+					this.SendPropertyChanging();
+					this._MATKHAU = value;
+					this.SendPropertyChanged("MATKHAU");
+					this.OnMATKHAUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALND", DbType="Char(6)")]
+		public string MALND
+		{
+			get
+			{
+				return this._MALND;
+			}
+			set
+			{
+				if ((this._MALND != value))
+				{
+					if (this._LOAINGUOIDUNG.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMALNDChanging(value);
+					this.SendPropertyChanging();
+					this._MALND = value;
+					this.SendPropertyChanged("MALND");
+					this.OnMALNDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LOAINGUOIDUNG_NGUOIDUNG", Storage="_LOAINGUOIDUNG", ThisKey="MALND", OtherKey="MALND", IsForeignKey=true)]
+		public LOAINGUOIDUNG LOAINGUOIDUNG
+		{
+			get
+			{
+				return this._LOAINGUOIDUNG.Entity;
+			}
+			set
+			{
+				LOAINGUOIDUNG previousValue = this._LOAINGUOIDUNG.Entity;
+				if (((previousValue != value) 
+							|| (this._LOAINGUOIDUNG.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._LOAINGUOIDUNG.Entity = null;
+						previousValue.NGUOIDUNGs.Remove(this);
+					}
+					this._LOAINGUOIDUNG.Entity = value;
+					if ((value != null))
+					{
+						value.NGUOIDUNGs.Add(this);
+						this._MALND = value.MALND;
+					}
+					else
+					{
+						this._MALND = default(string);
+					}
+					this.SendPropertyChanged("LOAINGUOIDUNG");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.QUATRINHHOC")]
 	public partial class QUATRINHHOC : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -3165,6 +3559,192 @@ namespace NMCNPM_QLHS.DAL
 		{
 			this.SendPropertyChanging();
 			entity.QUATRINHHOC = null;
+		}
+	}
+	
+	public partial class sp_KiemTraLoaiNguoiDungResult
+	{
+		
+		private string _MALND;
+		
+		public sp_KiemTraLoaiNguoiDungResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALND", DbType="Char(6)")]
+		public string MALND
+		{
+			get
+			{
+				return this._MALND;
+			}
+			set
+			{
+				if ((this._MALND != value))
+				{
+					this._MALND = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sp_LayBaoCaoTongKetHocKyResult
+	{
+		
+		private string _TENLOP;
+		
+		private System.Nullable<int> _SISO;
+		
+		private System.Nullable<int> _SOLUONGDAT;
+		
+		private System.Nullable<float> _TYLE;
+		
+		public sp_LayBaoCaoTongKetHocKyResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENLOP", DbType="NVarChar(50)")]
+		public string TENLOP
+		{
+			get
+			{
+				return this._TENLOP;
+			}
+			set
+			{
+				if ((this._TENLOP != value))
+				{
+					this._TENLOP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SISO", DbType="Int")]
+		public System.Nullable<int> SISO
+		{
+			get
+			{
+				return this._SISO;
+			}
+			set
+			{
+				if ((this._SISO != value))
+				{
+					this._SISO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOLUONGDAT", DbType="Int")]
+		public System.Nullable<int> SOLUONGDAT
+		{
+			get
+			{
+				return this._SOLUONGDAT;
+			}
+			set
+			{
+				if ((this._SOLUONGDAT != value))
+				{
+					this._SOLUONGDAT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TYLE", DbType="Real")]
+		public System.Nullable<float> TYLE
+		{
+			get
+			{
+				return this._TYLE;
+			}
+			set
+			{
+				if ((this._TYLE != value))
+				{
+					this._TYLE = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sp_LayBaoCaoTongKetMonResult
+	{
+		
+		private string _TENLOP;
+		
+		private System.Nullable<int> _SISO;
+		
+		private System.Nullable<int> _SOLUONGDAT;
+		
+		private System.Nullable<float> _TYLE;
+		
+		public sp_LayBaoCaoTongKetMonResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENLOP", DbType="NVarChar(50)")]
+		public string TENLOP
+		{
+			get
+			{
+				return this._TENLOP;
+			}
+			set
+			{
+				if ((this._TENLOP != value))
+				{
+					this._TENLOP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SISO", DbType="Int")]
+		public System.Nullable<int> SISO
+		{
+			get
+			{
+				return this._SISO;
+			}
+			set
+			{
+				if ((this._SISO != value))
+				{
+					this._SISO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOLUONGDAT", DbType="Int")]
+		public System.Nullable<int> SOLUONGDAT
+		{
+			get
+			{
+				return this._SOLUONGDAT;
+			}
+			set
+			{
+				if ((this._SOLUONGDAT != value))
+				{
+					this._SOLUONGDAT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TYLE", DbType="Real")]
+		public System.Nullable<float> TYLE
+		{
+			get
+			{
+				return this._TYLE;
+			}
+			set
+			{
+				if ((this._TYLE != value))
+				{
+					this._TYLE = value;
+				}
+			}
 		}
 	}
 	
@@ -4058,6 +4638,86 @@ namespace NMCNPM_QLHS.DAL
 		}
 	}
 	
+	public partial class sp_ThemNguoiDungResult
+	{
+		
+		private string _MAND;
+		
+		private string _TENDANGNHAP;
+		
+		private string _MATKHAU;
+		
+		private string _MALND;
+		
+		public sp_ThemNguoiDungResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAND", DbType="Char(6) NOT NULL", CanBeNull=false)]
+		public string MAND
+		{
+			get
+			{
+				return this._MAND;
+			}
+			set
+			{
+				if ((this._MAND != value))
+				{
+					this._MAND = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENDANGNHAP", DbType="Char(50)")]
+		public string TENDANGNHAP
+		{
+			get
+			{
+				return this._TENDANGNHAP;
+			}
+			set
+			{
+				if ((this._TENDANGNHAP != value))
+				{
+					this._TENDANGNHAP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATKHAU", DbType="Char(20)")]
+		public string MATKHAU
+		{
+			get
+			{
+				return this._MATKHAU;
+			}
+			set
+			{
+				if ((this._MATKHAU != value))
+				{
+					this._MATKHAU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALND", DbType="Char(6)")]
+		public string MALND
+		{
+			get
+			{
+				return this._MALND;
+			}
+			set
+			{
+				if ((this._MALND != value))
+				{
+					this._MALND = value;
+				}
+			}
+		}
+	}
+	
 	public partial class sp_ThemQTHResult
 	{
 		
@@ -4365,6 +5025,86 @@ namespace NMCNPM_QLHS.DAL
 				if ((this._EMAIL != value))
 				{
 					this._EMAIL = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sp_KiemTraDangNhapResult
+	{
+		
+		private string _MAND;
+		
+		private string _TENDANGNHAP;
+		
+		private string _MATKHAU;
+		
+		private string _MALND;
+		
+		public sp_KiemTraDangNhapResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAND", DbType="Char(6) NOT NULL", CanBeNull=false)]
+		public string MAND
+		{
+			get
+			{
+				return this._MAND;
+			}
+			set
+			{
+				if ((this._MAND != value))
+				{
+					this._MAND = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENDANGNHAP", DbType="Char(50)")]
+		public string TENDANGNHAP
+		{
+			get
+			{
+				return this._TENDANGNHAP;
+			}
+			set
+			{
+				if ((this._TENDANGNHAP != value))
+				{
+					this._TENDANGNHAP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATKHAU", DbType="Char(20)")]
+		public string MATKHAU
+		{
+			get
+			{
+				return this._MATKHAU;
+			}
+			set
+			{
+				if ((this._MATKHAU != value))
+				{
+					this._MATKHAU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALND", DbType="Char(6)")]
+		public string MALND
+		{
+			get
+			{
+				return this._MALND;
+			}
+			set
+			{
+				if ((this._MALND != value))
+				{
+					this._MALND = value;
 				}
 			}
 		}
