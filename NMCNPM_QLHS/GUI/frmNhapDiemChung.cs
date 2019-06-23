@@ -51,7 +51,55 @@ namespace NMCNPM_QLHS.GUI
                     this.bindingNavigatorSaveItem_Click(sender, e);
             }
         }
+        private void btnThemNam_Click(object sender, EventArgs e)
+        {
+            var frm = new frmNamHoc();
+            if (Application.OpenForms[frm.Name] == null)
+            {
+                frm.Show();
+            }
+            else
+            {
+                Application.OpenForms[frm.Name].Focus();
+            }
+        }
+        private void btnThemLop_Click(object sender, EventArgs e)
+        {
+            var frm = new frmLop();
+            if (Application.OpenForms[frm.Name] == null)
+            {
+                frm.Show();
+            }
+            else
+            {
+                Application.OpenForms[frm.Name].Focus();
+            }
+        }
+        private void btnThemHK_Click(object sender, EventArgs e)
+        {
+            var frm = new frmHocKy();
+            if (Application.OpenForms[frm.Name] == null)
+            {
+                frm.Show();
+            }
+            else
+            {
+                Application.OpenForms[frm.Name].Focus();
+            }
+        }
 
+        private void btnThemMon_Click(object sender, EventArgs e)
+        {
+            var frm = new frmMonHoc();
+            if (Application.OpenForms[frm.Name] == null)
+            {
+                frm.Show();
+            }
+            else
+            {
+                Application.OpenForms[frm.Name].Focus();
+            }
+        }
         #endregion -Form-
 
         #region -bindingNavigatorItems_Click-
@@ -190,9 +238,12 @@ namespace NMCNPM_QLHS.GUI
                 bindingSourceDiem.DataSource = null;
         }
 
+
+
         #endregion -Load-
 
         #endregion -Methods-
 
+        
     }
 }

@@ -53,5 +53,31 @@ namespace NMCNPM_QLHS.GUI
         {
             load_DSLop();
         }
+
+        private void btnThemNam_Click(object sender, EventArgs e)
+        {
+            var frm = new frmNamHoc();
+            if (Application.OpenForms[frm.Name] == null)
+            {
+                frm.Show();
+            }
+            else
+            {
+                Application.OpenForms[frm.Name].Focus();
+            }
+        }
+
+        private void btnThemKhoi_Click(object sender, EventArgs e)
+        {
+            var frm = new frmKhoilop();
+            if (Application.OpenForms[frm.Name] == null)
+            {
+                frm.Show();
+            }
+            else
+            {
+                Application.OpenForms[frm.Name].Focus();
+            }
+        }
     }
 }

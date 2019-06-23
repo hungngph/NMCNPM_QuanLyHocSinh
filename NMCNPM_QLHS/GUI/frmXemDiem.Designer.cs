@@ -46,11 +46,18 @@
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.groupControlHocSinh = new DevExpress.XtraEditors.GroupControl();
             this.gridDiemControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.col_maHS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_maHS_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.col_hoTen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_hoTen_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.col_diemMieng = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_diemMieng_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.col_diem15Phut = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_diem15Phut_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.col_diem1Tiet = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_diem1Tiet_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.col_diemThi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_diemThi_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.bindingNavigatorDiem = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -64,13 +71,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorXemDiemItem = new System.Windows.Forms.ToolStripButton();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.col_maHS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_hoTen = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_diemMieng = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_diem15Phut = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_diem1Tiet = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_diemThi = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.navCapNhat)).BeginInit();
             this.navCapNhat.SuspendLayout();
             this.navigationPage2.SuspendLayout();
@@ -84,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControlHocSinh)).BeginInit();
             this.groupControlHocSinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDiemControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_maHS_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_hoTen_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_diemMieng_edit)).BeginInit();
@@ -92,7 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.col_diemThi_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorDiem)).BeginInit();
             this.bindingNavigatorDiem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // navCapNhat
@@ -280,30 +280,107 @@
             this.gridDiemControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.col_maHS,
+            this.col_hoTen,
+            this.col_diemMieng,
+            this.col_diem15Phut,
+            this.col_diem1Tiet,
+            this.col_diemThi});
+            this.gridView1.GridControl = this.gridDiemControl;
+            this.gridView1.GroupFormat = "";
+            this.gridView1.GroupPanelText = "DANH SÁCH ĐIIỂM";
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // col_maHS
+            // 
+            this.col_maHS.Caption = "Mã học sinh";
+            this.col_maHS.ColumnEdit = this.col_maHS_edit;
+            this.col_maHS.FieldName = "MAHS";
+            this.col_maHS.Name = "col_maHS";
+            this.col_maHS.OptionsColumn.AllowEdit = false;
+            this.col_maHS.Visible = true;
+            this.col_maHS.VisibleIndex = 0;
+            this.col_maHS.Width = 110;
+            // 
             // col_maHS_edit
             // 
             this.col_maHS_edit.AutoHeight = false;
             this.col_maHS_edit.Name = "col_maHS_edit";
+            // 
+            // col_hoTen
+            // 
+            this.col_hoTen.Caption = "Họ và tên";
+            this.col_hoTen.ColumnEdit = this.col_hoTen_edit;
+            this.col_hoTen.FieldName = "HOTEN";
+            this.col_hoTen.Name = "col_hoTen";
+            this.col_hoTen.OptionsColumn.AllowEdit = false;
+            this.col_hoTen.Visible = true;
+            this.col_hoTen.VisibleIndex = 1;
+            this.col_hoTen.Width = 117;
             // 
             // col_hoTen_edit
             // 
             this.col_hoTen_edit.AutoHeight = false;
             this.col_hoTen_edit.Name = "col_hoTen_edit";
             // 
+            // col_diemMieng
+            // 
+            this.col_diemMieng.Caption = "Điểm miệng";
+            this.col_diemMieng.ColumnEdit = this.col_diemMieng_edit;
+            this.col_diemMieng.FieldName = "DIEMMIENG";
+            this.col_diemMieng.Name = "col_diemMieng";
+            this.col_diemMieng.Visible = true;
+            this.col_diemMieng.VisibleIndex = 2;
+            this.col_diemMieng.Width = 105;
+            // 
             // col_diemMieng_edit
             // 
             this.col_diemMieng_edit.AutoHeight = false;
             this.col_diemMieng_edit.Name = "col_diemMieng_edit";
+            // 
+            // col_diem15Phut
+            // 
+            this.col_diem15Phut.Caption = "Điểm 15 phút";
+            this.col_diem15Phut.ColumnEdit = this.col_diem15Phut_edit;
+            this.col_diem15Phut.FieldName = "DIEM15P";
+            this.col_diem15Phut.Name = "col_diem15Phut";
+            this.col_diem15Phut.Visible = true;
+            this.col_diem15Phut.VisibleIndex = 3;
+            this.col_diem15Phut.Width = 110;
             // 
             // col_diem15Phut_edit
             // 
             this.col_diem15Phut_edit.AutoHeight = false;
             this.col_diem15Phut_edit.Name = "col_diem15Phut_edit";
             // 
+            // col_diem1Tiet
+            // 
+            this.col_diem1Tiet.Caption = "Điểm 1 tiết";
+            this.col_diem1Tiet.ColumnEdit = this.col_diem1Tiet_edit;
+            this.col_diem1Tiet.FieldName = "DIEM1TIET";
+            this.col_diem1Tiet.Name = "col_diem1Tiet";
+            this.col_diem1Tiet.Visible = true;
+            this.col_diem1Tiet.VisibleIndex = 4;
+            this.col_diem1Tiet.Width = 120;
+            // 
             // col_diem1Tiet_edit
             // 
             this.col_diem1Tiet_edit.AutoHeight = false;
             this.col_diem1Tiet_edit.Name = "col_diem1Tiet_edit";
+            // 
+            // col_diemThi
+            // 
+            this.col_diemThi.Caption = "Điểm thi";
+            this.col_diemThi.ColumnEdit = this.col_diemThi_edit;
+            this.col_diemThi.FieldName = "DIEMTHI";
+            this.col_diemThi.Name = "col_diemThi";
+            this.col_diemThi.Visible = true;
+            this.col_diemThi.VisibleIndex = 5;
+            this.col_diemThi.Width = 142;
             // 
             // col_diemThi_edit
             // 
@@ -422,83 +499,6 @@
             this.bindingNavigatorXemDiemItem.Size = new System.Drawing.Size(89, 28);
             this.bindingNavigatorXemDiemItem.Text = "Xem điểm";
             // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.col_maHS,
-            this.col_hoTen,
-            this.col_diemMieng,
-            this.col_diem15Phut,
-            this.col_diem1Tiet,
-            this.col_diemThi});
-            this.gridView1.GridControl = this.gridDiemControl;
-            this.gridView1.GroupFormat = "";
-            this.gridView1.GroupPanelText = "DANH SÁCH ĐIIỂM";
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // col_maHS
-            // 
-            this.col_maHS.Caption = "Mã học sinh";
-            this.col_maHS.ColumnEdit = this.col_maHS_edit;
-            this.col_maHS.FieldName = "MAHS";
-            this.col_maHS.Name = "col_maHS";
-            this.col_maHS.OptionsColumn.AllowEdit = false;
-            this.col_maHS.Visible = true;
-            this.col_maHS.VisibleIndex = 0;
-            this.col_maHS.Width = 110;
-            // 
-            // col_hoTen
-            // 
-            this.col_hoTen.Caption = "Họ và tên";
-            this.col_hoTen.ColumnEdit = this.col_hoTen_edit;
-            this.col_hoTen.FieldName = "HOTEN";
-            this.col_hoTen.Name = "col_hoTen";
-            this.col_hoTen.OptionsColumn.AllowEdit = false;
-            this.col_hoTen.Visible = true;
-            this.col_hoTen.VisibleIndex = 1;
-            this.col_hoTen.Width = 117;
-            // 
-            // col_diemMieng
-            // 
-            this.col_diemMieng.Caption = "Điểm miệng";
-            this.col_diemMieng.ColumnEdit = this.col_diemMieng_edit;
-            this.col_diemMieng.FieldName = "DIEMMIENG";
-            this.col_diemMieng.Name = "col_diemMieng";
-            this.col_diemMieng.Visible = true;
-            this.col_diemMieng.VisibleIndex = 2;
-            this.col_diemMieng.Width = 105;
-            // 
-            // col_diem15Phut
-            // 
-            this.col_diem15Phut.Caption = "Điểm 15 phút";
-            this.col_diem15Phut.ColumnEdit = this.col_diem15Phut_edit;
-            this.col_diem15Phut.FieldName = "DIEM15P";
-            this.col_diem15Phut.Name = "col_diem15Phut";
-            this.col_diem15Phut.Visible = true;
-            this.col_diem15Phut.VisibleIndex = 3;
-            this.col_diem15Phut.Width = 110;
-            // 
-            // col_diem1Tiet
-            // 
-            this.col_diem1Tiet.Caption = "Điểm 1 tiết";
-            this.col_diem1Tiet.ColumnEdit = this.col_diem1Tiet_edit;
-            this.col_diem1Tiet.FieldName = "DIEM1TIET";
-            this.col_diem1Tiet.Name = "col_diem1Tiet";
-            this.col_diem1Tiet.Visible = true;
-            this.col_diem1Tiet.VisibleIndex = 4;
-            this.col_diem1Tiet.Width = 120;
-            // 
-            // col_diemThi
-            // 
-            this.col_diemThi.Caption = "Điểm thi";
-            this.col_diemThi.ColumnEdit = this.col_diemThi_edit;
-            this.col_diemThi.FieldName = "DIEMTHI";
-            this.col_diemThi.Name = "col_diemThi";
-            this.col_diemThi.Visible = true;
-            this.col_diemThi.VisibleIndex = 5;
-            this.col_diemThi.Width = 142;
-            // 
             // frmXemDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -507,7 +507,7 @@
             this.Controls.Add(this.groupControlHocSinh);
             this.Controls.Add(this.dockPanelChucNang);
             this.Name = "frmXemDiem";
-            this.Text = "frmXemDiem";
+            this.Text = "Xem điểm";
             ((System.ComponentModel.ISupportInitialize)(this.navCapNhat)).EndInit();
             this.navCapNhat.ResumeLayout(false);
             this.navigationPage2.ResumeLayout(false);
@@ -523,6 +523,7 @@
             this.groupControlHocSinh.ResumeLayout(false);
             this.groupControlHocSinh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDiemControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_maHS_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_hoTen_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_diemMieng_edit)).EndInit();
@@ -532,7 +533,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorDiem)).EndInit();
             this.bindingNavigatorDiem.ResumeLayout(false);
             this.bindingNavigatorDiem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

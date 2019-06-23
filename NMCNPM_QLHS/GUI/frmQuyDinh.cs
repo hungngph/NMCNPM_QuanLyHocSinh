@@ -22,7 +22,6 @@ namespace NMCNPM_QLHS.GUI
         {
             InitializeComponent();
         }
-
         public frmQuyDinh(string s)
         {
             InitializeComponent();
@@ -39,18 +38,17 @@ namespace NMCNPM_QLHS.GUI
                     break;
             }
         }
+    #endregion -Constructor-
 
-        #endregion -Constructor-
+    #region -Events-
 
-        #region -Events-
+    #region -Button_click-
 
-        #region -Button_click-
+    #region -Hủy bỏ-
 
-        #region -Hủy bỏ-
+    #region -tabDoTuoi-
 
-        #region -tabDoTuoi-
-
-        private void btnHuyBo1_Click(object sender, EventArgs e)
+    private void btnHuyBo1_Click(object sender, EventArgs e)
         {
             loadTabDoTuoi();
         }

@@ -11,6 +11,8 @@ namespace NMCNPM_QLHS.GUI
         public rpDanhSachLop()
         {
             InitializeComponent();
+            foreach (DevExpress.XtraReports.Parameters.Parameter p in Parameters)
+                p.Visible = false;
         }
 
     }

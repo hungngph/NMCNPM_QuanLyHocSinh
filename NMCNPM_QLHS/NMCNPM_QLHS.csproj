@@ -231,6 +231,12 @@
     <Compile Include="GUI\rpDanhSachHocSinh.Designer.cs">
       <DependentUpon>rpDanhSachHocSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\rpDanhSachLop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\rpDanhSachLop.Designer.cs">
+      <DependentUpon>rpDanhSachLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="DAL\SQL_QLHS.dbml.layout">
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\rpDanhSachHocSinh.resx">
       <DependentUpon>rpDanhSachHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\rpDanhSachLop.resx">
+      <DependentUpon>rpDanhSachLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
