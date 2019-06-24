@@ -14,5 +14,17 @@ namespace NMCNPM_QLHS.BUS
         {
             return HOCKY_DAL.LayTatCaHocKy();
         }
+
+        // Lấy hệ số
+        public static int layHeSo(string maHK)
+        {
+            return HOCKY_DAL.layHeSo(maHK);
+        }
+
+        // Sửa hệ số học kỳ
+        public static void update(string maHK, int heSo)
+        {
+            HOCKY_BUS.update(maHK, heSo);
+        }
     }
 }

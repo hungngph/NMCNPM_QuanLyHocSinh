@@ -346,6 +346,7 @@
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayDiemChiTietHocSinhTheoMonResult.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayDiemHocSinhTheoLopResult.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayDiemMonHocTheoLopResult.datasource" />
+    <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayLopTheoNamHocResult.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayQTHCuaHocSinhResult.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayTatCaHocSinhResult.datasource" />
     <None Include="Properties\Settings.settings">

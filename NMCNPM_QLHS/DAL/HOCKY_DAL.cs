@@ -22,11 +22,33 @@ namespace NMCNPM_QLHS.DAL
                     {
                         hocKy.MAHK = x.MAHK;
                         hocKy.TENHOCKY = x.TENHOCKY;
+                        hocKy.HESO = x.HESO;
                         lst.Add(hocKy);
                     }
                 }
             }
             return lst;
+        }
+
+        // Lấy hệ số
+        public static int layHeSo(string maHK)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                HOCKY hk = db.HOCKies.Where(a => a.MAHK == maHK).FirstOrDefault();
+                return hk.HESO.Value;
+            }
+        }
+
+        // Sửa hệ số học kỳ
+        public static void Update(string maHK, int heSo)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                HOCKY hk = db.HOCKies.Where(a => a.MAHK == maHK).FirstOrDefault();
+                hk.HESO = heSo;
+                db.SubmitChanges();
+            }
         }
     }
 }

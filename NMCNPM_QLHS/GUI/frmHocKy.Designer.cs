@@ -31,10 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlHocKy = new DevExpress.XtraGrid.GridControl();
+            this.bindingSourceHocKy = new System.Windows.Forms.BindingSource(this.components);
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_maHocKy = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_tenHocKy = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumnHeSo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_HeSo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -45,14 +46,13 @@
             this.BIXoa = new DevExpress.XtraBars.BarButtonItem();
             this.BILuuDanhSach = new DevExpress.XtraBars.BarButtonItem();
             this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
-            this.bindingSourceHocKy = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHocKy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHocKy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHocKy)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -81,12 +81,18 @@
             this.gridView,
             this.gridView1});
             // 
+            // bindingSourceHocKy
+            // 
+            this.bindingSourceHocKy.DataSource = typeof(NMCNPM_QLHS.DAL.HOCKY);
+            // 
             // gridView
             // 
+            this.gridView.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.col_maHocKy,
             this.col_tenHocKy,
-            this.gridColumnHeSo});
+            this.col_HeSo});
             this.gridView.DetailHeight = 431;
             this.gridView.GridControl = this.gridControlHocKy;
             this.gridView.Name = "gridView";
@@ -98,6 +104,7 @@
             this.col_maHocKy.FieldName = "MAHK";
             this.col_maHocKy.MinWidth = 23;
             this.col_maHocKy.Name = "col_maHocKy";
+            this.col_maHocKy.OptionsColumn.AllowEdit = false;
             this.col_maHocKy.Visible = true;
             this.col_maHocKy.VisibleIndex = 0;
             this.col_maHocKy.Width = 201;
@@ -108,18 +115,20 @@
             this.col_tenHocKy.FieldName = "TENHOCKY";
             this.col_tenHocKy.MinWidth = 23;
             this.col_tenHocKy.Name = "col_tenHocKy";
+            this.col_tenHocKy.OptionsColumn.AllowEdit = false;
             this.col_tenHocKy.Visible = true;
             this.col_tenHocKy.VisibleIndex = 1;
             this.col_tenHocKy.Width = 226;
             // 
-            // gridColumnHeSo
+            // col_HeSo
             // 
-            this.gridColumnHeSo.Caption = "Hệ số";
-            this.gridColumnHeSo.MinWidth = 23;
-            this.gridColumnHeSo.Name = "gridColumnHeSo";
-            this.gridColumnHeSo.Visible = true;
-            this.gridColumnHeSo.VisibleIndex = 2;
-            this.gridColumnHeSo.Width = 1413;
+            this.col_HeSo.Caption = "Hệ số";
+            this.col_HeSo.FieldName = "HESO";
+            this.col_HeSo.MinWidth = 23;
+            this.col_HeSo.Name = "col_HeSo";
+            this.col_HeSo.Visible = true;
+            this.col_HeSo.VisibleIndex = 2;
+            this.col_HeSo.Width = 1413;
             // 
             // gridView1
             // 
@@ -205,10 +214,6 @@
             // 
             this.xtraOpenFileDialog1.FileName = "xtraOpenFileDialog1";
             // 
-            // bindingSourceHocKy
-            // 
-            this.bindingSourceHocKy.DataSource = typeof(NMCNPM_QLHS.DAL.HOCKY);
-            // 
             // frmHocKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -226,10 +231,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHocKy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHocKy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHocKy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,7 +255,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView;
         private DevExpress.XtraGrid.Columns.GridColumn col_maHocKy;
         private DevExpress.XtraGrid.Columns.GridColumn col_tenHocKy;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnHeSo;
+        private DevExpress.XtraGrid.Columns.GridColumn col_HeSo;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.BindingSource bindingSourceHocKy;
     }

@@ -24,7 +24,7 @@ namespace NMCNPM_QLHS.GUI
             //DataService.OpenConnection();
         }
 
-        #endregion -Constructor-
+        #endregion -Constructor-enableall
 
         #region -Events-
 
@@ -57,7 +57,7 @@ namespace NMCNPM_QLHS.GUI
             btnHoanTat.Text = "Lưu";
             clear();
             enableAllTextBox();
-            txtMaHS.Text = HOCSINH_BUS.getMaHS();
+            txtMaHS.Text = HOCSINH_BUS.autoMaHS();
             txtHoTen.Focus();
         }
 
@@ -191,6 +191,7 @@ namespace NMCNPM_QLHS.GUI
 
         public void clear()
         {
+            txtMaHS.Text = null;
             txtHoTen.Text = null;
             txtDiaChi.Text = null;
             txtEmail.Text = null;

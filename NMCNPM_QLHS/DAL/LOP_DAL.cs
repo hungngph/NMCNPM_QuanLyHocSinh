@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,43 @@ namespace NMCNPM_QLHS.DAL
 {
     class LOP_DAL
     {
+        // Thêm Lớp
+        public static void Insert(string maLop, string tenLop, string maKhoi)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                LOP l = new LOP();
+                l.MALOP = maLop;
+                l.TENLOP = tenLop;
+                l.MAKHOI = maKhoi;
+                l.SISO = null;
+
+                db.LOPs.InsertOnSubmit(l);
+                db.SubmitChanges();
+            }
+        }
+
+        // Sửa lớp
+        public static void Update(string maLop, string tenLop, string maKhoi)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                LOP l = db.LOPs.Where(a => a.MALOP == maLop).FirstOrDefault();
+                l.TENLOP = tenLop;
+                l.MAKHOI = maKhoi;
+                db.SubmitChanges();
+            }
+        }
+
+        // Xóa lớp
+        public static void Delete(string maLop)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                db.sp_XoaLop(maLop);
+            }
+        }
+
         // Lấy tất cả các lớp
         public static List<LOP> LayTatCaLop()
         {
@@ -31,26 +69,40 @@ namespace NMCNPM_QLHS.DAL
         }
 
         // Lấy ds lớp theo năm học
-        public static List<LOP> LayLopTheoNamHoc(string maNamHoc)
+        public static DataTable LayLopTheoNamHoc(string maNamHoc)
         {
-            List<LOP> lst = new List<LOP>();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("MALOP", typeof(string));
+            dt.Columns.Add("TENLOP", typeof(string));
+            dt.Columns.Add("SISO", typeof(int));
+            dt.Columns.Add("TENKHOI", typeof(string));
+            dt.Columns.Add("MAKHOI", typeof(string));
+            dt.Columns.Add("TENNAMHOC", typeof(string));
 
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                var ds = db.LOPs.Where(a => a.KHOILOP.MANAM == maNamHoc).ToList();
-                foreach (var x in ds)
+                var ds = db.sp_LayLopTheoNamHoc(maNamHoc);
+                foreach (var i in ds)
                 {
-                    LOP lop = new LOP();
-                    {
-                        lop.MALOP = x.MALOP;
-                        lop.TENLOP = x.TENLOP;
-                        lop.MAKHOI = x.MAKHOI;
-                        lop.SISO = x.SISO;
-                        lst.Add(lop);
-                    }
+                    DataRow r = dt.NewRow();
+                    if (i.MALOP != null)
+                        r["MALOP"] = i.MALOP;
+                    if (i.TENLOP != null)
+                        r["TENLOP"] = i.TENLOP;
+                    if (i.SISO != null)
+                        r["SISO"] = i.SISO.Value;
+                    if (i.TENKHOI != null)
+                        r["TENKHOI"] = i.TENKHOI;
+                    if (i.MAKHOI != null)
+                        r["MAKHOI"] = i.MAKHOI;
+                    if (i.TENNAMHOC != null)
+                        r["TENNAMHOC"] = i.TENNAMHOC;
+                    dt.Rows.Add(r);
                 }
             }
-            return lst;
+            if (dt.Rows.Count == 0)
+                return null;
+            return dt;
         }
 
         // Lấy ds lớp theo Khối
@@ -85,6 +137,52 @@ namespace NMCNPM_QLHS.DAL
                 else
                     return 0;
             }
+        }
+
+        // Lấy mã lớp auto
+        public static string autoMaLop()
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                return db.AUTO_IDLOP();
+            }
+        }
+
+        // Tìm kiếm lớp theo tên
+        public static DataTable timLopTheoTen(string ten)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("MALOP", typeof(string));
+            dt.Columns.Add("TENLOP", typeof(string));
+            dt.Columns.Add("SISO", typeof(int));
+            dt.Columns.Add("TENKHOI", typeof(string));
+            dt.Columns.Add("MAKHOI", typeof(string));
+            dt.Columns.Add("TENNAMHOC", typeof(string));
+
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                var ds = db.sp_TimLopTheoTenLop(ten);
+                foreach (var i in ds)
+                {
+                    DataRow r = dt.NewRow();
+                    if (i.MALOP != null)
+                        r["MALOP"] = i.MALOP;
+                    if (i.TENLOP != null)
+                        r["TENLOP"] = i.TENLOP;
+                    if (i.SISO != null)
+                        r["SISO"] = i.SISO.Value;
+                    if (i.TENKHOI != null)
+                        r["TENKHOI"] = i.TENKHOI;
+                    if (i.MAKHOI != null)
+                        r["MAKHOI"] = i.MAKHOI;
+                    if (i.TENNAMHOC != null)
+                        r["TENNAMHOC"] = i.TENNAMHOC;
+                    dt.Rows.Add(r);
+                }
+            }
+            if (dt.Rows.Count == 0)
+                return null;
+            return dt;
         }
     }
 }

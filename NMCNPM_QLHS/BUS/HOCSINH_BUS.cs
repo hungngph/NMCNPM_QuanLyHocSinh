@@ -31,9 +31,9 @@ namespace NMCNPM_QLHS.BUS
         }
 
         // Tạo MaHS
-        public static string getMaHS()
+        public static string autoMaHS()
         {
-            return HOCSINH_DAL.getMaHS();
+            return HOCSINH_DAL.autoMaHS();
         }
 
         // Lấy danh sách tất cả học sinh
