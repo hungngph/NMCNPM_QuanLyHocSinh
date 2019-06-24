@@ -11,19 +11,17 @@ using DevExpress.XtraEditors;
 
 namespace NMCNPM_QLHS.GUI
 {
-    public partial class frmDangNhap : DevExpress.XtraEditors.XtraForm
+    public partial class frmThongTinNguoiDung : DevExpress.XtraEditors.XtraForm
     {
-        public frmDangNhap()
+        public frmThongTinNguoiDung()
         {
             InitializeComponent();
         }
 
-
-        private void btnDangNhap_Click(object sender, EventArgs e)
+        private void frmThongTinNguoiDung_FormClosed(object sender, FormClosedEventArgs e)
         {
-            frmManHinhChinh frm = new frmManHinhChinh();
-            frm.Show();
-            this.Hide();
+ 
+                Application.OpenForms["frmManHinhChinh"].Enabled=true;
         }
     }
 }

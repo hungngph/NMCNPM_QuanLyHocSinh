@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using DevExpress.XtraSplashScreen;
+using System.Threading;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -29,6 +31,10 @@ namespace NMCNPM_QLHS.GUI
         {
             //Load frmSplash
             InitializeComponent();
+            SplashScreenManager.ShowDefaultSplashScreen("Đang mở...", "Phần Mềm Quản lý học sinh");
+            Thread.Sleep(1000);
+            SplashScreenManager.CloseDefaultSplashScreen();
+            btnDangNhap.Visibility = BarItemVisibility.Never;
         }
         #endregion -Constructor-
 
@@ -36,7 +42,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void frmManHinhChinh_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         #endregion -Load-
@@ -539,5 +545,32 @@ namespace NMCNPM_QLHS.GUI
 
         #endregion -Show form-
 
+        private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            btnDangXuat.Visibility = BarItemVisibility.Never;
+            btnThongTin.Visibility = BarItemVisibility.Never;
+            btnDangNhap.Visibility = BarItemVisibility.Always;
+        }
+
+        private void btnDangNhap_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            btnDangNhap.Visibility = BarItemVisibility.Never;
+            btnDangXuat.Visibility = BarItemVisibility.Always;
+            btnThongTin.Visibility = BarItemVisibility.Always;
+        }
+
+        private void btnThongTin_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var frm = new frmThongTinNguoiDung();
+            if (Application.OpenForms[frm.Name] == null)
+            {
+                frm.Show();
+            }
+            else
+            {
+                Application.OpenForms[frm.Name].Focus();
+            }
+            this.Enabled = false;
+        }
     }
 }
