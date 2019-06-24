@@ -39,18 +39,20 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridControlHocSinh = new DevExpress.XtraGrid.GridControl();
-            this.dgvHocSinh = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.bindingSourceDiemTongKet = new System.Windows.Forms.BindingSource();
+            this.dgvDiemTongKet = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_maHS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_maHS_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.col_diemTBHK1_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_hoTen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_hoTen_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.col_HocKy1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_ngaySinh_edit = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.col_DiemTBHK1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_HocKy2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_diaChi_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.col_diemTBHK2_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_CaNam = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_email_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.col_diemCaNam_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.col_maHS_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_gioiTinh_edit = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.col_diemTBH_edit = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboLop.Properties)).BeginInit();
@@ -61,14 +63,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHocSinh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_maHS_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiemTongKet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiemTongKet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_diemTBHK1_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_hoTen_edit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_ngaySinh_edit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_ngaySinh_edit.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_diaChi_edit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_email_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_diemTBHK2_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_diemCaNam_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_maHS_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_gioiTinh_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_diemTBH_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_diemTBH_edit.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -88,7 +92,7 @@
             // 
             // cboLop
             // 
-            this.cboLop.Location = new System.Drawing.Point(485, 14);
+            this.cboLop.Location = new System.Drawing.Point(485, 12);
             this.cboLop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboLop.Name = "cboLop";
             this.cboLop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -96,34 +100,35 @@
             this.cboLop.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENLOP", "")});
             this.cboLop.Properties.NullText = "";
-            this.cboLop.Size = new System.Drawing.Size(335, 22);
+            this.cboLop.Size = new System.Drawing.Size(336, 22);
             this.cboLop.StyleController = this.layoutControl1;
             this.cboLop.TabIndex = 9;
+            this.cboLop.EditValueChanged += new System.EventHandler(this.cboLop_EditValueChanged);
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(909, 14);
+            this.btnLamMoi.Location = new System.Drawing.Point(910, 12);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(79, 27);
+            this.btnLamMoi.Size = new System.Drawing.Size(80, 27);
             this.btnLamMoi.StyleController = this.layoutControl1;
             this.btnLamMoi.TabIndex = 7;
             this.btnLamMoi.Text = "Làm mới";
             // 
             // btnIn
             // 
-            this.btnIn.Location = new System.Drawing.Point(824, 14);
+            this.btnIn.Location = new System.Drawing.Point(825, 12);
             this.btnIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(81, 27);
             this.btnIn.StyleController = this.layoutControl1;
             this.btnIn.TabIndex = 6;
             this.btnIn.Text = "In";
-            this.btnIn.Click += new System.EventHandler(this.btnDongY_Click);
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // cboNamHoc
             // 
-            this.cboNamHoc.Location = new System.Drawing.Point(77, 14);
+            this.cboNamHoc.Location = new System.Drawing.Point(75, 12);
             this.cboNamHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboNamHoc.Name = "cboNamHoc";
             this.cboNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -131,7 +136,7 @@
             this.cboNamHoc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNAMHOC", "")});
             this.cboNamHoc.Properties.NullText = "";
-            this.cboNamHoc.Size = new System.Drawing.Size(341, 22);
+            this.cboNamHoc.Size = new System.Drawing.Size(343, 22);
             this.cboNamHoc.StyleController = this.layoutControl1;
             this.cboNamHoc.TabIndex = 4;
             this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
@@ -152,18 +157,18 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnLamMoi;
-            this.layoutControlItem4.Location = new System.Drawing.Point(895, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(898, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(83, 36);
+            this.layoutControlItem4.Size = new System.Drawing.Size(84, 40);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnIn;
-            this.layoutControlItem3.Location = new System.Drawing.Point(810, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(813, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(85, 36);
+            this.layoutControlItem3.Size = new System.Drawing.Size(85, 40);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -172,77 +177,85 @@
             this.layoutControlItem1.Control = this.cboNamHoc;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(408, 36);
+            this.layoutControlItem1.Size = new System.Drawing.Size(410, 40);
             this.layoutControlItem1.Text = "Năm học:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(60, 17);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.cboLop;
-            this.layoutControlItem5.Location = new System.Drawing.Point(408, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(410, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(402, 36);
+            this.layoutControlItem5.Size = new System.Drawing.Size(403, 40);
             this.layoutControlItem5.Text = "Lớp:";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 17);
             // 
             // gridControlHocSinh
             // 
+            this.gridControlHocSinh.DataSource = this.bindingSourceDiemTongKet;
             this.gridControlHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControlHocSinh.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlHocSinh.Location = new System.Drawing.Point(0, 60);
-            this.gridControlHocSinh.MainView = this.dgvHocSinh;
+            this.gridControlHocSinh.MainView = this.dgvDiemTongKet;
             this.gridControlHocSinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlHocSinh.Name = "gridControlHocSinh";
             this.gridControlHocSinh.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.col_maHS_edit,
             this.col_hoTen_edit,
             this.col_gioiTinh_edit,
-            this.col_ngaySinh_edit,
-            this.col_diaChi_edit,
-            this.col_email_edit});
+            this.col_diemTBH_edit,
+            this.col_diemTBHK2_edit,
+            this.col_diemCaNam_edit,
+            this.col_diemTBHK1_edit});
             this.gridControlHocSinh.Size = new System.Drawing.Size(1002, 573);
             this.gridControlHocSinh.TabIndex = 11;
             this.gridControlHocSinh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvHocSinh});
+            this.dgvDiemTongKet});
             // 
-            // dgvHocSinh
+            // bindingSourceDiemTongKet
             // 
-            this.dgvHocSinh.Appearance.GroupPanel.BackColor = System.Drawing.Color.Transparent;
-            this.dgvHocSinh.Appearance.GroupPanel.BackColor2 = System.Drawing.Color.Transparent;
-            this.dgvHocSinh.Appearance.GroupPanel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.dgvHocSinh.Appearance.GroupPanel.ForeColor = System.Drawing.Color.Black;
-            this.dgvHocSinh.Appearance.GroupPanel.Options.UseBackColor = true;
-            this.dgvHocSinh.Appearance.GroupPanel.Options.UseFont = true;
-            this.dgvHocSinh.Appearance.GroupPanel.Options.UseForeColor = true;
-            this.dgvHocSinh.Appearance.GroupPanel.Options.UseTextOptions = true;
-            this.dgvHocSinh.Appearance.GroupPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dgvHocSinh.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.bindingSourceDiemTongKet.DataSource = typeof(NMCNPM_QLHS.DAL.sp_LayDiemHocSinhTheoLopResult);
+            // 
+            // dgvDiemTongKet
+            // 
+            this.dgvDiemTongKet.Appearance.GroupPanel.BackColor = System.Drawing.Color.Transparent;
+            this.dgvDiemTongKet.Appearance.GroupPanel.BackColor2 = System.Drawing.Color.Transparent;
+            this.dgvDiemTongKet.Appearance.GroupPanel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.dgvDiemTongKet.Appearance.GroupPanel.ForeColor = System.Drawing.Color.Black;
+            this.dgvDiemTongKet.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.dgvDiemTongKet.Appearance.GroupPanel.Options.UseFont = true;
+            this.dgvDiemTongKet.Appearance.GroupPanel.Options.UseForeColor = true;
+            this.dgvDiemTongKet.Appearance.GroupPanel.Options.UseTextOptions = true;
+            this.dgvDiemTongKet.Appearance.GroupPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvDiemTongKet.Appearance.Row.Options.UseTextOptions = true;
+            this.dgvDiemTongKet.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.dgvDiemTongKet.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.col_maHS,
             this.col_hoTen,
-            this.col_HocKy1,
+            this.col_DiemTBHK1,
             this.col_HocKy2,
             this.col_CaNam});
-            this.dgvHocSinh.DetailHeight = 431;
-            this.dgvHocSinh.GridControl = this.gridControlHocSinh;
-            this.dgvHocSinh.GroupPanelText = "DANH SÁCH HỌC SINH";
-            this.dgvHocSinh.Name = "dgvHocSinh";
-            this.dgvHocSinh.OptionsBehavior.Editable = false;
+            this.dgvDiemTongKet.DetailHeight = 431;
+            this.dgvDiemTongKet.GridControl = this.gridControlHocSinh;
+            this.dgvDiemTongKet.GroupPanelText = "BẢNG ĐIỂM TỔNG KẾT";
+            this.dgvDiemTongKet.Name = "dgvDiemTongKet";
+            this.dgvDiemTongKet.OptionsBehavior.Editable = false;
             // 
             // col_maHS
             // 
             this.col_maHS.Caption = "Mã Học Sinh";
-            this.col_maHS.ColumnEdit = this.col_maHS_edit;
+            this.col_maHS.ColumnEdit = this.col_diemTBHK1_edit;
             this.col_maHS.FieldName = "MAHS";
             this.col_maHS.MinWidth = 24;
             this.col_maHS.Name = "col_maHS";
             this.col_maHS.Visible = true;
             this.col_maHS.VisibleIndex = 0;
-            this.col_maHS.Width = 156;
+            this.col_maHS.Width = 168;
             // 
-            // col_maHS_edit
+            // col_diemTBHK1_edit
             // 
-            this.col_maHS_edit.AutoHeight = false;
-            this.col_maHS_edit.Name = "col_maHS_edit";
+            this.col_diemTBHK1_edit.AutoHeight = false;
+            this.col_diemTBHK1_edit.Name = "col_diemTBHK1_edit";
             // 
             // col_hoTen
             // 
@@ -253,64 +266,60 @@
             this.col_hoTen.Name = "col_hoTen";
             this.col_hoTen.Visible = true;
             this.col_hoTen.VisibleIndex = 1;
-            this.col_hoTen.Width = 205;
+            this.col_hoTen.Width = 329;
             // 
             // col_hoTen_edit
             // 
             this.col_hoTen_edit.AutoHeight = false;
             this.col_hoTen_edit.Name = "col_hoTen_edit";
             // 
-            // col_HocKy1
+            // col_DiemTBHK1
             // 
-            this.col_HocKy1.Caption = "Học kỳ 1";
-            this.col_HocKy1.ColumnEdit = this.col_ngaySinh_edit;
-            this.col_HocKy1.FieldName = "NGAYSINH";
-            this.col_HocKy1.MinWidth = 24;
-            this.col_HocKy1.Name = "col_HocKy1";
-            this.col_HocKy1.Visible = true;
-            this.col_HocKy1.VisibleIndex = 2;
-            this.col_HocKy1.Width = 205;
-            // 
-            // col_ngaySinh_edit
-            // 
-            this.col_ngaySinh_edit.AutoHeight = false;
-            this.col_ngaySinh_edit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.col_ngaySinh_edit.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.col_ngaySinh_edit.Name = "col_ngaySinh_edit";
+            this.col_DiemTBHK1.Caption = "Học kỳ 1";
+            this.col_DiemTBHK1.ColumnEdit = this.col_diemTBHK1_edit;
+            this.col_DiemTBHK1.FieldName = "DIEMTBHK1";
+            this.col_DiemTBHK1.MinWidth = 24;
+            this.col_DiemTBHK1.Name = "col_DiemTBHK1";
+            this.col_DiemTBHK1.Visible = true;
+            this.col_DiemTBHK1.VisibleIndex = 2;
+            this.col_DiemTBHK1.Width = 168;
             // 
             // col_HocKy2
             // 
             this.col_HocKy2.Caption = "Học kỳ 2";
-            this.col_HocKy2.ColumnEdit = this.col_diaChi_edit;
-            this.col_HocKy2.FieldName = "DIACHI";
+            this.col_HocKy2.ColumnEdit = this.col_diemTBHK2_edit;
+            this.col_HocKy2.FieldName = "DIEMTBHK2";
             this.col_HocKy2.MinWidth = 24;
             this.col_HocKy2.Name = "col_HocKy2";
             this.col_HocKy2.Visible = true;
             this.col_HocKy2.VisibleIndex = 3;
-            this.col_HocKy2.Width = 205;
+            this.col_HocKy2.Width = 161;
             // 
-            // col_diaChi_edit
+            // col_diemTBHK2_edit
             // 
-            this.col_diaChi_edit.AutoHeight = false;
-            this.col_diaChi_edit.Name = "col_diaChi_edit";
+            this.col_diemTBHK2_edit.AutoHeight = false;
+            this.col_diemTBHK2_edit.Name = "col_diemTBHK2_edit";
             // 
             // col_CaNam
             // 
             this.col_CaNam.Caption = "Cả năm";
-            this.col_CaNam.ColumnEdit = this.col_email_edit;
-            this.col_CaNam.FieldName = "EMAIL";
+            this.col_CaNam.ColumnEdit = this.col_diemCaNam_edit;
+            this.col_CaNam.FieldName = "DIEMCANAM";
             this.col_CaNam.MinWidth = 24;
             this.col_CaNam.Name = "col_CaNam";
             this.col_CaNam.Visible = true;
             this.col_CaNam.VisibleIndex = 4;
-            this.col_CaNam.Width = 209;
+            this.col_CaNam.Width = 751;
             // 
-            // col_email_edit
+            // col_diemCaNam_edit
             // 
-            this.col_email_edit.AutoHeight = false;
-            this.col_email_edit.Name = "col_email_edit";
+            this.col_diemCaNam_edit.AutoHeight = false;
+            this.col_diemCaNam_edit.Name = "col_diemCaNam_edit";
+            // 
+            // col_maHS_edit
+            // 
+            this.col_maHS_edit.AutoHeight = false;
+            this.col_maHS_edit.Name = "col_maHS_edit";
             // 
             // col_gioiTinh_edit
             // 
@@ -318,6 +327,15 @@
             this.col_gioiTinh_edit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.col_gioiTinh_edit.Name = "col_gioiTinh_edit";
+            // 
+            // col_diemTBH_edit
+            // 
+            this.col_diemTBH_edit.AutoHeight = false;
+            this.col_diemTBH_edit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.col_diemTBH_edit.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.col_diemTBH_edit.Name = "col_diemTBH_edit";
             // 
             // frmrpDanhSachHocSinh
             // 
@@ -340,14 +358,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHocSinh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_maHS_edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiemTongKet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiemTongKet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_diemTBHK1_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_hoTen_edit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_ngaySinh_edit.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_ngaySinh_edit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_diaChi_edit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_email_edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_diemTBHK2_edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_diemCaNam_edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_maHS_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_gioiTinh_edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_diemTBH_edit.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_diemTBH_edit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,19 +382,21 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraGrid.GridControl gridControlHocSinh;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgvHocSinh;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvDiemTongKet;
         private DevExpress.XtraGrid.Columns.GridColumn col_maHS;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_maHS_edit;
         private DevExpress.XtraGrid.Columns.GridColumn col_hoTen;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_hoTen_edit;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox col_gioiTinh_edit;
-        private DevExpress.XtraGrid.Columns.GridColumn col_HocKy1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit col_ngaySinh_edit;
+        private DevExpress.XtraGrid.Columns.GridColumn col_DiemTBHK1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit col_diemTBH_edit;
         private DevExpress.XtraGrid.Columns.GridColumn col_HocKy2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_diaChi_edit;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_diemTBHK2_edit;
         private DevExpress.XtraGrid.Columns.GridColumn col_CaNam;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_email_edit;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_diemCaNam_edit;
         private DevExpress.XtraEditors.LookUpEdit cboLop;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private System.Windows.Forms.BindingSource bindingSourceDiemTongKet;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_diemTBHK1_edit;
     }
 }
