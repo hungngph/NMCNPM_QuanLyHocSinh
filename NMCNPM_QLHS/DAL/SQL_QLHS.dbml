@@ -390,13 +390,26 @@
     <Parameter Name="manamhoc" Type="System.String" DbType="Char(4)" />
     <Return Type="System.Double" />
   </Function>
-  <Function Name="dbo.sp_KiemTraDangNhap" Method="sp_KiemTraDangNhap">
+  <Function Name="dbo.sp_KiemTraTonTai" Method="sp_KiemTraTonTai">
     <Parameter Name="tendangnhap" Type="System.String" DbType="Char(50)" />
-    <ElementType Name="sp_KiemTraDangNhapResult">
+    <ElementType Name="sp_KiemTraTonTaiResult">
       <Column Name="MAND" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
       <Column Name="TENDANGNHAP" Type="System.String" DbType="Char(50)" CanBeNull="true" />
       <Column Name="MATKHAU" Type="System.String" DbType="Char(20)" CanBeNull="true" />
       <Column Name="MALND" Type="System.String" DbType="Char(6)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.sp_DangNhap" Method="sp_DangNhap">
+    <Parameter Name="tenDangNhap" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="matkhau" Type="System.String" DbType="Char(20)" />
+    <ElementType Name="sp_DangNhapResult">
+      <Column Name="MAND" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="TENDANGNHAP" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="MATKHAU" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MALND" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AUTO_IDNGUOIDUNG" Method="AUTO_IDNGUOIDUNG" IsComposable="true">
+    <Return Type="System.String" />
   </Function>
 </Database>

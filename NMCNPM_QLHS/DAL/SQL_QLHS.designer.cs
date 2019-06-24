@@ -450,11 +450,24 @@ namespace NMCNPM_QLHS.DAL
 			return ((System.Nullable<double>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mahs, mahocky, manamhoc).ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_KiemTraDangNhap")]
-		public ISingleResult<sp_KiemTraDangNhapResult> sp_KiemTraDangNhap([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(50)")] string tendangnhap)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_KiemTraTonTai")]
+		public ISingleResult<sp_KiemTraTonTaiResult> sp_KiemTraTonTai([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(50)")] string tendangnhap)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tendangnhap);
-			return ((ISingleResult<sp_KiemTraDangNhapResult>)(result.ReturnValue));
+			return ((ISingleResult<sp_KiemTraTonTaiResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_DangNhap")]
+		public ISingleResult<sp_DangNhapResult> sp_DangNhap([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(50)")] string tenDangNhap, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(20)")] string matkhau)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tenDangNhap, matkhau);
+			return ((ISingleResult<sp_DangNhapResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AUTO_IDNGUOIDUNG", IsComposable=true)]
+		public string AUTO_IDNGUOIDUNG()
+		{
+			return ((string)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod()))).ReturnValue));
 		}
 	}
 	
@@ -5030,7 +5043,7 @@ namespace NMCNPM_QLHS.DAL
 		}
 	}
 	
-	public partial class sp_KiemTraDangNhapResult
+	public partial class sp_KiemTraTonTaiResult
 	{
 		
 		private string _MAND;
@@ -5041,7 +5054,87 @@ namespace NMCNPM_QLHS.DAL
 		
 		private string _MALND;
 		
-		public sp_KiemTraDangNhapResult()
+		public sp_KiemTraTonTaiResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAND", DbType="Char(6) NOT NULL", CanBeNull=false)]
+		public string MAND
+		{
+			get
+			{
+				return this._MAND;
+			}
+			set
+			{
+				if ((this._MAND != value))
+				{
+					this._MAND = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENDANGNHAP", DbType="Char(50)")]
+		public string TENDANGNHAP
+		{
+			get
+			{
+				return this._TENDANGNHAP;
+			}
+			set
+			{
+				if ((this._TENDANGNHAP != value))
+				{
+					this._TENDANGNHAP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATKHAU", DbType="Char(20)")]
+		public string MATKHAU
+		{
+			get
+			{
+				return this._MATKHAU;
+			}
+			set
+			{
+				if ((this._MATKHAU != value))
+				{
+					this._MATKHAU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALND", DbType="Char(6)")]
+		public string MALND
+		{
+			get
+			{
+				return this._MALND;
+			}
+			set
+			{
+				if ((this._MALND != value))
+				{
+					this._MALND = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sp_DangNhapResult
+	{
+		
+		private string _MAND;
+		
+		private string _TENDANGNHAP;
+		
+		private string _MATKHAU;
+		
+		private string _MALND;
+		
+		public sp_DangNhapResult()
 		{
 		}
 		

@@ -119,7 +119,7 @@
         <classShapeMoniker Id="68028697-7828-48ea-b41b-f3a4903f4662" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 4.62870748440004); (3.5 : 4.62870748440004)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 4.62870748440004); (3.13541666666667 : 4.62870748440004 : JumpStart); (3.30208333333333 : 4.62870748440004 : JumpEnd); (3.5 : 4.62870748440004)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SQL_QLHSDataContext/HOCKY/HOCKY_BAOCAOTONGKETMON" />
       <nodes>
         <classShapeMoniker Id="91a7c86d-5af9-4975-b641-82e8ebdf4f40" />
@@ -133,7 +133,7 @@
         <classShapeMoniker Id="fff25680-695b-4bb1-b7d4-d2da5c6a2fee" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 2.10702189127604); (3.04166666666667 : 2.10702189127604 : JumpStart); (3.20833333333333 : 2.10702189127604 : JumpEnd); (3.5 : 2.10702189127604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 2.10702189127604); (3.5 : 2.10702189127604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SQL_QLHSDataContext/LOP/LOP_BAOCAOTONGKETHK" />
       <nodes>
         <classShapeMoniker Id="26bc21d1-fb2f-413f-b555-2906a94e4fa5" />
@@ -161,7 +161,7 @@
         <classShapeMoniker Id="f80c146e-dfe3-4729-a916-f490d1e551a5" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 6.00091745577925); (2.875 : 5.625); (2.875 : 6.0112939453125); (3.5 : 5.3862939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 6.00091745577925); (2.875 : 5.625); (2.875 : 6.0112939453125); (3.06607443490112 : 5.82021951041138 : JumpStart); (3.27767556509888 : 5.60861838021362 : JumpEnd); (3.5 : 5.3862939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SQL_QLHSDataContext/MONHOC/MONHOC_BAOCAOTONGKETMON" />
       <nodes>
         <classShapeMoniker Id="dde67f3b-d3d7-4d29-9074-25841fb1ab17" />
@@ -189,7 +189,7 @@
         <classShapeMoniker Id="f80c146e-dfe3-4729-a916-f490d1e551a5" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 5.19399251302083); (3.125 : 5.56899251302083); (3.125 : 7.63544840494792); (3.19791666666667 : 7.63544840494792 : JumpStart); (3.36458333333333 : 7.63544840494792 : JumpEnd); (3.5 : 7.63544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 5.19399251302083); (3.125 : 5.56899251302083); (3.125 : 7.63544840494792); (3.5 : 7.63544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SQL_QLHSDataContext/HOCKY/HOCKY_QUATRINHHOC" />
       <nodes>
         <classShapeMoniker Id="91a7c86d-5af9-4975-b641-82e8ebdf4f40" />
@@ -203,7 +203,7 @@
         <classShapeMoniker Id="fbf8f0d9-9822-4ba9-a6ba-8f0152c93e15" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 2.44873716105769); (3.06607443490112 : 2.76481159595881 : JumpStart); (3.18392556509888 : 2.88266272615657 : JumpEnd); (3.21875 : 2.91748716105769); (3.21875 : 7.16147220247396); (3.5 : 7.16147220247396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 2.44873716105769); (3.21875 : 2.91748716105769); (3.21875 : 7.16147220247396); (3.5 : 7.16147220247396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SQL_QLHSDataContext/LOP/LOP_QUATRINHHOC" />
       <nodes>
         <classShapeMoniker Id="26bc21d1-fb2f-413f-b555-2906a94e4fa5" />

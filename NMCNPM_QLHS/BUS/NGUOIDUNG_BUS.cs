@@ -10,7 +10,11 @@ namespace NMCNPM_QLHS.BUS
     class NGUOIDUNG_BUS
     {
         public static bool KiemTraNguoiDung(string tendangnhap) {
-            return NGUOIDUNG_DAL.KiemTraNguoiDung(tendangnhap);
+            return NGUOIDUNG_DAL.KiemTraTonTai(tendangnhap);
+        }
+        public static string DangNhap(string tendangnhap, string matkhau)
+        {
+            return NGUOIDUNG_DAL.DangNhap(tendangnhap, matkhau);
         }
     }
 }

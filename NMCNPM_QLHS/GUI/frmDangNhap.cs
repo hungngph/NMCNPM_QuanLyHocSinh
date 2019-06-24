@@ -26,7 +26,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (NGUOIDUNG_BUS.KiemTraNguoiDung(txtTaiKhoan.Text))
+            if (NGUOIDUNG_BUS.DangNhap(txtTaiKhoan.Text, txtMatKhau.Text) != "")
                 MessageBox.Show("OK");
             else
                 MessageBox.Show("FAILED");
