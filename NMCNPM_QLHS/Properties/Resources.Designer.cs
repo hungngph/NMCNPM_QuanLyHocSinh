@@ -103,6 +103,16 @@ namespace NMCNPM_QLHS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancel_50px {
+            get {
+                object obj = ResourceManager.GetObject("Cancel_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chuyenlop {
             get {
                 object obj = ResourceManager.GetObject("chuyenlop", resourceCulture);
@@ -356,6 +366,16 @@ namespace NMCNPM_QLHS.Properties {
         internal static System.Drawing.Bitmap huongdan {
             get {
                 object obj = ResourceManager.GetObject("huongdan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Info_52px {
+            get {
+                object obj = ResourceManager.GetObject("Info_52px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

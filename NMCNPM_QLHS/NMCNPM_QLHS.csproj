@@ -221,6 +221,12 @@
     <Compile Include="GUI\frmrpTongKetMon.designer.cs">
       <DependentUpon>frmrpTongKetMon.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmThongTinNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThongTinNguoiDung.Designer.cs">
+      <DependentUpon>frmThongTinNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmTraCuuHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmrpTongKetMon.resx">
       <DependentUpon>frmrpTongKetMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThongTinNguoiDung.resx">
+      <DependentUpon>frmThongTinNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTraCuuHocSinh.resx">
       <DependentUpon>frmTraCuuHocSinh.cs</DependentUpon>
@@ -565,9 +574,17 @@
   <ItemGroup>
     <None Include="Resources\icons8_Update_32px.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8_Info_52px.png" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Cancel_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Cancel_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
