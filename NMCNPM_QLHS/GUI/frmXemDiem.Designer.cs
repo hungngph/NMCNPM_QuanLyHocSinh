@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXemDiem));
             this.navCapNhat = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
@@ -40,12 +41,12 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.cboNamHoc = new DevExpress.XtraEditors.LookUpEdit();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanelChucNang = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.groupControlHocSinh = new DevExpress.XtraEditors.GroupControl();
             this.gridDiemControl = new DevExpress.XtraGrid.GridControl();
-            this.bindingSourceDiem = new System.Windows.Forms.BindingSource();
+            this.bindingSourceDiem = new System.Windows.Forms.BindingSource(this.components);
             this.dgvDiem = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_maHS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_maHS_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
@@ -59,7 +60,7 @@
             this.col_diem1Tiet_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_diemThi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_diemThi_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.bindingNavigatorDiem = new System.Windows.Forms.BindingNavigator();
+            this.bindingNavigatorDiem = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();

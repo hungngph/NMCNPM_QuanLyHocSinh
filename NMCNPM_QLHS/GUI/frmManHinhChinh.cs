@@ -77,7 +77,6 @@ namespace NMCNPM_QLHS.GUI
 
         #region -Phân quyền-
 
-        #region -Phân quyền đăng nhập-
         public void Permissions()
         {
             switch ("LND001")
@@ -96,11 +95,8 @@ namespace NMCNPM_QLHS.GUI
                     break;
             }
         }
-        #endregion -Phân quyền đăng nhập-
 
-        #region -Giao diện đăng nhập
 
-        #region -Giao diện mặc định-
         public void Default()
         {
             // True
@@ -109,18 +105,15 @@ namespace NMCNPM_QLHS.GUI
             // Disable các button
             btnPhanLop.Visibility = BarItemVisibility.Always;
             btnLenLop.Visibility = BarItemVisibility.Always;
+            btnNhapDiem.Visibility = BarItemVisibility.Always;
             ribbonPageQuyDinh.Visible = true;
         }
-        #endregion
 
-        #region -Giao diện đăng nhập với quyền BGH-
         public void IsBGH()
         {
             // Enable, Disable các button
         }
-        #endregion
 
-        #region -Giao diện đăng nhập với quyền Giáo viên-
         public void IsGiaoVien()
         {
             // Enable, Disable các button
@@ -128,17 +121,13 @@ namespace NMCNPM_QLHS.GUI
             btnLenLop.Visibility = BarItemVisibility.Never;
             ribbonPageQuyDinh.Visible = false;
         }
-        #endregion
 
-        #region -Giao diện đăng nhập với quyền Giáo vụ-
         public void IsGiaoVu()
         {
             // Enable, Disable các button
+            btnNhapDiem.Visibility = BarItemVisibility.Never;
         }
 
-        #endregion
-
-        #endregion -Giao diện đăng nhập
 
         #endregion -Phân quyền-
 

@@ -16,6 +16,78 @@ namespace NMCNPM_QLHS.GUI
     {
         static bool state = false; // Đã thay đổi dữ liệu hay chưa
 
+        #region -Phân quyền-
+
+        public void Permissions()
+        {
+            switch ("LND001")
+            {
+                case "LND001":      // Giao diện đăng nhập với quyền BGH
+                    IsBGH();
+                    break;
+                case "LND002":      // Giao diện đăng nhập với quyền GiaoVien
+                    IsGiaoVien();
+                    break;
+                case "LND003":      // Giao diện đăng nhập với quyền GiaoVu
+                    IsGiaoVu();
+                    break;
+                default:
+                    Default();
+                    break;
+            }
+        }
+        public void Default()
+        {
+            // True
+            // Enable các button
+            // False 
+            // Disable các button
+            btnDongY1.Visible = true;
+            btnDongY2.Visible = true;
+            btnDongY3.Visible = true;
+            btnHuy1.Visible = true;
+            btnHuy2.Visible = true;
+            btnHuy3.Visible = true;
+            txtTuoiToiDa.Enabled = true;
+            txtTuoiToiThieu.Enabled = true;
+            txtSiSoToiDa.Enabled = true;
+            txtDiemToiDa.Enabled = true;
+            txtDiemToiThieu.Enabled = true;
+            txtDatMon.Enabled = true;
+            txtDatHK.Enabled = true;
+        }
+
+        public void IsBGH()
+        {
+            // Enable, Disable các button
+        }
+
+        public void IsGiaoVien()
+        {
+            // Enable, Disable các button
+            btnDongY1.Visible = false;
+            btnDongY2.Visible = false;
+            btnDongY3.Visible = false;
+            btnHuy1.Visible = false;
+            btnHuy2.Visible = false;
+            btnHuy3.Visible = false;
+            txtTuoiToiDa.Enabled = false;
+            txtTuoiToiThieu.Enabled = false;
+            txtSiSoToiDa.Enabled = false;
+            txtDiemToiDa.Enabled = false;
+            txtDiemToiThieu.Enabled = false;
+            txtDatMon.Enabled = false;
+            txtDatHK.Enabled = false;
+        }
+
+        public void IsGiaoVu()
+        {
+            // Enable, Disable các button
+            IsGiaoVien();
+        }
+
+        #endregion -Phân quyền-
+
         #region -Constructor-
 
         public frmQuyDinh()

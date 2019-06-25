@@ -27,7 +27,6 @@ namespace NMCNPM_QLHS.GUI
 
         #region -Phân quyền-
 
-        #region -Phân quyền đăng nhập-
         public void Permissions()
         {
             switch ("LND001")
@@ -46,11 +45,8 @@ namespace NMCNPM_QLHS.GUI
                     break;
             }
         }
-        #endregion -Phân quyền đăng nhập-
 
-        #region -Giao diện đăng nhập
 
-        #region -Giao diện mặc định-
         public void Default()
         {
             // True
@@ -59,34 +55,33 @@ namespace NMCNPM_QLHS.GUI
             // Disable các button
             navNhapLieu.Visible = true;
             navPanelChucNang.SelectedPage = navNhapLieu;
+            bindingNavigatorAdd.Enabled = true;
+            bindingNavigatorDelete.Enabled = true;
+            bindingNavigatorEdit.Enabled = true;
+            bindingNavigatorLuu.Enabled = true;
         }
-        #endregion
 
-        #region -Giao diện đăng nhập với quyền BGH-
         public void IsBGH()
         {
             // Enable, Disable các button
         }
-        #endregion
 
-        #region -Giao diện đăng nhập với quyền Giáo viên-
         public void IsGiaoVien()
         {
             // Enable, Disable các button
             navNhapLieu.Visible = false;
+            bindingNavigatorAdd.Enabled = false;
+            bindingNavigatorDelete.Enabled = false;
+            bindingNavigatorEdit.Enabled = false;
+            bindingNavigatorLuu.Enabled = false;
             navPanelChucNang.SelectedPage = navTimKiem;
         }
-        #endregion
 
-        #region -Giao diện đăng nhập với quyền Giáo vụ-
         public void IsGiaoVu()
         {
             // Enable, Disable các button
         }
 
-        #endregion
-
-        #endregion -Giao diện đăng nhập
 
         #endregion -Phân quyền-
 
