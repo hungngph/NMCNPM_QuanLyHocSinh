@@ -58,11 +58,11 @@
             this.gridControlKhoiLop = new DevExpress.XtraGrid.GridControl();
             this.dgvKhoiLop = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_maKhoi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_maKhoi_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_TenKhoi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_tenKhoi_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_SoLop = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_soLop_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.col_maKhoi_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.cboNamHoc = new DevExpress.XtraEditors.LookUpEdit();
@@ -77,9 +77,9 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlKhoiLop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoiLop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_maKhoi_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_tenKhoi_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_soLop_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_maKhoi_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -358,11 +358,6 @@
             this.col_maKhoi.VisibleIndex = 0;
             this.col_maKhoi.Width = 211;
             // 
-            // col_maKhoi_edit
-            // 
-            this.col_maKhoi_edit.AutoHeight = false;
-            this.col_maKhoi_edit.Name = "col_maKhoi_edit";
-            // 
             // col_TenKhoi
             // 
             this.col_TenKhoi.Caption = "Khối lớp";
@@ -397,6 +392,11 @@
             this.col_soLop_edit.AutoHeight = false;
             this.col_soLop_edit.Name = "col_soLop_edit";
             // 
+            // col_maKhoi_edit
+            // 
+            this.col_maKhoi_edit.AutoHeight = false;
+            this.col_maKhoi_edit.Name = "col_maKhoi_edit";
+            // 
             // gridView1
             // 
             this.gridView1.DetailHeight = 431;
@@ -417,7 +417,7 @@
             // 
             // cboNamHoc
             // 
-            this.cboNamHoc.Location = new System.Drawing.Point(72, 14);
+            this.cboNamHoc.Location = new System.Drawing.Point(70, 12);
             this.cboNamHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboNamHoc.MenuManager = this.barManager1;
             this.cboNamHoc.Name = "cboNamHoc";
@@ -426,7 +426,7 @@
             this.cboNamHoc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNAMHOC", "")});
             this.cboNamHoc.Properties.NullText = "";
-            this.cboNamHoc.Size = new System.Drawing.Size(160, 22);
+            this.cboNamHoc.Size = new System.Drawing.Size(162, 22);
             this.cboNamHoc.StyleController = this.layoutControl1;
             this.cboNamHoc.TabIndex = 4;
             this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
@@ -447,16 +447,16 @@
             this.layoutControlItem1.Control = this.cboNamHoc;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(222, 42);
+            this.layoutControlItem1.Size = new System.Drawing.Size(224, 46);
             this.layoutControlItem1.Text = "Năm học";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(55, 17);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(222, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(224, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(348, 42);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(350, 46);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frmKhoilop
@@ -483,9 +483,9 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlKhoiLop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoiLop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_maKhoi_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_tenKhoi_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_soLop_edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_maKhoi_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

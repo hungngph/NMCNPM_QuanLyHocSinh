@@ -16,6 +16,10 @@ namespace NMCNPM_QLHS.GUI
         public frmDoiMatKhau()
         {
             InitializeComponent();
+            PhanQuyen();
+        }
+        public void PhanQuyen() {
+
         }
     }
 }

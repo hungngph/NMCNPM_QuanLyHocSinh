@@ -20,9 +20,76 @@ namespace NMCNPM_QLHS.GUI
         public frmLop()
         {
             InitializeComponent();
+            Permissions();
         }
 
         #endregion -Constructor-
+
+        #region -Phân quyền-
+
+        #region -Phân quyền đăng nhập-
+        public void Permissions()
+        {
+            switch ("LND001")
+            {
+                case "LND001":      // Giao diện đăng nhập với quyền BGH
+                    IsBGH();
+                    break;
+                case "LND002":      // Giao diện đăng nhập với quyền GiaoVien
+                    IsGiaoVien();
+                    break;
+                case "LND003":      // Giao diện đăng nhập với quyền GiaoVu
+                    IsGiaoVu();
+                    break;
+                default:
+                    Default();
+                    break;
+            }
+        }
+        #endregion -Phân quyền đăng nhập-
+
+        #region -Giao diện đăng nhập
+
+        #region -Giao diện mặc định-
+        public void Default()
+        {
+            // True
+            // Enable các button
+            // False 
+            // Disable các button
+            navNhapLieu.Visible = true;
+            navPanelChucNang.SelectedPage = navNhapLieu;
+        }
+        #endregion
+
+        #region -Giao diện đăng nhập với quyền BGH-
+        public void IsBGH()
+        {
+            // Enable, Disable các button
+        }
+        #endregion
+
+        #region -Giao diện đăng nhập với quyền Giáo viên-
+        public void IsGiaoVien()
+        {
+            // Enable, Disable các button
+            navNhapLieu.Visible = false;
+            navPanelChucNang.SelectedPage = navTimKiem;
+        }
+        #endregion
+
+        #region -Giao diện đăng nhập với quyền Giáo vụ-
+        public void IsGiaoVu()
+        {
+            // Enable, Disable các button
+        }
+
+        #endregion
+
+        #endregion -Giao diện đăng nhập
+
+        #endregion -Phân quyền-
+
 
         #region -Methods-
 

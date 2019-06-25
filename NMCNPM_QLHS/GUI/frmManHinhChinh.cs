@@ -35,6 +35,7 @@ namespace NMCNPM_QLHS.GUI
             Thread.Sleep(1000);
             SplashScreenManager.CloseDefaultSplashScreen();
             btnDangNhap.Visibility = BarItemVisibility.Never;
+            Permissions();
         }
         #endregion -Constructor-
 
@@ -78,9 +79,9 @@ namespace NMCNPM_QLHS.GUI
         #region -Phân quyền-
 
         #region -Phân quyền đăng nhập-
-        public void Permissions(String m_Per)
+        public void Permissions()
         {
-            switch (m_Per)
+            switch ("LND001")
             {
                 case "LND001":      // Giao diện đăng nhập với quyền BGH
                     IsBGH();
@@ -107,6 +108,9 @@ namespace NMCNPM_QLHS.GUI
             // Enable các button
             // False 
             // Disable các button
+            btnPhanLop.Visibility = BarItemVisibility.Always;
+            btnLenLop.Visibility = BarItemVisibility.Always;
+            ribbonPageQuyDinh.Visible = true;
         }
         #endregion
 
@@ -121,6 +125,9 @@ namespace NMCNPM_QLHS.GUI
         public void IsGiaoVien()
         {
             // Enable, Disable các button
+            btnPhanLop.Visibility = BarItemVisibility.Never;
+            btnLenLop.Visibility = BarItemVisibility.Never;
+            ribbonPageQuyDinh.Visible = false;
         }
         #endregion
 
