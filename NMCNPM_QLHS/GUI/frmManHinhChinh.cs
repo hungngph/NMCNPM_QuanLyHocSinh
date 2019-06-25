@@ -415,7 +415,22 @@ namespace NMCNPM_QLHS.GUI
 
         #region -Menu Thống kê-
 
-        private void btnKQHKTheoLop_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnBaoCaoHocKy_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmrpHocKy));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmrpHocKy f = new frmrpHocKy
+                {
+                    MdiParent = this
+                };
+                f.Show();
+            }
+        }
+
+        private void btnBaoCaoMon_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form frm = this.KiemTraTonTai(typeof(frmrpMon));
             if (frm != null)
@@ -429,22 +444,6 @@ namespace NMCNPM_QLHS.GUI
                 f.Show();
             }
         }
-
-        private void btnKQHKTheoMon_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
-        private void btnKQCNTheoLop_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
-        private void btnKQCNTheoMon_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
         private void btnDSHocSinh_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form frm = this.KiemTraTonTai(typeof(frmrpDanhSachHocSinh));
@@ -549,21 +548,11 @@ namespace NMCNPM_QLHS.GUI
         }
 
         #endregion
-
-        #endregion -Show form-
-
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
-            btnDangXuat.Visibility = BarItemVisibility.Never;
-            btnThongTin.Visibility = BarItemVisibility.Never;
-            btnDangNhap.Visibility = BarItemVisibility.Always;
-        }
-
-        private void btnDangNhap_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            btnDangNhap.Visibility = BarItemVisibility.Never;
-            btnDangXuat.Visibility = BarItemVisibility.Always;
-            btnThongTin.Visibility = BarItemVisibility.Always;
+            this.Close();
+            var frm = new frmDangNhap();
+            frm.Show();
         }
 
         private void btnThongTin_ItemClick(object sender, ItemClickEventArgs e)
@@ -579,5 +568,9 @@ namespace NMCNPM_QLHS.GUI
             }
             this.Enabled = false;
         }
+
+
+        #endregion -Show form-
+
     }
 }
