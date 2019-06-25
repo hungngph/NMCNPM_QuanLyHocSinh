@@ -52,7 +52,7 @@ namespace NMCNPM_QLHS.DAL
         }
 
         // Tạo MaHS
-        public static string getMaHS()
+        public static string autoMaHS()
         {
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {

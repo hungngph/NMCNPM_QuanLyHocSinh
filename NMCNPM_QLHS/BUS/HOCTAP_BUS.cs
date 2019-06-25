@@ -39,18 +39,20 @@ namespace NMCNPM_QLHS.BUS
         public static bool KiemTraDieuKienLenLop(string maHS, string maNamHoc)
         {
             var lst = MONHOC_BUS.LayTatCaMonHoc();
-            foreach (var mh in lst)
-            {
-                double diemHK1 = HOCTAP_DAL.LayDiemTongKetMonHoc(maHS, mh.MAMONHOC.ToString(), "HK01", maNamHoc);
-                double diemHK2 = HOCTAP_DAL.LayDiemTongKetMonHoc(maHS, mh.MAMONHOC.ToString(), "HK02", maNamHoc);
-                double diemCaNam = (diemHK1 + diemHK2 * 2) / 3;
-                if (diemCaNam < 3.5)
-                    return false;
-            }
+            int heSoHK1 = HOCKY_BUS.layHeSo("HK01");
+            int heSoHK2 = HOCKY_BUS.layHeSo("HK02");
+            //foreach (var mh in lst)
+            //{
+            //    double diemHK1 = HOCTAP_DAL.LayDiemTongKetMonHoc(maHS, mh.MAMONHOC.ToString(), "HK01", maNamHoc);
+            //    double diemHK2 = HOCTAP_DAL.LayDiemTongKetMonHoc(maHS, mh.MAMONHOC.ToString(), "HK02", maNamHoc);
+            //    double diemCaNam = (diemHK1 * heSoHK1 + diemHK2 * heSoHK2) / (heSoHK1 + heSoHK2);
+            //    if (diemCaNam < 3.5)
+            //        return false;
+            //}
 
             double diemTongKetHK1 = HOCTAP_DAL.LayDiemTongKetHocKy(maHS, "HK01", maNamHoc);
             double diemTongKetHK2 = HOCTAP_DAL.LayDiemTongKetHocKy(maHS, "HK02", maNamHoc);
-            double diemTongKetCaNam = (diemTongKetHK1 + diemTongKetHK2 * 2) / 3;
+            double diemTongKetCaNam = (diemTongKetHK1 * heSoHK1 + diemTongKetHK2 * heSoHK2) / (heSoHK1 + heSoHK2);
             if (diemTongKetCaNam < 5)
                 return false;
 
