@@ -11,7 +11,7 @@ namespace NMCNPM_QLHS.BUS
     class KHOILOP_BUS
     {
         // Lấy tất cả các khối
-        public static List<KHOILOP> LayTatCaKhoi()
+        public static DataTable LayTatCaKhoi()
         {
             return KHOILOP_DAL.LayTatCaKhoi();
         }

@@ -352,6 +352,7 @@
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.MONHOC.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.NAMHOC.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.QUATRINHHOC.datasource" />
+    <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayBaoCaoTongKetHocKyResult.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayDiemChiTietHocSinhTheoMonResult.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayDiemHocSinhTheoLopResult.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.sp_LayDiemMonHocTheoLopResult.datasource" />

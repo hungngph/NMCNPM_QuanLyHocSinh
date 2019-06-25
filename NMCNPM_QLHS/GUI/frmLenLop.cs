@@ -371,6 +371,15 @@ namespace NMCNPM_QLHS.GUI
 
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
+            if (state == true)
+            {
+                if (MessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    this.btnLuu_Click(sender, e);
+                else
+                {
+                    state = false;
+                }
+            }
             cboNamHocCu.EditValue = null;
             load_cboNamHocCu();
         }
@@ -381,40 +390,43 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnChuyen_Click(object sender, EventArgs e)
         {
-            if (QUATRINHHOC_BUS.KiemTraSiSo(cboLopMoi.EditValue.ToString(), lstvDSHSMoi.SelectedItems.Count) == true)
+            if (lstvDSHSMoi.Items.Count != 0)
             {
-                IEnumerator ie = lstvDSHSCu.SelectedItems.GetEnumerator();
-                if (lstvDSHSCu.SelectedItems.Count != 0)
-                    state = true;
-                while (ie.MoveNext())
+                if (QUATRINHHOC_BUS.KiemTraSiSo(cboLopMoi.EditValue.ToString(), lstvDSHSMoi.SelectedItems.Count) == true)
                 {
-                    ListViewItem olditem = (ListViewItem)ie.Current;
-                    ListViewItem newitem = new ListViewItem();
-
-                    //Trạng thái học sinh đã được phân lớp hay chưa?
-                    bool stateHS = false;
-
-                    foreach (ListViewItem item in lstvDSHSMoi.Items)
+                    IEnumerator ie = lstvDSHSCu.SelectedItems.GetEnumerator();
+                    if (lstvDSHSCu.SelectedItems.Count != 0)
+                        state = true;
+                    while (ie.MoveNext())
                     {
-                        if (item.SubItems[0].Text == olditem.SubItems[0].Text)
+                        ListViewItem olditem = (ListViewItem)ie.Current;
+                        ListViewItem newitem = new ListViewItem();
+
+                        //Trạng thái học sinh đã được phân lớp hay chưa?
+                        bool stateHS = false;
+
+                        foreach (ListViewItem item in lstvDSHSMoi.Items)
                         {
-                            MessageBox.Show("Học sinh " + olditem.SubItems[1].Text + " hiện đã được phân vào lớp " + cboLopMoi.Text, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            stateHS = true;
-                            goto Cont;
+                            if (item.SubItems[0].Text == olditem.SubItems[0].Text)
+                            {
+                                MessageBox.Show("Học sinh " + olditem.SubItems[1].Text + " hiện đã được phân vào lớp " + cboLopMoi.Text, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                stateHS = true;
+                                goto Cont;
+                            }
                         }
+
+                        newitem = olditem;
+                        lstvDSHSCu.Items.Remove(olditem);
+                        lstvDSHSMoi.Items.Add(newitem);
+
+                    Cont:
+                        if (stateHS == true)
+                            break;
                     }
-
-                    newitem = olditem;
-                    lstvDSHSCu.Items.Remove(olditem);
-                    lstvDSHSMoi.Items.Add(newitem);
-
-                Cont:
-                    if (stateHS == true)
-                        break;
                 }
+                else
+                    MessageBox.Show("Vượt quá sĩ số tối đa", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-                MessageBox.Show("Vượt quá sĩ số tối đa", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)

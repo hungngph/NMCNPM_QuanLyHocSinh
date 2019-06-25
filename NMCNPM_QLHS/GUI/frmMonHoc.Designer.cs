@@ -61,7 +61,6 @@
             this.col_maMonHoc_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_tenMonHoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_tenMonHoc_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.gridColumnHeSo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorMonHoc)).BeginInit();
@@ -317,8 +316,7 @@
             // 
             this.dgvMonHoc.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.col_maMonHoc,
-            this.col_tenMonHoc,
-            this.gridColumnHeSo});
+            this.col_tenMonHoc});
             this.dgvMonHoc.DetailHeight = 431;
             this.dgvMonHoc.GridControl = this.gridControlMonHoc;
             this.dgvMonHoc.Name = "dgvMonHoc";
@@ -331,9 +329,10 @@
             this.col_maMonHoc.FieldName = "MAMONHOC";
             this.col_maMonHoc.MinWidth = 23;
             this.col_maMonHoc.Name = "col_maMonHoc";
+            this.col_maMonHoc.OptionsColumn.AllowEdit = false;
             this.col_maMonHoc.Visible = true;
             this.col_maMonHoc.VisibleIndex = 0;
-            this.col_maMonHoc.Width = 248;
+            this.col_maMonHoc.Width = 284;
             // 
             // col_maMonHoc_edit
             // 
@@ -349,21 +348,12 @@
             this.col_tenMonHoc.Name = "col_tenMonHoc";
             this.col_tenMonHoc.Visible = true;
             this.col_tenMonHoc.VisibleIndex = 1;
-            this.col_tenMonHoc.Width = 289;
+            this.col_tenMonHoc.Width = 1293;
             // 
             // col_tenMonHoc_edit
             // 
             this.col_tenMonHoc_edit.AutoHeight = false;
             this.col_tenMonHoc_edit.Name = "col_tenMonHoc_edit";
-            // 
-            // gridColumnHeSo
-            // 
-            this.gridColumnHeSo.Caption = "Hệ số";
-            this.gridColumnHeSo.MinWidth = 23;
-            this.gridColumnHeSo.Name = "gridColumnHeSo";
-            this.gridColumnHeSo.Visible = true;
-            this.gridColumnHeSo.VisibleIndex = 2;
-            this.gridColumnHeSo.Width = 1302;
             // 
             // groupControl1
             // 
@@ -424,7 +414,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView dgvMonHoc;
         private DevExpress.XtraGrid.Columns.GridColumn col_maMonHoc;
         private DevExpress.XtraGrid.Columns.GridColumn col_tenMonHoc;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnHeSo;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.BindingNavigator bindingNavigatorMonHoc;
         private System.Windows.Forms.ToolStripButton btnThem;

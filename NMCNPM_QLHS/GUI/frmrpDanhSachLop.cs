@@ -85,7 +85,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void cboHocKy_EditValueChanged(object sender, EventArgs e)
         {
-            if (cboLop.Text != null && cboHocKy.Text != null)
+            if (cboLop.Text != "" && cboHocKy.Text != "")
                 bindingSourceDSHS.DataSource = HOCSINH_BUS.LayHocSinhTheoLop(cboLop.EditValue.ToString(), cboHocKy.EditValue.ToString());
             else
                 bindingSourceDSHS.DataSource = null;

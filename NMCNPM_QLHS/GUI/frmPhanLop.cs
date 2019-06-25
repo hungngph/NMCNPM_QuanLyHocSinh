@@ -72,11 +72,31 @@ namespace NMCNPM_QLHS.GUI
 
         private void cboLop_EditValueChanged(object sender, EventArgs e)
         {
+            if (state == true)
+            {
+                if (MessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    this.btnLuu_Click(sender, e);
+                else
+                {
+                    load_DSHS();
+                    state = false;
+                }
+            }
             load_DSLop();
         }
 
         private void cboHocKy_EditValueChanged(object sender, EventArgs e)
         {
+            if (state == true)
+            {
+                if (MessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    this.btnLuu_Click(sender, e);
+                else
+                {
+                    load_DSHS();
+                    state = false;
+                }
+            }
             load_DSLop();
         }
 
@@ -145,16 +165,17 @@ namespace NMCNPM_QLHS.GUI
 
         private void load_cboNamHoc()
         {
-            cboNamHoc.Properties.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
-            cboNamHoc.Properties.DisplayMember = "TENNAMHOC";
-            cboNamHoc.Properties.ValueMember = "MANAMHOC";
+            cboNamHoc.Text = NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC;
+            //cboNamHoc.Properties.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
+            //cboNamHoc.Properties.DisplayMember = "TENNAMHOC";
+            //cboNamHoc.Properties.ValueMember = "MANAMHOC";
         }
 
         private void load_cboKhoiLop()
         {
             if (cboNamHoc.Text != "")
             {
-                string maNamHoc = cboNamHoc.EditValue.ToString();
+                string maNamHoc = NAMHOC_BUS.LayNamHocHienTai().MANAMHOC;
                 cboKhoiLop.Properties.DataSource = KHOILOP_BUS.LayKhoiTheoNamHoc(maNamHoc);
                 cboKhoiLop.Properties.DisplayMember = "TENKHOI";
                 cboKhoiLop.Properties.ValueMember = "MAKHOI";

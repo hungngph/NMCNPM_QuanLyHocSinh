@@ -63,9 +63,9 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.btnDeletebindingNavigatorDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btnThem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorAdd = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorNamHoc = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingSourceNamHoc = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
@@ -418,13 +418,14 @@
             this.toolStripButton1.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton1.Text = "Move first";
             // 
-            // btnDelete
+            // btnDeletebindingNavigatorDelete
             // 
-            this.btnDelete.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.RightToLeftAutoMirrorImage = true;
-            this.btnDelete.Size = new System.Drawing.Size(63, 28);
-            this.btnDelete.Text = "Xóa";
+            this.btnDeletebindingNavigatorDelete.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
+            this.btnDeletebindingNavigatorDelete.Name = "btnDeletebindingNavigatorDelete";
+            this.btnDeletebindingNavigatorDelete.RightToLeftAutoMirrorImage = true;
+            this.btnDeletebindingNavigatorDelete.Size = new System.Drawing.Size(63, 28);
+            this.btnDeletebindingNavigatorDelete.Text = "Xóa";
+            this.btnDeletebindingNavigatorDelete.Click += new System.EventHandler(this.btnDeletebindingNavigatorDelete_Click);
             // 
             // toolStripLabel1
             // 
@@ -433,20 +434,21 @@
             this.toolStripLabel1.Text = "of {0}";
             this.toolStripLabel1.ToolTipText = "Total number of items";
             // 
-            // btnThem
+            // bindingNavigatorAdd
             // 
-            this.btnThem.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
-            this.btnThem.Name = "btnThem";
-            this.btnThem.RightToLeftAutoMirrorImage = true;
-            this.btnThem.Size = new System.Drawing.Size(74, 28);
-            this.btnThem.Text = "Thêm";
+            this.bindingNavigatorAdd.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
+            this.bindingNavigatorAdd.Name = "bindingNavigatorAdd";
+            this.bindingNavigatorAdd.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAdd.Size = new System.Drawing.Size(74, 28);
+            this.bindingNavigatorAdd.Text = "Thêm";
+            this.bindingNavigatorAdd.Click += new System.EventHandler(this.bindingNavigatorAdd_Click);
             // 
             // bindingNavigatorNamHoc
             // 
-            this.bindingNavigatorNamHoc.AddNewItem = this.btnThem;
+            this.bindingNavigatorNamHoc.AddNewItem = null;
             this.bindingNavigatorNamHoc.BindingSource = this.bindingSourceNamHoc;
             this.bindingNavigatorNamHoc.CountItem = this.toolStripLabel1;
-            this.bindingNavigatorNamHoc.DeleteItem = this.btnDelete;
+            this.bindingNavigatorNamHoc.DeleteItem = null;
             this.bindingNavigatorNamHoc.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.bindingNavigatorNamHoc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
@@ -458,8 +460,8 @@
             this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripSeparator3,
-            this.btnThem,
-            this.btnDelete,
+            this.bindingNavigatorAdd,
+            this.btnDeletebindingNavigatorDelete,
             this.btnSua,
             this.btnLuu});
             this.bindingNavigatorNamHoc.Location = new System.Drawing.Point(2, 25);
@@ -518,6 +520,7 @@
             this.dgvNamHoc.DetailHeight = 431;
             this.dgvNamHoc.GridControl = this.gridControlNamHoc;
             this.dgvNamHoc.Name = "dgvNamHoc";
+            this.dgvNamHoc.OptionsBehavior.Editable = false;
             this.dgvNamHoc.OptionsView.ShowGroupPanel = false;
             // 
             // col_maNamHoc
@@ -624,9 +627,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn col_tenNamHoc;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.BindingNavigator bindingNavigatorNamHoc;
-        private System.Windows.Forms.ToolStripButton btnThem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAdd;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton btnDelete;
+        private System.Windows.Forms.ToolStripButton btnDeletebindingNavigatorDelete;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
