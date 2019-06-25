@@ -240,6 +240,7 @@ namespace NMCNPM_QLHS.GUI
                 cboKhoiLop.EditValue = dr.ItemArray[4].ToString();
             }
         }
+
         private void btnHoanTat_Click(object sender, EventArgs e)
         {
             string maLop = txtMaLop.Text;

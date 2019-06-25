@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,13 +10,42 @@ namespace NMCNPM_QLHS.DAL
     class KHOILOP_DAL
     {
         // Lấy tất cả các khối
-        public static List<KHOILOP> LayTatCaKhoi()
+        public static DataTable LayTatCaKhoi()
         {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("MAKHOI", typeof(string));
+            dt.Columns.Add("TENKHOI", typeof(string));
+            dt.Columns.Add("SOLOP", typeof(int));
+            dt.Columns.Add("TENNAMHOC", typeof(string));
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                List<KHOILOP> lst = db.KHOILOPs.ToList();
-                return lst;
+                var ds = from khoi in db.KHOILOPs
+                         from namHoc in db.NAMHOCs 
+                         where khoi.MANAM == namHoc.MANAMHOC 
+                         select new
+                         {
+                             tenNamHoc = namHoc.TENNAMHOC,
+                             maKhoi = khoi.MAKHOI,
+                             tenKHoi = khoi.TENKHOI,
+                             soLop = khoi.SOLOP
+                         };
+                foreach (var i in ds)
+                {
+                    DataRow r = dt.NewRow();
+                    if (i.maKhoi != null)
+                        r["MAKHOI"] = i.maKhoi;
+                    if (i.tenKHoi != null)
+                        r["TENKHOI"] = i.tenKHoi;
+                    if (i.soLop != null)
+                        r["SOLOP"] = i.soLop.Value;
+                    if (i.tenNamHoc != null)
+                        r["TENNAMHOC"] = i.tenNamHoc;
+                    dt.Rows.Add(r);
+                }
             }
+            if (dt.Rows.Count == 0)
+                return null;
+            return dt;
         }
 
         // Lấy khối theo năm học

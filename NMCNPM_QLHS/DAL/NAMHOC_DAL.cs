@@ -8,6 +8,24 @@ namespace NMCNPM_QLHS.DAL
 {
     class NAMHOC_DAL
     {
+        // Thêm năm học
+        public static void Insert()
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                db.sp_ThemNamHoc();
+            }
+        }
+
+        // Xóa năm học
+        public static void Delete(string maNamHoc)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                db.sp_XoaNamHoc(maNamHoc);
+            }
+        }
+
         // Lấy tất cả các năm học
         public static List<NAMHOC> LayTatCaNamHoc()
         {

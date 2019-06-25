@@ -90,6 +90,28 @@ namespace NMCNPM_QLHS.GUI
 
         private void frmNamHoc_Load(object sender, EventArgs e)
         {
+            load_DSNamHoc();
+        }
+
+        private void bindingNavigatorAdd_Click(object sender, EventArgs e)
+        {
+            NAMHOC_BUS.Insert();
+            load_DSNamHoc();
+        }
+
+        private void btnDeletebindingNavigatorDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn xóa lớp này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string maNamHoc = dgvNamHoc.GetFocusedRowCellDisplayText(col_maNamHoc);
+                NAMHOC_BUS.Delete(maNamHoc);
+                load_DSNamHoc();
+            }
+        }
+
+        private void load_DSNamHoc()
+        {
+
             bindingSourceNamHoc.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
         }
     }

@@ -20,22 +20,24 @@ namespace NMCNPM_QLHS.DAL
             dt.Columns.Add("DIEMTBHK2", typeof(float));
             dt.Columns.Add("DIEMCANAM", typeof(float));
 
-            SQL_QLHSDataContext db = new SQL_QLHSDataContext();
-            var lst = db.sp_LayDiemHocSinhTheoLop(maLop);
-            foreach (var i in lst)
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                DataRow r = dt.NewRow();
-                if (i.MAHS != null)
-                    r["MAHS"] = i.MAHS;
-                if (i.HOTEN != null)
-                    r["HOTEN"] = i.HOTEN;
-                if (i.DIEMTBHK1 != null)
-                    r["DIEMTBHK1"] = i.DIEMTBHK1.Value;
-                if (i.DIEMTBHK2 != null)
-                    r["DIEMTBHK2"] = i.DIEMTBHK2.Value;
-                if (i.DIEMCANAM != null)
-                    r["DIEMCANAM"] = i.DIEMCANAM.Value;
-                dt.Rows.Add(r);
+                var lst = db.sp_LayDiemHocSinhTheoLop(maLop);
+                foreach (var i in lst)
+                {
+                    DataRow r = dt.NewRow();
+                    if (i.MAHS != null)
+                        r["MAHS"] = i.MAHS;
+                    if (i.HOTEN != null)
+                        r["HOTEN"] = i.HOTEN;
+                    if (i.DIEMTBHK1 != null)
+                        r["DIEMTBHK1"] = i.DIEMTBHK1.Value;
+                    if (i.DIEMTBHK2 != null)
+                        r["DIEMTBHK2"] = i.DIEMTBHK2.Value;
+                    if (i.DIEMCANAM != null)
+                        r["DIEMCANAM"] = i.DIEMCANAM.Value;
+                    dt.Rows.Add(r);
+                }
             }
             if (dt.Rows.Count == 0)
                 return null;
@@ -53,25 +55,29 @@ namespace NMCNPM_QLHS.DAL
             dt.Columns.Add("DIEMTHI", typeof(float));
             dt.Columns.Add("DIEMTBHK", typeof(float));
 
-            SQL_QLHSDataContext db = new SQL_QLHSDataContext();
-            var lst = db.sp_LayDiemChiTietHocSinh(maHS, maHocKy, maNamHoc);
-            foreach (var i in lst)
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                DataRow r = dt.NewRow();
-                if (i.TENMONHOC != null)
-                    r["TENMONHOC"] = i.TENMONHOC;
-                if (i.DIEMMIENG != null)
-                    r["DIEMMIENG"] = i.DIEMMIENG;
-                if (i.DIEM15P != null)
-                    r["DIEM15P"] = i.DIEM15P;
-                if (i.DIEM1TIET != null)
-                    r["DIEM1TIET"] = i.DIEM1TIET;
-                if (i.DIEMTHI != null)
-                    r["DIEMTHI"] = i.DIEMTHI;
-                if (i.DIEMTBHK != null)
-                    r["DIEMTBHK"] = i.DIEMTBHK;
-                dt.Rows.Add(r);
+                var lst = db.sp_LayDiemChiTietHocSinh(maHS, maHocKy, maNamHoc);
+                foreach (var i in lst)
+                {
+                    DataRow r = dt.NewRow();
+                    if (i.TENMONHOC != null)
+                        r["TENMONHOC"] = i.TENMONHOC;
+                    if (i.DIEMMIENG != null)
+                        r["DIEMMIENG"] = i.DIEMMIENG;
+                    if (i.DIEM15P != null)
+                        r["DIEM15P"] = i.DIEM15P;
+                    if (i.DIEM1TIET != null)
+                        r["DIEM1TIET"] = i.DIEM1TIET;
+                    if (i.DIEMTHI != null)
+                        r["DIEMTHI"] = i.DIEMTHI;
+                    if (i.DIEMTBHK != null)
+                        r["DIEMTBHK"] = i.DIEMTBHK;
+                    dt.Rows.Add(r);
+                }
             }
+            if (dt.Rows.Count == 0)
+                return null;
             return dt;
         }
 

@@ -293,32 +293,6 @@
       <Column Name="DIEMTBHK" Type="System.Single" DbType="Real" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.sp_ThemNamHoc" Method="sp_ThemNamHoc">
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.sp_ThemQTH" Method="sp_ThemQTH">
-    <Parameter Name="mahs" Type="System.String" DbType="Char(6)" />
-    <Parameter Name="malop" Type="System.String" DbType="Char(5)" />
-    <ElementType Name="sp_ThemQTHResult">
-      <Column Name="MAQTHOC" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
-      <Column Name="MAHS" Type="System.String" DbType="Char(5)" CanBeNull="true" />
-      <Column Name="MALOP" Type="System.String" DbType="Char(5)" CanBeNull="true" />
-      <Column Name="MAHK" Type="System.String" DbType="Char(4)" CanBeNull="true" />
-      <Column Name="DIEMTBHK" Type="System.Single" DbType="Real" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.sp_ThemQTH1HocKy" Method="sp_ThemQTH1HocKy">
-    <Parameter Name="mahs" Type="System.String" DbType="Char(6)" />
-    <Parameter Name="malop" Type="System.String" DbType="Char(5)" />
-    <Parameter Name="mahk" Type="System.String" DbType="Char(4)" />
-    <ElementType Name="sp_ThemQTH1HocKyResult">
-      <Column Name="MAQTHOC" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
-      <Column Name="MAHS" Type="System.String" DbType="Char(5)" CanBeNull="true" />
-      <Column Name="MALOP" Type="System.String" DbType="Char(5)" CanBeNull="true" />
-      <Column Name="MAHK" Type="System.String" DbType="Char(4)" CanBeNull="true" />
-      <Column Name="DIEMTBHK" Type="System.Single" DbType="Real" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.sp_TimHSTheoMaHS" Method="sp_TimHSTheoMaHS">
     <Parameter Name="s" Type="System.String" DbType="NVarChar(50)" />
     <ElementType Name="sp_TimHSTheoMaHSResult">
@@ -363,12 +337,46 @@
       <Column Name="SISO" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.sp_ThemNamHoc" Method="sp_ThemNamHoc">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_ThemQTH" Method="sp_ThemQTH">
+    <Parameter Name="mahs" Type="System.String" DbType="Char(6)" />
+    <Parameter Name="malop" Type="System.String" DbType="Char(5)" />
+    <ElementType Name="sp_ThemQTHResult">
+      <Column Name="MAQTHOC" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="MAHS" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="MALOP" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="MAHK" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="DIEMTBHK" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_ThemQTH1HocKy" Method="sp_ThemQTH1HocKy">
+    <Parameter Name="mahs" Type="System.String" DbType="Char(6)" />
+    <Parameter Name="malop" Type="System.String" DbType="Char(5)" />
+    <Parameter Name="mahk" Type="System.String" DbType="Char(4)" />
+    <ElementType Name="sp_ThemQTH1HocKyResult">
+      <Column Name="MAQTHOC" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="MAHS" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="MALOP" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="MAHK" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="DIEMTBHK" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.sp_XoaHocSinh" Method="sp_XoaHocSinh">
     <Parameter Name="mahs" Type="System.String" DbType="Char(5)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.sp_XoaLop" Method="sp_XoaLop">
     <Parameter Name="malop" Type="System.String" DbType="Char(5)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_XoaMonHoc" Method="sp_XoaMonHoc">
+    <Parameter Name="mamonhoc" Type="System.String" DbType="Char(4)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_XoaNamHoc" Method="sp_XoaNamHoc">
+    <Parameter Name="manamhoc" Type="System.String" DbType="Char(4)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.AUTO_IDBCTKM" Method="AUTO_IDBCTKM" IsComposable="true">

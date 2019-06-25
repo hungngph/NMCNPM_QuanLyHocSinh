@@ -10,6 +10,18 @@ namespace NMCNPM_QLHS.BUS
 {
     class NAMHOC_BUS
     {
+        // Thêm năm học
+        public static void Insert()
+        {
+            NAMHOC_DAL.Insert();
+        }
+
+        // Xóa năm học
+        public static void Delete(string maNamHoc)
+        {
+            NAMHOC_DAL.Delete(maNamHoc);
+        }
+
         // Lấy tất cả các năm học
         public static List<NAMHOC> LayTatCaNamHoc()
         {
