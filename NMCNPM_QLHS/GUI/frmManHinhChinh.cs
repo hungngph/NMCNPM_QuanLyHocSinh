@@ -410,12 +410,12 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnKQHKTheoLop_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = this.KiemTraTonTai(typeof(frmrpTongKetMon));
+            Form frm = this.KiemTraTonTai(typeof(frmrpMon));
             if (frm != null)
                 frm.Activate();
             else
             {
-                frmrpTongKetMon f = new frmrpTongKetMon
+                frmrpMon f = new frmrpMon
                 {
                     MdiParent = this
                 };

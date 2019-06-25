@@ -30,12 +30,12 @@ namespace NMCNPM_QLHS.DAL
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertTHAMSO(THAMSO instance);
-    partial void UpdateTHAMSO(THAMSO instance);
-    partial void DeleteTHAMSO(THAMSO instance);
     partial void InsertBANGDIEMMON(BANGDIEMMON instance);
     partial void UpdateBANGDIEMMON(BANGDIEMMON instance);
     partial void DeleteBANGDIEMMON(BANGDIEMMON instance);
+    partial void InsertTHAMSO(THAMSO instance);
+    partial void UpdateTHAMSO(THAMSO instance);
+    partial void DeleteTHAMSO(THAMSO instance);
     partial void InsertBAOCAOTONGKETHK(BAOCAOTONGKETHK instance);
     partial void UpdateBAOCAOTONGKETHK(BAOCAOTONGKETHK instance);
     partial void DeleteBAOCAOTONGKETHK(BAOCAOTONGKETHK instance);
@@ -75,7 +75,7 @@ namespace NMCNPM_QLHS.DAL
     #endregion
 		
 		public SQL_QLHSDataContext() : 
-				base(global::NMCNPM_QLHS.Properties.Settings.Default.QLHSConnectionString, mappingSource)
+				base(global::NMCNPM_QLHS.Properties.Settings.Default.QLHSConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -104,19 +104,19 @@ namespace NMCNPM_QLHS.DAL
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<THAMSO> THAMSOs
-		{
-			get
-			{
-				return this.GetTable<THAMSO>();
-			}
-		}
-		
 		public System.Data.Linq.Table<BANGDIEMMON> BANGDIEMMONs
 		{
 			get
 			{
 				return this.GetTable<BANGDIEMMON>();
+			}
+		}
+		
+		public System.Data.Linq.Table<THAMSO> THAMSOs
+		{
+			get
+			{
+				return this.GetTable<THAMSO>();
 			}
 		}
 		
@@ -457,92 +457,6 @@ namespace NMCNPM_QLHS.DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.THAMSO")]
-	public partial class THAMSO : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _TENTHAMSO;
-		
-		private System.Nullable<int> _GIATRI;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnTENTHAMSOChanging(string value);
-    partial void OnTENTHAMSOChanged();
-    partial void OnGIATRIChanging(System.Nullable<int> value);
-    partial void OnGIATRIChanged();
-    #endregion
-		
-		public THAMSO()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTHAMSO", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string TENTHAMSO
-		{
-			get
-			{
-				return this._TENTHAMSO;
-			}
-			set
-			{
-				if ((this._TENTHAMSO != value))
-				{
-					this.OnTENTHAMSOChanging(value);
-					this.SendPropertyChanging();
-					this._TENTHAMSO = value;
-					this.SendPropertyChanged("TENTHAMSO");
-					this.OnTENTHAMSOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIATRI", DbType="Int")]
-		public System.Nullable<int> GIATRI
-		{
-			get
-			{
-				return this._GIATRI;
-			}
-			set
-			{
-				if ((this._GIATRI != value))
-				{
-					this.OnGIATRIChanging(value);
-					this.SendPropertyChanging();
-					this._GIATRI = value;
-					this.SendPropertyChanged("GIATRI");
-					this.OnGIATRIChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BANGDIEMMON")]
 	public partial class BANGDIEMMON : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -784,6 +698,92 @@ namespace NMCNPM_QLHS.DAL
 		{
 			this.SendPropertyChanging();
 			entity.BANGDIEMMON = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.THAMSO")]
+	public partial class THAMSO : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _TENTHAMSO;
+		
+		private System.Nullable<int> _GIATRI;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTENTHAMSOChanging(string value);
+    partial void OnTENTHAMSOChanged();
+    partial void OnGIATRIChanging(System.Nullable<int> value);
+    partial void OnGIATRIChanged();
+    #endregion
+		
+		public THAMSO()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTHAMSO", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string TENTHAMSO
+		{
+			get
+			{
+				return this._TENTHAMSO;
+			}
+			set
+			{
+				if ((this._TENTHAMSO != value))
+				{
+					this.OnTENTHAMSOChanging(value);
+					this.SendPropertyChanging();
+					this._TENTHAMSO = value;
+					this.SendPropertyChanged("TENTHAMSO");
+					this.OnTENTHAMSOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIATRI", DbType="Int")]
+		public System.Nullable<int> GIATRI
+		{
+			get
+			{
+				return this._GIATRI;
+			}
+			set
+			{
+				if ((this._GIATRI != value))
+				{
+					this.OnGIATRIChanging(value);
+					this.SendPropertyChanging();
+					this._GIATRI = value;
+					this.SendPropertyChanged("GIATRI");
+					this.OnGIATRIChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	

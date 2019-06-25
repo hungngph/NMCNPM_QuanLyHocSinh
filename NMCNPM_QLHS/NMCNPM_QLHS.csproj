@@ -215,11 +215,11 @@
     <Compile Include="GUI\frmrpHocKy.Designer.cs">
       <DependentUpon>frmrpHocKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmrpTongKetMon.cs">
+    <Compile Include="GUI\frmrpMon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmrpTongKetMon.designer.cs">
-      <DependentUpon>frmrpTongKetMon.cs</DependentUpon>
+    <Compile Include="GUI\frmrpMon.designer.cs">
+      <DependentUpon>frmrpMon.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmThongTinNguoiDung.cs">
       <SubType>Form</SubType>
@@ -250,6 +250,18 @@
     </Compile>
     <Compile Include="GUI\rpDanhSachLop.Designer.cs">
       <DependentUpon>rpDanhSachLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\rpHocKy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\rpHocKy.Designer.cs">
+      <DependentUpon>rpHocKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\rpMon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\rpMon.Designer.cs">
+      <DependentUpon>rpMon.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -307,8 +319,8 @@
     <EmbeddedResource Include="GUI\frmrpHocKy.resx">
       <DependentUpon>frmrpHocKy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmrpTongKetMon.resx">
-      <DependentUpon>frmrpTongKetMon.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmrpMon.resx">
+      <DependentUpon>frmrpMon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmThongTinNguoiDung.resx">
       <DependentUpon>frmThongTinNguoiDung.cs</DependentUpon>
@@ -324,6 +336,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\rpDanhSachLop.resx">
       <DependentUpon>rpDanhSachLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\rpHocKy.resx">
+      <DependentUpon>rpHocKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\rpMon.resx">
+      <DependentUpon>rpMon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

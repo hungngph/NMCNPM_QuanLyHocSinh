@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace NMCNPM_QLHS.GUI
 {
-    public partial class frmrpTongKetMon : DevExpress.XtraEditors.XtraForm
+    public partial class frmrpMon : DevExpress.XtraEditors.XtraForm
     {
-        public frmrpTongKetMon()
+        public frmrpMon()
         {
             InitializeComponent();
         }
