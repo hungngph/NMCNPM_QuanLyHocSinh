@@ -1,11 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLHS" Class="SQL_QLHSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=QLHS;Integrated Security=True" SettingsObjectName="NMCNPM_QLHS.Properties.Settings" SettingsPropertyName="QLHSConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.THAMSO" Member="THAMSOs">
-    <Type Name="THAMSO">
-      <Column Name="TENTHAMSO" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="GIATRI" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PHBLNHE\SQLEXPRESS;Initial Catalog=QLHS;Integrated Security=True" SettingsObjectName="NMCNPM_QLHS.Properties.Settings" SettingsPropertyName="QLHSConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BANGDIEMMON" Member="BANGDIEMMONs">
     <Type Name="BANGDIEMMON">
       <Column Name="MABANGDIEMMON" Type="System.String" DbType="Char(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -15,6 +9,12 @@
       <Association Name="BANGDIEMMON_CT_DIEMMON" Member="CT_DIEMMONs" ThisKey="MABANGDIEMMON" OtherKey="MABANGDIEMMON" Type="CT_DIEMMON" />
       <Association Name="MONHOC_BANGDIEMMON" Member="MONHOC" ThisKey="MAMONHOC" OtherKey="MAMONHOC" Type="MONHOC" IsForeignKey="true" />
       <Association Name="QUATRINHHOC_BANGDIEMMON" Member="QUATRINHHOC" ThisKey="MAQTHOC" OtherKey="MAQTHOC" Type="QUATRINHHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THAMSO" Member="THAMSOs">
+    <Type Name="THAMSO">
+      <Column Name="TENTHAMSO" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GIATRI" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.BAOCAOTONGKETHK" Member="BAOCAOTONGKETHKs">
