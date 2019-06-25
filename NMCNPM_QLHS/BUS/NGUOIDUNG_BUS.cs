@@ -12,7 +12,7 @@ namespace NMCNPM_QLHS.BUS
         public static bool KiemTraNguoiDung(string tendangnhap) {
             return NGUOIDUNG_DAL.KiemTraTonTai(tendangnhap);
         }
-        public static string DangNhap(string tendangnhap, string matkhau)
+        public static bool DangNhap(string tendangnhap, string matkhau)
         {
             return NGUOIDUNG_DAL.DangNhap(tendangnhap, matkhau);
         }

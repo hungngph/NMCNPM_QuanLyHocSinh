@@ -11,18 +11,23 @@ namespace NMCNPM_QLHS.DAL
         public static bool KiemTraTonTai(string tendangnhap) {
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                int x = 0;
-                if (!int.TryParse(db.sp_KiemTraTonTai(tendangnhap).ReturnValue.ToString(), out x))
-                    return false;
-                return x != 0;
+                if (db.NGUOIDUNGs.Any(u => u.TENDANGNHAP == tendangnhap))
+                    return true;
+                return false;
             }
         }
-        public static string DangNhap(string tendangnhap, string matkhau) {
+        public static bool DangNhap(string tendangnhap, string matkhau) {
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                string result = "";
-                result = db.sp_DangNhap(tendangnhap, matkhau).ReturnValue.ToString();
-                return result;
+
+                if (db.NGUOIDUNGs.Any(u => u.TENDANGNHAP == tendangnhap && u.MATKHAU == matkhau)) {
+                    NGUOIDUNG user = db.NGUOIDUNGs.FirstOrDefault(u => u.TENDANGNHAP == tendangnhap && u.MATKHAU == matkhau);
+                    CurrentUser.Parse(user.MALND, user.TENDANGNHAP, user.LOAINGUOIDUNG.TENLOAIND);
+                    return true;
+                }
+                else {
+                    return false;
+                }
             }
         }
     }

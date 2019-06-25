@@ -93,6 +93,7 @@
     <Compile Include="BUS\NGUOIDUNG_BUS.cs" />
     <Compile Include="BUS\QUATRINHHOC_BUS.cs" />
     <Compile Include="BUS\THAMSO_BUS.cs" />
+    <Compile Include="CurrentUser.cs" />
     <Compile Include="DAL\BAOCAO_DAL.cs" />
     <Compile Include="DAL\HOCKY_DAL.cs" />
     <Compile Include="DAL\HOCSINH_DAL.cs" />
