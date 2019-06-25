@@ -34,7 +34,6 @@ namespace NMCNPM_QLHS.GUI
             SplashScreenManager.ShowDefaultSplashScreen("Đang mở...", "Phần Mềm Quản lý học sinh");
             Thread.Sleep(1000);
             SplashScreenManager.CloseDefaultSplashScreen();
-            btnDangNhap.Visibility = BarItemVisibility.Never;
             Permissions();
         }
         #endregion -Constructor-

@@ -19,6 +19,75 @@ namespace NMCNPM_QLHS.GUI
             InitializeComponent();
         }
 
+        #region -Phân quyền-
+
+        #region -Phân quyền đăng nhập-
+        public void Permissions()
+        {
+            switch ("LND001")
+            {
+                case "LND001":      // Giao diện đăng nhập với quyền BGH
+                    IsBGH();
+                    break;
+                case "LND002":      // Giao diện đăng nhập với quyền GiaoVien
+                    IsGiaoVien();
+                    break;
+                case "LND003":      // Giao diện đăng nhập với quyền GiaoVu
+                    IsGiaoVu();
+                    break;
+                default:
+                    Default();
+                    break;
+            }
+        }
+        #endregion -Phân quyền đăng nhập-
+
+        #region -Giao diện đăng nhập
+
+        #region -Giao diện mặc định-
+        public void Default()
+        {
+            // True
+            // Enable các button
+            // False 
+            // Disable các button
+            btnThem.Enabled = true;
+            btnSua.Enabled = true;
+            btnDelete.Enabled = true;
+            //btnLuu.Enabled = true;
+        }
+        #endregion
+
+        #region -Giao diện đăng nhập với quyền BGH-
+        public void IsBGH()
+        {
+            // Enable, Disable các button
+        }
+        #endregion
+
+        #region -Giao diện đăng nhập với quyền Giáo viên-
+        public void IsGiaoVien()
+        {
+            // Enable, Disable các button
+            btnThem.Enabled = false;
+            btnSua.Enabled = false;
+            btnDelete.Enabled = false;
+            //btnLuu.Enabled = false;
+        }
+        #endregion
+
+        #region -Giao diện đăng nhập với quyền Giáo vụ-
+        public void IsGiaoVu()
+        {
+            // Enable, Disable các button
+        }
+
+        #endregion
+
+        #endregion -Giao diện đăng nhập
+
+        #endregion -Phân quyền-
+
         private void frmNamHoc_Load(object sender, EventArgs e)
         {
             bindingSourceNamHoc.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
