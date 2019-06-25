@@ -27,13 +27,13 @@ namespace NMCNPM_QLHS.GUI
             string tenHocKy = cboHocKy.Text;
             string maHocKy = cboHocKy.EditValue.ToString();
 
-            //rpDanhSachHocSinh rp = new rpDanhSachHocSinh(tenNamHoc, tenLop, maLop);
+            rpHocKy rp = new rpHocKy(maNamHoc, tenNamHoc, maHocKy, tenHocKy);
             //documentViewer1.DocumentSource = rp;
-            //rp.CreateDocument();
-            //using (ReportPrintTool printTool = new ReportPrintTool(rp))
-            //{
-            //    printTool.ShowPreviewDialog();
-            //}
+            rp.CreateDocument();
+            using (ReportPrintTool printTool = new ReportPrintTool(rp))
+            {
+                printTool.ShowPreviewDialog();
+            }
         }
 
         private void load_cboHocKy()

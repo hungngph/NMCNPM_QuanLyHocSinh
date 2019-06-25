@@ -17,6 +17,16 @@
       <Column Name="GIATRI" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.BAOCAOTONGKETMON" Member="BAOCAOTONGKETMONs">
+    <Type Name="BAOCAOTONGKETMON">
+      <Column Name="MABCTKMON" Type="System.String" DbType="Char(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MAMONHOC" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="MAHOCKY" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Association Name="BAOCAOTONGKETMON_CT_BCTKMON" Member="CT_BCTKMONs" ThisKey="MABCTKMON" OtherKey="MABCTKMON" Type="CT_BCTKMON" />
+      <Association Name="HOCKY_BAOCAOTONGKETMON" Member="HOCKY" ThisKey="MAHOCKY" OtherKey="MAHK" Type="HOCKY" IsForeignKey="true" />
+      <Association Name="MONHOC_BAOCAOTONGKETMON" Member="MONHOC" ThisKey="MAMONHOC" OtherKey="MAMONHOC" Type="MONHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.BAOCAOTONGKETHK" Member="BAOCAOTONGKETHKs">
     <Type Name="BAOCAOTONGKETHK">
       <Column Name="MAHK" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -26,16 +36,6 @@
       <Column Name="TYLE" Type="System.Single" DbType="Real" CanBeNull="true" />
       <Association Name="HOCKY_BAOCAOTONGKETHK" Member="HOCKY" ThisKey="MAHK" OtherKey="MAHK" Type="HOCKY" IsForeignKey="true" />
       <Association Name="LOP_BAOCAOTONGKETHK" Member="LOP" ThisKey="MALOP" OtherKey="MALOP" Type="LOP" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.BAOCAOTONGKETMON" Member="BAOCAOTONGKETMONs">
-    <Type Name="BAOCAOTONGKETMON">
-      <Column Name="MABCTKMON" Type="System.String" DbType="Char(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MAMONHOC" Type="System.String" DbType="Char(4)" CanBeNull="true" />
-      <Column Name="MAHOCKY" Type="System.String" DbType="Char(4)" CanBeNull="true" />
-      <Association Name="BAOCAOTONGKETMON_CT_BCTKMON" Member="CT_BCTKMONs" ThisKey="MABCTKMON" OtherKey="MABCTKMON" Type="CT_BCTKMON" />
-      <Association Name="HOCKY_BAOCAOTONGKETMON" Member="HOCKY" ThisKey="MAHOCKY" OtherKey="MAHK" Type="HOCKY" IsForeignKey="true" />
-      <Association Name="MONHOC_BAOCAOTONGKETMON" Member="MONHOC" ThisKey="MAMONHOC" OtherKey="MAMONHOC" Type="MONHOC" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CT_BCTKMON" Member="CT_BCTKMONs">
@@ -63,8 +63,8 @@
       <Column Name="MAHK" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TENHOCKY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="HESO" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="HOCKY_BAOCAOTONGKETHK" Member="BAOCAOTONGKETHKs" ThisKey="MAHK" OtherKey="MAHK" Type="BAOCAOTONGKETHK" />
       <Association Name="HOCKY_BAOCAOTONGKETMON" Member="BAOCAOTONGKETMONs" ThisKey="MAHK" OtherKey="MAHOCKY" Type="BAOCAOTONGKETMON" />
+      <Association Name="HOCKY_BAOCAOTONGKETHK" Member="BAOCAOTONGKETHKs" ThisKey="MAHK" OtherKey="MAHK" Type="BAOCAOTONGKETHK" />
       <Association Name="HOCKY_QUATRINHHOC" Member="QUATRINHHOCs" ThisKey="MAHK" OtherKey="MAHK" Type="QUATRINHHOC" />
     </Type>
   </Table>
@@ -139,6 +139,49 @@
       <Association Name="LOP_QUATRINHHOC" Member="LOP" ThisKey="MALOP" OtherKey="MALOP" Type="LOP" IsForeignKey="true" />
     </Type>
   </Table>
+  <Function Name="dbo.AUTO_IDBCTKM" Method="AUTO_IDBCTKM" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.func_LayDiemTongKetMonHoc" Method="func_LayDiemTongKetMonHoc" IsComposable="true">
+    <Parameter Name="mahs" Type="System.String" DbType="Char(5)" />
+    <Parameter Name="mamonhoc" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="mahocky" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="manamhoc" Type="System.String" DbType="Char(4)" />
+    <Return Type="System.Double" />
+  </Function>
+  <Function Name="dbo.AUTO_IDBDM" Method="AUTO_IDBDM" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.AUTO_IDHK" Method="AUTO_IDHK" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.AUTO_IDHS" Method="AUTO_IDHS" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.AUTO_IDKHOI" Method="AUTO_IDKHOI" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.AUTO_IDLHKT" Method="AUTO_IDLHKT" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.AUTO_IDLOP" Method="AUTO_IDLOP" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.AUTO_IDMONHOC" Method="AUTO_IDMONHOC" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.AUTO_IDNAMHOC" Method="AUTO_IDNAMHOC" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.AUTO_IDQTH" Method="AUTO_IDQTH" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.func_LayDiemTongKetHocKy" Method="func_LayDiemTongKetHocKy" IsComposable="true">
+    <Parameter Name="mahs" Type="System.String" DbType="Char(5)" />
+    <Parameter Name="mahocky" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="manamhoc" Type="System.String" DbType="Char(4)" />
+    <Return Type="System.Double" />
+  </Function>
   <Function Name="dbo.sp_LayBaoCaoTongKetHocKy" Method="sp_LayBaoCaoTongKetHocKy">
     <Parameter Name="mahocky" Type="System.String" DbType="Char(4)" />
     <Parameter Name="manamhoc" Type="System.String" DbType="Char(4)" />
@@ -378,48 +421,5 @@
   <Function Name="dbo.sp_XoaNamHoc" Method="sp_XoaNamHoc">
     <Parameter Name="manamhoc" Type="System.String" DbType="Char(4)" />
     <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.AUTO_IDBCTKM" Method="AUTO_IDBCTKM" IsComposable="true">
-    <Return Type="System.String" />
-  </Function>
-  <Function Name="dbo.func_LayDiemTongKetMonHoc" Method="func_LayDiemTongKetMonHoc" IsComposable="true">
-    <Parameter Name="mahs" Type="System.String" DbType="Char(5)" />
-    <Parameter Name="mamonhoc" Type="System.String" DbType="Char(4)" />
-    <Parameter Name="mahocky" Type="System.String" DbType="Char(4)" />
-    <Parameter Name="manamhoc" Type="System.String" DbType="Char(4)" />
-    <Return Type="System.Double" />
-  </Function>
-  <Function Name="dbo.AUTO_IDBDM" Method="AUTO_IDBDM" IsComposable="true">
-    <Return Type="System.String" />
-  </Function>
-  <Function Name="dbo.AUTO_IDHK" Method="AUTO_IDHK" IsComposable="true">
-    <Return Type="System.String" />
-  </Function>
-  <Function Name="dbo.AUTO_IDHS" Method="AUTO_IDHS" IsComposable="true">
-    <Return Type="System.String" />
-  </Function>
-  <Function Name="dbo.AUTO_IDKHOI" Method="AUTO_IDKHOI" IsComposable="true">
-    <Return Type="System.String" />
-  </Function>
-  <Function Name="dbo.AUTO_IDLHKT" Method="AUTO_IDLHKT" IsComposable="true">
-    <Return Type="System.String" />
-  </Function>
-  <Function Name="dbo.AUTO_IDLOP" Method="AUTO_IDLOP" IsComposable="true">
-    <Return Type="System.String" />
-  </Function>
-  <Function Name="dbo.AUTO_IDMONHOC" Method="AUTO_IDMONHOC" IsComposable="true">
-    <Return Type="System.String" />
-  </Function>
-  <Function Name="dbo.AUTO_IDNAMHOC" Method="AUTO_IDNAMHOC" IsComposable="true">
-    <Return Type="System.String" />
-  </Function>
-  <Function Name="dbo.AUTO_IDQTH" Method="AUTO_IDQTH" IsComposable="true">
-    <Return Type="System.String" />
-  </Function>
-  <Function Name="dbo.func_LayDiemTongKetHocKy" Method="func_LayDiemTongKetHocKy" IsComposable="true">
-    <Parameter Name="mahs" Type="System.String" DbType="Char(5)" />
-    <Parameter Name="mahocky" Type="System.String" DbType="Char(4)" />
-    <Parameter Name="manamhoc" Type="System.String" DbType="Char(4)" />
-    <Return Type="System.Double" />
   </Function>
 </Database>

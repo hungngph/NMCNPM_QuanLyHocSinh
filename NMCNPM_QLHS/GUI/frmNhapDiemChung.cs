@@ -253,6 +253,7 @@ namespace NMCNPM_QLHS.GUI
             else
                 cboLop.Properties.DataSource = null;
         }
+
         private void load_cboMonHoc()
         {
             cboMonHoc.Properties.DataSource = MONHOC_BUS.LayTatCaMonHoc();

@@ -29,7 +29,7 @@ namespace NMCNPM_QLHS.DAL
                     if (i.SISO != null)
                         r["SISO"] = i.SISO.Value;
                     if (i.SOLUONGDAT != null)
-                        r["DIEMTBHK1"] = i.SOLUONGDAT.Value;
+                        r["SOLUONGDAT"] = i.SOLUONGDAT.Value;
                     if (i.TYLE != null)
                         r["TYLE"] = i.TYLE.Value;
                     dt.Rows.Add(r);
@@ -60,7 +60,7 @@ namespace NMCNPM_QLHS.DAL
                     if (i.SISO != null)
                         r["SISO"] = i.SISO.Value;
                     if (i.SOLUONGDAT != null)
-                        r["DIEMTBHK1"] = i.SOLUONGDAT.Value;
+                        r["SOLUONGDAT"] = i.SOLUONGDAT.Value;
                     if (i.TYLE != null)
                         r["TYLE"] = i.TYLE.Value;
                     dt.Rows.Add(r);

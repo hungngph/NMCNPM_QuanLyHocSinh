@@ -51,10 +51,10 @@ namespace NMCNPM_QLHS.GUI
             // Enable các button
             // False 
             // Disable các button
-            btnThem.Enabled = true;
-            btnSua.Enabled = true;
-            btnDelete.Enabled = true;
-            btnLuu.Enabled = true;
+            bindingNavigatorAdd.Enabled = true;
+            bindingNavigatorEdit.Enabled = true;
+            bindingNavigatorDelete.Enabled = true;
+            bindingNavigatorSave.Enabled = true;
         }
         #endregion
 
@@ -69,10 +69,10 @@ namespace NMCNPM_QLHS.GUI
         public void IsGiaoVien()
         {
             // Enable, Disable các button
-            btnThem.Enabled = false;
-            btnSua.Enabled = false;
-            btnDelete.Enabled = false;
-            btnLuu.Enabled = false;
+            bindingNavigatorAdd.Enabled = false;
+            bindingNavigatorEdit.Enabled = false;
+            bindingNavigatorDelete.Enabled = false;
+            bindingNavigatorSave.Enabled = false;
         }
         #endregion
 

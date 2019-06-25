@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using NMCNPM_QLHS.BUS;
 using System.Globalization;
+using OfficeOpenXml;
+using System.IO;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -216,6 +218,64 @@ namespace NMCNPM_QLHS.GUI
             }
         }
 
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filePath = "";
+                // lấy file excel
+                OpenFileDialog dialog = new OpenFileDialog();
+
+                // Lọc ra các file excel
+                dialog.Filter = "Excel Files|*.xlsx;*.xlsm;*.xls";
+
+                // Chọn nơi lấy file thành công sẽ lưu đường dẫn lại dùng
+                if (dialog.ShowDialog() == DialogResult.OK)
+                    filePath = dialog.FileName;
+                else
+                    return;
+                filePath = dialog.FileName;
+                // mở file excel
+                var package = new ExcelPackage(new FileInfo(filePath));
+
+                // lấy ra sheet đầu tiên để thao tác
+                ExcelWorksheet workSheet = package.Workbook.Worksheets[1];
+
+                // duyệt tuần tự từ dòng thứ 2 đến dòng cuối cùng của file.
+                for (int i = workSheet.Dimension.Start.Row + 1; i <= workSheet.Dimension.End.Row; i++)
+                {
+                    try
+                    {
+                        int j = 1;
+                        string maHS = HOCSINH_BUS.autoMaHS();
+                        string hoTen = workSheet.Cells[i, j++].Value.ToString();
+                        string gioiTinh = workSheet.Cells[i, j++].Value.ToString();
+                        var ngaySinh1 = workSheet.Cells[i, j++].Value;
+                        DateTime ngaySinh = new DateTime();
+                        if (ngaySinh1 != null)
+                        {
+                            ngaySinh = (DateTime)ngaySinh1;
+                        }
+                        string diaChi = workSheet.Cells[i, j++].Value.ToString();
+                        string email = workSheet.Cells[i, j++].Value.ToString();
+                        if (HOCSINH_BUS.KiemTraTuoi(ngaySinh) == true)
+                            HOCSINH_BUS.Insert(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                XtraMessageBox.Show("Import dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                load_dgvHocSinh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error!");
+            }
+
+        }
+
         #endregion -Nhập liệu Events-
 
         #region -Tìm kiếm Events-
@@ -278,8 +338,8 @@ namespace NMCNPM_QLHS.GUI
             cboGioiTinh.Enabled = false;
         }
 
+
         #endregion -Methods-
 
-        
     }
 }
