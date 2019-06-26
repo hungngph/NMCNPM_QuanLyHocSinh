@@ -27,6 +27,7 @@ namespace NMCNPM_QLHS.GUI
         public frmNhapDiemChung()
         {
             InitializeComponent();
+            Permissions();
         }
 
         #endregion -Constructor-
@@ -81,7 +82,6 @@ namespace NMCNPM_QLHS.GUI
             {
                 col.OptionsColumn.AllowEdit = false;
             }
-            bindingNavigatorSaveItem.Enabled = false;
         }
 
         #endregion -Phân quyền-

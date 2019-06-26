@@ -17,6 +17,7 @@ namespace NMCNPM_QLHS.GUI
         public frmKhoilop()
         {
             InitializeComponent();
+            Permissions();
         }
         #region -Phân quyền-
 

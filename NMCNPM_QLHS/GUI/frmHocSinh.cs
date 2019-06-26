@@ -24,6 +24,7 @@ namespace NMCNPM_QLHS.GUI
         {
             InitializeComponent();
             //DataService.OpenConnection();
+            Permissions();
         }
 
         #endregion -Constructor-enableall

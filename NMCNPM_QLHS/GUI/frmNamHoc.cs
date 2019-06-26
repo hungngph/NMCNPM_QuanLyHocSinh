@@ -17,6 +17,7 @@ namespace NMCNPM_QLHS.GUI
         public frmNamHoc()
         {
             InitializeComponent();
+            Permissions();
         }
 
         #region -Phân quyền-
@@ -51,6 +52,7 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorEdit.Enabled = true;
             bindingNavigatorDelete.Enabled = true;
             bindingNavigatorSave.Enabled = true;
+            dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
         }
 
         public void IsBGH()
@@ -66,6 +68,7 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorEdit.Enabled = false;
             bindingNavigatorDelete.Enabled = false;
             bindingNavigatorSave.Enabled = false;
+            dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
         }
 
         public void IsGiaoVu()
