@@ -93,6 +93,16 @@ namespace NMCNPM_QLHS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addgroupfooter_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("addgroupfooter_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Back_Arrow_32px {
             get {
                 object obj = ResourceManager.GetObject("Back_Arrow_32px", resourceCulture);
@@ -396,6 +406,16 @@ namespace NMCNPM_QLHS.Properties {
         internal static System.Drawing.Bitmap huongdan {
             get {
                 object obj = ResourceManager.GetObject("huongdan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Add_Image_16px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Add_Image_16px_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

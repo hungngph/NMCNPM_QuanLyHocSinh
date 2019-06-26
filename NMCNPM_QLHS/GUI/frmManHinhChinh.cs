@@ -525,14 +525,8 @@ namespace NMCNPM_QLHS.GUI
         private void load_menuQuyDinh(string s)
         {
             var frm = new frmQuyDinh(s);
-            if (Application.OpenForms[frm.Name] == null)
-            {
-                frm.Show();
-            }
-            else
-            {
-                Application.OpenForms[frm.Name].Focus();
-            }
+            frm.Show();
+            Application.OpenForms["frmManHinhChinh"].Enabled = false;
         }
 
         #endregion
@@ -563,20 +557,19 @@ namespace NMCNPM_QLHS.GUI
         private void btnThongTin_ItemClick(object sender, ItemClickEventArgs e)
         {
             var frm = new frmThongTinNguoiDung();
-            if (Application.OpenForms[frm.Name] == null)
-            {
-                frm.Show();
-            }
-            else
-            {
-                Application.OpenForms[frm.Name].Focus();
-            }
+            frm.Show();
+            this.Enabled = false;
+        }
+        private void btnDoiMatKhau_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var frm = new frmDoiMatKhau();
+            frm.Show();
             this.Enabled = false;
         }
 
 
         #endregion -Show form-
 
-        
+
     }
 }

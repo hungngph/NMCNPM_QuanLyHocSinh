@@ -56,6 +56,7 @@
             // 
             this.txtMatKhauMoi.Location = new System.Drawing.Point(122, 77);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
+            this.txtMatKhauMoi.Properties.UseSystemPasswordChar = true;
             this.txtMatKhauMoi.Size = new System.Drawing.Size(154, 20);
             this.txtMatKhauMoi.TabIndex = 8;
             // 
@@ -74,6 +75,7 @@
             this.txtMatKhau.Location = new System.Drawing.Point(122, 33);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Properties.NullText = "Mật khẩu cũ";
+            this.txtMatKhau.Properties.UseSystemPasswordChar = true;
             this.txtMatKhau.Size = new System.Drawing.Size(154, 20);
             this.txtMatKhau.TabIndex = 6;
             // 
@@ -90,6 +92,7 @@
             // 
             this.txtNhapLai.Location = new System.Drawing.Point(122, 123);
             this.txtNhapLai.Name = "txtNhapLai";
+            this.txtNhapLai.Properties.UseSystemPasswordChar = true;
             this.txtNhapLai.Size = new System.Drawing.Size(154, 20);
             this.txtNhapLai.TabIndex = 11;
             // 
@@ -127,6 +130,7 @@
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
             this.btnHuy.TabIndex = 12;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // frmDoiMatKhau
             // 
@@ -137,7 +141,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDoiMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi mật khẩu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDoiMatKhau_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhauMoi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhapLai.Properties)).EndInit();

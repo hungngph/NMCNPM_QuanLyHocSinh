@@ -57,8 +57,8 @@
             this.skinRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.subNguoiDung = new DevExpress.XtraBars.BarSubItem();
             this.btnThongTin = new DevExpress.XtraBars.BarButtonItem();
-            this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
             this.btnDoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
             this.btnThongTinPhanMem = new DevExpress.XtraBars.BarButtonItem();
             this.btnNguoiDung = new DevExpress.XtraBars.BarButtonItem();
             this.btnLoaiHinhKiemTra = new DevExpress.XtraBars.BarButtonItem();
@@ -372,6 +372,14 @@
             this.btnThongTin.Name = "btnThongTin";
             this.btnThongTin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThongTin_ItemClick);
             // 
+            // btnDoiMatKhau
+            // 
+            this.btnDoiMatKhau.Caption = "Đổi mật khẩu";
+            this.btnDoiMatKhau.Id = 67;
+            this.btnDoiMatKhau.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Password_1_16px;
+            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDoiMatKhau_ItemClick);
+            // 
             // btnDangXuat
             // 
             this.btnDangXuat.Caption = "Đăng xuất";
@@ -379,13 +387,6 @@
             this.btnDangXuat.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Export_16px_1;
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangXuat_ItemClick);
-            // 
-            // btnDoiMatKhau
-            // 
-            this.btnDoiMatKhau.Caption = "Đổi mật khẩu";
-            this.btnDoiMatKhau.Id = 67;
-            this.btnDoiMatKhau.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Password_1_16px;
-            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             // 
             // btnThongTinPhanMem
             // 
@@ -581,6 +582,7 @@
             this.IsMdiContainer = true;
             this.Name = "frmManHinhChinh";
             this.Ribbon = this.ribbon;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Quản Lý Học Sinh";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
