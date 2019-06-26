@@ -12,16 +12,16 @@ using NMCNPM_QLHS.BUS;
 
 namespace NMCNPM_QLHS.GUI
 {
-    public partial class frmNhapDiemChiTiet : DevExpress.XtraEditors.XtraForm
+    public partial class frmDiemChiTiet : DevExpress.XtraEditors.XtraForm
     {
 
         #region -Constructor-
 
-        public frmNhapDiemChiTiet()
+        public frmDiemChiTiet()
         {
             InitializeComponent();
         }
-        public frmNhapDiemChiTiet(string maHS, string maHocKy, string maNamHoc)
+        public frmDiemChiTiet(string maHS, string maHocKy, string maNamHoc)
         {
             InitializeComponent();
             dgvDiem.OptionsBehavior.ReadOnly = true;

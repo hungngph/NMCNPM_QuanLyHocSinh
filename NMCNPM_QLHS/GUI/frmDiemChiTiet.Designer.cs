@@ -1,6 +1,6 @@
 ﻿namespace NMCNPM_QLHS.GUI
 {
-    partial class frmNhapDiemChiTiet
+    partial class frmDiemChiTiet
     {
         /// <summary>
         /// Required designer variable.
@@ -45,14 +45,9 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.cboNamHoc = new DevExpress.XtraEditors.LookUpEdit();
             this.cboHocSinh = new DevExpress.XtraEditors.LookUpEdit();
-            this.cboMonHoc = new System.Windows.Forms.ComboBox();
-            this.btnXemDiem = new DevExpress.XtraEditors.SimpleButton();
             this.cboHocKy = new DevExpress.XtraEditors.LookUpEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -70,9 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cboHocKy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -109,10 +101,10 @@
             // 
             this.gridControlHocSinh.DataSource = this.bindingSourceDiemChiTiet;
             this.gridControlHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlHocSinh.Location = new System.Drawing.Point(2, 155);
+            this.gridControlHocSinh.Location = new System.Drawing.Point(2, 131);
             this.gridControlHocSinh.MainView = this.dgvDiem;
             this.gridControlHocSinh.Name = "gridControlHocSinh";
-            this.gridControlHocSinh.Size = new System.Drawing.Size(882, 354);
+            this.gridControlHocSinh.Size = new System.Drawing.Size(882, 378);
             this.gridControlHocSinh.TabIndex = 4;
             this.gridControlHocSinh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvDiem,
@@ -214,34 +206,32 @@
             // 
             this.layoutControl1.Controls.Add(this.cboNamHoc);
             this.layoutControl1.Controls.Add(this.cboHocSinh);
-            this.layoutControl1.Controls.Add(this.cboMonHoc);
-            this.layoutControl1.Controls.Add(this.btnXemDiem);
             this.layoutControl1.Controls.Add(this.cboHocKy);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.layoutControl1.Location = new System.Drawing.Point(2, 20);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(882, 135);
+            this.layoutControl1.Size = new System.Drawing.Size(882, 111);
             this.layoutControl1.TabIndex = 3;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // cboNamHoc
             // 
-            this.cboNamHoc.Location = new System.Drawing.Point(486, 62);
+            this.cboNamHoc.Location = new System.Drawing.Point(486, 66);
             this.cboNamHoc.Name = "cboNamHoc";
             this.cboNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboNamHoc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNAMHOC", "")});
             this.cboNamHoc.Properties.NullText = "";
-            this.cboNamHoc.Size = new System.Drawing.Size(374, 20);
+            this.cboNamHoc.Size = new System.Drawing.Size(372, 20);
             this.cboNamHoc.StyleController = this.layoutControl1;
             this.cboNamHoc.TabIndex = 17;
             this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
             // 
             // cboHocSinh
             // 
-            this.cboHocSinh.Location = new System.Drawing.Point(70, 38);
+            this.cboHocSinh.Location = new System.Drawing.Point(72, 42);
             this.cboHocSinh.Name = "cboHocSinh";
             this.cboHocSinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -249,40 +239,21 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MAHS", "Mã học sinh"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("HOTEN", "Họ tên")});
             this.cboHocSinh.Properties.NullText = "";
-            this.cboHocSinh.Size = new System.Drawing.Size(364, 20);
+            this.cboHocSinh.Size = new System.Drawing.Size(362, 20);
             this.cboHocSinh.StyleController = this.layoutControl1;
             this.cboHocSinh.TabIndex = 15;
             this.cboHocSinh.EditValueChanged += new System.EventHandler(this.cboHocSinh_EditValueChanged);
             // 
-            // cboMonHoc
-            // 
-            this.cboMonHoc.FormattingEnabled = true;
-            this.cboMonHoc.Location = new System.Drawing.Point(486, 86);
-            this.cboMonHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboMonHoc.Name = "cboMonHoc";
-            this.cboMonHoc.Size = new System.Drawing.Size(374, 21);
-            this.cboMonHoc.TabIndex = 11;
-            // 
-            // btnXemDiem
-            // 
-            this.btnXemDiem.Location = new System.Drawing.Point(265, 86);
-            this.btnXemDiem.Name = "btnXemDiem";
-            this.btnXemDiem.Size = new System.Drawing.Size(169, 29);
-            this.btnXemDiem.StyleController = this.layoutControl1;
-            this.btnXemDiem.TabIndex = 10;
-            this.btnXemDiem.Text = "Xem điểm";
-            this.btnXemDiem.Click += new System.EventHandler(this.btnXemDiem_Click);
-            // 
             // cboHocKy
             // 
-            this.cboHocKy.Location = new System.Drawing.Point(486, 38);
+            this.cboHocKy.Location = new System.Drawing.Point(486, 42);
             this.cboHocKy.Name = "cboHocKy";
             this.cboHocKy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboHocKy.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENHOCKY", "")});
             this.cboHocKy.Properties.NullText = "";
-            this.cboHocKy.Size = new System.Drawing.Size(374, 20);
+            this.cboHocKy.Size = new System.Drawing.Size(372, 20);
             this.cboHocKy.StyleController = this.layoutControl1;
             this.cboHocKy.TabIndex = 17;
             this.cboHocKy.EditValueChanged += new System.EventHandler(this.cboHocKy_EditValueChanged);
@@ -294,66 +265,35 @@
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(882, 135);
+            this.Root.Size = new System.Drawing.Size(882, 111);
             this.Root.TextVisible = false;
             // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.emptySpaceItem1,
-            this.layoutControlItem5,
-            this.layoutControlItem2,
             this.layoutControlItem7,
             this.layoutControlItem1,
             this.layoutControlItem3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(864, 119);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(862, 91);
             this.layoutControlGroup1.Text = "Thông tin:";
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 48);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(243, 33);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.btnXemDiem;
-            this.layoutControlItem5.Location = new System.Drawing.Point(243, 48);
-            this.layoutControlItem5.MinSize = new System.Drawing.Size(63, 25);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(173, 33);
-            this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.cboMonHoc;
-            this.layoutControlItem2.Location = new System.Drawing.Point(416, 48);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(426, 33);
-            this.layoutControlItem2.Text = "Môn học";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(45, 13);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.cboHocSinh;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(416, 48);
+            this.layoutControlItem7.Size = new System.Drawing.Size(414, 49);
             this.layoutControlItem7.Text = "Học sinh";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(45, 13);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.cboNamHoc;
-            this.layoutControlItem1.Location = new System.Drawing.Point(416, 24);
+            this.layoutControlItem1.Location = new System.Drawing.Point(414, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(426, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(424, 25);
             this.layoutControlItem1.Text = "Năm học:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(45, 13);
             // 
@@ -361,9 +301,9 @@
             // 
             this.layoutControlItem3.Control = this.cboHocKy;
             this.layoutControlItem3.CustomizationFormText = "Học kỳ:";
-            this.layoutControlItem3.Location = new System.Drawing.Point(416, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(414, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(426, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(424, 24);
             this.layoutControlItem3.Text = "Học kỳ:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(45, 13);
             // 
@@ -390,9 +330,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cboHocKy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -417,9 +354,6 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraEditors.SimpleButton btnXemDiem;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private System.Windows.Forms.BindingSource bindingSourceDiemChiTiet;
         private DevExpress.XtraEditors.LookUpEdit cboHocSinh;
         private DevExpress.XtraEditors.LookUpEdit cboNamHoc;
@@ -427,7 +361,5 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraEditors.LookUpEdit cboHocKy;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private System.Windows.Forms.ComboBox cboMonHoc;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

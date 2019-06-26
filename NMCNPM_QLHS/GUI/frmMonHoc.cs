@@ -49,7 +49,6 @@ namespace NMCNPM_QLHS.GUI
             btnThem.Enabled = true;
             btnSua.Enabled = true;
             btnDelete.Enabled = true;
-            btnLuu.Enabled = true;
         }
 
         public void IsBGH()
@@ -64,7 +63,6 @@ namespace NMCNPM_QLHS.GUI
             btnThem.Enabled = false;
             btnSua.Enabled = false;
             btnDelete.Enabled = false;
-            btnLuu.Enabled = false;
         }
 
         public void IsGiaoVu()

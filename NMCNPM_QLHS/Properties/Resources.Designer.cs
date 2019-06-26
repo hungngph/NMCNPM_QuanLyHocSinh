@@ -83,6 +83,26 @@ namespace NMCNPM_QLHS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_New_32px {
+            get {
+                object obj = ResourceManager.GetObject("Add_New_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Back_Arrow_32px {
+            get {
+                object obj = ResourceManager.GetObject("Back_Arrow_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background {
             get {
                 object obj = ResourceManager.GetObject("background", resourceCulture);
@@ -96,6 +116,16 @@ namespace NMCNPM_QLHS.Properties {
         internal static System.Drawing.Bitmap cachnhapdiem {
             get {
                 object obj = ResourceManager.GetObject("cachnhapdiem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cancel_32px {
+            get {
+                object obj = ResourceManager.GetObject("Cancel_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,6 +403,76 @@ namespace NMCNPM_QLHS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Export_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Export_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Export_16px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Export_16px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_More_Info_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_More_Info_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Password_1_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Password_1_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Password_Reset_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Password_Reset_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Refresh_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Refresh_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_User_Group_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_User_Group_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Info_52px {
             get {
                 object obj = ResourceManager.GetObject("Info_52px", resourceCulture);
@@ -463,6 +563,26 @@ namespace NMCNPM_QLHS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lookup_reference_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("lookup&reference_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lookup_reference_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("lookup&reference_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lophoc {
             get {
                 object obj = ResourceManager.GetObject("lophoc", resourceCulture);
@@ -537,6 +657,16 @@ namespace NMCNPM_QLHS.Properties {
             get {
                 object obj = ResourceManager.GetObject("phuchoidulieu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage print {
+            get {
+                object obj = ResourceManager.GetObject("print", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
         
@@ -643,9 +773,19 @@ namespace NMCNPM_QLHS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap splash {
+        internal static System.Drawing.Bitmap sectionbreakslist_evenpage_16x16 {
             get {
-                object obj = ResourceManager.GetObject("splash", resourceCulture);
+                object obj = ResourceManager.GetObject("sectionbreakslist_evenpage_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sectionbreakslist_evenpage_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("sectionbreakslist_evenpage_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

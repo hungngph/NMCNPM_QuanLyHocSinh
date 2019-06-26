@@ -170,7 +170,7 @@ namespace NMCNPM_QLHS.GUI
             string hoTen = dgvDiem.GetFocusedRowCellDisplayText(col_hoTen);
             string maHocKy = cboHocKy.EditValue.ToString();
             string maNamHoc = NAMHOC_BUS.LayNamHocHienTai().MANAMHOC;
-            frmNhapDiemChiTiet frm = new frmNhapDiemChiTiet(maHS, maHocKy, maNamHoc);
+            frmDiemChiTiet frm = new frmDiemChiTiet(maHS, maHocKy, maNamHoc);
             frm.Show();
         }
 

@@ -81,7 +81,7 @@ namespace NMCNPM_QLHS.DAL
     #endregion
 		
 		public SQL_QLHSDataContext() : 
-				base(global::NMCNPM_QLHS.Properties.Settings.Default.QLHSConnectionString, mappingSource)
+				base(global::NMCNPM_QLHS.Properties.Settings.Default.QLHSConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

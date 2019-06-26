@@ -41,7 +41,6 @@ namespace NMCNPM_QLHS.GUI
             load_cboNamHoc();
             load_cboHocKy();
             btnChuyen.Enabled = false;
-            btnDanhSach.Enabled = false;
         }
 
         private void frmPhanLop_FormClosing(object sender, FormClosingEventArgs e)
@@ -236,7 +235,6 @@ namespace NMCNPM_QLHS.GUI
                     item.SubItems.Add(i.HOTEN);
                     lstvDSLop.Items.Add(item);
                 }
-                btnDanhSach.Enabled = true;
                 btnChuyen.Enabled = true;
             }
             else

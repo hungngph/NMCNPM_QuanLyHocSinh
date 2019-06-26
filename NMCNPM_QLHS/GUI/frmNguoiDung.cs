@@ -17,5 +17,10 @@ namespace NMCNPM_QLHS.GUI
         {
             InitializeComponent();
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

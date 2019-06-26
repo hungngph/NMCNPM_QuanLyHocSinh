@@ -401,6 +401,20 @@ namespace NMCNPM_QLHS.GUI
                 f.Show();
             }
         }
+        private void btnNguoiDung_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmNguoiDung));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmNguoiDung f = new frmNguoiDung
+                {
+                    MdiParent = this
+                };
+                f.Show();
+            }
+        }
 
         #endregion
 
@@ -476,12 +490,12 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnTraCuuDiem_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = this.KiemTraTonTai(typeof(frmNhapDiemChiTiet));
+            Form frm = this.KiemTraTonTai(typeof(frmDiemChiTiet));
             if (frm != null)
                 frm.Activate();
             else
             {
-                frmNhapDiemChiTiet f = new frmNhapDiemChiTiet
+                frmDiemChiTiet f = new frmDiemChiTiet
                 {
                     MdiParent = this
                 };
@@ -563,5 +577,6 @@ namespace NMCNPM_QLHS.GUI
 
         #endregion -Show form-
 
+        
     }
 }

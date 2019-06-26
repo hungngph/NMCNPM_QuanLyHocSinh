@@ -110,6 +110,9 @@
     <Compile Include="DAL\NAMHOC_DAL.cs" />
     <Compile Include="DAL\NGUOIDUNG_DAL.cs" />
     <Compile Include="DAL\QUATRINHHOC_DAL.cs" />
+    <Compile Include="DAL\SQL_QLHS.cs">
+      <DependentUpon>SQL_QLHS.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DAL\SQL_QLHS.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -182,11 +185,11 @@
     <Compile Include="GUI\frmNguoiDung.Designer.cs">
       <DependentUpon>frmNguoiDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmNhapDiemChiTiet.cs">
+    <Compile Include="GUI\frmDiemChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmNhapDiemChiTiet.Designer.cs">
-      <DependentUpon>frmNhapDiemChiTiet.cs</DependentUpon>
+    <Compile Include="GUI\frmDiemChiTiet.Designer.cs">
+      <DependentUpon>frmDiemChiTiet.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmNhapDiemChung.cs">
       <SubType>Form</SubType>
@@ -307,8 +310,8 @@
     <EmbeddedResource Include="GUI\frmNguoiDung.resx">
       <DependentUpon>frmNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmNhapDiemChiTiet.resx">
-      <DependentUpon>frmNhapDiemChiTiet.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmDiemChiTiet.resx">
+      <DependentUpon>frmDiemChiTiet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmNhapDiemChung.resx">
       <DependentUpon>frmNhapDiemChung.cs</DependentUpon>
@@ -627,15 +630,6 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Excel">
-      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>9</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
     <COMReference Include="VBIDE">
       <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>5</VersionMajor>
@@ -648,6 +642,63 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Back_Arrow_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Back_Arrow_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Cancel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Add_New_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Print_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Print_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Export_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Refresh_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Password_Reset_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_User_Group_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sectionbreakslist_evenpage_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sectionbreakslist_evenpage_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lookup&amp;reference_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lookup&amp;reference_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_More_Info_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Shutdown_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Export_16px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Password_1_16px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
