@@ -53,7 +53,7 @@ namespace NMCNPM_QLHS.GUI
             // Enable các button
             // False 
             // Disable các button
-            navNhapLieu.Visible = true;
+            navNhapLieu.PageVisible = true;
             navPanelChucNang.SelectedPage = navNhapLieu;
             bindingNavigatorAdd.Enabled = true;
             bindingNavigatorDelete.Enabled = true;
@@ -64,12 +64,13 @@ namespace NMCNPM_QLHS.GUI
         public void IsBGH()
         {
             // Enable, Disable các button
+            IsGiaoVien();
         }
 
         public void IsGiaoVien()
         {
             // Enable, Disable các button
-            navNhapLieu.Visible = false;
+            navNhapLieu.PageVisible = false;
             bindingNavigatorAdd.Enabled = false;
             bindingNavigatorDelete.Enabled = false;
             bindingNavigatorEdit.Enabled = false;

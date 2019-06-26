@@ -112,6 +112,9 @@ namespace NMCNPM_QLHS.GUI
         public void IsBGH()
         {
             // Enable, Disable các button
+            btnPhanLop.Visibility = BarItemVisibility.Never;
+            btnLenLop.Visibility = BarItemVisibility.Never;
+            ribbonPageThongKe.Visible = false;
         }
 
         public void IsGiaoVien()

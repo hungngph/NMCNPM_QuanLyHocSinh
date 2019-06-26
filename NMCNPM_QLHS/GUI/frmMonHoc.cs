@@ -55,6 +55,7 @@ namespace NMCNPM_QLHS.GUI
         public void IsBGH()
         {
             // Enable, Disable các button
+            IsGiaoVien();
         }
 
         public void IsGiaoVien()

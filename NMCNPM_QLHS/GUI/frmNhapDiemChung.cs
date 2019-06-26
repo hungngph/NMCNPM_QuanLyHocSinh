@@ -65,6 +65,7 @@ namespace NMCNPM_QLHS.GUI
         public void IsBGH()
         {
             // Enable, Disable các button
+            IsGiaoVu();
         }
 
         public void IsGiaoVien()
@@ -80,6 +81,7 @@ namespace NMCNPM_QLHS.GUI
             {
                 col.OptionsColumn.AllowEdit = false;
             }
+            bindingNavigatorSaveItem.Enabled = false;
         }
 
         #endregion -Phân quyền-
