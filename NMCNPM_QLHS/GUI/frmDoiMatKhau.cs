@@ -21,5 +21,16 @@ namespace NMCNPM_QLHS.GUI
         public void PhanQuyen() {
 
         }
+
+        private void frmDoiMatKhau_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms["frmManHinhChinh"].Enabled = true;
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.OpenForms["frmManHinhChinh"].Enabled = true;
+        }
     }
 }

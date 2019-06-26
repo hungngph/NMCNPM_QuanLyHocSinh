@@ -38,13 +38,9 @@
             this.cboMonHoc = new DevExpress.XtraEditors.LookUpEdit();
             this.cboLop = new DevExpress.XtraEditors.LookUpEdit();
             this.cboHocKy = new DevExpress.XtraEditors.LookUpEdit();
-            this.btnThemMon = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.btnThemHK = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.btnThemLop = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.btnThemNam = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.cboNamHoc = new DevExpress.XtraEditors.ComboBoxEdit();
             this.groupControlHocSinh = new DevExpress.XtraEditors.GroupControl();
@@ -75,6 +71,10 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorXemDiemItem = new System.Windows.Forms.ToolStripButton();
+            this.btnThemNam = new System.Windows.Forms.Button();
+            this.btnThemHK = new System.Windows.Forms.Button();
+            this.btnThemMon = new System.Windows.Forms.Button();
+            this.btnThemLop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanelChucNang.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -126,8 +126,8 @@
             this.dockPanelChucNang.ID = new System.Guid("5146ebf8-0899-4481-84da-4622369fb346");
             this.dockPanelChucNang.Location = new System.Drawing.Point(0, 0);
             this.dockPanelChucNang.Name = "dockPanelChucNang";
-            this.dockPanelChucNang.OriginalSize = new System.Drawing.Size(275, 200);
-            this.dockPanelChucNang.Size = new System.Drawing.Size(236, 441);
+            this.dockPanelChucNang.OriginalSize = new System.Drawing.Size(244, 200);
+            this.dockPanelChucNang.Size = new System.Drawing.Size(244, 441);
             this.dockPanelChucNang.Text = "Chức năng";
             // 
             // dockPanel1_Container
@@ -135,7 +135,7 @@
             this.dockPanel1_Container.Controls.Add(this.navCapNhat);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(227, 414);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(235, 414);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navCapNhat
@@ -147,30 +147,30 @@
             this.navCapNhat.PageProperties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.Image;
             this.navCapNhat.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationPage2});
-            this.navCapNhat.RegularSize = new System.Drawing.Size(227, 414);
+            this.navCapNhat.RegularSize = new System.Drawing.Size(235, 414);
             this.navCapNhat.SelectedPage = this.navigationPage2;
-            this.navCapNhat.Size = new System.Drawing.Size(227, 414);
+            this.navCapNhat.Size = new System.Drawing.Size(235, 414);
             this.navCapNhat.TabIndex = 0;
             this.navCapNhat.Text = "navigationPane1";
             // 
             // navigationPage2
             // 
             this.navigationPage2.Caption = "Cập nhật bảng điểm";
+            this.navigationPage2.Controls.Add(this.btnThemLop);
+            this.navigationPage2.Controls.Add(this.btnThemMon);
+            this.navigationPage2.Controls.Add(this.btnThemHK);
+            this.navigationPage2.Controls.Add(this.btnThemNam);
             this.navigationPage2.Controls.Add(this.cboMonHoc);
             this.navigationPage2.Controls.Add(this.cboLop);
             this.navigationPage2.Controls.Add(this.cboHocKy);
-            this.navigationPage2.Controls.Add(this.btnThemMon);
             this.navigationPage2.Controls.Add(this.labelControl5);
-            this.navigationPage2.Controls.Add(this.btnThemHK);
             this.navigationPage2.Controls.Add(this.labelControl6);
-            this.navigationPage2.Controls.Add(this.btnThemLop);
             this.navigationPage2.Controls.Add(this.labelControl7);
-            this.navigationPage2.Controls.Add(this.btnThemNam);
             this.navigationPage2.Controls.Add(this.labelControl8);
             this.navigationPage2.Controls.Add(this.cboNamHoc);
             this.navigationPage2.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Update_32px;
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(161, 354);
+            this.navigationPage2.Size = new System.Drawing.Size(169, 354);
             // 
             // cboMonHoc
             // 
@@ -211,15 +211,6 @@
             this.cboHocKy.TabIndex = 164;
             this.cboHocKy.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
             // 
-            // btnThemMon
-            // 
-            this.btnThemMon.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.add;
-            this.btnThemMon.Location = new System.Drawing.Point(123, 216);
-            this.btnThemMon.Name = "btnThemMon";
-            this.btnThemMon.Size = new System.Drawing.Size(24, 23);
-            this.btnThemMon.TabIndex = 157;
-            this.btnThemMon.Click += new System.EventHandler(this.btnThemMon_Click);
-            // 
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(17, 198);
@@ -227,15 +218,6 @@
             this.labelControl5.Size = new System.Drawing.Size(44, 13);
             this.labelControl5.TabIndex = 156;
             this.labelControl5.Text = "Môn học:";
-            // 
-            // btnThemHK
-            // 
-            this.btnThemHK.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.add;
-            this.btnThemHK.Location = new System.Drawing.Point(123, 156);
-            this.btnThemHK.Name = "btnThemHK";
-            this.btnThemHK.Size = new System.Drawing.Size(24, 23);
-            this.btnThemHK.TabIndex = 154;
-            this.btnThemHK.Click += new System.EventHandler(this.btnThemHK_Click);
             // 
             // labelControl6
             // 
@@ -245,15 +227,6 @@
             this.labelControl6.TabIndex = 153;
             this.labelControl6.Text = "Học kỳ:";
             // 
-            // btnThemLop
-            // 
-            this.btnThemLop.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.add;
-            this.btnThemLop.Location = new System.Drawing.Point(123, 95);
-            this.btnThemLop.Name = "btnThemLop";
-            this.btnThemLop.Size = new System.Drawing.Size(24, 23);
-            this.btnThemLop.TabIndex = 151;
-            this.btnThemLop.Click += new System.EventHandler(this.btnThemLop_Click);
-            // 
             // labelControl7
             // 
             this.labelControl7.Location = new System.Drawing.Point(17, 75);
@@ -261,15 +234,6 @@
             this.labelControl7.Size = new System.Drawing.Size(21, 13);
             this.labelControl7.TabIndex = 150;
             this.labelControl7.Text = "Lớp:";
-            // 
-            // btnThemNam
-            // 
-            this.btnThemNam.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.add;
-            this.btnThemNam.Location = new System.Drawing.Point(123, 38);
-            this.btnThemNam.Name = "btnThemNam";
-            this.btnThemNam.Size = new System.Drawing.Size(24, 23);
-            this.btnThemNam.TabIndex = 148;
-            this.btnThemNam.Click += new System.EventHandler(this.btnThemNam_Click);
             // 
             // labelControl8
             // 
@@ -295,9 +259,9 @@
             this.groupControlHocSinh.Controls.Add(this.gridDiemControl);
             this.groupControlHocSinh.Controls.Add(this.bindingNavigatorDiem);
             this.groupControlHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControlHocSinh.Location = new System.Drawing.Point(236, 0);
+            this.groupControlHocSinh.Location = new System.Drawing.Point(244, 0);
             this.groupControlHocSinh.Name = "groupControlHocSinh";
-            this.groupControlHocSinh.Size = new System.Drawing.Size(735, 441);
+            this.groupControlHocSinh.Size = new System.Drawing.Size(727, 441);
             this.groupControlHocSinh.TabIndex = 2;
             this.groupControlHocSinh.Text = "Danh sách nhập điểm";
             // 
@@ -315,7 +279,7 @@
             this.col_diem15Phut_edit,
             this.col_diem1Tiet_edit,
             this.col_diemThi_edit});
-            this.gridDiemControl.Size = new System.Drawing.Size(731, 388);
+            this.gridDiemControl.Size = new System.Drawing.Size(723, 388);
             this.gridDiemControl.TabIndex = 2;
             this.gridDiemControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvDiem});
@@ -455,7 +419,7 @@
             this.bindingNavigatorDiem.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatorDiem.Name = "bindingNavigatorDiem";
             this.bindingNavigatorDiem.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorDiem.Size = new System.Drawing.Size(731, 31);
+            this.bindingNavigatorDiem.Size = new System.Drawing.Size(723, 31);
             this.bindingNavigatorDiem.TabIndex = 0;
             this.bindingNavigatorDiem.Text = "bindingNavigator1";
             // 
@@ -544,6 +508,46 @@
             this.bindingNavigatorXemDiemItem.Text = "Xem điểm";
             this.bindingNavigatorXemDiemItem.Click += new System.EventHandler(this.bindingNavigatorXemDiemItem_Click);
             // 
+            // btnThemNam
+            // 
+            this.btnThemNam.Image = global::NMCNPM_QLHS.Properties.Resources.Add_New_32px;
+            this.btnThemNam.Location = new System.Drawing.Point(132, 39);
+            this.btnThemNam.Name = "btnThemNam";
+            this.btnThemNam.Size = new System.Drawing.Size(24, 20);
+            this.btnThemNam.TabIndex = 167;
+            this.btnThemNam.UseVisualStyleBackColor = true;
+            this.btnThemNam.Click += new System.EventHandler(this.btnThemNam_Click);
+            // 
+            // btnThemHK
+            // 
+            this.btnThemHK.Image = global::NMCNPM_QLHS.Properties.Resources.Add_New_32px;
+            this.btnThemHK.Location = new System.Drawing.Point(132, 156);
+            this.btnThemHK.Name = "btnThemHK";
+            this.btnThemHK.Size = new System.Drawing.Size(24, 20);
+            this.btnThemHK.TabIndex = 168;
+            this.btnThemHK.UseVisualStyleBackColor = true;
+            this.btnThemHK.Click += new System.EventHandler(this.btnThemHK_Click);
+            // 
+            // btnThemMon
+            // 
+            this.btnThemMon.Image = global::NMCNPM_QLHS.Properties.Resources.Add_New_32px;
+            this.btnThemMon.Location = new System.Drawing.Point(132, 217);
+            this.btnThemMon.Name = "btnThemMon";
+            this.btnThemMon.Size = new System.Drawing.Size(24, 20);
+            this.btnThemMon.TabIndex = 169;
+            this.btnThemMon.UseVisualStyleBackColor = true;
+            this.btnThemMon.Click += new System.EventHandler(this.btnThemMon_Click);
+            // 
+            // btnThemLop
+            // 
+            this.btnThemLop.Image = global::NMCNPM_QLHS.Properties.Resources.Add_New_32px;
+            this.btnThemLop.Location = new System.Drawing.Point(132, 96);
+            this.btnThemLop.Name = "btnThemLop";
+            this.btnThemLop.Size = new System.Drawing.Size(24, 20);
+            this.btnThemLop.TabIndex = 170;
+            this.btnThemLop.UseVisualStyleBackColor = true;
+            this.btnThemLop.Click += new System.EventHandler(this.btnThemLop_Click);
+            // 
             // frmNhapDiemChung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -606,13 +610,9 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorXemDiemItem;
         private DevExpress.XtraBars.Navigation.NavigationPane navCapNhat;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage2;
-        private DevExpress.XtraEditors.SimpleButton btnThemMon;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.SimpleButton btnThemHK;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.SimpleButton btnThemLop;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.SimpleButton btnThemNam;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private System.Windows.Forms.BindingSource bindingSourceDiem;
         private DevExpress.XtraGrid.Views.Grid.GridView dgvDiem;
@@ -632,5 +632,9 @@
         private DevExpress.XtraEditors.LookUpEdit cboLop;
         private DevExpress.XtraEditors.LookUpEdit cboHocKy;
         private DevExpress.XtraEditors.ComboBoxEdit cboNamHoc;
+        private System.Windows.Forms.Button btnThemLop;
+        private System.Windows.Forms.Button btnThemMon;
+        private System.Windows.Forms.Button btnThemHK;
+        private System.Windows.Forms.Button btnThemNam;
     }
 }

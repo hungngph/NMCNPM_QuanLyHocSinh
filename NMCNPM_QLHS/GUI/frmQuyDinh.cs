@@ -289,5 +289,9 @@ namespace NMCNPM_QLHS.GUI
 
         #endregion -Methods-
 
+        private void frmQuyDinh_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms["frmManHinhChinh"].Enabled = true;
+        }
     }
 }

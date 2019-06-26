@@ -34,8 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaiKhoan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -65,6 +65,7 @@
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(150, 91);
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Properties.UseSystemPasswordChar = true;
             this.txtMatKhau.Size = new System.Drawing.Size(182, 20);
             this.txtMatKhau.TabIndex = 3;
             // 
@@ -98,18 +99,9 @@
             this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Card;
             this.groupControl1.Location = new System.Drawing.Point(12, 50);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(346, 210);
+            this.groupControl1.Size = new System.Drawing.Size(346, 177);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Thông tin đăng nhập";
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.EditValue = global::NMCNPM_QLHS.Properties.Resources.loginimage;
-            this.pictureEdit1.Location = new System.Drawing.Point(5, 50);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(68, 58);
-            this.pictureEdit1.TabIndex = 5;
             // 
             // labelControl1
             // 
@@ -121,11 +113,20 @@
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "QUẢN LÝ HỌC SINH";
             // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.EditValue = global::NMCNPM_QLHS.Properties.Resources.loginimage;
+            this.pictureEdit1.Location = new System.Drawing.Point(5, 50);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Size = new System.Drawing.Size(68, 58);
+            this.pictureEdit1.TabIndex = 5;
+            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 260);
+            this.ClientSize = new System.Drawing.Size(367, 227);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
