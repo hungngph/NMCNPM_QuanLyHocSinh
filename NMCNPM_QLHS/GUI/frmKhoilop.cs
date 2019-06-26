@@ -23,16 +23,16 @@ namespace NMCNPM_QLHS.GUI
 
         public void Permissions()
         {
-            switch ("LND001")
+            switch (CurrentUser.Code)
             {
-                case "LND001":      // Giao diện đăng nhập với quyền BGH
+                case "LND002":      // Giao diện đăng nhập với quyền BGH
                     IsBGH();
-                    break;
-                case "LND002":      // Giao diện đăng nhập với quyền GiaoVien
-                    IsGiaoVien();
                     break;
                 case "LND003":      // Giao diện đăng nhập với quyền GiaoVu
                     IsGiaoVu();
+                    break;
+                case "LND004":      // Giao diện đăng nhập với quyền GiaoVien
+                    IsGiaoVien();
                     break;
                 default:
                     Default();

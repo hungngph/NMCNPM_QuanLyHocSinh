@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using NMCNPM_QLHS.BUS;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -21,9 +22,14 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            frmManHinhChinh frm = new frmManHinhChinh();
-            frm.Show();
-            this.Hide();
+            if (NGUOIDUNG_BUS.DangNhap(txtTaiKhoan.Text, txtMatKhau.Text))
+            {
+                frmManHinhChinh frm = new frmManHinhChinh();
+                frm.Show();
+                this.Hide();
+            }
+            else
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu");
         }
     }
 }

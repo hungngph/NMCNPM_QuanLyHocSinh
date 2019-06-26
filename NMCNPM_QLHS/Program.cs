@@ -17,8 +17,8 @@ namespace NMCNPM_QLHS.GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmManHinhChinh());
-            //Application.Run(new frmDangNhap());
+            //Application.Run(new frmManHinhChinh());
+            Application.Run(new frmDangNhap());
             //Application.Run(new frmNhapDiemChung());
             //Application.Run(new frmNhapDiemChiTiet());
             //Application.Run(new frmPhanLop());

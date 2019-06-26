@@ -96,8 +96,10 @@
     <Compile Include="BUS\LOP_BUS.cs" />
     <Compile Include="BUS\MONHOC_BUS.cs" />
     <Compile Include="BUS\NAMHOC_BUS.cs" />
+    <Compile Include="BUS\NGUOIDUNG_BUS.cs" />
     <Compile Include="BUS\QUATRINHHOC_BUS.cs" />
     <Compile Include="BUS\THAMSO_BUS.cs" />
+    <Compile Include="CurrentUser.cs" />
     <Compile Include="DAL\BAOCAO_DAL.cs" />
     <Compile Include="DAL\HOCKY_DAL.cs" />
     <Compile Include="DAL\HOCSINH_DAL.cs" />
@@ -106,6 +108,7 @@
     <Compile Include="DAL\LOP_DAL.cs" />
     <Compile Include="DAL\MONHOC_DAL.cs" />
     <Compile Include="DAL\NAMHOC_DAL.cs" />
+    <Compile Include="DAL\NGUOIDUNG_DAL.cs" />
     <Compile Include="DAL\QUATRINHHOC_DAL.cs" />
     <Compile Include="DAL\SQL_QLHS.designer.cs">
       <AutoGen>True</AutoGen>
