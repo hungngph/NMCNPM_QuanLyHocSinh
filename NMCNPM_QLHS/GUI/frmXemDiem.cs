@@ -49,7 +49,6 @@ namespace NMCNPM_QLHS.GUI
             // False 
             // Disable các button
             dockPanelChucNang.Visible = true;
-            bindingNavigatorSaveItem.Enabled = true;
         }
 
         public void IsBGH()
@@ -65,7 +64,6 @@ namespace NMCNPM_QLHS.GUI
         public void IsGiaoVu()
         {
             // Enable, Disable các button
-            bindingNavigatorSaveItem.Enabled = false;
             foreach (DevExpress.XtraGrid.Columns.GridColumn col in ((ColumnView)gridDiemControl.Views[0]).Columns) {
                 col.OptionsColumn.AllowEdit = false;
             }
@@ -140,7 +138,7 @@ namespace NMCNPM_QLHS.GUI
             string hoTen = dgvDiem.GetFocusedRowCellDisplayText(col_hoTen);
             string maHocKy = cboHocKy.EditValue.ToString();
             string maNamHoc = cboNamHoc.EditValue.ToString();
-            frmNhapDiemChiTiet frm = new frmNhapDiemChiTiet(maHS, maHocKy, maNamHoc);
+            frmDiemChiTiet frm = new frmDiemChiTiet(maHS, maHocKy, maNamHoc);
             frm.Show();
         }
 

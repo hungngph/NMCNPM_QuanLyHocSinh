@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNguoiDung));
             this.groupControlNguoiDung = new DevExpress.XtraEditors.GroupControl();
             this.gridControlHocSinh = new DevExpress.XtraGrid.GridControl();
@@ -39,10 +44,11 @@
             this.col_hoTen_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_LoaiNguoiDung = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_gioiTinh_edit = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.col_ngaySinh_edit = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.col_TenDangNhap = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_diaChi_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_MatKhau = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnReset = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.col_ngaySinh_edit = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.col_email_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.bindingNavigatorHocSinh = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -66,9 +72,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.col_maHS_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_hoTen_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_gioiTinh_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_diaChi_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_ngaySinh_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_ngaySinh_edit.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_diaChi_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_email_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocSinh)).BeginInit();
             this.bindingNavigatorHocSinh.SuspendLayout();
@@ -81,7 +88,7 @@
             this.groupControlNguoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControlNguoiDung.Location = new System.Drawing.Point(0, 0);
             this.groupControlNguoiDung.Name = "groupControlNguoiDung";
-            this.groupControlNguoiDung.Size = new System.Drawing.Size(646, 353);
+            this.groupControlNguoiDung.Size = new System.Drawing.Size(714, 360);
             this.groupControlNguoiDung.TabIndex = 2;
             this.groupControlNguoiDung.Text = "Danh sách người dùng";
             // 
@@ -97,8 +104,9 @@
             this.col_gioiTinh_edit,
             this.col_ngaySinh_edit,
             this.col_diaChi_edit,
-            this.col_email_edit});
-            this.gridControlHocSinh.Size = new System.Drawing.Size(642, 300);
+            this.col_email_edit,
+            this.btnReset});
+            this.gridControlHocSinh.Size = new System.Drawing.Size(710, 307);
             this.gridControlHocSinh.TabIndex = 2;
             this.gridControlHocSinh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvHocSinh});
@@ -135,7 +143,7 @@
             this.col_maNguoiDung.Name = "col_maNguoiDung";
             this.col_maNguoiDung.Visible = true;
             this.col_maNguoiDung.VisibleIndex = 0;
-            this.col_maNguoiDung.Width = 81;
+            this.col_maNguoiDung.Width = 138;
             // 
             // col_maHS_edit
             // 
@@ -151,7 +159,7 @@
             this.col_TenNguoiDung.Name = "col_TenNguoiDung";
             this.col_TenNguoiDung.Visible = true;
             this.col_TenNguoiDung.VisibleIndex = 1;
-            this.col_TenNguoiDung.Width = 81;
+            this.col_TenNguoiDung.Width = 138;
             // 
             // col_hoTen_edit
             // 
@@ -167,7 +175,7 @@
             this.col_LoaiNguoiDung.Name = "col_LoaiNguoiDung";
             this.col_LoaiNguoiDung.Visible = true;
             this.col_LoaiNguoiDung.VisibleIndex = 2;
-            this.col_LoaiNguoiDung.Width = 81;
+            this.col_LoaiNguoiDung.Width = 138;
             // 
             // col_gioiTinh_edit
             // 
@@ -175,15 +183,6 @@
             this.col_gioiTinh_edit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.col_gioiTinh_edit.Name = "col_gioiTinh_edit";
-            // 
-            // col_ngaySinh_edit
-            // 
-            this.col_ngaySinh_edit.AutoHeight = false;
-            this.col_ngaySinh_edit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.col_ngaySinh_edit.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.col_ngaySinh_edit.Name = "col_ngaySinh_edit";
             // 
             // col_TenDangNhap
             // 
@@ -194,7 +193,7 @@
             this.col_TenDangNhap.Name = "col_TenDangNhap";
             this.col_TenDangNhap.Visible = true;
             this.col_TenDangNhap.VisibleIndex = 3;
-            this.col_TenDangNhap.Width = 81;
+            this.col_TenDangNhap.Width = 213;
             // 
             // col_diaChi_edit
             // 
@@ -203,19 +202,37 @@
             // 
             // col_MatKhau
             // 
-            this.col_MatKhau.Caption = "Mật khẩu";
-            this.col_MatKhau.ColumnEdit = this.col_email_edit;
-            this.col_MatKhau.FieldName = "EMAIL";
+            this.col_MatKhau.ColumnEdit = this.btnReset;
             this.col_MatKhau.MinWidth = 21;
             this.col_MatKhau.Name = "col_MatKhau";
             this.col_MatKhau.Visible = true;
             this.col_MatKhau.VisibleIndex = 4;
-            this.col_MatKhau.Width = 81;
+            this.col_MatKhau.Width = 67;
+            // 
+            // btnReset
+            // 
+            this.btnReset.AutoHeight = false;
+            editorButtonImageOptions1.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Password_Reset_32px;
+            this.btnReset.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Đặt lại mật khẩu", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.btnReset.Name = "btnReset";
+            this.btnReset.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // col_ngaySinh_edit
+            // 
+            this.col_ngaySinh_edit.AutoHeight = false;
+            this.col_ngaySinh_edit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.col_ngaySinh_edit.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.col_ngaySinh_edit.Name = "col_ngaySinh_edit";
             // 
             // col_email_edit
             // 
             this.col_email_edit.AutoHeight = false;
             this.col_email_edit.Name = "col_email_edit";
+            this.col_email_edit.UseSystemPasswordChar = true;
             // 
             // bindingNavigatorHocSinh
             // 
@@ -245,7 +262,7 @@
             this.bindingNavigatorHocSinh.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatorHocSinh.Name = "bindingNavigatorHocSinh";
             this.bindingNavigatorHocSinh.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorHocSinh.Size = new System.Drawing.Size(642, 31);
+            this.bindingNavigatorHocSinh.Size = new System.Drawing.Size(710, 31);
             this.bindingNavigatorHocSinh.TabIndex = 0;
             this.bindingNavigatorHocSinh.Text = "bindingNavigator1";
             // 
@@ -360,10 +377,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 353);
+            this.ClientSize = new System.Drawing.Size(714, 360);
             this.Controls.Add(this.groupControlNguoiDung);
             this.Name = "frmNguoiDung";
-            this.Text = "frmNguoiDung";
+            this.Text = "Quản lý người dùng";
             ((System.ComponentModel.ISupportInitialize)(this.groupControlNguoiDung)).EndInit();
             this.groupControlNguoiDung.ResumeLayout(false);
             this.groupControlNguoiDung.PerformLayout();
@@ -372,9 +389,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.col_maHS_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_hoTen_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_gioiTinh_edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col_diaChi_edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_ngaySinh_edit.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_ngaySinh_edit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col_diaChi_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_email_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocSinh)).EndInit();
             this.bindingNavigatorHocSinh.ResumeLayout(false);
@@ -414,5 +432,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorEditItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorSaveItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorSearchItem;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnReset;
     }
 }

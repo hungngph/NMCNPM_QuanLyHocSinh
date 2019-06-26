@@ -47,10 +47,7 @@ namespace NMCNPM_QLHS.GUI
             // Enable các button
             // False 
             // Disable các button
-            btnThem.Enabled = true;
-            btnSua.Enabled = true;
-            btnDelete.Enabled = true;
-            btnLuu.Enabled = true;
+
         }
 
         public void IsBGH()
@@ -62,10 +59,7 @@ namespace NMCNPM_QLHS.GUI
         public void IsGiaoVien()
         {
             // Enable, Disable các button
-            btnThem.Enabled = false;
-            btnSua.Enabled = false;
-            btnDelete.Enabled = false;
-            btnLuu.Enabled = false;
+            
         }
 
         public void IsGiaoVu()
@@ -79,15 +73,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void frmKhoilop_Load(object sender, EventArgs e)
         {
-            load_cboNamHoc();
             bindingSourceKhoiLop.DataSource = KHOILOP_BUS.LayTatCaKhoi();
-        }
-
-        private void load_cboNamHoc()
-        {
-            cboNamHoc.Properties.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
-            cboNamHoc.Properties.DisplayMember = "TENNAMHOC";
-            cboNamHoc.Properties.ValueMember = "MANAMHOC";
         }
     }
 }

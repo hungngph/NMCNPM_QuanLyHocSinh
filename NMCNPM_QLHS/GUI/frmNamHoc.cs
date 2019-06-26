@@ -48,11 +48,11 @@ namespace NMCNPM_QLHS.GUI
             // Enable các button
             // False 
             // Disable các button
-            bindingNavigatorAdd.Enabled = true;
-            bindingNavigatorEdit.Enabled = true;
-            bindingNavigatorDelete.Enabled = true;
-            bindingNavigatorSave.Enabled = true;
-            dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
+            //bindingNavigatorAdd.Enabled = true;
+            //bindingNavigatorEdit.Enabled = true;
+            //bindingNavigatorDelete.Enabled = true;
+            //bindingNavigatorSave.Enabled = true;
+            //dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
         }
 
         public void IsBGH()
@@ -65,10 +65,10 @@ namespace NMCNPM_QLHS.GUI
         {
             // Enable, Disable các button
             bindingNavigatorAdd.Enabled = false;
-            bindingNavigatorEdit.Enabled = false;
-            bindingNavigatorDelete.Enabled = false;
-            bindingNavigatorSave.Enabled = false;
-            dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+            //bindingNavigatorEdit.Enabled = false;
+            //bindingNavigatorDelete.Enabled = false;
+            //bindingNavigatorSave.Enabled = false;
+            //dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
         }
 
         public void IsGiaoVu()

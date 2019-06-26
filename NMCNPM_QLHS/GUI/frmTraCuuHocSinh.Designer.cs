@@ -74,24 +74,22 @@
             this.layoutControl1.Controls.Add(this.cboSearchHocSinh);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(879, 110);
+            this.layoutControl1.Size = new System.Drawing.Size(753, 89);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // cboSearchHocSinh
             // 
             this.cboSearchHocSinh.EditValue = "";
-            this.cboSearchHocSinh.Location = new System.Drawing.Point(88, 47);
-            this.cboSearchHocSinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboSearchHocSinh.Location = new System.Drawing.Point(72, 38);
             this.cboSearchHocSinh.Name = "cboSearchHocSinh";
             this.cboSearchHocSinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboSearchHocSinh.Properties.NullText = "";
             this.cboSearchHocSinh.Properties.PopupView = this.searchLookUpEdit1View;
-            this.cboSearchHocSinh.Size = new System.Drawing.Size(767, 22);
+            this.cboSearchHocSinh.Size = new System.Drawing.Size(659, 20);
             this.cboSearchHocSinh.StyleController = this.layoutControl1;
             this.cboSearchHocSinh.TabIndex = 4;
             this.cboSearchHocSinh.EditValueChanged += new System.EventHandler(this.cboSearchHocSinh_EditValueChanged);
@@ -129,7 +127,7 @@
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(879, 110);
+            this.Root.Size = new System.Drawing.Size(753, 89);
             this.Root.TextVisible = false;
             // 
             // layoutControlGroup1
@@ -138,7 +136,7 @@
             this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(859, 90);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(735, 73);
             this.layoutControlGroup1.Text = "Thông tin học sinh";
             // 
             // layoutControlItem1
@@ -146,18 +144,16 @@
             this.layoutControlItem1.Control = this.cboSearchHocSinh;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(835, 43);
+            this.layoutControlItem1.Size = new System.Drawing.Size(713, 35);
             this.layoutControlItem1.Text = "Học sinh: ";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(61, 17);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(47, 13);
             // 
             // gridControlHocSinh
             // 
             this.gridControlHocSinh.DataSource = this.bindingSourceQuaTrinhHoc;
             this.gridControlHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlHocSinh.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControlHocSinh.Location = new System.Drawing.Point(0, 110);
+            this.gridControlHocSinh.Location = new System.Drawing.Point(0, 89);
             this.gridControlHocSinh.MainView = this.dgvQuaTrinhHoc;
-            this.gridControlHocSinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlHocSinh.Name = "gridControlHocSinh";
             this.gridControlHocSinh.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.col_maHS_edit,
@@ -166,7 +162,7 @@
             this.col_ngaySinh_edit,
             this.col_diaChi_edit,
             this.col_email_edit});
-            this.gridControlHocSinh.Size = new System.Drawing.Size(879, 436);
+            this.gridControlHocSinh.Size = new System.Drawing.Size(753, 355);
             this.gridControlHocSinh.TabIndex = 3;
             this.gridControlHocSinh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvQuaTrinhHoc});
@@ -191,7 +187,6 @@
             this.col_Lop,
             this.col_HocKy,
             this.col_DiemTBHK});
-            this.dgvQuaTrinhHoc.DetailHeight = 431;
             this.dgvQuaTrinhHoc.GridControl = this.gridControlHocSinh;
             this.dgvQuaTrinhHoc.GroupPanelText = "QUÁ TRÌNH HỌC";
             this.dgvQuaTrinhHoc.Name = "dgvQuaTrinhHoc";
@@ -202,41 +197,41 @@
             // 
             this.col_NamHoc.Caption = "Năm học";
             this.col_NamHoc.FieldName = "TENNAMHOC";
-            this.col_NamHoc.MinWidth = 24;
+            this.col_NamHoc.MinWidth = 21;
             this.col_NamHoc.Name = "col_NamHoc";
             this.col_NamHoc.Visible = true;
             this.col_NamHoc.VisibleIndex = 0;
-            this.col_NamHoc.Width = 94;
+            this.col_NamHoc.Width = 81;
             // 
             // col_Lop
             // 
             this.col_Lop.Caption = "Lớp";
             this.col_Lop.FieldName = "TENLOP";
-            this.col_Lop.MinWidth = 24;
+            this.col_Lop.MinWidth = 21;
             this.col_Lop.Name = "col_Lop";
             this.col_Lop.Visible = true;
             this.col_Lop.VisibleIndex = 2;
-            this.col_Lop.Width = 94;
+            this.col_Lop.Width = 81;
             // 
             // col_HocKy
             // 
             this.col_HocKy.Caption = "Học kỳ";
             this.col_HocKy.FieldName = "TENHOCKY";
-            this.col_HocKy.MinWidth = 24;
+            this.col_HocKy.MinWidth = 21;
             this.col_HocKy.Name = "col_HocKy";
             this.col_HocKy.Visible = true;
             this.col_HocKy.VisibleIndex = 1;
-            this.col_HocKy.Width = 94;
+            this.col_HocKy.Width = 81;
             // 
             // col_DiemTBHK
             // 
             this.col_DiemTBHK.Caption = "Điểm trung bình";
             this.col_DiemTBHK.FieldName = "DIEMTBHK";
-            this.col_DiemTBHK.MinWidth = 24;
+            this.col_DiemTBHK.MinWidth = 21;
             this.col_DiemTBHK.Name = "col_DiemTBHK";
             this.col_DiemTBHK.Visible = true;
             this.col_DiemTBHK.VisibleIndex = 3;
-            this.col_DiemTBHK.Width = 94;
+            this.col_DiemTBHK.Width = 81;
             // 
             // col_maHS_edit
             // 
@@ -276,12 +271,11 @@
             // 
             // frmTraCuuHocSinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 546);
+            this.ClientSize = new System.Drawing.Size(753, 444);
             this.Controls.Add(this.gridControlHocSinh);
             this.Controls.Add(this.layoutControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmTraCuuHocSinh";
             this.Text = "Quá trình học";
             this.Load += new System.EventHandler(this.frmTraCuuHocSinh_Load);
