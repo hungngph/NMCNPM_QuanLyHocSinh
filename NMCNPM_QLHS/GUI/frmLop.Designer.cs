@@ -181,7 +181,7 @@
             // 
             // txtMaLop
             // 
-            this.txtMaLop.Location = new System.Drawing.Point(7, 48);
+            this.txtMaLop.Location = new System.Drawing.Point(13, 211);
             this.txtMaLop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaLop.Name = "txtMaLop";
             this.txtMaLop.Properties.ReadOnly = true;
@@ -190,7 +190,7 @@
             // 
             // txtTenLop
             // 
-            this.txtTenLop.Location = new System.Drawing.Point(7, 133);
+            this.txtTenLop.Location = new System.Drawing.Point(13, 296);
             this.txtTenLop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenLop.Name = "txtTenLop";
             this.txtTenLop.Size = new System.Drawing.Size(174, 22);
@@ -198,7 +198,7 @@
             // 
             // cboKhoiLop
             // 
-            this.cboKhoiLop.Location = new System.Drawing.Point(7, 277);
+            this.cboKhoiLop.Location = new System.Drawing.Point(12, 125);
             this.cboKhoiLop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboKhoiLop.Name = "cboKhoiLop";
             this.cboKhoiLop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -211,7 +211,7 @@
             // 
             // cboNamHoc
             // 
-            this.cboNamHoc.Location = new System.Drawing.Point(7, 204);
+            this.cboNamHoc.Location = new System.Drawing.Point(12, 52);
             this.cboNamHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboNamHoc.Name = "cboNamHoc";
             this.cboNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -226,7 +226,7 @@
             // btnThemKhoi
             // 
             this.btnThemKhoi.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.add;
-            this.btnThemKhoi.Location = new System.Drawing.Point(153, 274);
+            this.btnThemKhoi.Location = new System.Drawing.Point(158, 122);
             this.btnThemKhoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThemKhoi.Name = "btnThemKhoi";
             this.btnThemKhoi.Size = new System.Drawing.Size(28, 28);
@@ -236,7 +236,7 @@
             // btnThemNam
             // 
             this.btnThemNam.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.add;
-            this.btnThemNam.Location = new System.Drawing.Point(153, 198);
+            this.btnThemNam.Location = new System.Drawing.Point(158, 46);
             this.btnThemNam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThemNam.Name = "btnThemNam";
             this.btnThemNam.Size = new System.Drawing.Size(28, 28);
@@ -262,7 +262,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 249);
+            this.label1.Location = new System.Drawing.Point(8, 97);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 20);
@@ -274,7 +274,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(2, 14);
+            this.label2.Location = new System.Drawing.Point(8, 177);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 20);
@@ -286,7 +286,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(3, 174);
+            this.label11.Location = new System.Drawing.Point(8, 22);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 20);
@@ -298,7 +298,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(2, 94);
+            this.label6.Location = new System.Drawing.Point(8, 257);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 20);

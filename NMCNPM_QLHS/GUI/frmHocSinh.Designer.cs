@@ -80,7 +80,6 @@
             this.col_email = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_email_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.bindingNavigatorHocSinh = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -90,10 +89,12 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorEditItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSearchItem = new System.Windows.Forms.ToolStripButton();
+            this.btnImport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel2.SuspendLayout();
             this.dockPanelChucNang.SuspendLayout();
@@ -536,6 +537,7 @@
             // 
             // groupControlHocSinh
             // 
+            this.groupControlHocSinh.Controls.Add(this.btnImport);
             this.groupControlHocSinh.Controls.Add(this.gridControlHocSinh);
             this.groupControlHocSinh.Controls.Add(this.bindingNavigatorHocSinh);
             this.groupControlHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -578,6 +580,8 @@
             this.dgvHocSinh.Appearance.GroupPanel.Options.UseForeColor = true;
             this.dgvHocSinh.Appearance.GroupPanel.Options.UseTextOptions = true;
             this.dgvHocSinh.Appearance.GroupPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvHocSinh.Appearance.Row.Options.UseTextOptions = true;
+            this.dgvHocSinh.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.dgvHocSinh.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.col_maHS,
             this.col_hoTen,
@@ -728,15 +732,6 @@
             this.bindingNavigatorHocSinh.TabIndex = 0;
             this.bindingNavigatorHocSinh.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 28);
-            this.bindingNavigatorAddNewItem.Text = "Thêm";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
-            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
@@ -804,6 +799,15 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 28);
+            this.bindingNavigatorAddNewItem.Text = "Thêm";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
             // bindingNavigatorDeleteItem
             // 
             this.bindingNavigatorDeleteItem.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
@@ -839,6 +843,20 @@
             this.bindingNavigatorSearchItem.Size = new System.Drawing.Size(98, 28);
             this.bindingNavigatorSearchItem.Text = "Tìm kiếm";
             this.bindingNavigatorSearchItem.Click += new System.EventHandler(this.bindingNavigatorSearchItem_Click);
+            // 
+            // btnImport
+            // 
+            this.btnImport.BackColor = System.Drawing.Color.Green;
+            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.White;
+            this.btnImport.Location = new System.Drawing.Point(629, 25);
+            this.btnImport.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(96, 31);
+            this.btnImport.TabIndex = 138;
+            this.btnImport.Text = "import";
+            this.btnImport.UseVisualStyleBackColor = false;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // frmHocSinh
             // 
@@ -955,5 +973,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn col_email;
         private System.Windows.Forms.ComboBox cboGioiTinh;
         private DevExpress.XtraEditors.DateEdit dtpNgaySinh;
+        private System.Windows.Forms.Button btnImport;
     }
 }

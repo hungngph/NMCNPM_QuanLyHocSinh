@@ -17,8 +17,8 @@ namespace NMCNPM_QLHS.GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           // Application.Run(new frmManHinhChinh());
-            Application.Run(new frmDangNhap());
+            Application.Run(new frmManHinhChinh());
+            //Application.Run(new frmDangNhap());
             //Application.Run(new frmNhapDiemChung());
             //Application.Run(new frmNhapDiemChiTiet());
             //Application.Run(new frmPhanLop());
@@ -27,6 +27,7 @@ namespace NMCNPM_QLHS.GUI
             //Application.Run(new frmLenLop());
             //Application.Run(new frmLop());
             //Application.Run(new frmrpDanhSachLop());
+            //Application.Run(new frmrpHocKy());
         }
     }
 }

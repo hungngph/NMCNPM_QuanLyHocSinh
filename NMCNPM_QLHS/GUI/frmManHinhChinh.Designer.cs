@@ -96,10 +96,11 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 507);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 625);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(917, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1070, 37);
             // 
             // ribbon
             // 
@@ -134,6 +135,7 @@
             this.btnDangXuat,
             this.btnThongTinPhanMem});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
+            this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbon.MaxItemId = 64;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.subNguoiDung);
@@ -148,7 +150,7 @@
             this.repositoryItemTextEdit2,
             this.repositoryItemTextEdit3});
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbon.Size = new System.Drawing.Size(917, 143);
+            this.ribbon.Size = new System.Drawing.Size(1070, 178);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Above;
             // 
@@ -533,46 +535,50 @@
             // txtNamHoc
             // 
             this.txtNamHoc.Enabled = false;
-            this.txtNamHoc.Location = new System.Drawing.Point(807, 512);
+            this.txtNamHoc.Location = new System.Drawing.Point(941, 630);
+            this.txtNamHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNamHoc.MenuManager = this.ribbon;
             this.txtNamHoc.Name = "txtNamHoc";
             this.txtNamHoc.Properties.ReadOnly = true;
             this.txtNamHoc.Properties.UseReadOnlyAppearance = false;
-            this.txtNamHoc.Size = new System.Drawing.Size(108, 20);
+            this.txtNamHoc.Size = new System.Drawing.Size(126, 22);
             this.txtNamHoc.TabIndex = 3;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(756, 515);
+            this.labelControl1.Location = new System.Drawing.Point(882, 634);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(45, 13);
+            this.labelControl1.Size = new System.Drawing.Size(60, 17);
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Năm học:";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(0, 515);
+            this.labelControl2.Location = new System.Drawing.Point(48, 634);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(59, 13);
+            this.labelControl2.Size = new System.Drawing.Size(77, 17);
             this.labelControl2.TabIndex = 6;
             this.labelControl2.Text = "Người dùng:";
             // 
             // txtNguoiDung
             // 
             this.txtNguoiDung.Enabled = false;
-            this.txtNguoiDung.Location = new System.Drawing.Point(65, 512);
+            this.txtNguoiDung.Location = new System.Drawing.Point(150, 631);
+            this.txtNguoiDung.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNguoiDung.MenuManager = this.ribbon;
             this.txtNguoiDung.Name = "txtNguoiDung";
             this.txtNguoiDung.Properties.ReadOnly = true;
-            this.txtNguoiDung.Size = new System.Drawing.Size(173, 20);
+            this.txtNguoiDung.Size = new System.Drawing.Size(202, 22);
             this.txtNguoiDung.TabIndex = 5;
             // 
             // frmManHinhChinh
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 538);
+            this.ClientSize = new System.Drawing.Size(1070, 662);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.txtNguoiDung);
             this.Controls.Add(this.labelControl1);
@@ -581,6 +587,7 @@
             this.Controls.Add(this.ribbon);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmManHinhChinh";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;

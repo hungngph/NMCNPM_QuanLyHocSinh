@@ -54,8 +54,8 @@
             this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnLuu = new System.Windows.Forms.ToolStripButton();
-            this.btnSua = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSave = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorEdit = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
@@ -63,7 +63,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.btnDeletebindingNavigatorDelete = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorAdd = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorNamHoc = new System.Windows.Forms.BindingNavigator(this.components);
@@ -351,21 +351,21 @@
             this.barButtonItem2.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
             this.barButtonItem2.Name = "barButtonItem2";
             // 
-            // btnLuu
+            // bindingNavigatorSave
             // 
-            this.btnLuu.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
-            this.btnLuu.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(61, 28);
-            this.btnLuu.Text = "Lưu";
+            this.bindingNavigatorSave.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
+            this.bindingNavigatorSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bindingNavigatorSave.Name = "bindingNavigatorSave";
+            this.bindingNavigatorSave.Size = new System.Drawing.Size(61, 28);
+            this.bindingNavigatorSave.Text = "Lưu";
             // 
-            // btnSua
+            // bindingNavigatorEdit
             // 
-            this.btnSua.Image = global::NMCNPM_QLHS.Properties.Resources.Edit_32px;
-            this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(62, 28);
-            this.btnSua.Text = "Sửa";
+            this.bindingNavigatorEdit.Image = global::NMCNPM_QLHS.Properties.Resources.Edit_32px;
+            this.bindingNavigatorEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bindingNavigatorEdit.Name = "bindingNavigatorEdit";
+            this.bindingNavigatorEdit.Size = new System.Drawing.Size(62, 28);
+            this.bindingNavigatorEdit.Text = "Sửa";
             // 
             // toolStripSeparator3
             // 
@@ -418,14 +418,14 @@
             this.toolStripButton1.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton1.Text = "Move first";
             // 
-            // btnDeletebindingNavigatorDelete
+            // bindingNavigatorDelete
             // 
-            this.btnDeletebindingNavigatorDelete.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
-            this.btnDeletebindingNavigatorDelete.Name = "btnDeletebindingNavigatorDelete";
-            this.btnDeletebindingNavigatorDelete.RightToLeftAutoMirrorImage = true;
-            this.btnDeletebindingNavigatorDelete.Size = new System.Drawing.Size(63, 28);
-            this.btnDeletebindingNavigatorDelete.Text = "Xóa";
-            this.btnDeletebindingNavigatorDelete.Click += new System.EventHandler(this.btnDeletebindingNavigatorDelete_Click);
+            this.bindingNavigatorDelete.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
+            this.bindingNavigatorDelete.Name = "bindingNavigatorDelete";
+            this.bindingNavigatorDelete.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDelete.Size = new System.Drawing.Size(63, 28);
+            this.bindingNavigatorDelete.Text = "Xóa";
+            this.bindingNavigatorDelete.Click += new System.EventHandler(this.btnDeletebindingNavigatorDelete_Click);
             // 
             // toolStripLabel1
             // 
@@ -461,9 +461,9 @@
             this.toolStripButton4,
             this.toolStripSeparator3,
             this.bindingNavigatorAdd,
-            this.btnDeletebindingNavigatorDelete,
-            this.btnSua,
-            this.btnLuu});
+            this.bindingNavigatorDelete,
+            this.bindingNavigatorEdit,
+            this.bindingNavigatorSave});
             this.bindingNavigatorNamHoc.Location = new System.Drawing.Point(2, 25);
             this.bindingNavigatorNamHoc.MoveFirstItem = this.toolStripButton1;
             this.bindingNavigatorNamHoc.MoveLastItem = this.toolStripButton4;
@@ -629,7 +629,7 @@
         private System.Windows.Forms.BindingNavigator bindingNavigatorNamHoc;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAdd;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton btnDeletebindingNavigatorDelete;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDelete;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -638,8 +638,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton btnSua;
-        private System.Windows.Forms.ToolStripButton btnLuu;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorEdit;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorSave;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
