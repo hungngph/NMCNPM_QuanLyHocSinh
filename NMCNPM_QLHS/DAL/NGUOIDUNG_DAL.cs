@@ -25,7 +25,7 @@ namespace NMCNPM_QLHS.DAL
                 if (db.NGUOIDUNGs.Any(u => u.TENDANGNHAP == tendangnhap && u.MATKHAU == matkhau))
                 {
                     NGUOIDUNG user = db.NGUOIDUNGs.FirstOrDefault(u => u.TENDANGNHAP == tendangnhap && u.MATKHAU == matkhau);
-                    CurrentUser.Parse(user.MALND, user.TENDANGNHAP, user.LOAINGUOIDUNG.TENLOAIND);
+                    CurrentUser.Code = user.MAND;
                     return true;
                 }
                 else
@@ -34,14 +34,14 @@ namespace NMCNPM_QLHS.DAL
                 }
             }
         }
-        public static string LayTenNguoiDung(string tendangnhap) {
+        public static string LayTenNguoiDung(string code) {
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                if (db.NGUOIDUNGs.Any(u => u.TENDANGNHAP == tendangnhap))
+                if (db.NGUOIDUNGs.Any(u => u.MAND == code))
                 {
-                    return db.NGUOIDUNGs.First(u => u.TENDANGNHAP == tendangnhap).TENNGUOIDUNG;
+                    return db.NGUOIDUNGs.First(u => u.MAND == code).TENNGUOIDUNG;
                 }
-                return "Noname";
+                return "unknown";
             }
         }
         public static List<NGUOIDUNG> LayTatCaNguoiDung()
@@ -73,6 +73,27 @@ namespace NMCNPM_QLHS.DAL
                 }
             }
             return lst;
+        }
+        public static string LayTenDangNhap(string code) {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                if (db.NGUOIDUNGs.Any(u => u.MAND == code))
+                {
+                    return db.NGUOIDUNGs.First(u => u.MAND == code).TENDANGNHAP;
+                }
+                return "unknown";
+            }
+        }
+        public static string LayQuyen(string code)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                if (db.NGUOIDUNGs.Any(u => u.MAND == code))
+                {
+                    return db.NGUOIDUNGs.First(u => u.MAND == code).LOAINGUOIDUNG.TENLOAIND;
+                }
+                return "unknown";
+            }
         }
     }
 }

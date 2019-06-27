@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using NMCNPM_QLHS.BUS;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -22,6 +23,13 @@ namespace NMCNPM_QLHS.GUI
         {
  
                 Application.OpenForms["frmManHinhChinh"].Enabled=true;
+        }
+
+        private void frmThongTinNguoiDung_Load(object sender, EventArgs e)
+        {
+            lbChucVu.Text = NGUOIDUNG_BUS.LayQuyen(CurrentUser.Code);
+            lbTenNgDung.Text = NGUOIDUNG_BUS.LayTenNguoiDung(CurrentUser.Code);
+            lbTenTaiKhoan.Text = NGUOIDUNG_BUS.LayTenDangNhap(CurrentUser.Code);
         }
     }
 }

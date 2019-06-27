@@ -26,5 +26,13 @@ namespace NMCNPM_QLHS.BUS
         public static List<NGUOIDUNG> LayTatCaNguoiDung() {
             return NGUOIDUNG_DAL.LayTatCaNguoiDung();
         }
+        public static string LayTenDangNhap(string code)
+        {
+            return NGUOIDUNG_DAL.LayTenDangNhap(code);
+        }
+        public static string LayQuyen(string code)
+        {
+            return NGUOIDUNG_DAL.LayQuyen(code);
+        }
     }
 }
