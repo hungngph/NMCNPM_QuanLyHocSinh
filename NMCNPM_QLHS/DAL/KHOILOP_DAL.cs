@@ -10,42 +10,26 @@ namespace NMCNPM_QLHS.DAL
     class KHOILOP_DAL
     {
         // Lấy tất cả các khối
-        public static DataTable LayTatCaKhoi()
+        public static List<KHOILOP> LayTatCaKhoi()
         {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("MAKHOI", typeof(string));
-            dt.Columns.Add("TENKHOI", typeof(string));
-            dt.Columns.Add("SOLOP", typeof(int));
-            dt.Columns.Add("TENNAMHOC", typeof(string));
+            List<KHOILOP> lst = new List<KHOILOP>();
+
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                var ds = from khoi in db.KHOILOPs
-                         from namHoc in db.NAMHOCs 
-                         where khoi.MANAM == namHoc.MANAMHOC 
-                         select new
-                         {
-                             tenNamHoc = namHoc.TENNAMHOC,
-                             maKhoi = khoi.MAKHOI,
-                             tenKHoi = khoi.TENKHOI,
-                             soLop = khoi.SOLOP
-                         };
-                foreach (var i in ds)
+                var ds = db.KHOILOPs.ToList();
+                foreach (var x in ds)
                 {
-                    DataRow r = dt.NewRow();
-                    if (i.maKhoi != null)
-                        r["MAKHOI"] = i.maKhoi;
-                    if (i.tenKHoi != null)
-                        r["TENKHOI"] = i.tenKHoi;
-                    if (i.soLop != null)
-                        r["SOLOP"] = i.soLop.Value;
-                    if (i.tenNamHoc != null)
-                        r["TENNAMHOC"] = i.tenNamHoc;
-                    dt.Rows.Add(r);
+                    KHOILOP kl = new KHOILOP();
+                    {
+                        kl.MAKHOI = x.MAKHOI;
+                        kl.TENKHOI = x.TENKHOI;
+                        kl.SOLOP = x.SOLOP;
+                        kl.MANAM = x.MANAM;
+                        lst.Add(kl);
+                    }
                 }
             }
-            if (dt.Rows.Count == 0)
-                return null;
-            return dt;
+            return lst;
         }
 
         // Lấy khối theo năm học

@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNamHoc));
             this.BIThemMoi = new DevExpress.XtraBars.BarButtonItem();
             this.BIXoa = new DevExpress.XtraBars.BarButtonItem();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.BILuuDanhSach = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog();
+            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -51,15 +52,15 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorNamHoc = new System.Windows.Forms.BindingNavigator();
-            this.bindingSourceNamHoc = new System.Windows.Forms.BindingSource();
+            this.bindingNavigatorNamHoc = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingSourceNamHoc = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControlNamHoc = new DevExpress.XtraGrid.GridControl();
             this.dgvNamHoc = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_maNamHoc = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_maNamHoc_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_tenNamHoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_maNamHoc_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_tenNamHoc_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
@@ -350,11 +351,6 @@
             this.col_maNamHoc.VisibleIndex = 0;
             this.col_maNamHoc.Width = 101;
             // 
-            // col_maNamHoc_edit
-            // 
-            this.col_maNamHoc_edit.AutoHeight = false;
-            this.col_maNamHoc_edit.Name = "col_maNamHoc_edit";
-            // 
             // col_tenNamHoc
             // 
             this.col_tenNamHoc.Caption = "Tên năm học";
@@ -365,6 +361,11 @@
             this.col_tenNamHoc.Visible = true;
             this.col_tenNamHoc.VisibleIndex = 1;
             this.col_tenNamHoc.Width = 472;
+            // 
+            // col_maNamHoc_edit
+            // 
+            this.col_maNamHoc_edit.AutoHeight = false;
+            this.col_maNamHoc_edit.Name = "col_maNamHoc_edit";
             // 
             // col_tenNamHoc_edit
             // 
