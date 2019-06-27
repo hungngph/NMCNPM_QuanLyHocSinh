@@ -44,5 +44,35 @@ namespace NMCNPM_QLHS.DAL
                 return "Noname";
             }
         }
+        public static List<NGUOIDUNG> LayTatCaNguoiDung()
+        {
+            List<NGUOIDUNG> lst = new List<NGUOIDUNG>();
+
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                var ds = from ngd in db.NGUOIDUNGs
+                         select new
+                         {
+                             MANGUOIDUNG = ngd.MAND,
+                             TENDANGNHAP = ngd.TENDANGNHAP,
+                             TENNGUOIDUNG = ngd.TENNGUOIDUNG,
+                             MATKHAU = ngd.MATKHAU,
+                             LOAINGUOIDUNG = ngd.LOAINGUOIDUNG
+                         };
+                foreach (var x in ds)
+                {
+                    NGUOIDUNG ngd = new NGUOIDUNG();
+                    {
+                        ngd.MAND = x.MANGUOIDUNG;
+                        ngd.TENDANGNHAP = x.TENDANGNHAP;
+                        ngd.TENNGUOIDUNG = x.TENNGUOIDUNG;
+                        ngd.MATKHAU = x.MATKHAU;
+                        ngd.LOAINGUOIDUNG = x.LOAINGUOIDUNG;
+                        lst.Add(ngd);
+                    }
+                }
+            }
+            return lst;
+        }
     }
 }
