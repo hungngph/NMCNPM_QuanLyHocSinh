@@ -34,5 +34,15 @@ namespace NMCNPM_QLHS.DAL
                 }
             }
         }
+        public static string LayTenNguoiDung(string tendangnhap) {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                if (db.NGUOIDUNGs.Any(u => u.TENDANGNHAP == tendangnhap))
+                {
+                    return db.NGUOIDUNGs.First(u => u.TENDANGNHAP == tendangnhap).TENNGUOIDUNG;
+                }
+                return "Noname";
+            }
+        }
     }
 }

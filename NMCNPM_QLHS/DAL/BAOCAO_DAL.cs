@@ -30,8 +30,8 @@ namespace NMCNPM_QLHS.DAL
                         r["SISO"] = i.SISO.Value;
                     if (i.SOLUONGDAT != null)
                         r["SOLUONGDAT"] = i.SOLUONGDAT.Value;
-                    if (i.TYLE != null)
-                        r["TYLE"] = i.TYLE.Value;
+                    //if (i.TYLE != null)
+                    //    r["TYLE"] = i.TYLE.Value;
                     dt.Rows.Add(r);
                 }
             }
@@ -61,8 +61,8 @@ namespace NMCNPM_QLHS.DAL
                         r["SISO"] = i.SISO.Value;
                     if (i.SOLUONGDAT != null)
                         r["SOLUONGDAT"] = i.SOLUONGDAT.Value;
-                    if (i.TYLE != null)
-                        r["TYLE"] = i.TYLE.Value;
+                    //if (i.TYLE != null)
+                    //    r["TYLE"] = i.TYLE.Value;
                     dt.Rows.Add(r);
                 }
             }

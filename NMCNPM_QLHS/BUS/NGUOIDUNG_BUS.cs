@@ -17,5 +17,11 @@ namespace NMCNPM_QLHS.BUS
         {
             return NGUOIDUNG_DAL.DangNhap(tendangnhap, matkhau);
         }
+        public static bool DangKy(string tendangnhap, string tennguoidung, string matkhau, string loaingdung) {
+            return false;
+        }
+        public static string LayTenNguoiDung(string tendangnhap) {
+            return NGUOIDUNG_DAL.LayTenNguoiDung(tendangnhap);
+        }
     }
 }
