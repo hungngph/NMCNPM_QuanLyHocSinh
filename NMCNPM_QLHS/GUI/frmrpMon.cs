@@ -74,5 +74,10 @@ namespace NMCNPM_QLHS.GUI
             load_cboHocKy();
             load_cboMonHoc();
         }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

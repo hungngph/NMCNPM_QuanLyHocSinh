@@ -24,7 +24,7 @@ namespace NMCNPM_QLHS.BUS
         // Sửa hệ số học kỳ
         public static void update(string maHK, int heSo)
         {
-            HOCKY_BUS.update(maHK, heSo);
+            HOCKY_DAL.Update(maHK, heSo);
         }
     }
 }

@@ -22,6 +22,16 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            if(txtTaiKhoan.Text =="")
+            {
+                XtraMessageBox.Show("Chưa nhập tên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTaiKhoan.Focus();
+            }
+            if (txtMatKhau.Text == "")
+            {
+                XtraMessageBox.Show("Chưa nhập mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMatKhau.Focus();
+            }
             if (NGUOIDUNG_BUS.DangNhap(txtTaiKhoan.Text, txtMatKhau.Text))
             {
                 frmManHinhChinh frm = new frmManHinhChinh();
@@ -30,6 +40,14 @@ namespace NMCNPM_QLHS.GUI
             }
             else
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+        }
+
+        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.btnDangNhap_Click(this.btnDangNhap, e);
+            }
         }
     }
 }

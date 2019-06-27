@@ -55,10 +55,9 @@ namespace NMCNPM_QLHS.GUI
             // Disable các button
             navNhapLieu.PageVisible = true;
             navPanelChucNang.SelectedPage = navNhapLieu;
-            bindingNavigatorAdd.Enabled = true;
-            bindingNavigatorDelete.Enabled = true;
-            bindingNavigatorEdit.Enabled = true;
-            bindingNavigatorLuu.Enabled = true;
+            bindingNavigatorAddNewItem.Enabled = true;
+            bindingNavigatorDeleteItem.Enabled = true;
+            bindingNavigatorEditItem.Enabled = true;
         }
 
         public void IsBGH()
@@ -71,10 +70,9 @@ namespace NMCNPM_QLHS.GUI
         {
             // Enable, Disable các button
             navNhapLieu.PageVisible = false;
-            bindingNavigatorAdd.Enabled = false;
-            bindingNavigatorDelete.Enabled = false;
-            bindingNavigatorEdit.Enabled = false;
-            bindingNavigatorLuu.Enabled = false;
+            bindingNavigatorAddNewItem.Enabled = false;
+            bindingNavigatorDeleteItem.Enabled = false;
+            bindingNavigatorEditItem.Enabled = false;
             navPanelChucNang.SelectedPage = navTimKiem;
         }
 
@@ -134,6 +132,9 @@ namespace NMCNPM_QLHS.GUI
         private void frmLop_Load(object sender, EventArgs e)
         {
             load_cboNamHoc();
+            btnHoanTat.Visible = false;
+            btnHuyBo.Visible = false;
+            txtTenLop.ReadOnly = true;
         }
 
         private void cboNamHoc_EditValueChanged(object sender, EventArgs e)
@@ -159,19 +160,6 @@ namespace NMCNPM_QLHS.GUI
             }
         }
 
-        private void btnThemKhoi_Click(object sender, EventArgs e)
-        {
-            var frm = new frmKhoilop();
-            if (Application.OpenForms[frm.Name] == null)
-            {
-                frm.Show();
-            }
-            else
-            {
-                Application.OpenForms[frm.Name].Focus();
-            }
-        }
-
         #endregion -Button_click-
 
         #region -BindingNavigatorItem_Click-
@@ -181,8 +169,9 @@ namespace NMCNPM_QLHS.GUI
             dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
             navPanelChucNang.SelectedPage = navNhapLieu;
 
-            bindingNavigatorAdd.Enabled = false;
+            bindingNavigatorAddNewItem.Enabled = false;
             btnHoanTat.Visible = true;
+            btnHuyBo.Visible = true;
             btnHoanTat.Text = "Lưu";
             txtMaLop.Text = LOP_BUS.autoMaLop();
             txtTenLop.Text = "";
@@ -210,9 +199,9 @@ namespace NMCNPM_QLHS.GUI
 
             btnHoanTat.Text = "Hoàn tất";
             btnHoanTat.Visible = true;
+            btnHuyBo.Visible = true;
             cboNamHoc.ReadOnly = true;
             txtTenLop.ReadOnly = false;
-            //cboKhoiLop.ReadOnly = false;
             txtTenLop.Focus();
         }
 
@@ -228,8 +217,9 @@ namespace NMCNPM_QLHS.GUI
 
         private void dgvDSLop_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            bindingNavigatorAdd.Enabled = true;
+            bindingNavigatorAddNewItem.Enabled = true;
             btnHoanTat.Visible = false;
+            btnHuyBo.Visible = false;
             txtTenLop.ReadOnly = true;
             cboKhoiLop.ReadOnly = true;
             if (bindingSourceLop.DataSource != null)
@@ -260,23 +250,36 @@ namespace NMCNPM_QLHS.GUI
                     LOP_BUS.Update(maLop, tenLop, maKhoi);
                     load_DSLop();
                 }
+                btnHoanTat.Visible = false;
+                btnHuyBo.Visible = false;
+                txtTenLop.ReadOnly = true;
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            bindingNavigatorAdd.Enabled = true;
+            bindingNavigatorAddNewItem.Enabled = true;
         }
 
+        private void btnHuyBo_Click(object sender, EventArgs e)
+        {
+            btnHoanTat.Visible = false;
+            btnHuyBo.Visible = false;
+            txtTenLop.ReadOnly = true;
+            bindingNavigatorAddNewItem.Enabled = true;
+        }
 
         #endregion -Nhập liệu-
 
         #region -Tìm kiếm-
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            bindingSourceLop.DataSource = LOP_BUS.timLopTheoTen(txtTimKiem.Text);
+        {   
+            if(rbtnMaLop.Checked == true)
+                bindingSourceLop.DataSource = LOP_BUS.timLopTheoMaLop(txtTimKiem.Text);
+            else
+                bindingSourceLop.DataSource = LOP_BUS.timLopTheoTen(txtTimKiem.Text);
         }
 
         #endregion -Tìm kiếm-

@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Linq;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +14,7 @@ namespace NMCNPM_QLHS.DAL
     {
 
         // Thêm học sinh
-        public static void Insert(string maHS, string hoTen, string gioiTinh, DateTime ngaySinh, string diaChi, string email)
+        public static void Insert(string maHS, string hoTen, string gioiTinh, DateTime ngaySinh, string diaChi, string email, Binary image_binary)
         {
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
@@ -22,13 +25,14 @@ namespace NMCNPM_QLHS.DAL
                 hs.NGAYSINH = ngaySinh;
                 hs.DIACHI = diaChi;
                 hs.EMAIL = email;
+                hs.ANH = image_binary;
                 db.HOCSINHs.InsertOnSubmit(hs);
                 db.SubmitChanges();
             }
         }
 
         // Sửa học sinh
-        public static void Update(string maHS, string hoTen, string gioiTinh, DateTime ngaySinh, string diaChi, string email)
+        public static void Update(string maHS, string hoTen, string gioiTinh, DateTime ngaySinh, string diaChi, string email, Binary image_binary)
         {
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
@@ -38,6 +42,7 @@ namespace NMCNPM_QLHS.DAL
                 hs.NGAYSINH = ngaySinh;
                 hs.DIACHI = diaChi;
                 hs.EMAIL = email;
+                hs.ANH = image_binary;
                 db.SubmitChanges();
             }
         }
@@ -68,7 +73,15 @@ namespace NMCNPM_QLHS.DAL
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
                 var ds = from hs in db.HOCSINHs
-                         select hs;
+                         select new
+                         {
+                             MAHS = hs.MAHS,
+                             HOTEN = hs.HOTEN,
+                             GIOITINH = hs.GIOITINH,
+                             NGAYSINH = hs.NGAYSINH,
+                             DIACHI = hs.DIACHI,
+                             EMAIL = hs.EMAIL
+                         };
                 foreach (var x in ds)
                 {
                     HOCSINH hs = new HOCSINH();
@@ -150,6 +163,22 @@ namespace NMCNPM_QLHS.DAL
             return lst;
         }
 
+        // Lấy ảnh hs theo mã hs
+        public static Image LayAnhHS(string mahs)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                var hs = db.HOCSINHs.Where(a => a.MAHS == mahs).FirstOrDefault();
+                if (hs.ANH == null)
+                    return null;
+                using (MemoryStream ms = new MemoryStream(hs.ANH.ToArray()))
+                {
+                    Image img = Image.FromStream(ms);
+                    return img;
+                }
+            }
+        }
+
         // Tìm kiếm học sinh theo tên
         public static List<HOCSINH> timTTHSTheoTen(string ten)
         {
@@ -167,6 +196,31 @@ namespace NMCNPM_QLHS.DAL
                         hs.NGAYSINH = x.NGAYSINH;
                         hs.DIACHI = x.DIACHI;
                         hs.EMAIL = x.EMAIL;
+                        lst.Add(hs);
+                    }
+                }
+            }
+            return lst;
+        }
+
+        // Tìm kiếm thông tin học sinh theo mã học sinh
+        public static List<HOCSINH> timTTHSTheoMaHS(string maHS)
+        {
+            List<HOCSINH> lst = new List<HOCSINH>();
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                var ds = db.sp_TimHSTheoMaHS(maHS);
+                foreach (var x in ds)
+                {
+                    HOCSINH hs = new HOCSINH();
+                    {
+                        hs.MAHS = x.MAHS;
+                        hs.HOTEN = x.HOTEN;
+                        hs.GIOITINH = x.GIOITINH;
+                        hs.NGAYSINH = x.NGAYSINH;
+                        hs.DIACHI = x.DIACHI;
+                        hs.EMAIL = x.EMAIL;
+                        hs.ANH = null;
                         lst.Add(hs);
                     }
                 }

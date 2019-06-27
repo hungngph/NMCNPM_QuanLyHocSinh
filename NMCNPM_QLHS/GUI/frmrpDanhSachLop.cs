@@ -90,5 +90,10 @@ namespace NMCNPM_QLHS.GUI
             else
                 bindingSourceDSHS.DataSource = null;
         }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

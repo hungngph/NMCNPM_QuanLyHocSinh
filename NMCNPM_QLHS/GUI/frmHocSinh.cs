@@ -12,6 +12,8 @@ using NMCNPM_QLHS.BUS;
 using System.Globalization;
 //using OfficeOpenXml;
 using System.IO;
+using System.Drawing.Imaging;
+using System.Data.Linq;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -96,6 +98,7 @@ namespace NMCNPM_QLHS.GUI
         private void frmHocSinh_Load(object sender, EventArgs e)
         {
             btnHoanTat.Visible = false;
+            btnHuyBo.Visible = false;
             load_dgvHocSinh();
         }
 
@@ -117,6 +120,7 @@ namespace NMCNPM_QLHS.GUI
             
             bindingNavigatorAddNewItem.Enabled = false;
             btnHoanTat.Visible = true;
+            btnHuyBo.Visible = true;
             btnHoanTat.Text = "Lưu";
             clear();
             enableAllTextBox();
@@ -143,6 +147,7 @@ namespace NMCNPM_QLHS.GUI
             navPanelChucNang.SelectedPage = navNhapLieu;
 
             btnHoanTat.Text = "Hoàn tất";
+            btnHuyBo.Visible = true;
             btnHoanTat.Visible = true;
             enableAllTextBox();
             txtHoTen.Focus();
@@ -168,17 +173,36 @@ namespace NMCNPM_QLHS.GUI
 
         private void dgvHocSinh_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            bindingNavigatorAddNewItem.Enabled = true;
-            btnHoanTat.Visible = false;
-            disableAllTextBox();
-            txtMaHS.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_maHS);
-            txtHoTen.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_hoTen);
-            dtpNgaySinh.EditValue = dgvHocSinh.GetFocusedRowCellValue(col_ngaySinh);
-            cboGioiTinh.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_gioiTinh);
-            txtDiaChi.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_diaChi);
-            txtEmail.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_email);
+            if (navNhapLieu.Focused == true)
+            {
+                bindingNavigatorAddNewItem.Enabled = true;
+                btnHoanTat.Visible = false;
+                disableAllTextBox();
+                txtMaHS.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_maHS);
+                txtHoTen.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_hoTen);
+                dtpNgaySinh.EditValue = dgvHocSinh.GetFocusedRowCellValue(col_ngaySinh);
+                cboGioiTinh.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_gioiTinh);
+                txtDiaChi.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_diaChi);
+                txtEmail.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_email);
+                picHocSinh.Image = HOCSINH_BUS.LayAnhHS(txtMaHS.Text);
+            }
         }
 
+        private void btnChonHinh_Click(object sender, EventArgs e)
+        {
+            XtraOpenFileDialog open = new XtraOpenFileDialog();
+
+            PictureBox pic = this.picHocSinh as PictureBox;
+            if (pic != null)
+            {
+                open.Filter = "Image Files|*.jpg;*.jpeg;*.bmp";
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    pic.Image = Image.FromFile(open.FileName);
+                }
+            }
+        }
+        
         private void btnHoanTat_Click(object sender, EventArgs e)
         {
             string maHS = txtMaHS.Text;
@@ -187,6 +211,9 @@ namespace NMCNPM_QLHS.GUI
             DateTime ngaySinh = DateTime.ParseExact(dtpNgaySinh.Text.ToString(), "dd/MM/yyyy", CultureInfo.CreateSpecificCulture("en-GB"));
             string email = txtEmail.Text;
             string diaChi = txtDiaChi.Text;
+            //Convert image to byte[] array
+            byte[] image_byte = imageToByteArray(picHocSinh.Image);
+            Binary image_binary = new Binary(image_byte);
 
             if (HOCSINH_BUS.KiemTraTuoi(ngaySinh) == true)
             {
@@ -194,16 +221,18 @@ namespace NMCNPM_QLHS.GUI
                 {
                     if (btnHoanTat.Text == "Lưu")
                     {
-                        HOCSINH_BUS.Insert(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi);
+                        HOCSINH_BUS.Insert(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi, image_binary);
                         load_dgvHocSinh();
                         bindingNavigatorHocSinh.BindingSource.MoveLast();
                     }
                     else
                     {
-                        HOCSINH_BUS.Update(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi);
+                        HOCSINH_BUS.Update(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi, image_binary);
                         load_dgvHocSinh();
                     }
-
+                    btnHoanTat.Visible = false;
+                    btnHuyBo.Visible = false;
+                    disableAllTextBox();
                 }
                 catch (Exception ex)
                 {
@@ -216,6 +245,15 @@ namespace NMCNPM_QLHS.GUI
                 MessageBox.Show("Tuổi không hợp lệ", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dtpNgaySinh.Focus();
             }
+        }
+
+        private void btnHuyBo_Click(object sender, EventArgs e)
+        {
+            txtMaHS.Text = "";
+            btnHoanTat.Visible = false;
+            btnHuyBo.Visible = false;
+            bindingNavigatorAddNewItem.Enabled = true;
+            disableAllTextBox();
         }
 
         private void btnImport_Click(object sender, EventArgs e)
@@ -280,14 +318,12 @@ namespace NMCNPM_QLHS.GUI
 
         #region -Tìm kiếm Events-
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtTTTimKiem_TextChanged(object sender, EventArgs e)
         {
-            bindingSourceHocSinh.DataSource = HOCSINH_BUS.timTTHSTheoTen(txtTTTimKiem.Text);
+            if(rbtnTen.Checked == true)
+                bindingSourceHocSinh.DataSource = HOCSINH_BUS.timTTHSTheoTen(txtTTTimKiem.Text);
+            else
+                bindingSourceHocSinh.DataSource = HOCSINH_BUS.timTTHSTheoMaHS(txtTTTimKiem.Text);
         }
 
         #endregion -Tìm kiếm Events-
@@ -312,12 +348,13 @@ namespace NMCNPM_QLHS.GUI
 
         public void clear()
         {
-            txtMaHS.Text = null;
-            txtHoTen.Text = null;
-            txtDiaChi.Text = null;
-            txtEmail.Text = null;
-            dtpNgaySinh.Text = null;
-            cboGioiTinh.Text = null;
+            txtMaHS.Text = "";
+            txtHoTen.Text = "";
+            dtpNgaySinh.EditValue = null;
+            cboGioiTinh.Text = "";
+            txtDiaChi.Text = "";
+            txtEmail.Text = "";
+            picHocSinh.Image = null;
         }
 
         public void enableAllTextBox()
@@ -327,6 +364,7 @@ namespace NMCNPM_QLHS.GUI
             txtDiaChi.ReadOnly = false;
             dtpNgaySinh.ReadOnly = false;
             cboGioiTinh.Enabled = true;
+            btnChonHinh.Enabled = true;
         }
 
         public void disableAllTextBox()
@@ -336,8 +374,17 @@ namespace NMCNPM_QLHS.GUI
             txtDiaChi.ReadOnly = true;
             dtpNgaySinh.ReadOnly = true;
             cboGioiTinh.Enabled = false;
+            btnChonHinh.Enabled = false;
         }
 
+        private byte[] imageToByteArray(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, ImageFormat.Gif);
+                return ms.ToArray();
+            }
+        }
 
         #endregion -Methods-
 

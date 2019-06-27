@@ -265,7 +265,7 @@ namespace NMCNPM_QLHS.GUI
             if (state == true)
             {
                 if (MessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    this.btnLuu_Click(sender, e);
+                    btnLuu.PerformClick();
             }
         }
         private void btnThemNam_Click(object sender, EventArgs e)
@@ -374,7 +374,7 @@ namespace NMCNPM_QLHS.GUI
             if (state == true)
             {
                 if (MessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    this.btnLuu_Click(sender, e);
+                    btnLuu.PerformClick();
                 else
                 {
                     state = false;
@@ -440,10 +440,14 @@ namespace NMCNPM_QLHS.GUI
             }
         }
 
+
         #endregion -Button_Click-
 
         #endregion -Events-
 
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

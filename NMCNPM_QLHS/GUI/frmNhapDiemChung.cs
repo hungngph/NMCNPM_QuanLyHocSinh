@@ -86,7 +86,6 @@ namespace NMCNPM_QLHS.GUI
 
         #endregion -Phân quyền-
 
-
         #region -Events-
 
         #region -Form-
@@ -96,7 +95,6 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorXemDiemItem.Enabled = false;
             load_cboMonHoc();
             load_cboHocKy();
-            load_cboNamHoc();
             load_cboLop();
         }
 
@@ -108,19 +106,7 @@ namespace NMCNPM_QLHS.GUI
                     this.bindingNavigatorSaveItem_Click(sender, e);
             }
         }
-
-        private void btnThemNam_Click(object sender, EventArgs e)
-        {
-            var frm = new frmNamHoc();
-            if (Application.OpenForms[frm.Name] == null)
-            {
-                frm.Show();
-            }
-            else
-            {
-                Application.OpenForms[frm.Name].Focus();
-            }
-        }
+        
         private void btnThemLop_Click(object sender, EventArgs e)
         {
             var frm = new frmLop();
@@ -133,18 +119,7 @@ namespace NMCNPM_QLHS.GUI
                 Application.OpenForms[frm.Name].Focus();
             }
         }
-        private void btnThemHK_Click(object sender, EventArgs e)
-        {
-            var frm = new frmHocKy();
-            if (Application.OpenForms[frm.Name] == null)
-            {
-                frm.Show();
-            }
-            else
-            {
-                Application.OpenForms[frm.Name].Focus();
-            }
-        }
+
         private void btnThemMon_Click(object sender, EventArgs e)
         {
             var frm = new frmMonHoc();
@@ -232,28 +207,20 @@ namespace NMCNPM_QLHS.GUI
         #region -Methods-
 
         #region -Load-
-
-        private void load_cboNamHoc()
-        {
-            cboNamHoc.Text = NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC;
-        }
+        
         private void load_cboHocKy()
         {
             cboHocKy.Properties.DataSource = HOCKY_BUS.LayTatCaHocKy();
             cboHocKy.Properties.DisplayMember = "TENHOCKY";
             cboHocKy.Properties.ValueMember = "MAHK";
         }
+
         private void load_cboLop()
         {
-            if (cboNamHoc.Text != "")
-            {
-                cboLop.Properties.DataSource = LOP_BUS.LayLopTheoNamHoc(NAMHOC_BUS.LayNamHocHienTai().MANAMHOC);
-                cboLop.Properties.DisplayMember = "TENLOP";
-                cboLop.Properties.ValueMember = "MALOP";
-                cboLop.EditValue = null;
-            }
-            else
-                cboLop.Properties.DataSource = null;
+            cboLop.Properties.DataSource = LOP_BUS.LayLopTheoNamHoc(NAMHOC_BUS.LayNamHocHienTai().MANAMHOC);
+            cboLop.Properties.DisplayMember = "TENLOP";
+            cboLop.Properties.ValueMember = "MALOP";
+            cboLop.EditValue = null;
         }
 
         private void load_cboMonHoc()

@@ -46,9 +46,9 @@ namespace NMCNPM_QLHS.GUI
             // Enable các button
             // False 
             // Disable các button
-            btnThem.Enabled = true;
-            btnSua.Enabled = true;
-            btnDelete.Enabled = true;
+            bindingNavigatorAddNewItem.Enabled = true;
+            bindingNavigatorEditItem.Enabled = true;
+            bindingNavigatorDeleteItem.Enabled = true;
         }
 
         public void IsBGH()
@@ -60,9 +60,9 @@ namespace NMCNPM_QLHS.GUI
         public void IsGiaoVien()
         {
             // Enable, Disable các button
-            btnThem.Enabled = false;
-            btnSua.Enabled = false;
-            btnDelete.Enabled = false;
+            bindingNavigatorAddNewItem.Enabled = false;
+            bindingNavigatorEditItem.Enabled = false;
+            bindingNavigatorDeleteItem.Enabled = false;
         }
 
         public void IsGiaoVu()
@@ -77,6 +77,16 @@ namespace NMCNPM_QLHS.GUI
         private void frmMonHoc_Load(object sender, EventArgs e)
         {
             bindingSourceMonHoc.DataSource = MONHOC_BUS.LayTatCaMonHoc();
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -57,5 +57,11 @@ namespace NMCNPM_QLHS.BUS
         {
             return LOP_DAL.timLopTheoTen(ten);
         }
+
+        // Tìm kiếm lớp theo mã lớp
+        public static DataTable timLopTheoMaLop(string maLop)
+        {
+            return LOP_DAL.timLopTheoMaLop(maLop);
+        }
     }
 }
