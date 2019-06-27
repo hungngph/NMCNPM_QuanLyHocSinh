@@ -32,5 +32,10 @@ namespace NMCNPM_QLHS.GUI
             this.Close();
             Application.OpenForms["frmManHinhChinh"].Enabled = true;
         }
+
+        private void btnDongY_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -52,6 +52,7 @@
             this.btnDongY.Size = new System.Drawing.Size(87, 28);
             this.btnDongY.TabIndex = 9;
             this.btnDongY.Text = "Đồng ý";
+            this.btnDongY.Click += new System.EventHandler(this.btnDongY_Click);
             // 
             // txtMatKhauMoi
             // 

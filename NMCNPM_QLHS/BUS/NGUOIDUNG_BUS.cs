@@ -34,5 +34,15 @@ namespace NMCNPM_QLHS.BUS
         {
             return NGUOIDUNG_DAL.LayQuyen(code);
         }
+        public static bool DoiMatKhau(string code, string matkhaucu, string matkhaumoi) {
+            return false;
+            //if (NGUOIDUNG_DAL.LayMatKhau(code) != matkhaucu))
+            //    return false;
+            //else 
+                
+        }
+        public static string LayMatKhau(string code) {
+            return NGUOIDUNG_DAL.LayMatKhau(code);
+        }
     }
 }

@@ -21,7 +21,6 @@ namespace NMCNPM_QLHS.GUI
 
         private void frmThongTinNguoiDung_FormClosed(object sender, FormClosedEventArgs e)
         {
- 
                 Application.OpenForms["frmManHinhChinh"].Enabled=true;
         }
 

@@ -95,5 +95,16 @@ namespace NMCNPM_QLHS.DAL
                 return "unknown";
             }
         }
+        public static string LayMatKhau(string code)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                if (db.NGUOIDUNGs.Any(u => u.MAND == code))
+                {
+                    return db.NGUOIDUNGs.First(u => u.MAND == code).MATKHAU;
+                }
+                return "unknown";
+            }
+        }
     }
 }
