@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using NMCNPM_QLHS.BUS;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -18,7 +19,8 @@ namespace NMCNPM_QLHS.GUI
             InitializeComponent();
             PhanQuyen();
         }
-        public void PhanQuyen() {
+        public void PhanQuyen()
+        {
 
         }
 
@@ -35,7 +37,16 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
-
+            if (txtMatKhauMoi.Text != txtNhapLai.Text)
+                MessageBox.Show("Nhập lại không trùng");
+            else if (NGUOIDUNG_BUS.LayMatKhau(CurrentUser.Code) != txtMatKhau.Text)
+                MessageBox.Show("Mật khẩu cũ sai");
+            else if (txtMatKhau.Text == txtMatKhauMoi.Text)
+                MessageBox.Show("Mật khẩu mới trùng mật khẩu cũ");
+            else if (!NGUOIDUNG_BUS.DoiMatKhau(CurrentUser.Code, txtMatKhau.Text, txtMatKhauMoi.Text))
+                MessageBox.Show("Đổi mật khẩu không thành công");
+            else
+                MessageBox.Show("Đổi mật khẩu thành công");
         }
     }
 }

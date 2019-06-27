@@ -3234,7 +3234,7 @@ namespace NMCNPM_QLHS.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENDANGNHAP", DbType="Char(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENDANGNHAP", DbType="VarChar(50)")]
 		public string TENDANGNHAP
 		{
 			get
@@ -3274,7 +3274,7 @@ namespace NMCNPM_QLHS.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATKHAU", DbType="Char(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATKHAU", DbType="VarChar(20)")]
 		public string MATKHAU
 		{
 			get

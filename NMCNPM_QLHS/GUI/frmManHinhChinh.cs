@@ -44,7 +44,8 @@ namespace NMCNPM_QLHS.GUI
         private void frmManHinhChinh_Load(object sender, EventArgs e)
         {
             staticNamHoc.Caption = "Năm học: " + NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC.ToString();
-            staticNguoiDung.Caption = "Người dùng: " + "abcxyz";
+            staticNguoiDung.Caption = "Người dùng: " + NGUOIDUNG_BUS.LayTenNguoiDung(CurrentUser.Code);
+            subNguoiDung.Caption = NGUOIDUNG_BUS.LayTenNguoiDung(CurrentUser.Code) + " đã đăng nhập";
         }
 
         #endregion -Load-
@@ -109,6 +110,7 @@ namespace NMCNPM_QLHS.GUI
             btnLenLop.Visibility = BarItemVisibility.Always;
             btnNhapDiem.Visibility = BarItemVisibility.Always;
             ribbonPageQuyDinh.Visible = true;
+            btnNguoiDung.Visibility = BarItemVisibility.Always;
         }
 
         public void IsBGH()
@@ -117,6 +119,7 @@ namespace NMCNPM_QLHS.GUI
             btnPhanLop.Visibility = BarItemVisibility.Never;
             btnLenLop.Visibility = BarItemVisibility.Never;
             ribbonPageThongKe.Visible = false;
+            btnNguoiDung.Visibility = BarItemVisibility.Never;
         }
 
         public void IsGiaoVien()
@@ -125,12 +128,14 @@ namespace NMCNPM_QLHS.GUI
             btnPhanLop.Visibility = BarItemVisibility.Never;
             btnLenLop.Visibility = BarItemVisibility.Never;
             ribbonPageQuyDinh.Visible = false;
+            btnNguoiDung.Visibility = BarItemVisibility.Never;
         }
 
         public void IsGiaoVu()
         {
             // Enable, Disable các button
             btnNhapDiem.Visibility = BarItemVisibility.Never;
+            btnNguoiDung.Visibility = BarItemVisibility.Never;
         }
 
 

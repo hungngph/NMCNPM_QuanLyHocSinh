@@ -137,9 +137,9 @@
   <Table Name="dbo.NGUOIDUNG" Member="NGUOIDUNGs">
     <Type Name="NGUOIDUNG">
       <Column Name="MAND" Type="System.String" DbType="Char(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TENDANGNHAP" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="TENDANGNHAP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="TENNGUOIDUNG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="MATKHAU" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MATKHAU" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="MALND" Type="System.String" DbType="Char(6)" CanBeNull="true" />
       <Association Name="LOAINGUOIDUNG_NGUOIDUNG" Member="LOAINGUOIDUNG" ThisKey="MALND" OtherKey="MALND" Type="LOAINGUOIDUNG" IsForeignKey="true" />
     </Type>

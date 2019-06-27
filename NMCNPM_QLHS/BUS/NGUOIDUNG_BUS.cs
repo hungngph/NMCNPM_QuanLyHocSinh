@@ -35,14 +35,21 @@ namespace NMCNPM_QLHS.BUS
             return NGUOIDUNG_DAL.LayQuyen(code);
         }
         public static bool DoiMatKhau(string code, string matkhaucu, string matkhaumoi) {
-            return false;
-            //if (NGUOIDUNG_DAL.LayMatKhau(code) != matkhaucu))
-            //    return false;
-            //else 
-                
+            if (NGUOIDUNG_DAL.LayMatKhau(code) != matkhaucu)
+                return false;
+            else  
+                return NGUOIDUNG_DAL.DoiMatKhau(code, matkhaumoi);
         }
         public static string LayMatKhau(string code) {
             return NGUOIDUNG_DAL.LayMatKhau(code);
+        }
+        public static bool ThemNguoiDung(string taikhoan, string ten, string loaiquyen)
+        {
+            return NGUOIDUNG_DAL.ThemNguoiDung(taikhoan, ten, loaiquyen);
+        }
+        public static bool XoaNguoiDung(string code)
+        {
+            return NGUOIDUNG_DAL.XoaNguoiDung(code);
         }
     }
 }

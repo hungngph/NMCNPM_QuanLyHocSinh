@@ -98,5 +98,42 @@ namespace NMCNPM_QLHS.DAL
                 return "unknown";
             }
         }
+        public static bool DoiMatKhau(string code, string matkhaumoi)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                NGUOIDUNG ngd = db.NGUOIDUNGs.Where(a => a.MAND == code).FirstOrDefault();
+                if (ngd == null)
+                    return false;
+                ngd.MATKHAU = matkhaumoi;
+                db.SubmitChanges();
+                return true;
+            }
+        }
+        public static bool ThemNguoiDung(string taikhoan, string ten, string loaiquyen) {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                string matkhau = "12345";
+                if (KiemTraTonTai(taikhoan))
+                    return false;
+                if (!db.LOAINGUOIDUNGs.Any(kind => kind.MALND == loaiquyen))
+                    return false;
+                else
+                    db.sp_ThemNguoiDung(taikhoan, ten, matkhau, loaiquyen);
+                return true;
+            }
+        }
+        public static bool XoaNguoiDung(string code) {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext()) {
+                try
+                {
+                    db.NGUOIDUNGs.DeleteOnSubmit(db.NGUOIDUNGs.Where(user => user.MAND == code).FirstOrDefault());
+                }
+                catch {
+                    return false;
+                }
+                return true;
+            }
+        }
     }
 }
