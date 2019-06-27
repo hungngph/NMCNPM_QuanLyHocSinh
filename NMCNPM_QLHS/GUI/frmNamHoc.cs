@@ -105,5 +105,15 @@ namespace NMCNPM_QLHS.GUI
 
             bindingSourceNamHoc.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
         }
+
+        private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorAdd_Click(sender, e);
+        }
+
+        private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            btnDeletebindingNavigatorDelete_Click(sender, e);
+        }
     }
 }

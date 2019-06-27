@@ -157,6 +157,12 @@
     <Compile Include="GUI\frmLenLop.Designer.cs">
       <DependentUpon>frmLenLop.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmLoaiHinhKT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLoaiHinhKT.Designer.cs">
+      <DependentUpon>frmLoaiHinhKT.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmLop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,12 @@
     <Compile Include="GUI\frmrpMon.designer.cs">
       <DependentUpon>frmrpMon.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThongTin.Designer.cs">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmThongTinNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +309,9 @@
     <EmbeddedResource Include="GUI\frmLenLop.resx">
       <DependentUpon>frmLenLop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLoaiHinhKT.resx">
+      <DependentUpon>frmLoaiHinhKT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLop.resx">
       <DependentUpon>frmLop.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmrpMon.resx">
       <DependentUpon>frmrpMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThongTin.resx">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmThongTinNguoiDung.resx">
       <DependentUpon>frmThongTinNguoiDung.cs</DependentUpon>

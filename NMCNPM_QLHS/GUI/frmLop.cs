@@ -58,6 +58,9 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorAddNewItem.Enabled = true;
             bindingNavigatorDeleteItem.Enabled = true;
             bindingNavigatorEditItem.Enabled = true;
+            btnSua.Enabled = true;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
         }
 
         public void IsBGH()
@@ -73,6 +76,9 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorAddNewItem.Enabled = false;
             bindingNavigatorDeleteItem.Enabled = false;
             bindingNavigatorEditItem.Enabled = false;
+            btnSua.Enabled = true;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
             navPanelChucNang.SelectedPage = navTimKiem;
         }
 
@@ -163,6 +169,20 @@ namespace NMCNPM_QLHS.GUI
         #endregion -Button_click-
 
         #region -BindingNavigatorItem_Click-
+        private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorAdd_Click(sender, e);
+        }
+
+        private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorDelete_Click(sender, e);
+        }
+
+        private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorEdit_Click(sender, e);
+        }
 
         private void bindingNavigatorAdd_Click(object sender, EventArgs e)
         {
@@ -285,6 +305,7 @@ namespace NMCNPM_QLHS.GUI
         #endregion -Tìm kiếm-
 
         #endregion -Events-
+
 
     }
 }

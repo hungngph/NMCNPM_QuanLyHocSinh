@@ -17,5 +17,15 @@ namespace NMCNPM_QLHS.GUI
         {
             InitializeComponent();
         }
+
+        private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorSaveItem_Click(sender, e);
+        }
+
+        private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

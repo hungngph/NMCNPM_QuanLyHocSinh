@@ -59,10 +59,13 @@
             this.gridControlNamHoc = new DevExpress.XtraGrid.GridControl();
             this.dgvNamHoc = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_maNamHoc = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_tenNamHoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_maNamHoc_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.col_tenNamHoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_tenNamHoc_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnThem = new DevExpress.XtraBars.BarButtonItem();
+            this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorNamHoc)).BeginInit();
@@ -75,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.col_tenNamHoc_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // BIThemMoi
@@ -122,10 +126,9 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 482);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 392);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(883, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(757, 0);
             // 
             // barManager1
             // 
@@ -135,8 +138,10 @@
             this.barManager1.DockControls.Add(this.barDockControlRight);
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.BILuuDanhSach});
-            this.barManager1.MaxItemId = 3;
+            this.BILuuDanhSach,
+            this.btnThem,
+            this.btnXoa});
+            this.barManager1.MaxItemId = 5;
             // 
             // barDockControlTop
             // 
@@ -144,8 +149,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(883, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(757, 0);
             // 
             // barDockControlLeft
             // 
@@ -153,17 +157,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 482);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 392);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(883, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(757, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 482);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 392);
             // 
             // xtraOpenFileDialog1
             // 
@@ -242,14 +244,14 @@
             this.bindingNavigatorDeleteItem.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(63, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(55, 28);
             this.bindingNavigatorDeleteItem.Text = "Xóa";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.btnDeletebindingNavigatorDelete_Click);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(45, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(35, 28);
             this.toolStripLabel1.Text = "of {0}";
             this.toolStripLabel1.ToolTipText = "Total number of items";
             // 
@@ -258,7 +260,7 @@
             this.bindingNavigatorAddNewItem.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(66, 28);
             this.bindingNavigatorAddNewItem.Text = "Thêm";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAdd_Click);
             // 
@@ -281,14 +283,14 @@
             this.toolStripSeparator3,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem});
-            this.bindingNavigatorNamHoc.Location = new System.Drawing.Point(2, 25);
+            this.bindingNavigatorNamHoc.Location = new System.Drawing.Point(2, 20);
             this.bindingNavigatorNamHoc.MoveFirstItem = this.toolStripButton1;
             this.bindingNavigatorNamHoc.MoveLastItem = this.toolStripButton4;
             this.bindingNavigatorNamHoc.MoveNextItem = this.toolStripButton3;
             this.bindingNavigatorNamHoc.MovePreviousItem = this.toolStripButton2;
             this.bindingNavigatorNamHoc.Name = "bindingNavigatorNamHoc";
             this.bindingNavigatorNamHoc.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigatorNamHoc.Size = new System.Drawing.Size(879, 31);
+            this.bindingNavigatorNamHoc.Size = new System.Drawing.Size(753, 31);
             this.bindingNavigatorNamHoc.TabIndex = 2;
             this.bindingNavigatorNamHoc.Text = "bindingNavigator2";
             // 
@@ -301,13 +303,12 @@
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(58, 27);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
             this.toolStripTextBox1.Text = "0";
             this.toolStripTextBox1.ToolTipText = "Current position";
             // 
             // gridView1
             // 
-            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gridControlNamHoc;
             this.gridView1.Name = "gridView1";
             // 
@@ -315,15 +316,13 @@
             // 
             this.gridControlNamHoc.DataSource = this.bindingSourceNamHoc;
             this.gridControlNamHoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlNamHoc.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControlNamHoc.Location = new System.Drawing.Point(2, 56);
+            this.gridControlNamHoc.Location = new System.Drawing.Point(2, 51);
             this.gridControlNamHoc.MainView = this.dgvNamHoc;
-            this.gridControlNamHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlNamHoc.Name = "gridControlNamHoc";
             this.gridControlNamHoc.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.col_maNamHoc_edit,
             this.col_tenNamHoc_edit});
-            this.gridControlNamHoc.Size = new System.Drawing.Size(879, 424);
+            this.gridControlNamHoc.Size = new System.Drawing.Size(753, 339);
             this.gridControlNamHoc.TabIndex = 3;
             this.gridControlNamHoc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvNamHoc,
@@ -334,7 +333,6 @@
             this.dgvNamHoc.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.col_maNamHoc,
             this.col_tenNamHoc});
-            this.dgvNamHoc.DetailHeight = 431;
             this.dgvNamHoc.GridControl = this.gridControlNamHoc;
             this.dgvNamHoc.Name = "dgvNamHoc";
             this.dgvNamHoc.OptionsBehavior.Editable = false;
@@ -345,27 +343,25 @@
             this.col_maNamHoc.Caption = "Mã năm học";
             this.col_maNamHoc.ColumnEdit = this.col_maNamHoc_edit;
             this.col_maNamHoc.FieldName = "MANAMHOC";
-            this.col_maNamHoc.MinWidth = 23;
             this.col_maNamHoc.Name = "col_maNamHoc";
             this.col_maNamHoc.Visible = true;
             this.col_maNamHoc.VisibleIndex = 0;
-            this.col_maNamHoc.Width = 101;
+            this.col_maNamHoc.Width = 87;
+            // 
+            // col_maNamHoc_edit
+            // 
+            this.col_maNamHoc_edit.AutoHeight = false;
+            this.col_maNamHoc_edit.Name = "col_maNamHoc_edit";
             // 
             // col_tenNamHoc
             // 
             this.col_tenNamHoc.Caption = "Tên năm học";
             this.col_tenNamHoc.ColumnEdit = this.col_tenNamHoc_edit;
             this.col_tenNamHoc.FieldName = "TENNAMHOC";
-            this.col_tenNamHoc.MinWidth = 23;
             this.col_tenNamHoc.Name = "col_tenNamHoc";
             this.col_tenNamHoc.Visible = true;
             this.col_tenNamHoc.VisibleIndex = 1;
-            this.col_tenNamHoc.Width = 472;
-            // 
-            // col_maNamHoc_edit
-            // 
-            this.col_maNamHoc_edit.AutoHeight = false;
-            this.col_maNamHoc_edit.Name = "col_maNamHoc_edit";
+            this.col_tenNamHoc.Width = 405;
             // 
             // col_tenNamHoc_edit
             // 
@@ -378,23 +374,47 @@
             this.groupControl1.Controls.Add(this.bindingNavigatorNamHoc);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(883, 482);
+            this.groupControl1.Size = new System.Drawing.Size(757, 392);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Danh sách năm học";
             // 
+            // popupMenu1
+            // 
+            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnThem),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnXoa)});
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
+            // 
+            // btnThem
+            // 
+            this.btnThem.Caption = "Thêm";
+            this.btnThem.Id = 3;
+            this.btnThem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
+            this.btnThem.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Caption = "Xóa";
+            this.btnXoa.Id = 4;
+            this.btnXoa.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
+            this.btnXoa.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
+            // 
             // frmNamHoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 482);
+            this.ClientSize = new System.Drawing.Size(757, 392);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmNamHoc";
             this.Text = "Năm học";
             this.Load += new System.EventHandler(this.frmNamHoc_Load);
@@ -412,6 +432,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,5 +472,8 @@
         private System.Windows.Forms.BindingSource bindingSourceNamHoc;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_maNamHoc_edit;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_tenNamHoc_edit;
+        private DevExpress.XtraBars.BarButtonItem btnThem;
+        private DevExpress.XtraBars.BarButtonItem btnXoa;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
     }
 }
