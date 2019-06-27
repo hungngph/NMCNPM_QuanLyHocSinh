@@ -3,6 +3,8 @@ using NMCNPM_QLHS.DAL;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Linq;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,15 +15,15 @@ namespace NMCNPM_QLHS.BUS
     class HOCSINH_BUS
     {
         // Thêm học sinh
-        public static void Insert(string maHS, string hoTen, string gioiTinh, DateTime ngaySinh, string email, string diaChi)
+        public static void Insert(string maHS, string hoTen, string gioiTinh, DateTime ngaySinh, string email, string diaChi, Binary image_binary)
         {
-            HOCSINH_DAL.Insert(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi);
+            HOCSINH_DAL.Insert(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi, image_binary);
         }
 
         // Sửa học sinh
-        public static void Update(string maHS, string hoTen, string gioiTinh, DateTime ngaySinh, string diaChi, string email)
+        public static void Update(string maHS, string hoTen, string gioiTinh, DateTime ngaySinh, string diaChi, string email, Binary image_binary)
         {
-            HOCSINH_DAL.Update(maHS, hoTen, gioiTinh, ngaySinh, diaChi, email);
+            HOCSINH_DAL.Update(maHS, hoTen, gioiTinh, ngaySinh, diaChi, email, image_binary);
         }
 
         // Xóa học sinh
@@ -104,10 +106,22 @@ namespace NMCNPM_QLHS.BUS
             return lst;
         }
 
+        // Lấy ảnh hs theo mã hs
+        public static Image LayAnhHS(string mahs)
+        {
+            return HOCSINH_DAL.LayAnhHS(mahs);
+        }
+
         // Tìm kiếm thông tin học sinh theo tên
         public static List<HOCSINH> timTTHSTheoTen(string ten)
         {
             return HOCSINH_DAL.timTTHSTheoTen(ten);
+        }
+
+        // Tìm kiếm thông tin học sinh theo mã học sinh
+        public static List<HOCSINH> timTTHSTheoMaHS(string maHS)
+        {
+            return HOCSINH_DAL.timTTHSTheoMaHS(maHS);
         }
 
         public static bool KiemTraTuoi(DateTime ngaySinh)

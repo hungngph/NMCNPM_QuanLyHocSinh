@@ -72,5 +72,10 @@ namespace NMCNPM_QLHS.GUI
                 printTool.ShowPreviewDialog();
             }
         }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

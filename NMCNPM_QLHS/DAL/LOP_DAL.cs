@@ -184,5 +184,42 @@ namespace NMCNPM_QLHS.DAL
                 return null;
             return dt;
         }
+
+        // Tìm kiếm lớp theo mã lớp
+        public static DataTable timLopTheoMaLop(string maLop)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("MALOP", typeof(string));
+            dt.Columns.Add("TENLOP", typeof(string));
+            dt.Columns.Add("SISO", typeof(int));
+            dt.Columns.Add("TENKHOI", typeof(string));
+            dt.Columns.Add("MAKHOI", typeof(string));
+            dt.Columns.Add("TENNAMHOC", typeof(string));
+
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                var ds = db.sp_TimLopTheoMaLop(maLop);
+                foreach (var i in ds)
+                {
+                    DataRow r = dt.NewRow();
+                    if (i.MALOP != null)
+                        r["MALOP"] = i.MALOP;
+                    if (i.TENLOP != null)
+                        r["TENLOP"] = i.TENLOP;
+                    if (i.SISO != null)
+                        r["SISO"] = i.SISO.Value;
+                    if (i.TENKHOI != null)
+                        r["TENKHOI"] = i.TENKHOI;
+                    if (i.MAKHOI != null)
+                        r["MAKHOI"] = i.MAKHOI;
+                    if (i.TENNAMHOC != null)
+                        r["TENNAMHOC"] = i.TENNAMHOC;
+                    dt.Rows.Add(r);
+                }
+            }
+            if (dt.Rows.Count == 0)
+                return null;
+            return dt;
+        }
     }
 }

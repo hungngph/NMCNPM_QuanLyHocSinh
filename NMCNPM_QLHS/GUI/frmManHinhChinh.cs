@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraSplashScreen;
 using System.Threading;
+using NMCNPM_QLHS.BUS;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -42,7 +43,8 @@ namespace NMCNPM_QLHS.GUI
 
         private void frmManHinhChinh_Load(object sender, EventArgs e)
         {
-           
+            staticNamHoc.Caption = "Năm học: " + NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC.ToString();
+            staticNguoiDung.Caption = "Người dùng: " + "abcxyz";
         }
 
         #endregion -Load-
