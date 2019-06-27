@@ -16,7 +16,7 @@ namespace NMCNPM_QLHS.DAL
             dt.Columns.Add("TENLOP", typeof(string));
             dt.Columns.Add("SISO", typeof(int));
             dt.Columns.Add("SOLUONGDAT", typeof(int));
-            dt.Columns.Add("TYLE", typeof(float));
+            dt.Columns.Add("TYLE", typeof(string));
 
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
@@ -30,8 +30,8 @@ namespace NMCNPM_QLHS.DAL
                         r["SISO"] = i.SISO.Value;
                     if (i.SOLUONGDAT != null)
                         r["SOLUONGDAT"] = i.SOLUONGDAT.Value;
-                    //if (i.TYLE != null)
-                    //    r["TYLE"] = i.TYLE.Value;
+                    if (i.TYLE != null)
+                        r["TYLE"] = i.TYLE;
                     dt.Rows.Add(r);
                 }
             }
@@ -47,7 +47,7 @@ namespace NMCNPM_QLHS.DAL
             dt.Columns.Add("TENLOP", typeof(string));
             dt.Columns.Add("SISO", typeof(int));
             dt.Columns.Add("SOLUONGDAT", typeof(int));
-            dt.Columns.Add("TYLE", typeof(float));
+            dt.Columns.Add("TYLE", typeof(string));
 
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
@@ -61,8 +61,8 @@ namespace NMCNPM_QLHS.DAL
                         r["SISO"] = i.SISO.Value;
                     if (i.SOLUONGDAT != null)
                         r["SOLUONGDAT"] = i.SOLUONGDAT.Value;
-                    //if (i.TYLE != null)
-                    //    r["TYLE"] = i.TYLE.Value;
+                    if (i.TYLE != null)
+                        r["TYLE"] = i.TYLE;
                     dt.Rows.Add(r);
                 }
             }

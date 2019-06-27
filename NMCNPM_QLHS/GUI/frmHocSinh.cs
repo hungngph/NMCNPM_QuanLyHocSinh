@@ -173,7 +173,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void dgvHocSinh_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            if (navNhapLieu.Focused == true)
+            if (navPanelChucNang.SelectedPage == navNhapLieu)
             {
                 bindingNavigatorAddNewItem.Enabled = true;
                 btnHoanTat.Visible = false;
@@ -195,7 +195,7 @@ namespace NMCNPM_QLHS.GUI
             PictureBox pic = this.picHocSinh as PictureBox;
             if (pic != null)
             {
-                open.Filter = "Image Files|*.jpg;*.jpeg;*.bmp";
+                open.Filter = "Image Files|*.jpg;*.jpeg;*.bmp;*.png";
                 if (open.ShowDialog() == DialogResult.OK)
                 {
                     pic.Image = Image.FromFile(open.FileName);
