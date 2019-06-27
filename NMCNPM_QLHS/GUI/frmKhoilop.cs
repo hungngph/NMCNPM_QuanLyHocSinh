@@ -74,6 +74,12 @@ namespace NMCNPM_QLHS.GUI
         private void frmKhoilop_Load(object sender, EventArgs e)
         {
             bindingSourceKhoiLop.DataSource = KHOILOP_BUS.LayTatCaKhoi();
+            load_colNamHoc();
+        }
+
+        private void load_colNamHoc()
+        {
+            col_namHoc_edit.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
         }
     }
 }

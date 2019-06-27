@@ -50,20 +50,12 @@ namespace NMCNPM_QLHS.DAL
 
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                var ds = from ngd in db.NGUOIDUNGs
-                         select new
-                         {
-                             MANGUOIDUNG = ngd.MAND,
-                             TENDANGNHAP = ngd.TENDANGNHAP,
-                             TENNGUOIDUNG = ngd.TENNGUOIDUNG,
-                             MATKHAU = ngd.MATKHAU,
-                             LOAINGUOIDUNG = ngd.LOAINGUOIDUNG
-                         };
+                var ds = db.NGUOIDUNGs.ToList();
                 foreach (var x in ds)
                 {
                     NGUOIDUNG ngd = new NGUOIDUNG();
                     {
-                        ngd.MAND = x.MANGUOIDUNG;
+                        ngd.MAND = x.MAND;
                         ngd.TENDANGNHAP = x.TENDANGNHAP;
                         ngd.TENNGUOIDUNG = x.TENNGUOIDUNG;
                         ngd.MATKHAU = x.MATKHAU;
