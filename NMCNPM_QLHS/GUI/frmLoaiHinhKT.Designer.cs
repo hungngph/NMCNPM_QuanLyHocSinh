@@ -1,0 +1,286 @@
+﻿namespace NMCNPM_QLHS.GUI
+{
+    partial class frmLoaiHinhKT
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoaiHinhKT));
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.gridControlLoaiKT = new DevExpress.XtraGrid.GridControl();
+            this.dgvHocKy = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.col_ma = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_tenHocKy = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_heSo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.bindingNavigatorHocKy = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCancelItem = new System.Windows.Forms.ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlLoaiKT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHocKy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocKy)).BeginInit();
+            this.bindingNavigatorHocKy.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.gridControlLoaiKT);
+            this.groupControl1.Controls.Add(this.bindingNavigatorHocKy);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(810, 434);
+            this.groupControl1.TabIndex = 1;
+            this.groupControl1.Text = "Danh sách loại kiểm tra";
+            // 
+            // gridControlLoaiKT
+            // 
+            this.gridControlLoaiKT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlLoaiKT.Location = new System.Drawing.Point(2, 47);
+            this.gridControlLoaiKT.MainView = this.dgvHocKy;
+            this.gridControlLoaiKT.Name = "gridControlLoaiKT";
+            this.gridControlLoaiKT.Size = new System.Drawing.Size(806, 385);
+            this.gridControlLoaiKT.TabIndex = 5;
+            this.gridControlLoaiKT.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvHocKy,
+            this.gridView1});
+            // 
+            // dgvHocKy
+            // 
+            this.dgvHocKy.Appearance.Row.Options.UseTextOptions = true;
+            this.dgvHocKy.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.dgvHocKy.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.col_ma,
+            this.col_tenHocKy,
+            this.col_heSo});
+            this.dgvHocKy.GridControl = this.gridControlLoaiKT;
+            this.dgvHocKy.Name = "dgvHocKy";
+            this.dgvHocKy.OptionsView.ShowGroupPanel = false;
+            // 
+            // col_ma
+            // 
+            this.col_ma.Caption = "Mã học kỳ";
+            this.col_ma.FieldName = "MAHK";
+            this.col_ma.Name = "col_ma";
+            this.col_ma.OptionsColumn.AllowEdit = false;
+            this.col_ma.Visible = true;
+            this.col_ma.VisibleIndex = 0;
+            this.col_ma.Width = 209;
+            // 
+            // col_tenHocKy
+            // 
+            this.col_tenHocKy.Caption = "Tên học kỳ";
+            this.col_tenHocKy.FieldName = "TENHOCKY";
+            this.col_tenHocKy.Name = "col_tenHocKy";
+            this.col_tenHocKy.OptionsColumn.AllowEdit = false;
+            this.col_tenHocKy.Visible = true;
+            this.col_tenHocKy.VisibleIndex = 1;
+            this.col_tenHocKy.Width = 166;
+            // 
+            // col_heSo
+            // 
+            this.col_heSo.Caption = "Hệ số";
+            this.col_heSo.FieldName = "HESO";
+            this.col_heSo.MinWidth = 21;
+            this.col_heSo.Name = "col_heSo";
+            this.col_heSo.Visible = true;
+            this.col_heSo.VisibleIndex = 2;
+            this.col_heSo.Width = 169;
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControlLoaiKT;
+            this.gridView1.Name = "gridView1";
+            // 
+            // bindingNavigatorHocKy
+            // 
+            this.bindingNavigatorHocKy.AddNewItem = null;
+            this.bindingNavigatorHocKy.CountItem = this.bindingNavigatorCountItem;
+            this.bindingNavigatorHocKy.DeleteItem = null;
+            this.bindingNavigatorHocKy.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bindingNavigatorHocKy.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorSaveItem,
+            this.bindingNavigatorCancelItem});
+            this.bindingNavigatorHocKy.Location = new System.Drawing.Point(2, 20);
+            this.bindingNavigatorHocKy.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bindingNavigatorHocKy.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bindingNavigatorHocKy.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bindingNavigatorHocKy.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bindingNavigatorHocKy.Name = "bindingNavigatorHocKy";
+            this.bindingNavigatorHocKy.PositionItem = this.bindingNavigatorPositionItem;
+            this.bindingNavigatorHocKy.Size = new System.Drawing.Size(806, 27);
+            this.bindingNavigatorHocKy.TabIndex = 4;
+            this.bindingNavigatorHocKy.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorSaveItem
+            // 
+            this.bindingNavigatorSaveItem.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
+            this.bindingNavigatorSaveItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
+            this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(51, 24);
+            this.bindingNavigatorSaveItem.Text = "Lưu";
+            // 
+            // bindingNavigatorCancelItem
+            // 
+            this.bindingNavigatorCancelItem.Image = global::NMCNPM_QLHS.Properties.Resources.Cancel_32px;
+            this.bindingNavigatorCancelItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bindingNavigatorCancelItem.Name = "bindingNavigatorCancelItem";
+            this.bindingNavigatorCancelItem.Size = new System.Drawing.Size(70, 24);
+            this.bindingNavigatorCancelItem.Text = "Hủy bỏ";
+            // 
+            // frmLoaiHinhKT
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(810, 434);
+            this.Controls.Add(this.groupControl1);
+            this.Name = "frmLoaiHinhKT";
+            this.Text = "Loại hình kiểm tra";
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlLoaiKT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHocKy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocKy)).EndInit();
+            this.bindingNavigatorHocKy.ResumeLayout(false);
+            this.bindingNavigatorHocKy.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraGrid.GridControl gridControlLoaiKT;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvHocKy;
+        private DevExpress.XtraGrid.Columns.GridColumn col_ma;
+        private DevExpress.XtraGrid.Columns.GridColumn col_tenHocKy;
+        private DevExpress.XtraGrid.Columns.GridColumn col_heSo;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.BindingNavigator bindingNavigatorHocKy;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorSaveItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorCancelItem;
+    }
+}
