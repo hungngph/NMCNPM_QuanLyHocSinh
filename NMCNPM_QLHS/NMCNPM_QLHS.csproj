@@ -242,6 +242,12 @@
     <Compile Include="GUI\frmrpMon.designer.cs">
       <DependentUpon>frmrpMon.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmThemNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThemNguoiDung.Designer.cs">
+      <DependentUpon>frmThemNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmrpMon.resx">
       <DependentUpon>frmrpMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThemNguoiDung.resx">
+      <DependentUpon>frmThemNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmThongTin.resx">
       <DependentUpon>frmThongTin.cs</DependentUpon>
