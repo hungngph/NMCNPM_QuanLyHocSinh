@@ -134,6 +134,7 @@
             this.dockPanelChucNang.ID = new System.Guid("797054d8-1154-434f-80e5-00d553231bd7");
             this.dockPanelChucNang.Location = new System.Drawing.Point(0, 0);
             this.dockPanelChucNang.Name = "dockPanelChucNang";
+            this.dockPanelChucNang.Options.ShowCloseButton = false;
             this.dockPanelChucNang.OriginalSize = new System.Drawing.Size(282, 200);
             this.dockPanelChucNang.Size = new System.Drawing.Size(282, 548);
             this.dockPanelChucNang.Text = "Chức năng";
@@ -183,7 +184,8 @@
             // 
             // btnHuyBo
             // 
-            this.btnHuyBo.Location = new System.Drawing.Point(114, 228);
+            this.btnHuyBo.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Delete_16px;
+            this.btnHuyBo.Location = new System.Drawing.Point(114, 237);
             this.btnHuyBo.Name = "btnHuyBo";
             this.btnHuyBo.Size = new System.Drawing.Size(75, 23);
             this.btnHuyBo.TabIndex = 6;
@@ -202,7 +204,8 @@
             // 
             // btnHoanTat
             // 
-            this.btnHoanTat.Location = new System.Drawing.Point(12, 228);
+            this.btnHoanTat.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Ok_16px;
+            this.btnHoanTat.Location = new System.Drawing.Point(12, 237);
             this.btnHoanTat.Name = "btnHoanTat";
             this.btnHoanTat.Size = new System.Drawing.Size(75, 23);
             this.btnHoanTat.TabIndex = 5;
