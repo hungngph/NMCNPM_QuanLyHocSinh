@@ -56,10 +56,9 @@ namespace NMCNPM_QLHS.DAL
                     NGUOIDUNG ngd = new NGUOIDUNG();
                     {
                         ngd.MAND = x.MAND;
-                        ngd.TENDANGNHAP = x.TENDANGNHAP;
                         ngd.TENNGUOIDUNG = x.TENNGUOIDUNG;
-                        ngd.MATKHAU = x.MATKHAU;
-                        ngd.LOAINGUOIDUNG = x.LOAINGUOIDUNG;
+                        ngd.TENDANGNHAP = x.TENDANGNHAP;
+                        ngd.MALND = x.MALND;
                         lst.Add(ngd);
                     }
                 }
@@ -115,7 +114,7 @@ namespace NMCNPM_QLHS.DAL
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
                 NGUOIDUNG nd = db.NGUOIDUNGs.Where(a => a.MAND == maND).FirstOrDefault();
-                nd.MATKHAU = "123456789";
+                nd.MATKHAU = "12345";
                 db.SubmitChanges();
             }
         }
@@ -130,7 +129,7 @@ namespace NMCNPM_QLHS.DAL
                 nd.TENNGUOIDUNG = tenNguoiDung;
                 nd.MALND = maLND;
                 nd.TENDANGNHAP = tenDangNhap;
-                nd.MATKHAU = "123456789";
+                nd.MATKHAU = "12345";
 
                 db.NGUOIDUNGs.InsertOnSubmit(nd);
                 db.SubmitChanges();
@@ -159,6 +158,7 @@ namespace NMCNPM_QLHS.DAL
                 db.SubmitChanges();
             }
         }
+
         public static bool DoiMatKhau(string code, string matkhaumoi)
         {
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
@@ -171,6 +171,7 @@ namespace NMCNPM_QLHS.DAL
                 return true;
             }
         }
+
         public static bool ThemNguoiDung(string taikhoan, string ten, string loaiquyen) {
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
@@ -184,6 +185,7 @@ namespace NMCNPM_QLHS.DAL
                 return true;
             }
         }
+
         public static bool XoaNguoiDung(string code) {
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext()) {
                 try

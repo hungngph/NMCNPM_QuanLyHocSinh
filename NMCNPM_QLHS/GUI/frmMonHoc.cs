@@ -13,12 +13,23 @@ using NMCNPM_QLHS.BUS;
 namespace NMCNPM_QLHS.GUI
 {
     public partial class frmMonHoc : DevExpress.XtraEditors.XtraForm
-    {   
+    {
+                
+        #region -Fields-
+
+        static bool state = false;
         List<string> lst = new List<string>();
+
+        #endregion -Fields-
+
+        #region -Constructor-
+
         public frmMonHoc()
         {
             InitializeComponent();
         }
+
+        #endregion -Constructor-
 
         #region -Phân quyền-
 
@@ -71,18 +82,31 @@ namespace NMCNPM_QLHS.GUI
             // Enable, Disable các button
         }
 
-
-
         #endregion -Phân quyền-
+
+        #region -Form-
 
         private void frmMonHoc_Load(object sender, EventArgs e)
         {
             bindingSourceMonHoc.DataSource = MONHOC_BUS.LayTatCaMonHoc();
-            lst = null;
         }
+
+        private void frmMonHoc_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (state == true)
+            {
+                if (XtraMessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    this.bindingNavigatorSaveItem_Click(bindingNavigatorSaveItem, e);
+            }
+        }
+
+        #endregion -Form-
+
+        #region -bindingNavigatorItem_Click-
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
+            dgvMonHoc.FocusInvalidRow();
             string maMonHoc = MONHOC_BUS.autoID(dgvMonHoc);
             dgvMonHoc.AddNewRow();
             int rowHandle = dgvMonHoc.GetRowHandle(dgvMonHoc.DataRowCount);
@@ -100,11 +124,6 @@ namespace NMCNPM_QLHS.GUI
                 dgvMonHoc.DeleteSelectedRows();
                 lst.Add(maMonHoc);
             }
-        }
-
-        private void dgvMonHoc_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            //col_tenMonHoc.OptionsColumn.AllowEdit = false;
         }
 
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -128,11 +147,14 @@ namespace NMCNPM_QLHS.GUI
                 for (int i = 0; i < lst.Count; i++)
                     MONHOC_BUS.delete(lst[i]);
             }
+            XtraMessageBox.Show("Lưu thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            state = false;
         }
-        private void bindingNavigatorEditItem_Click(object sender, EventArgs e)
-        {
 
-        }
+        #endregion -bindingNavigatorItem_Click-
+
+        #region -popupMenu-
+
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bindingNavigatorAddNewItem_Click(sender, e);
@@ -143,9 +165,12 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorDeleteItem_Click(sender, e);
         }
 
-        private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        #endregion -popupMenu-
+
+        private void dgvMonHoc_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            bindingNavigatorEditItem_Click(sender, e);
+            state = true;
         }
+
     }
 }

@@ -93,6 +93,7 @@
     <Compile Include="BUS\HOCSINH_BUS.cs" />
     <Compile Include="BUS\HOCTAP_BUS.cs" />
     <Compile Include="BUS\KHOILOP_BUS.cs" />
+    <Compile Include="BUS\LOAIHINHKIEMTRA_BUS.cs" />
     <Compile Include="BUS\LOAINGUOIDUNG_BUS.cs" />
     <Compile Include="BUS\LOP_BUS.cs" />
     <Compile Include="BUS\MONHOC_BUS.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="DAL\HOCSINH_DAL.cs" />
     <Compile Include="DAL\HOCTAP_DAL.cs" />
     <Compile Include="DAL\KHOILOP_DAL.cs" />
+    <Compile Include="DAL\LOAIHINHKIEMTRA_DAL.cs" />
     <Compile Include="DAL\LOAINGUOIDUNG_DAL.cs" />
     <Compile Include="DAL\LOP_DAL.cs" />
     <Compile Include="DAL\MONHOC_DAL.cs" />
@@ -399,6 +401,7 @@
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.HOCKY.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.HOCSINH.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.KHOILOP.datasource" />
+    <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.LOAIHINHKIEMTRA.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.LOP.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.MONHOC.datasource" />
     <None Include="Properties\DataSources\NMCNPM_QLHS.DAL.NAMHOC.datasource" />

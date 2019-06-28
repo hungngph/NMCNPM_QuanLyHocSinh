@@ -22,10 +22,27 @@ namespace NMCNPM_QLHS.GUI
             //hello
         }
 
+        #region -Events-
+
+        #region -Form-
+
         private void frmHocKy_Load(object sender, EventArgs e)
         {
             bindingSourceHocKy.DataSource = HOCKY_BUS.LayTatCaHocKy();
         }
+
+        private void frmHocKy_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (state == true)
+            {
+                if (XtraMessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    bindingNavigatorSaveItem.PerformClick();
+            }
+        }
+
+        #endregion -Form-
+
+        #region -bingdingNagigatorItem_Click-
 
         private void bindingNavigatorCancelItem_Click(object sender, EventArgs e)
         {
@@ -48,18 +65,11 @@ namespace NMCNPM_QLHS.GUI
             state = false;
         }
 
+        #endregion -bingdingNagigatorItem_Click-
+
         private void dgvHocKy_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             state = true;
-        }
-
-        private void frmHocKy_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (state == true)
-            {
-                if (XtraMessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    bindingNavigatorSaveItem.PerformClick();
-            }
         }
 
         private void gridControlHocKy_MouseUp(object sender, MouseEventArgs e)
@@ -72,5 +82,8 @@ namespace NMCNPM_QLHS.GUI
         {
             bindingNavigatorSaveItem_Click(sender, e);
         }
+
+        #endregion -Events-
+
     }
 }
