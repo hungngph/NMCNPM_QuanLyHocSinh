@@ -129,5 +129,23 @@ namespace NMCNPM_QLHS.GUI
                     MONHOC_BUS.delete(lst[i]);
             }
         }
+        private void bindingNavigatorEditItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorAddNewItem_Click(sender, e);
+        }
+
+        private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorDeleteItem_Click(sender, e);
+        }
+
+        private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorEditItem_Click(sender, e);
+        }
     }
 }
