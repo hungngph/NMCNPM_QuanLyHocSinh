@@ -177,9 +177,9 @@
     <value>510, 17</value>
   </metadata>
   <metadata name="errEmail.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>780, 14</value>
+    <value>753, 51</value>
   </metadata>
   <metadata name="errHoTen.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>892, 14</value>
+    <value>848, 17</value>
   </metadata>
 </root>
