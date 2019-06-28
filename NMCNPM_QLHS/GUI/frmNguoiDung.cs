@@ -16,6 +16,7 @@ namespace NMCNPM_QLHS.GUI
     {
         #region -Fields-
 
+        Action<string, string, string, string> action;
         static bool state = false;
         List<string> lst = new List<string>();
 
@@ -26,6 +27,7 @@ namespace NMCNPM_QLHS.GUI
         public frmNguoiDung()
         {
             InitializeComponent();
+            action += them;
         }
 
         #endregion -Constructor-
@@ -53,12 +55,13 @@ namespace NMCNPM_QLHS.GUI
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            var frm = new frmThemNguoiDung();
+            string maND = NGUOIDUNG_BUS.autoID(dgvNguoiDung);
+            var frm = new frmThemNguoiDung(maND, action);
             frm.Show();
             this.Enabled = false;
             //col_TenDangNhap.OptionsColumn.ReadOnly = false;
             //dgvNguoiDung.FocusInvalidRow();
-            //string maND = NGUOIDUNG_BUS.autoID(dgvNguoiDung);
+            
             //dgvNguoiDung.AddNewRow();
             //dgvNguoiDung.SetFocusedRowCellValue(col_LoaiNguoiDung, "LND001");
             //int rowHandle = dgvNguoiDung.GetRowHandle(dgvNguoiDung.DataRowCount);
@@ -89,19 +92,19 @@ namespace NMCNPM_QLHS.GUI
                 tenNguoiDung = dgvNguoiDung.GetFocusedRowCellDisplayText(col_TenNguoiDung);
                 MaLND = dgvNguoiDung.GetFocusedRowCellValue(col_LoaiNguoiDung).ToString();
                 tenTaiKhoan = dgvNguoiDung.GetFocusedRowCellDisplayText(col_TenDangNhap);
-                if (Utility.isPassword(tenTaiKhoan) || !Utility.isTen(tenNguoiDung))
-                {
-                    XtraMessageBox.Show("Sai định dạng tên tại dòng " + (i + 1), "Thông báo");
-                    return;
-                }
+                //if (Utility.isPassword(tenTaiKhoan) || !Utility.isTen(tenNguoiDung))
+                //{
+                //    XtraMessageBox.Show("Sai định dạng tên tại dòng " + (i + 1), "Thông báo");
+                //    return;
+                //}
 
                 if (NGUOIDUNG_BUS.LayTatCaNguoiDung().Any(a => a.MAND == maNguoiDung) == true)
                     NGUOIDUNG_BUS.update(maNguoiDung, tenNguoiDung, MaLND);
-                else if (NGUOIDUNG_BUS.KiemTraTenDangNhap(tenTaiKhoan))
-                {
-                    XtraMessageBox.Show("Trùng tên đăng nhập tại dòng " + (i + 1), "Thông báo");
-                    return;
-                }
+                //else if (NGUOIDUNG_BUS.KiemTraTenDangNhap(tenTaiKhoan))
+                //{
+                //    XtraMessageBox.Show("Trùng tên đăng nhập tại dòng " + (i + 1), "Thông báo");
+                //    return;
+                //}
                 else
                     NGUOIDUNG_BUS.insert(maNguoiDung, tenNguoiDung, MaLND, tenTaiKhoan);
                 bindingNavigatorNguoiDung.BindingSource.MoveNext();
@@ -154,6 +157,19 @@ namespace NMCNPM_QLHS.GUI
         {
             if (e.Button == MouseButtons.Right)
                 popupMenu1.ShowPopup(Control.MousePosition);
+        }
+
+        private void them(string maNguoiDung, string tenNguoiDung, string maLND, string tenTaiKhoan)
+        {
+            dgvNguoiDung.AddNewRow();
+            int rowHandle = dgvNguoiDung.GetRowHandle(dgvNguoiDung.DataRowCount);
+            if (dgvNguoiDung.IsNewItemRow(rowHandle))
+            {
+                dgvNguoiDung.SetRowCellValue(rowHandle, col_maNguoiDung, maNguoiDung);
+                dgvNguoiDung.SetRowCellValue(rowHandle, col_TenNguoiDung, tenNguoiDung);
+                dgvNguoiDung.SetRowCellValue(rowHandle, col_LoaiNguoiDung, maLND);
+                dgvNguoiDung.SetRowCellValue(rowHandle, col_TenDangNhap, tenTaiKhoan);
+            }
         }
     }
 }

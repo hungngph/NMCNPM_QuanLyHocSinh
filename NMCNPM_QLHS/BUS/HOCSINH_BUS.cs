@@ -15,9 +15,9 @@ namespace NMCNPM_QLHS.BUS
     class HOCSINH_BUS
     {
         // Thêm học sinh
-        public static void Insert(string maHS, string hoTen, string gioiTinh, DateTime ngaySinh, string email, string diaChi, Binary image_binary)
+        public static void Insert(string maHS, string hoTen, string gioiTinh, DateTime ngaySinh, string diaChi, string email, Binary image_binary)
         {
-            HOCSINH_DAL.Insert(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi, image_binary);
+            HOCSINH_DAL.Insert(maHS, hoTen, gioiTinh, ngaySinh, diaChi, email, image_binary);
         }
 
         // Sửa học sinh
