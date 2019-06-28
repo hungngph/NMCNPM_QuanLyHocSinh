@@ -302,10 +302,15 @@ namespace NMCNPM_QLHS.GUI
                 bindingSourceLop.DataSource = LOP_BUS.timLopTheoTen(txtTimKiem.Text);
         }
 
+
         #endregion -Tìm kiếm-
 
         #endregion -Events-
 
-
+        private void gridControlLop_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                popupMenu1.ShowPopup(Control.MousePosition);
+        }
     }
 }

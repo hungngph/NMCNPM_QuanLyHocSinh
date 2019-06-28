@@ -27,5 +27,11 @@ namespace NMCNPM_QLHS.GUI
         {
 
         }
+
+        private void gridControlLoaiKT_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                popupMenu1.ShowPopup(Control.MousePosition);
+        }
     }
 }

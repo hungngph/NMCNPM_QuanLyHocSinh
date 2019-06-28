@@ -256,7 +256,7 @@
             // 
             // bindingNavigatorCancelItem
             // 
-            this.bindingNavigatorCancelItem.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
+            this.bindingNavigatorCancelItem.Image = global::NMCNPM_QLHS.Properties.Resources.Cancel_32px;
             this.bindingNavigatorCancelItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bindingNavigatorCancelItem.Name = "bindingNavigatorCancelItem";
             this.bindingNavigatorCancelItem.Size = new System.Drawing.Size(70, 24);

@@ -81,7 +81,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
@@ -107,7 +107,11 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorEditItem_Click(sender, e);
         }
 
-       
+        private void gridControlMonHoc_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                popupMenu1.ShowPopup(Control.MousePosition);
+        }
     }
 
 }
