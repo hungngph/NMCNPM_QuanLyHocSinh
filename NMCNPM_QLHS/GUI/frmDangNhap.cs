@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using NMCNPM_QLHS.BUS;
-using System.Threading;
+
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -36,10 +36,10 @@ namespace NMCNPM_QLHS.GUI
             if (NGUOIDUNG_BUS.DangNhap(txtTaiKhoan.Text, txtMatKhau.Text))
             {
                 string tenDangNhap = txtTaiKhoan.Text;
-                frmSplash frms = new frmSplash();
                 frmManHinhChinh frm = new frmManHinhChinh(tenDangNhap);
-                frm.Show();
                 this.Hide();
+                frm.Show();
+
             }
             else
             {
