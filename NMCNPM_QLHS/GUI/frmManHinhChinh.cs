@@ -131,6 +131,7 @@ namespace NMCNPM_QLHS.GUI
             btnPhanLop.Visibility = BarItemVisibility.Never;
             btnLenLop.Visibility = BarItemVisibility.Never;
             ribbonPageThongKe.Visible = false;
+            btnNhapDiem.Visibility = BarItemVisibility.Never;
         }
 
         public void IsGiaoVien()
