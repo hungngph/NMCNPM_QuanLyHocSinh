@@ -114,6 +114,8 @@ namespace NMCNPM_QLHS.DAL
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
                 NGUOIDUNG nd = db.NGUOIDUNGs.Where(a => a.MAND == maND).FirstOrDefault();
+                if (nd == null)
+                    return;
                 nd.MATKHAU = "12345";
                 db.SubmitChanges();
             }
@@ -142,6 +144,8 @@ namespace NMCNPM_QLHS.DAL
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
                 NGUOIDUNG nd = db.NGUOIDUNGs.Where(a => a.MAND == maND).FirstOrDefault();
+                if (nd == null)
+                    return;
                 nd.TENNGUOIDUNG = tenNguoiDung;
                 nd.MALND = maLND;
                 db.SubmitChanges();
