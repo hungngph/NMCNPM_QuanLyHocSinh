@@ -73,12 +73,13 @@ namespace NMCNPM_QLHS.GUI
         {
             // Enable, Disable các button
             navNhapLieu.PageVisible = false;
-            bindingNavigatorAddNewItem.Enabled = false;
+            //bindingNavigatorAddNewItem.Enabled = false;
+            bindingNavigatorAddNewItem.Visible = false;
             bindingNavigatorDeleteItem.Enabled = false;
             bindingNavigatorEditItem.Enabled = false;
-            btnSua.Enabled = true;
-            btnThem.Enabled = true;
-            btnXoa.Enabled = true;
+            btnSua.Enabled = false;
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
             navPanelChucNang.SelectedPage = navTimKiem;
         }
 
@@ -187,6 +188,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void bindingNavigatorAdd_Click(object sender, EventArgs e)
         {
+            bindingNavigatorAddNewItem.Enabled = false;
             dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
             navPanelChucNang.SelectedPage = navNhapLieu;
             navPanelChucNang.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Default;

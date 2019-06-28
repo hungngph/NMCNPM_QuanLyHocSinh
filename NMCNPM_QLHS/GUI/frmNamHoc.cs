@@ -65,6 +65,7 @@ namespace NMCNPM_QLHS.GUI
         {
             // Enable, Disable các button
             bindingNavigatorAddNewItem.Enabled = false;
+            bindingNavigatorDeleteItem.Enabled = false;
             //bindingNavigatorEdit.Enabled = false;
             //bindingNavigatorDelete.Enabled = false;
             //bindingNavigatorSave.Enabled = false;

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using NMCNPM_QLHS.BUS;
+using DevExpress.XtraGrid.Views.Base;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -19,8 +20,70 @@ namespace NMCNPM_QLHS.GUI
         public frmHocKy()
         {
             InitializeComponent();
-            //hello
+            Permissions();
         }
+
+        //foreach (DevExpress.XtraGrid.Columns.GridColumn col in ((ColumnView) gridDiemControl.Views[0]).Columns)
+        //    {
+        //        col.OptionsColumn.AllowEdit = false;
+        //    }
+
+        #region -Phân quyền-
+
+        public void Permissions()
+        {
+            switch (NGUOIDUNG_BUS.LayMaQuyen(CurrentUser.Code))
+            {
+                case "LND002":      // Giao diện đăng nhập với quyền BGH
+                    IsBGH();
+                    break;
+                case "LND004":      // Giao diện đăng nhập với quyền GiaoVien
+                    IsGiaoVien();
+                    break;
+                case "LND003":      // Giao diện đăng nhập với quyền GiaoVu
+                    IsGiaoVu();
+                    break;
+                default:
+                    Default();
+                    break;
+            }
+        }
+
+        public void Default()
+        {
+            // True
+            // Enable các button
+            // False 
+            // Disable các button
+            bindingNavigatorSaveItem.Enabled = true;
+            bindingNavigatorCancelItem.Enabled = true;
+        }
+
+        public void IsBGH()
+        {
+            // Enable, Disable các button
+            IsGiaoVien();
+        }
+
+        public void IsGiaoVien()
+        {
+            // Enable, Disable các button
+            bindingNavigatorSaveItem.Enabled = false;
+            bindingNavigatorCancelItem.Enabled = false;
+            foreach (DevExpress.XtraGrid.Columns.GridColumn col in ((ColumnView)gridControlHocKy.Views[0]).Columns)
+            {
+                col.OptionsColumn.AllowEdit = false;
+            }
+        }
+
+        public void IsGiaoVu()
+        {
+            // Enable, Disable các button
+        }
+
+
+
+        #endregion -Phân quyền-
 
         #region -Events-
 
