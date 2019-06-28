@@ -246,13 +246,13 @@ namespace NMCNPM_QLHS.GUI
                 {
                     if (btnHoanTat.Text == "Lưu")
                     {
-                        HOCSINH_BUS.Insert(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi, image_binary);
+                        HOCSINH_BUS.Insert(maHS, hoTen, gioiTinh, ngaySinh, diaChi, email, image_binary);
                         load_dgvHocSinh();
                         bindingNavigatorHocSinh.BindingSource.MoveLast();
                     }
                     else
                     {
-                        HOCSINH_BUS.Update(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi, image_binary);
+                        HOCSINH_BUS.Update(maHS, hoTen, gioiTinh, ngaySinh, diaChi, email, image_binary);
                         load_dgvHocSinh();
                     }
                     btnHoanTat.Visible = false;
