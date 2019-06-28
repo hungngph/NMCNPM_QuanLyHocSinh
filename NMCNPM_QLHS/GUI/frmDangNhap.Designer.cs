@@ -83,9 +83,10 @@
             // 
             // btnDangNhap
             // 
+            this.btnDangNhap.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Login_16px;
             this.btnDangNhap.Location = new System.Drawing.Point(150, 142);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
+            this.btnDangNhap.Size = new System.Drawing.Size(85, 23);
             this.btnDangNhap.TabIndex = 3;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
