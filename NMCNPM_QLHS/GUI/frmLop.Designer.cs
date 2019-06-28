@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLop));
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanelChucNang = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.navPanelChucNang = new DevExpress.XtraBars.Navigation.NavigationPane();
@@ -52,7 +53,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControlHocSinh = new DevExpress.XtraEditors.GroupControl();
             this.gridControlLop = new DevExpress.XtraGrid.GridControl();
-            this.bindingSourceLop = new System.Windows.Forms.BindingSource();
+            this.bindingSourceLop = new System.Windows.Forms.BindingSource(this.components);
             this.dgvDSLop = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_MaLop = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_TenLop = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -60,7 +61,7 @@
             this.col_Khoi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_Nam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_Khoi_edit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.bindingNavigatorLop = new System.Windows.Forms.BindingNavigator();
+            this.bindingNavigatorLop = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -74,15 +75,16 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorEditItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSearchItem = new System.Windows.Forms.ToolStripButton();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnSua = new DevExpress.XtraBars.BarButtonItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.hideContainerLeft = new DevExpress.XtraBars.Docking.AutoHideContainer();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanelChucNang.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -105,13 +107,14 @@
             this.bindingNavigatorLop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            this.hideContainerLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // dockManager1
             // 
+            this.dockManager1.AutoHideContainers.AddRange(new DevExpress.XtraBars.Docking.AutoHideContainer[] {
+            this.hideContainerLeft});
             this.dockManager1.Form = this;
-            this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.dockPanelChucNang});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -136,8 +139,11 @@
             this.dockPanelChucNang.Name = "dockPanelChucNang";
             this.dockPanelChucNang.Options.ShowCloseButton = false;
             this.dockPanelChucNang.OriginalSize = new System.Drawing.Size(282, 200);
+            this.dockPanelChucNang.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanelChucNang.SavedIndex = 0;
             this.dockPanelChucNang.Size = new System.Drawing.Size(282, 548);
             this.dockPanelChucNang.Text = "Chức năng";
+            this.dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
             // dockPanel1_Container
             // 
@@ -340,9 +346,9 @@
             this.groupControlHocSinh.Controls.Add(this.gridControlLop);
             this.groupControlHocSinh.Controls.Add(this.bindingNavigatorLop);
             this.groupControlHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControlHocSinh.Location = new System.Drawing.Point(282, 0);
+            this.groupControlHocSinh.Location = new System.Drawing.Point(20, 0);
             this.groupControlHocSinh.Name = "groupControlHocSinh";
-            this.groupControlHocSinh.Size = new System.Drawing.Size(681, 548);
+            this.groupControlHocSinh.Size = new System.Drawing.Size(943, 548);
             this.groupControlHocSinh.TabIndex = 2;
             this.groupControlHocSinh.Text = "Danh sách lớp";
             // 
@@ -355,7 +361,7 @@
             this.gridControlLop.Name = "gridControlLop";
             this.gridControlLop.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.col_Khoi_edit});
-            this.gridControlLop.Size = new System.Drawing.Size(677, 495);
+            this.gridControlLop.Size = new System.Drawing.Size(939, 495);
             this.gridControlLop.TabIndex = 2;
             this.gridControlLop.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvDSLop});
@@ -468,7 +474,7 @@
             this.bindingNavigatorLop.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatorLop.Name = "bindingNavigatorLop";
             this.bindingNavigatorLop.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorLop.Size = new System.Drawing.Size(677, 31);
+            this.bindingNavigatorLop.Size = new System.Drawing.Size(939, 31);
             this.bindingNavigatorLop.TabIndex = 0;
             this.bindingNavigatorLop.Text = "bindingNavigator1";
             // 
@@ -656,13 +662,22 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 548);
             // 
+            // hideContainerLeft
+            // 
+            this.hideContainerLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.hideContainerLeft.Controls.Add(this.dockPanelChucNang);
+            this.hideContainerLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.hideContainerLeft.Location = new System.Drawing.Point(0, 0);
+            this.hideContainerLeft.Name = "hideContainerLeft";
+            this.hideContainerLeft.Size = new System.Drawing.Size(20, 548);
+            // 
             // frmLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 548);
             this.Controls.Add(this.groupControlHocSinh);
-            this.Controls.Add(this.dockPanelChucNang);
+            this.Controls.Add(this.hideContainerLeft);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -700,6 +715,7 @@
             this.bindingNavigatorLop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            this.hideContainerLeft.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -761,5 +777,6 @@
         private DevExpress.XtraBars.BarButtonItem btnXoa;
         private DevExpress.XtraBars.BarButtonItem btnSua;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerLeft;
     }
 }

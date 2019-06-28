@@ -46,7 +46,7 @@
             this.btnBaoCaoMon = new DevExpress.XtraBars.BarButtonItem();
             this.KQCNTheoLop = new DevExpress.XtraBars.BarButtonItem();
             this.KQCNTheoMon = new DevExpress.XtraBars.BarButtonItem();
-            this.btnDSHocSinh = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTraCuuHocSinh = new DevExpress.XtraBars.BarButtonItem();
             this.btnDSLopHoc = new DevExpress.XtraBars.BarButtonItem();
             this.btnTraCuuHS = new DevExpress.XtraBars.BarButtonItem();
             this.btnQuyDinhTuoi = new DevExpress.XtraBars.BarButtonItem();
@@ -135,7 +135,7 @@
             this.btnBaoCaoMon,
             this.KQCNTheoLop,
             this.KQCNTheoMon,
-            this.btnDSHocSinh,
+            this.btnTraCuuHocSinh,
             this.btnDSLopHoc,
             this.btnTraCuuHS,
             this.btnQuyDinhTuoi,
@@ -281,14 +281,14 @@
             this.KQCNTheoMon.Name = "KQCNTheoMon";
             this.KQCNTheoMon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // btnDSHocSinh
+            // btnTraCuuHocSinh
             // 
-            this.btnDSHocSinh.Caption = "Tra cứu học sinh";
-            this.btnDSHocSinh.Id = 15;
-            this.btnDSHocSinh.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.dshocsinh;
-            this.btnDSHocSinh.Name = "btnDSHocSinh";
-            this.btnDSHocSinh.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btnDSHocSinh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDSHocSinh_ItemClick);
+            this.btnTraCuuHocSinh.Caption = "Tra cứu học sinh";
+            this.btnTraCuuHocSinh.Id = 15;
+            this.btnTraCuuHocSinh.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.dshocsinh;
+            this.btnTraCuuHocSinh.Name = "btnTraCuuHocSinh";
+            this.btnTraCuuHocSinh.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnTraCuuHocSinh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDSHocSinh_ItemClick);
             // 
             // btnDSLopHoc
             // 
@@ -513,7 +513,7 @@
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.btnTraCuuHS);
             this.ribbonPageGroup8.ItemLinks.Add(this.btnTraCuuDiem);
-            this.ribbonPageGroup8.ItemLinks.Add(this.btnDSHocSinh);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnTraCuuHocSinh);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Tra cứu";
             // 
@@ -639,7 +639,7 @@
         private DevExpress.XtraBars.BarButtonItem btnBaoCaoMon;
         private DevExpress.XtraBars.BarButtonItem KQCNTheoLop;
         private DevExpress.XtraBars.BarButtonItem KQCNTheoMon;
-        private DevExpress.XtraBars.BarButtonItem btnDSHocSinh;
+        private DevExpress.XtraBars.BarButtonItem btnTraCuuHocSinh;
         private DevExpress.XtraBars.BarButtonItem btnDSLopHoc;
         private DevExpress.XtraBars.BarButtonItem btnTraCuuHS;
         private DevExpress.XtraBars.BarButtonItem btnQuyDinhTuoi;
