@@ -35,8 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaiKhoan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -107,6 +107,15 @@
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Thông tin đăng nhập";
             // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.EditValue = global::NMCNPM_QLHS.Properties.Resources.loginimage;
+            this.pictureEdit1.Location = new System.Drawing.Point(5, 50);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Size = new System.Drawing.Size(68, 58);
+            this.pictureEdit1.TabIndex = 5;
+            // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,18 +126,9 @@
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "QUẢN LÝ HỌC SINH";
             // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.EditValue = global::NMCNPM_QLHS.Properties.Resources.loginimage;
-            this.pictureEdit1.Location = new System.Drawing.Point(5, 50);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(68, 58);
-            this.pictureEdit1.TabIndex = 5;
-            // 
             // frmDangNhap
             // 
-            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

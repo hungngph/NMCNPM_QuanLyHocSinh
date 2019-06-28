@@ -99,11 +99,10 @@
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.staticNamHoc);
             this.ribbonStatusBar.ItemLinks.Add(this.staticNguoiDung);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 679);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 551);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1095, 37);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(939, 31);
             // 
             // staticNamHoc
             // 
@@ -156,7 +155,6 @@
             this.staticNamHoc,
             this.staticNguoiDung});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbon.MaxItemId = 70;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.subNguoiDung);
@@ -171,7 +169,7 @@
             this.repositoryItemTextEdit2,
             this.repositoryItemTextEdit3});
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbon.Size = new System.Drawing.Size(1095, 178);
+            this.ribbon.Size = new System.Drawing.Size(939, 143);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Above;
             // 
@@ -292,7 +290,7 @@
             // 
             // btnDSLopHoc
             // 
-            this.btnDSLopHoc.Caption = "Danh sách lớp học";
+            this.btnDSLopHoc.Caption = "Danh sách lớp học               ";
             this.btnDSLopHoc.Id = 16;
             this.btnDSLopHoc.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.dslophoc;
             this.btnDSLopHoc.Name = "btnDSLopHoc";
@@ -357,6 +355,8 @@
             // 
             this.btnXemDiem.Caption = "Xem điểm";
             this.btnXemDiem.Id = 28;
+            this.btnXemDiem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.lookup_reference_16x16;
+            this.btnXemDiem.ImageOptions.LargeImage = global::NMCNPM_QLHS.Properties.Resources.lookup_reference_32x32;
             this.btnXemDiem.Name = "btnXemDiem";
             this.btnXemDiem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnXemDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemDiem_ItemClick);
@@ -594,15 +594,14 @@
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 716);
+            this.ClientSize = new System.Drawing.Size(939, 582);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmManHinhChinh";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
