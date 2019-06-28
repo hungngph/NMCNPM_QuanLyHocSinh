@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNguoiDung));
             this.groupControlNguoiDung = new DevExpress.XtraEditors.GroupControl();
             this.gridControlHocSinh = new DevExpress.XtraGrid.GridControl();
@@ -222,7 +222,7 @@
             this.col_TenDangNhap.OptionsColumn.ReadOnly = true;
             this.col_TenDangNhap.Visible = true;
             this.col_TenDangNhap.VisibleIndex = 3;
-            this.col_TenDangNhap.Width = 213;
+            this.col_TenDangNhap.Width = 189;
             // 
             // col_diaChi_edit
             // 
@@ -231,19 +231,20 @@
             // 
             // col_MatKhau
             // 
+            this.col_MatKhau.Caption = "Đặt lại mật khẩu";
             this.col_MatKhau.ColumnEdit = this.btnReset;
             this.col_MatKhau.MinWidth = 21;
             this.col_MatKhau.Name = "col_MatKhau";
             this.col_MatKhau.Visible = true;
             this.col_MatKhau.VisibleIndex = 4;
-            this.col_MatKhau.Width = 67;
+            this.col_MatKhau.Width = 91;
             // 
             // btnReset
             // 
             this.btnReset.AutoHeight = false;
-            editorButtonImageOptions2.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Password_Reset_32px;
+            editorButtonImageOptions1.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Password_Reset_32px;
             this.btnReset.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Đặt lại mật khẩu", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Đặt lại mật khẩu", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnReset.Name = "btnReset";
             this.btnReset.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);

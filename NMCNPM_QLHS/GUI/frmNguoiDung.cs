@@ -53,16 +53,19 @@ namespace NMCNPM_QLHS.GUI
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            col_TenDangNhap.OptionsColumn.ReadOnly = false;
-            dgvNguoiDung.FocusInvalidRow();
-            string maND = NGUOIDUNG_BUS.autoID(dgvNguoiDung);
-            dgvNguoiDung.AddNewRow();
-            dgvNguoiDung.SetFocusedRowCellValue(col_LoaiNguoiDung, "LND001");
-            int rowHandle = dgvNguoiDung.GetRowHandle(dgvNguoiDung.DataRowCount);
-            if (dgvNguoiDung.IsNewItemRow(rowHandle))
-            {
-                dgvNguoiDung.SetRowCellValue(rowHandle, col_maNguoiDung, maND);
-            }
+            var frm = new frmThemNguoiDung();
+            frm.Show();
+            this.Enabled = false;
+            //col_TenDangNhap.OptionsColumn.ReadOnly = false;
+            //dgvNguoiDung.FocusInvalidRow();
+            //string maND = NGUOIDUNG_BUS.autoID(dgvNguoiDung);
+            //dgvNguoiDung.AddNewRow();
+            //dgvNguoiDung.SetFocusedRowCellValue(col_LoaiNguoiDung, "LND001");
+            //int rowHandle = dgvNguoiDung.GetRowHandle(dgvNguoiDung.DataRowCount);
+            //if (dgvNguoiDung.IsNewItemRow(rowHandle))
+            //{
+            //    dgvNguoiDung.SetRowCellValue(rowHandle, col_maNguoiDung, maND);
+            //}
         }
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
