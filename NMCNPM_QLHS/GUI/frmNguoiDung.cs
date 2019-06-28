@@ -67,7 +67,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            if (XtraMessageBox.Show("Bạn có chắc chắn xóa lớp này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (XtraMessageBox.Show("Bạn có chắc chắn xóa người dùng này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 string maNguoiDung = dgvNguoiDung.GetFocusedRowCellDisplayText(col_maNguoiDung);
                 dgvNguoiDung.DeleteSelectedRows();
@@ -86,8 +86,19 @@ namespace NMCNPM_QLHS.GUI
                 tenNguoiDung = dgvNguoiDung.GetFocusedRowCellDisplayText(col_TenNguoiDung);
                 MaLND = dgvNguoiDung.GetFocusedRowCellValue(col_LoaiNguoiDung).ToString();
                 tenTaiKhoan = dgvNguoiDung.GetFocusedRowCellDisplayText(col_TenDangNhap);
+                if (Utility.isPassword(tenTaiKhoan) || !Utility.isTen(tenNguoiDung))
+                {
+                    XtraMessageBox.Show("Sai định dạng tên tại dòng " + (i + 1), "Thông báo");
+                    return;
+                }
+
                 if (NGUOIDUNG_BUS.LayTatCaNguoiDung().Any(a => a.MAND == maNguoiDung) == true)
                     NGUOIDUNG_BUS.update(maNguoiDung, tenNguoiDung, MaLND);
+                else if (NGUOIDUNG_BUS.KiemTraTenDangNhap(tenTaiKhoan))
+                {
+                    XtraMessageBox.Show("Trùng tên đăng nhập tại dòng " + (i + 1), "Thông báo");
+                    return;
+                }
                 else
                     NGUOIDUNG_BUS.insert(maNguoiDung, tenNguoiDung, MaLND, tenTaiKhoan);
                 bindingNavigatorNguoiDung.BindingSource.MoveNext();

@@ -154,6 +154,8 @@ namespace NMCNPM_QLHS.DAL
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
                 NGUOIDUNG nd = db.NGUOIDUNGs.Where(a => a.MAND == maND).FirstOrDefault();
+                if (nd == null)
+                    return;
                 db.NGUOIDUNGs.DeleteOnSubmit(nd);
                 db.SubmitChanges();
             }
