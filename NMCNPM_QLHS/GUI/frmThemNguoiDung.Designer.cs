@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemNguoiDung));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtTenTaiKhoan = new DevExpress.XtraEditors.TextEdit();
@@ -40,12 +41,14 @@
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.txtTenNguoiDung = new DevExpress.XtraEditors.TextEdit();
             this.cboLoaiNguoiDung = new DevExpress.XtraEditors.LookUpEdit();
+            this.errTenTK = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenTaiKhoan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaNguoiDung.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNguoiDung.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboLoaiNguoiDung.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errTenTK)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -76,6 +79,7 @@
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(180, 22);
             this.txtTenTaiKhoan.TabIndex = 11;
+            this.txtTenTaiKhoan.TextChanged += new System.EventHandler(this.txtTenTaiKhoan_TextChanged);
             // 
             // label4
             // 
@@ -153,6 +157,7 @@
             this.txtTenNguoiDung.Name = "txtTenNguoiDung";
             this.txtTenNguoiDung.Size = new System.Drawing.Size(180, 22);
             this.txtTenNguoiDung.TabIndex = 2;
+            this.txtTenNguoiDung.EditValueChanged += new System.EventHandler(this.txtTenNguoiDung_EditValueChanged);
             // 
             // cboLoaiNguoiDung
             // 
@@ -168,6 +173,10 @@
             this.cboLoaiNguoiDung.Properties.ValueMember = "MALND";
             this.cboLoaiNguoiDung.Size = new System.Drawing.Size(180, 22);
             this.cboLoaiNguoiDung.TabIndex = 3;
+            // 
+            // errTenTK
+            // 
+            this.errTenTK.ContainerControl = this;
             // 
             // frmThemNguoiDung
             // 
@@ -191,6 +200,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaNguoiDung.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNguoiDung.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboLoaiNguoiDung.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errTenTK)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,5 +218,6 @@
         private DevExpress.XtraEditors.TextEdit txtTenTaiKhoan;
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.LookUpEdit cboLoaiNguoiDung;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider errTenTK;
     }
 }
