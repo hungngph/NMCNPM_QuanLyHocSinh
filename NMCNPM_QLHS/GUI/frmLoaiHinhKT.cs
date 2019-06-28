@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using NMCNPM_QLHS.BUS;
+using DevExpress.XtraGrid.Views.Base;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -18,6 +19,7 @@ namespace NMCNPM_QLHS.GUI
         public frmLoaiHinhKT()
         {
             InitializeComponent();
+            Permissions();
         }
 
         #region -Form-
@@ -37,6 +39,62 @@ namespace NMCNPM_QLHS.GUI
         }
 
         #endregion -Form-
+
+        #region -Phân quyền-
+
+        public void Permissions()
+        {
+            switch (NGUOIDUNG_BUS.LayMaQuyen(CurrentUser.Code))
+            {
+                case "LND002":      // Giao diện đăng nhập với quyền BGH
+                    IsBGH();
+                    break;
+                case "LND003":      // Giao diện đăng nhập với quyền GiaoVu
+                    IsGiaoVu();
+                    break;
+                case "LND004":      // Giao diện đăng nhập với quyền GiaoVien
+                    IsGiaoVien();
+                    break;
+                default:
+                    Default();
+                    break;
+            }
+        }
+
+        public void Default()
+        {
+            // True
+            // Enable các button
+            // False 
+            // Disable các button
+            bindingNavigatorCancelItem.Enabled = true;
+            bindingNavigatorSaveItem.Enabled = true;
+        }
+
+        public void IsBGH()
+        {
+            // Enable, Disable các button
+            IsGiaoVien();
+        }
+
+        public void IsGiaoVien()
+        {
+            // Enable, Disable các button
+            bindingNavigatorCancelItem.Enabled = false;
+            bindingNavigatorSaveItem.Enabled = false;
+
+            foreach (DevExpress.XtraGrid.Columns.GridColumn col in ((ColumnView)gridControlLoaiKT.Views[0]).Columns)
+            {
+                col.OptionsColumn.AllowEdit = false;
+            }
+        }
+
+        public void IsGiaoVu()
+        {
+            // Enable, Disable các button
+        }
+
+        #endregion -Phân quyền-
 
         #region  -bingdingNagigatorItem_Click-
 

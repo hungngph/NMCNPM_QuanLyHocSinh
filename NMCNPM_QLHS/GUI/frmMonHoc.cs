@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using NMCNPM_QLHS.BUS;
+using DevExpress.XtraGrid.Views.Base;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -27,6 +28,7 @@ namespace NMCNPM_QLHS.GUI
         public frmMonHoc()
         {
             InitializeComponent();
+            Permissions();
         }
 
         #endregion -Constructor-
@@ -77,8 +79,12 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorAddNewItem.Enabled = false;
             bindingNavigatorSaveItem.Enabled = false;
             bindingNavigatorDeleteItem.Enabled = false;
-            btnThem.Enabled = true;
-            btnXoa.Enabled = true;
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
+            foreach (DevExpress.XtraGrid.Columns.GridColumn col in ((ColumnView)gridControlMonHoc.Views[0]).Columns)
+            {
+                col.OptionsColumn.AllowEdit = false;
+            }
         }
 
         public void IsGiaoVu()
