@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuyDinh));
             this.tabQuyDinh = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabTuoi = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
@@ -641,6 +642,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 175);
             this.Controls.Add(this.tabQuyDinh);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmQuyDinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quy định";

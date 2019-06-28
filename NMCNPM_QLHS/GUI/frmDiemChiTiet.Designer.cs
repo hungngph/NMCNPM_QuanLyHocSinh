@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDiemChiTiet));
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
             this.groupControlDiemCT = new DevExpress.XtraEditors.GroupControl();
             this.gridControlHocSinh = new DevExpress.XtraGrid.GridControl();
@@ -312,7 +313,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 511);
             this.Controls.Add(this.groupControlDiemCT);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDiemChiTiet";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Điểm chi tiết";
             this.Load += new System.EventHandler(this.frmNhapDiemChiTiet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();

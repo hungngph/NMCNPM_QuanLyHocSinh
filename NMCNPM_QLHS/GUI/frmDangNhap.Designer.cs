@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             this.label1 = new System.Windows.Forms.Label();
             this.txtTaiKhoan = new DevExpress.XtraEditors.TextEdit();
             this.txtMatKhau = new DevExpress.XtraEditors.TextEdit();
@@ -134,6 +135,7 @@
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDangNhap";

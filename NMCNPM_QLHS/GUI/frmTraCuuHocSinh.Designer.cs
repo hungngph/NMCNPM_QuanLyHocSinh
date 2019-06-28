@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTraCuuHocSinh));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.cboSearchHocSinh = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -275,7 +276,9 @@
             this.ClientSize = new System.Drawing.Size(753, 444);
             this.Controls.Add(this.gridControlHocSinh);
             this.Controls.Add(this.layoutControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTraCuuHocSinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quá trình học";
             this.Load += new System.EventHandler(this.frmTraCuuHocSinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

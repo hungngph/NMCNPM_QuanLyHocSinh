@@ -360,7 +360,9 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmHocKy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Học kỳ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHocKy_FormClosing);
             this.Load += new System.EventHandler(this.frmHocKy_Load);

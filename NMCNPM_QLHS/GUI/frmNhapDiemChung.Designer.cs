@@ -176,7 +176,7 @@
             // btnThemLop
             // 
             this.btnThemLop.Image = global::NMCNPM_QLHS.Properties.Resources.Add_New_32px;
-            this.btnThemLop.Location = new System.Drawing.Point(129, 37);
+            this.btnThemLop.Location = new System.Drawing.Point(129, 40);
             this.btnThemLop.Name = "btnThemLop";
             this.btnThemLop.Size = new System.Drawing.Size(24, 20);
             this.btnThemLop.TabIndex = 170;
@@ -186,7 +186,7 @@
             // btnThemMon
             // 
             this.btnThemMon.Image = global::NMCNPM_QLHS.Properties.Resources.Add_New_32px;
-            this.btnThemMon.Location = new System.Drawing.Point(129, 158);
+            this.btnThemMon.Location = new System.Drawing.Point(129, 161);
             this.btnThemMon.Name = "btnThemMon";
             this.btnThemMon.Size = new System.Drawing.Size(24, 20);
             this.btnThemMon.TabIndex = 169;
@@ -593,7 +593,9 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNhapDiemChung";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhập điểm chung";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNhapDiemChung_FormClosing);
             this.Load += new System.EventHandler(this.frmNhapDiemChung_Load);

@@ -337,7 +337,9 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLoaiHinhKT";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loại hình kiểm tra";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLoaiHinhKT_FormClosing);
             this.Load += new System.EventHandler(this.frmLoaiHinhKT_Load);

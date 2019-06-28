@@ -415,7 +415,9 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNamHoc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Năm học";
             this.Load += new System.EventHandler(this.frmNamHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();

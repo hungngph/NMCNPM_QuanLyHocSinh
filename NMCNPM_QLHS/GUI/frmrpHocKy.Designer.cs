@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmrpHocKy));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.cboHocKy = new DevExpress.XtraEditors.LookUpEdit();
             this.btnLamMoi = new DevExpress.XtraEditors.SimpleButton();
@@ -314,7 +315,9 @@
             this.ClientSize = new System.Drawing.Size(794, 343);
             this.Controls.Add(this.gridControlBaoCaoHK);
             this.Controls.Add(this.layoutControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmrpHocKy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo cáo học kỳ";
             this.Load += new System.EventHandler(this.frmrpHocKy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

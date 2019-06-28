@@ -358,7 +358,9 @@
             this.ClientSize = new System.Drawing.Size(967, 476);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.layoutControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPhanLop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phân lớp";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPhanLop_FormClosing);
             this.Load += new System.EventHandler(this.frmPhanLop_Load);

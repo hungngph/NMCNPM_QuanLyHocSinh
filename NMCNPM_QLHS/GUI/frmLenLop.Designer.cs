@@ -532,7 +532,9 @@
             this.ClientSize = new System.Drawing.Size(762, 467);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.groupControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLenLop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lên lớp";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLenLop_FormClosing);
             this.Load += new System.EventHandler(this.frmLenLop_Load);
