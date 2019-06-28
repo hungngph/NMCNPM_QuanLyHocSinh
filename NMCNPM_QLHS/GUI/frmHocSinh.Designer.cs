@@ -193,7 +193,7 @@
             this.dockPanelChucNang.Name = "dockPanelChucNang";
             this.dockPanelChucNang.Options.ShowCloseButton = false;
             this.dockPanelChucNang.OriginalSize = new System.Drawing.Size(350, 200);
-            this.dockPanelChucNang.Size = new System.Drawing.Size(300, 609);
+            this.dockPanelChucNang.Size = new System.Drawing.Size(350, 609);
             this.dockPanelChucNang.Text = "Chức năng";
             // 
             // dockPanel1_Container
@@ -202,7 +202,7 @@
             this.dockPanel1_Container.Controls.Add(this.navBarControl1);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(291, 582);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(341, 582);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navPanelChucNang
@@ -216,9 +216,9 @@
             this.navPanelChucNang.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navNhapLieu,
             this.navTimKiem});
-            this.navPanelChucNang.RegularSize = new System.Drawing.Size(291, 582);
+            this.navPanelChucNang.RegularSize = new System.Drawing.Size(341, 582);
             this.navPanelChucNang.SelectedPage = this.navNhapLieu;
-            this.navPanelChucNang.Size = new System.Drawing.Size(291, 582);
+            this.navPanelChucNang.Size = new System.Drawing.Size(341, 582);
             this.navPanelChucNang.TabIndex = 1;
             this.navPanelChucNang.Text = "navigationPane1";
             // 
@@ -249,7 +249,7 @@
             this.navNhapLieu.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
             this.navNhapLieu.Name = "navNhapLieu";
             this.navNhapLieu.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
-            this.navNhapLieu.Size = new System.Drawing.Size(225, 522);
+            this.navNhapLieu.Size = new System.Drawing.Size(275, 522);
             // 
             // btnHuyBo
             // 
@@ -502,8 +502,8 @@
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 291;
-            this.navBarControl1.Size = new System.Drawing.Size(291, 582);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 341;
+            this.navBarControl1.Size = new System.Drawing.Size(341, 582);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -517,9 +517,9 @@
             this.groupControlHocSinh.Controls.Add(this.gridControlHocSinh);
             this.groupControlHocSinh.Controls.Add(this.bindingNavigatorHocSinh);
             this.groupControlHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControlHocSinh.Location = new System.Drawing.Point(300, 0);
+            this.groupControlHocSinh.Location = new System.Drawing.Point(350, 0);
             this.groupControlHocSinh.Name = "groupControlHocSinh";
-            this.groupControlHocSinh.Size = new System.Drawing.Size(725, 609);
+            this.groupControlHocSinh.Size = new System.Drawing.Size(675, 609);
             this.groupControlHocSinh.TabIndex = 1;
             this.groupControlHocSinh.Text = "Danh sách học sinh";
             // 
@@ -547,7 +547,7 @@
             this.col_ngaySinh_edit,
             this.col_diaChi_edit,
             this.col_email_edit});
-            this.gridControlHocSinh.Size = new System.Drawing.Size(721, 556);
+            this.gridControlHocSinh.Size = new System.Drawing.Size(671, 556);
             this.gridControlHocSinh.TabIndex = 2;
             this.gridControlHocSinh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvHocSinh});
@@ -709,7 +709,7 @@
             this.bindingNavigatorHocSinh.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatorHocSinh.Name = "bindingNavigatorHocSinh";
             this.bindingNavigatorHocSinh.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorHocSinh.Size = new System.Drawing.Size(721, 31);
+            this.bindingNavigatorHocSinh.Size = new System.Drawing.Size(671, 31);
             this.bindingNavigatorHocSinh.TabIndex = 0;
             this.bindingNavigatorHocSinh.Text = "bindingNavigator1";
             // 
@@ -917,6 +917,8 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmHocSinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Học sinh";

@@ -92,14 +92,14 @@
             // 
             // cboLop
             // 
-            this.cboLop.Location = new System.Drawing.Point(410, 10);
+            this.cboLop.Location = new System.Drawing.Point(410, 12);
             this.cboLop.Name = "cboLop";
             this.cboLop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboLop.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENLOP", "")});
             this.cboLop.Properties.NullText = "";
-            this.cboLop.Size = new System.Drawing.Size(274, 20);
+            this.cboLop.Size = new System.Drawing.Size(273, 20);
             this.cboLop.StyleController = this.layoutControl1;
             this.cboLop.TabIndex = 2;
             this.cboLop.EditValueChanged += new System.EventHandler(this.cboLop_EditValueChanged);
@@ -107,7 +107,7 @@
             // btnLamMoi
             // 
             this.btnLamMoi.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Refresh_16px;
-            this.btnLamMoi.Location = new System.Drawing.Point(780, 10);
+            this.btnLamMoi.Location = new System.Drawing.Point(779, 12);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(68, 22);
             this.btnLamMoi.StyleController = this.layoutControl1;
@@ -118,7 +118,7 @@
             // btnIn
             // 
             this.btnIn.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Export_16px;
-            this.btnIn.Location = new System.Drawing.Point(688, 10);
+            this.btnIn.Location = new System.Drawing.Point(687, 12);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(88, 22);
             this.btnIn.StyleController = this.layoutControl1;
@@ -128,14 +128,14 @@
             // 
             // cboNamHoc
             // 
-            this.cboNamHoc.Location = new System.Drawing.Point(59, 10);
+            this.cboNamHoc.Location = new System.Drawing.Point(60, 12);
             this.cboNamHoc.Name = "cboNamHoc";
             this.cboNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboNamHoc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNAMHOC", "")});
             this.cboNamHoc.Properties.NullText = "";
-            this.cboNamHoc.Size = new System.Drawing.Size(299, 20);
+            this.cboNamHoc.Size = new System.Drawing.Size(298, 20);
             this.cboNamHoc.StyleController = this.layoutControl1;
             this.cboNamHoc.TabIndex = 1;
             this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
@@ -156,18 +156,18 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnLamMoi;
-            this.layoutControlItem4.Location = new System.Drawing.Point(769, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(767, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(72, 33);
+            this.layoutControlItem4.Size = new System.Drawing.Size(72, 29);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnIn;
-            this.layoutControlItem3.Location = new System.Drawing.Point(677, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(675, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(92, 33);
+            this.layoutControlItem3.Size = new System.Drawing.Size(92, 29);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -176,16 +176,16 @@
             this.layoutControlItem1.Control = this.cboNamHoc;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(351, 33);
+            this.layoutControlItem1.Size = new System.Drawing.Size(350, 29);
             this.layoutControlItem1.Text = "Năm học:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(45, 13);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.cboLop;
-            this.layoutControlItem5.Location = new System.Drawing.Point(351, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(350, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(326, 33);
+            this.layoutControlItem5.Size = new System.Drawing.Size(325, 29);
             this.layoutControlItem5.Text = "Lớp:";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(45, 13);
             // 
@@ -341,6 +341,8 @@
             this.Controls.Add(this.gridControlHocSinh);
             this.Controls.Add(this.layoutControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmrpDanhSachHocSinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách học sinh";

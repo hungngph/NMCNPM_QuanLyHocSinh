@@ -49,8 +49,8 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlDiemCT)).BeginInit();
             this.groupControlDiemCT.SuspendLayout();
@@ -66,8 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -288,15 +288,6 @@
             this.layoutControlItem7.Text = "Học sinh";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(45, 13);
             // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.cboNamHoc;
-            this.layoutControlItem1.Location = new System.Drawing.Point(414, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(424, 24);
-            this.layoutControlItem1.Text = "Năm học:";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(45, 13);
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.cboHocKy;
@@ -307,6 +298,15 @@
             this.layoutControlItem3.Text = "Học kỳ:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(45, 13);
             // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.cboNamHoc;
+            this.layoutControlItem1.Location = new System.Drawing.Point(414, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(424, 24);
+            this.layoutControlItem1.Text = "Năm học:";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(45, 13);
+            // 
             // frmDiemChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,6 +314,8 @@
             this.ClientSize = new System.Drawing.Size(886, 511);
             this.Controls.Add(this.groupControlDiemCT);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmDiemChiTiet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Điểm chi tiết";
@@ -333,8 +335,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
