@@ -63,6 +63,9 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorAddNewItem.Enabled = true;
             bindingNavigatorDeleteItem.Enabled = true;
             bindingNavigatorEditItem.Enabled = true;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
         }
 
         public void IsBGH()
@@ -78,6 +81,9 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorAddNewItem.Enabled = false;
             bindingNavigatorDeleteItem.Enabled = false;
             bindingNavigatorEditItem.Enabled = false;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
             navPanelChucNang.SelectedPage = navTimKiem;
         }
 

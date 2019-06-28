@@ -435,6 +435,21 @@ namespace NMCNPM_QLHS.GUI
             }
         }
 
+        private void btnLoaiHinhKiemTra_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmLoaiHinhKT));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmLoaiHinhKT f = new frmLoaiHinhKT
+                {
+                    MdiParent = this
+                };
+                f.Show();
+            }
+        }
+
         #endregion
 
         #region -Menu Thống kê-
@@ -587,8 +602,8 @@ namespace NMCNPM_QLHS.GUI
         }
 
 
-        #endregion -Show form-
 
+        #endregion -Show form-
 
     }
 }

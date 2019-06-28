@@ -61,6 +61,8 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorAddNewItem.Enabled = true;
             bindingNavigatorSaveItem.Enabled = true;
             bindingNavigatorDeleteItem.Enabled = true;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
         }
 
         public void IsBGH()
@@ -75,6 +77,8 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorAddNewItem.Enabled = false;
             bindingNavigatorSaveItem.Enabled = false;
             bindingNavigatorDeleteItem.Enabled = false;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
         }
 
         public void IsGiaoVu()
