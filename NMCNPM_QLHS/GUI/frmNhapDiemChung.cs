@@ -255,10 +255,16 @@ namespace NMCNPM_QLHS.GUI
         }
 
 
+
         #endregion -Load-
 
         #endregion -Methods-
 
+        private void gridDiemControl_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                popupMenu1.ShowPopup(Control.MousePosition);
+        }
         private void dgvDiem_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
             state = true;

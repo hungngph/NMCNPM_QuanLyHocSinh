@@ -40,6 +40,10 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.BILuuDanhSach = new DevExpress.XtraBars.BarButtonItem();
             this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.btnThem = new DevExpress.XtraBars.BarButtonItem();
+            this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSua = new DevExpress.XtraBars.BarButtonItem();
+            this.bindingNavigatorEditItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
@@ -61,9 +65,6 @@
             this.col_tenMonHoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_tenMonHoc_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btnThem = new DevExpress.XtraBars.BarButtonItem();
-            this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
-            this.btnSua = new DevExpress.XtraBars.BarButtonItem();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorMonHoc)).BeginInit();
@@ -156,7 +157,34 @@
             this.BILuuDanhSach.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.BILuuDanhSach.Name = "BILuuDanhSach";
             // 
-            // bindingNavigatorSaveItem
+            // btnThem
+            // 
+            this.btnThem.Caption = "Thêm";
+            this.btnThem.Id = 3;
+            this.btnThem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
+            this.btnThem.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Caption = "Xóa";
+            this.btnXoa.Id = 4;
+            this.btnXoa.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
+            this.btnXoa.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Caption = "Sửa";
+            this.btnSua.Id = 5;
+            this.btnSua.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Edit_32px;
+            this.btnSua.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
+            this.btnSua.Name = "btnSua";
+            this.btnSua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSua_ItemClick);
+            // 
+            // bindingNavigatorEditItem
             // 
             this.bindingNavigatorSaveItem.Image = global::NMCNPM_QLHS.Properties.Resources.Edit_32px;
             this.bindingNavigatorSaveItem.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -305,6 +333,7 @@
             this.gridControlMonHoc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvMonHoc,
             this.gridView1});
+            this.gridControlMonHoc.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gridControlMonHoc_MouseUp);
             // 
             // dgvMonHoc
             // 
@@ -357,32 +386,6 @@
             this.groupControl1.Size = new System.Drawing.Size(512, 285);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Danh sách môn học";
-            // 
-            // btnThem
-            // 
-            this.btnThem.Caption = "Thêm";
-            this.btnThem.Id = 3;
-            this.btnThem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
-            this.btnThem.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Caption = "Xóa";
-            this.btnXoa.Id = 4;
-            this.btnXoa.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Caption = "Sửa";
-            this.btnSua.Id = 5;
-            this.btnSua.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Edit_32px;
-            this.btnSua.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
-            this.btnSua.Name = "btnSua";
-            this.btnSua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSua_ItemClick);
             // 
             // popupMenu1
             // 

@@ -147,5 +147,11 @@ namespace NMCNPM_QLHS.GUI
         {
             bindingNavigatorEditItem_Click(sender, e);
         }
+
+        private void gridControlMonHoc_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                popupMenu1.ShowPopup(Control.MousePosition);
+        }
     }
 }

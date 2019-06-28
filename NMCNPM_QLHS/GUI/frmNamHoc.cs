@@ -115,5 +115,11 @@ namespace NMCNPM_QLHS.GUI
         {
             btnDeletebindingNavigatorDelete_Click(sender, e);
         }
+
+        private void gridControlNamHoc_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                popupMenu1.ShowPopup(Control.MousePosition);
+        }
     }
 }
