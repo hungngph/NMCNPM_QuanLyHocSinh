@@ -352,7 +352,7 @@
             this.groupControlHocSinh.Name = "groupControlHocSinh";
             this.groupControlHocSinh.Size = new System.Drawing.Size(841, 674);
             this.groupControlHocSinh.TabIndex = 2;
-            this.groupControlHocSinh.Text = "Danh sách học sinh";
+            this.groupControlHocSinh.Text = "Danh sách lớp";
             // 
             // gridControlLop
             // 

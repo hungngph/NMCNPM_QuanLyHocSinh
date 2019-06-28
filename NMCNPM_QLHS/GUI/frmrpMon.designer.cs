@@ -218,8 +218,8 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(557, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(249, 45);
-            this.layoutControlItem2.Text = "Môn:";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 16);
+            this.layoutControlItem2.Text = "Môn học:";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 17);
             // 
             // gridControlBCTKM
             // 

@@ -245,10 +245,14 @@ namespace NMCNPM_QLHS.GUI
                 bindingSourceDiem.DataSource = null;
         }
 
+
         #endregion -Load-
 
         #endregion -Methods-
 
-        
+        private void dgvDiem_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            state = true;
+        }
     }
 }

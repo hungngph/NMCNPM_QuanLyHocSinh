@@ -390,43 +390,40 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnChuyen_Click(object sender, EventArgs e)
         {
-            if (lstvDSHSMoi.Items.Count != 0)
+            if (QUATRINHHOC_BUS.KiemTraSiSo(cboLopMoi.EditValue.ToString(), "HK01", lstvDSHSCu.SelectedItems.Count) == true)
             {
-                if (QUATRINHHOC_BUS.KiemTraSiSo(cboLopMoi.EditValue.ToString(), lstvDSHSMoi.SelectedItems.Count) == true)
+                IEnumerator ie = lstvDSHSCu.SelectedItems.GetEnumerator();
+                if (lstvDSHSCu.SelectedItems.Count != 0)
+                    state = true;
+                while (ie.MoveNext())
                 {
-                    IEnumerator ie = lstvDSHSCu.SelectedItems.GetEnumerator();
-                    if (lstvDSHSCu.SelectedItems.Count != 0)
-                        state = true;
-                    while (ie.MoveNext())
+                    ListViewItem olditem = (ListViewItem)ie.Current;
+                    ListViewItem newitem = new ListViewItem();
+
+                    //Trạng thái học sinh đã được phân lớp hay chưa?
+                    bool stateHS = false;
+
+                    foreach (ListViewItem item in lstvDSHSMoi.Items)
                     {
-                        ListViewItem olditem = (ListViewItem)ie.Current;
-                        ListViewItem newitem = new ListViewItem();
-
-                        //Trạng thái học sinh đã được phân lớp hay chưa?
-                        bool stateHS = false;
-
-                        foreach (ListViewItem item in lstvDSHSMoi.Items)
+                        if (item.SubItems[0].Text == olditem.SubItems[0].Text)
                         {
-                            if (item.SubItems[0].Text == olditem.SubItems[0].Text)
-                            {
-                                MessageBox.Show("Học sinh " + olditem.SubItems[1].Text + " hiện đã được phân vào lớp " + cboLopMoi.Text, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                stateHS = true;
-                                goto Cont;
-                            }
+                            MessageBox.Show("Học sinh " + olditem.SubItems[1].Text + " hiện đã được phân vào lớp " + cboLopMoi.Text, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            stateHS = true;
+                            goto Cont;
                         }
-
-                        newitem = olditem;
-                        lstvDSHSCu.Items.Remove(olditem);
-                        lstvDSHSMoi.Items.Add(newitem);
-
-                    Cont:
-                        if (stateHS == true)
-                            break;
                     }
+
+                    newitem = olditem;
+                    lstvDSHSCu.Items.Remove(olditem);
+                    lstvDSHSMoi.Items.Add(newitem);
+
+                Cont:
+                    if (stateHS == true)
+                        break;
                 }
-                else
-                    MessageBox.Show("Vượt quá sĩ số tối đa", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+                MessageBox.Show("Vượt quá sĩ số tối đa", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -447,7 +444,9 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-
+            load_DSHSCu();
+            load_DSHSMoi();
+            state = false;
         }
     }
 }

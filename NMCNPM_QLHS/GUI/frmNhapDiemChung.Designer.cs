@@ -308,6 +308,7 @@
             this.dgvDiem.GridControl = this.gridDiemControl;
             this.dgvDiem.Name = "dgvDiem";
             this.dgvDiem.OptionsView.ShowGroupPanel = false;
+            this.dgvDiem.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.dgvDiem_CellValueChanged);
             // 
             // col_maHS
             // 

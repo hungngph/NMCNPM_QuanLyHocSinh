@@ -474,10 +474,10 @@
             this.rbtnTen.Location = new System.Drawing.Point(16, 103);
             this.rbtnTen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnTen.Name = "rbtnTen";
-            this.rbtnTen.Size = new System.Drawing.Size(194, 21);
+            this.rbtnTen.Size = new System.Drawing.Size(159, 21);
             this.rbtnTen.TabIndex = 6;
             this.rbtnTen.TabStop = true;
-            this.rbtnTen.Text = "Tìm kiếm theo tên học sinh";
+            this.rbtnTen.Text = "Tìm kiếm theo họ tên";
             this.rbtnTen.UseVisualStyleBackColor = true;
             // 
             // rbtnMaHS

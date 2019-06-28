@@ -39,7 +39,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.BILuuDanhSach = new DevExpress.XtraBars.BarButtonItem();
-            this.bindingNavigatorEditItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
@@ -152,13 +152,14 @@
             this.BILuuDanhSach.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.BILuuDanhSach.Name = "BILuuDanhSach";
             // 
-            // bindingNavigatorEditItem
+            // bindingNavigatorSaveItem
             // 
-            this.bindingNavigatorEditItem.Image = global::NMCNPM_QLHS.Properties.Resources.Edit_32px;
-            this.bindingNavigatorEditItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.bindingNavigatorEditItem.Name = "bindingNavigatorEditItem";
-            this.bindingNavigatorEditItem.Size = new System.Drawing.Size(62, 28);
-            this.bindingNavigatorEditItem.Text = "Sửa";
+            this.bindingNavigatorSaveItem.Image = global::NMCNPM_QLHS.Properties.Resources.Edit_32px;
+            this.bindingNavigatorSaveItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
+            this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(61, 28);
+            this.bindingNavigatorSaveItem.Text = "Lưu";
+            this.bindingNavigatorSaveItem.Click += new System.EventHandler(this.bindingNavigatorSaveItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -247,10 +248,10 @@
             // 
             // bindingNavigatorMonHoc
             // 
-            this.bindingNavigatorMonHoc.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigatorMonHoc.AddNewItem = null;
             this.bindingNavigatorMonHoc.BindingSource = this.bindingSourceMonHoc;
             this.bindingNavigatorMonHoc.CountItem = this.toolStripLabel1;
-            this.bindingNavigatorMonHoc.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.bindingNavigatorMonHoc.DeleteItem = null;
             this.bindingNavigatorMonHoc.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMonHoc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
@@ -264,7 +265,7 @@
             this.toolStripSeparator3,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.bindingNavigatorEditItem});
+            this.bindingNavigatorSaveItem});
             this.bindingNavigatorMonHoc.Location = new System.Drawing.Point(2, 25);
             this.bindingNavigatorMonHoc.MoveFirstItem = this.toolStripButton1;
             this.bindingNavigatorMonHoc.MoveLastItem = this.toolStripButton4;
@@ -313,6 +314,7 @@
             this.dgvMonHoc.GridControl = this.gridControlMonHoc;
             this.dgvMonHoc.Name = "dgvMonHoc";
             this.dgvMonHoc.OptionsView.ShowGroupPanel = false;
+            this.dgvMonHoc.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvMonHoc_FocusedRowChanged);
             // 
             // col_maMonHoc
             // 
@@ -321,7 +323,7 @@
             this.col_maMonHoc.FieldName = "MAMONHOC";
             this.col_maMonHoc.MinWidth = 23;
             this.col_maMonHoc.Name = "col_maMonHoc";
-            this.col_maMonHoc.OptionsColumn.AllowEdit = false;
+            this.col_maMonHoc.OptionsColumn.ReadOnly = true;
             this.col_maMonHoc.Visible = true;
             this.col_maMonHoc.VisibleIndex = 0;
             this.col_maMonHoc.Width = 283;
@@ -419,7 +421,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorEditItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorSaveItem;
         private DevExpress.XtraBars.BarButtonItem BILuuDanhSach;
         private System.Windows.Forms.BindingSource bindingSourceMonHoc;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_maMonHoc_edit;
