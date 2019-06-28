@@ -343,34 +343,6 @@ namespace NMCNPM_QLHS.DAL
 			return ((ISingleResult<sp_SuaDiemResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_TimHSTheoMaHS")]
-		public ISingleResult<sp_TimHSTheoMaHSResult> sp_TimHSTheoMaHS([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string s)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), s);
-			return ((ISingleResult<sp_TimHSTheoMaHSResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_TimHSTheoTen")]
-		public ISingleResult<sp_TimHSTheoTenResult> sp_TimHSTheoTen([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string s)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), s);
-			return ((ISingleResult<sp_TimHSTheoTenResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_TimLopTheoMaLop")]
-		public ISingleResult<sp_TimLopTheoMaLopResult> sp_TimLopTheoMaLop([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string s)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), s);
-			return ((ISingleResult<sp_TimLopTheoMaLopResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_TimLopTheoTenLop")]
-		public ISingleResult<sp_TimLopTheoTenLopResult> sp_TimLopTheoTenLop([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string s)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), s);
-			return ((ISingleResult<sp_TimLopTheoTenLopResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ThemNamHoc")]
 		public int sp_ThemNamHoc()
 		{
@@ -397,6 +369,34 @@ namespace NMCNPM_QLHS.DAL
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mahs, malop, mahk);
 			return ((ISingleResult<sp_ThemQTH1HocKyResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_TimHSTheoMaHS")]
+		public ISingleResult<sp_TimHSTheoMaHSResult> sp_TimHSTheoMaHS([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string s)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), s);
+			return ((ISingleResult<sp_TimHSTheoMaHSResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_TimHSTheoTen")]
+		public ISingleResult<sp_TimHSTheoTenResult> sp_TimHSTheoTen([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string s)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), s);
+			return ((ISingleResult<sp_TimHSTheoTenResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_TimLopTheoMaLop")]
+		public ISingleResult<sp_TimLopTheoMaLopResult> sp_TimLopTheoMaLop([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string s)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), s);
+			return ((ISingleResult<sp_TimLopTheoMaLopResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_TimLopTheoTenLop")]
+		public ISingleResult<sp_TimLopTheoTenLopResult> sp_TimLopTheoTenLop([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string s)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), s);
+			return ((ISingleResult<sp_TimLopTheoTenLopResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_XoaHocSinh")]
@@ -850,7 +850,7 @@ namespace NMCNPM_QLHS.DAL
 		
 		private System.Nullable<int> _SOLUONGDAT;
 		
-		private System.Nullable<float> _TYLE;
+		private string _TYLE;
 		
 		private EntityRef<HOCKY> _HOCKY;
 		
@@ -868,7 +868,7 @@ namespace NMCNPM_QLHS.DAL
     partial void OnSISOChanged();
     partial void OnSOLUONGDATChanging(System.Nullable<int> value);
     partial void OnSOLUONGDATChanged();
-    partial void OnTYLEChanging(System.Nullable<float> value);
+    partial void OnTYLEChanging(string value);
     partial void OnTYLEChanged();
     #endregion
 		
@@ -967,8 +967,8 @@ namespace NMCNPM_QLHS.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TYLE", DbType="Real")]
-		public System.Nullable<float> TYLE
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TYLE", DbType="VarChar(50)")]
+		public string TYLE
 		{
 			get
 			{
@@ -1310,7 +1310,7 @@ namespace NMCNPM_QLHS.DAL
 		
 		private System.Nullable<int> _SOLUONGDAT;
 		
-		private System.Nullable<float> _TYLE;
+		private string _TYLE;
 		
 		private EntityRef<BAOCAOTONGKETMON> _BAOCAOTONGKETMON;
 		
@@ -1328,7 +1328,7 @@ namespace NMCNPM_QLHS.DAL
     partial void OnSISOChanged();
     partial void OnSOLUONGDATChanging(System.Nullable<int> value);
     partial void OnSOLUONGDATChanged();
-    partial void OnTYLEChanging(System.Nullable<float> value);
+    partial void OnTYLEChanging(string value);
     partial void OnTYLEChanged();
     #endregion
 		
@@ -1427,8 +1427,8 @@ namespace NMCNPM_QLHS.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TYLE", DbType="Real")]
-		public System.Nullable<float> TYLE
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TYLE", DbType="VarChar(50)")]
+		public string TYLE
 		{
 			get
 			{
@@ -1738,6 +1738,8 @@ namespace NMCNPM_QLHS.DAL
 		
 		private string _TENHOCKY;
 		
+		private System.Nullable<int> _HESO;
+		
 		private EntitySet<BAOCAOTONGKETHK> _BAOCAOTONGKETHKs;
 		
 		private EntitySet<BAOCAOTONGKETMON> _BAOCAOTONGKETMONs;
@@ -1752,6 +1754,8 @@ namespace NMCNPM_QLHS.DAL
     partial void OnMAHKChanged();
     partial void OnTENHOCKYChanging(string value);
     partial void OnTENHOCKYChanged();
+    partial void OnHESOChanging(System.Nullable<int> value);
+    partial void OnHESOChanged();
     #endregion
 		
 		public HOCKY()
@@ -1798,6 +1802,26 @@ namespace NMCNPM_QLHS.DAL
 					this._TENHOCKY = value;
 					this.SendPropertyChanged("TENHOCKY");
 					this.OnTENHOCKYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HESO", DbType="Int")]
+		public System.Nullable<int> HESO
+		{
+			get
+			{
+				return this._HESO;
+			}
+			set
+			{
+				if ((this._HESO != value))
+				{
+					this.OnHESOChanging(value);
+					this.SendPropertyChanging();
+					this._HESO = value;
+					this.SendPropertyChanged("HESO");
+					this.OnHESOChanged();
 				}
 			}
 		}
@@ -1916,6 +1940,8 @@ namespace NMCNPM_QLHS.DAL
 		
 		private string _EMAIL;
 		
+		private System.Data.Linq.Binary _ANH;
+		
 		private EntitySet<QUATRINHHOC> _QUATRINHHOCs;
 		
     #region Extensibility Method Definitions
@@ -1934,6 +1960,8 @@ namespace NMCNPM_QLHS.DAL
     partial void OnDIACHIChanged();
     partial void OnEMAILChanging(string value);
     partial void OnEMAILChanged();
+    partial void OnANHChanging(System.Data.Linq.Binary value);
+    partial void OnANHChanged();
     #endregion
 		
 		public HOCSINH()
@@ -2058,6 +2086,26 @@ namespace NMCNPM_QLHS.DAL
 					this._EMAIL = value;
 					this.SendPropertyChanged("EMAIL");
 					this.OnEMAILChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ANH", DbType="Image", UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary ANH
+		{
+			get
+			{
+				return this._ANH;
+			}
+			set
+			{
+				if ((this._ANH != value))
+				{
+					this.OnANHChanging(value);
+					this.SendPropertyChanging();
+					this._ANH = value;
+					this.SendPropertyChanged("ANH");
+					this.OnANHChanged();
 				}
 			}
 		}
@@ -4872,6 +4920,300 @@ namespace NMCNPM_QLHS.DAL
 		}
 	}
 	
+	public partial class sp_ThemNguoiDungResult
+	{
+		
+		private string _MAND;
+		
+		private string _TENDANGNHAP;
+		
+		private string _TENNGUOIDUNG;
+		
+		private string _MATKHAU;
+		
+		private string _MALND;
+		
+		public sp_ThemNguoiDungResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAND", DbType="Char(6) NOT NULL", CanBeNull=false)]
+		public string MAND
+		{
+			get
+			{
+				return this._MAND;
+			}
+			set
+			{
+				if ((this._MAND != value))
+				{
+					this._MAND = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENDANGNHAP", DbType="VarChar(50)")]
+		public string TENDANGNHAP
+		{
+			get
+			{
+				return this._TENDANGNHAP;
+			}
+			set
+			{
+				if ((this._TENDANGNHAP != value))
+				{
+					this._TENDANGNHAP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENNGUOIDUNG", DbType="NVarChar(50)")]
+		public string TENNGUOIDUNG
+		{
+			get
+			{
+				return this._TENNGUOIDUNG;
+			}
+			set
+			{
+				if ((this._TENNGUOIDUNG != value))
+				{
+					this._TENNGUOIDUNG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATKHAU", DbType="VarChar(20)")]
+		public string MATKHAU
+		{
+			get
+			{
+				return this._MATKHAU;
+			}
+			set
+			{
+				if ((this._MATKHAU != value))
+				{
+					this._MATKHAU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALND", DbType="Char(6)")]
+		public string MALND
+		{
+			get
+			{
+				return this._MALND;
+			}
+			set
+			{
+				if ((this._MALND != value))
+				{
+					this._MALND = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sp_ThemQTHResult
+	{
+		
+		private string _MAQTHOC;
+		
+		private string _MAHS;
+		
+		private string _MALOP;
+		
+		private string _MAHK;
+		
+		private System.Nullable<float> _DIEMTBHK;
+		
+		public sp_ThemQTHResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAQTHOC", DbType="Char(6) NOT NULL", CanBeNull=false)]
+		public string MAQTHOC
+		{
+			get
+			{
+				return this._MAQTHOC;
+			}
+			set
+			{
+				if ((this._MAQTHOC != value))
+				{
+					this._MAQTHOC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAHS", DbType="Char(5)")]
+		public string MAHS
+		{
+			get
+			{
+				return this._MAHS;
+			}
+			set
+			{
+				if ((this._MAHS != value))
+				{
+					this._MAHS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALOP", DbType="Char(5)")]
+		public string MALOP
+		{
+			get
+			{
+				return this._MALOP;
+			}
+			set
+			{
+				if ((this._MALOP != value))
+				{
+					this._MALOP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAHK", DbType="Char(4)")]
+		public string MAHK
+		{
+			get
+			{
+				return this._MAHK;
+			}
+			set
+			{
+				if ((this._MAHK != value))
+				{
+					this._MAHK = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DIEMTBHK", DbType="Real")]
+		public System.Nullable<float> DIEMTBHK
+		{
+			get
+			{
+				return this._DIEMTBHK;
+			}
+			set
+			{
+				if ((this._DIEMTBHK != value))
+				{
+					this._DIEMTBHK = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sp_ThemQTH1HocKyResult
+	{
+		
+		private string _MAQTHOC;
+		
+		private string _MAHS;
+		
+		private string _MALOP;
+		
+		private string _MAHK;
+		
+		private System.Nullable<float> _DIEMTBHK;
+		
+		public sp_ThemQTH1HocKyResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAQTHOC", DbType="Char(6) NOT NULL", CanBeNull=false)]
+		public string MAQTHOC
+		{
+			get
+			{
+				return this._MAQTHOC;
+			}
+			set
+			{
+				if ((this._MAQTHOC != value))
+				{
+					this._MAQTHOC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAHS", DbType="Char(5)")]
+		public string MAHS
+		{
+			get
+			{
+				return this._MAHS;
+			}
+			set
+			{
+				if ((this._MAHS != value))
+				{
+					this._MAHS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALOP", DbType="Char(5)")]
+		public string MALOP
+		{
+			get
+			{
+				return this._MALOP;
+			}
+			set
+			{
+				if ((this._MALOP != value))
+				{
+					this._MALOP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAHK", DbType="Char(4)")]
+		public string MAHK
+		{
+			get
+			{
+				return this._MAHK;
+			}
+			set
+			{
+				if ((this._MAHK != value))
+				{
+					this._MAHK = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DIEMTBHK", DbType="Real")]
+		public System.Nullable<float> DIEMTBHK
+		{
+			get
+			{
+				return this._DIEMTBHK;
+			}
+			set
+			{
+				if ((this._DIEMTBHK != value))
+				{
+					this._DIEMTBHK = value;
+				}
+			}
+		}
+	}
+	
 	public partial class sp_TimHSTheoMaHSResult
 	{
 		
@@ -5367,300 +5709,6 @@ namespace NMCNPM_QLHS.DAL
 				if ((this._SISO != value))
 				{
 					this._SISO = value;
-				}
-			}
-		}
-	}
-	
-	public partial class sp_ThemNguoiDungResult
-	{
-		
-		private string _MAND;
-		
-		private string _TENDANGNHAP;
-		
-		private string _TENNGUOIDUNG;
-		
-		private string _MATKHAU;
-		
-		private string _MALND;
-		
-		public sp_ThemNguoiDungResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAND", DbType="Char(6) NOT NULL", CanBeNull=false)]
-		public string MAND
-		{
-			get
-			{
-				return this._MAND;
-			}
-			set
-			{
-				if ((this._MAND != value))
-				{
-					this._MAND = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENDANGNHAP", DbType="Char(50)")]
-		public string TENDANGNHAP
-		{
-			get
-			{
-				return this._TENDANGNHAP;
-			}
-			set
-			{
-				if ((this._TENDANGNHAP != value))
-				{
-					this._TENDANGNHAP = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENNGUOIDUNG", DbType="NVarChar(50)")]
-		public string TENNGUOIDUNG
-		{
-			get
-			{
-				return this._TENNGUOIDUNG;
-			}
-			set
-			{
-				if ((this._TENNGUOIDUNG != value))
-				{
-					this._TENNGUOIDUNG = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATKHAU", DbType="Char(20)")]
-		public string MATKHAU
-		{
-			get
-			{
-				return this._MATKHAU;
-			}
-			set
-			{
-				if ((this._MATKHAU != value))
-				{
-					this._MATKHAU = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALND", DbType="Char(6)")]
-		public string MALND
-		{
-			get
-			{
-				return this._MALND;
-			}
-			set
-			{
-				if ((this._MALND != value))
-				{
-					this._MALND = value;
-				}
-			}
-		}
-	}
-	
-	public partial class sp_ThemQTHResult
-	{
-		
-		private string _MAQTHOC;
-		
-		private string _MAHS;
-		
-		private string _MALOP;
-		
-		private string _MAHK;
-		
-		private System.Nullable<float> _DIEMTBHK;
-		
-		public sp_ThemQTHResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAQTHOC", DbType="Char(6) NOT NULL", CanBeNull=false)]
-		public string MAQTHOC
-		{
-			get
-			{
-				return this._MAQTHOC;
-			}
-			set
-			{
-				if ((this._MAQTHOC != value))
-				{
-					this._MAQTHOC = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAHS", DbType="Char(5)")]
-		public string MAHS
-		{
-			get
-			{
-				return this._MAHS;
-			}
-			set
-			{
-				if ((this._MAHS != value))
-				{
-					this._MAHS = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALOP", DbType="Char(5)")]
-		public string MALOP
-		{
-			get
-			{
-				return this._MALOP;
-			}
-			set
-			{
-				if ((this._MALOP != value))
-				{
-					this._MALOP = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAHK", DbType="Char(4)")]
-		public string MAHK
-		{
-			get
-			{
-				return this._MAHK;
-			}
-			set
-			{
-				if ((this._MAHK != value))
-				{
-					this._MAHK = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DIEMTBHK", DbType="Real")]
-		public System.Nullable<float> DIEMTBHK
-		{
-			get
-			{
-				return this._DIEMTBHK;
-			}
-			set
-			{
-				if ((this._DIEMTBHK != value))
-				{
-					this._DIEMTBHK = value;
-				}
-			}
-		}
-	}
-	
-	public partial class sp_ThemQTH1HocKyResult
-	{
-		
-		private string _MAQTHOC;
-		
-		private string _MAHS;
-		
-		private string _MALOP;
-		
-		private string _MAHK;
-		
-		private System.Nullable<float> _DIEMTBHK;
-		
-		public sp_ThemQTH1HocKyResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAQTHOC", DbType="Char(6) NOT NULL", CanBeNull=false)]
-		public string MAQTHOC
-		{
-			get
-			{
-				return this._MAQTHOC;
-			}
-			set
-			{
-				if ((this._MAQTHOC != value))
-				{
-					this._MAQTHOC = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAHS", DbType="Char(5)")]
-		public string MAHS
-		{
-			get
-			{
-				return this._MAHS;
-			}
-			set
-			{
-				if ((this._MAHS != value))
-				{
-					this._MAHS = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALOP", DbType="Char(5)")]
-		public string MALOP
-		{
-			get
-			{
-				return this._MALOP;
-			}
-			set
-			{
-				if ((this._MALOP != value))
-				{
-					this._MALOP = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAHK", DbType="Char(4)")]
-		public string MAHK
-		{
-			get
-			{
-				return this._MAHK;
-			}
-			set
-			{
-				if ((this._MAHK != value))
-				{
-					this._MAHK = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DIEMTBHK", DbType="Real")]
-		public System.Nullable<float> DIEMTBHK
-		{
-			get
-			{
-				return this._DIEMTBHK;
-			}
-			set
-			{
-				if ((this._DIEMTBHK != value))
-				{
-					this._DIEMTBHK = value;
 				}
 			}
 		}
