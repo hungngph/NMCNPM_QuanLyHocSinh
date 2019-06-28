@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoaiHinhKT));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlLoaiKT = new DevExpress.XtraGrid.GridControl();
-            this.bindingSourceLHKT = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceLHKT = new System.Windows.Forms.BindingSource();
             this.dgvLHKT = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_maLHKT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_tenLHKT = new DevExpress.XtraGrid.Columns.GridColumn();
