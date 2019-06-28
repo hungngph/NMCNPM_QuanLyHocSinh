@@ -191,6 +191,7 @@ namespace NMCNPM_QLHS.GUI
             {
                 bindingNavigatorAddNewItem.Enabled = true;
                 btnHoanTat.Visible = false;
+                btnHuyBo.Visible = false;
                 disableAllTextBox();
                 txtMaHS.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_maHS);
                 txtHoTen.Text = dgvHocSinh.GetFocusedRowCellDisplayText(col_hoTen);
@@ -248,12 +249,14 @@ namespace NMCNPM_QLHS.GUI
                     {
                         HOCSINH_BUS.Insert(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi, image_binary);
                         load_dgvHocSinh();
+                        XtraMessageBox.Show("Thêm thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         bindingNavigatorHocSinh.BindingSource.MoveLast();
                     }
                     else
                     {
                         HOCSINH_BUS.Update(maHS, hoTen, gioiTinh, ngaySinh, email, diaChi, image_binary);
                         load_dgvHocSinh();
+                        XtraMessageBox.Show("Sửa thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     btnHoanTat.Visible = false;
                     btnHuyBo.Visible = false;

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using NMCNPM_QLHS.BUS;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -19,35 +20,11 @@ namespace NMCNPM_QLHS.GUI
             InitializeComponent();
         }
 
-        private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            bindingNavigatorSaveItem_Click(sender, e);
-        }
-
-        private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            string maHK;
-            int heSo;
-            bindingNavigatorHocKy.BindingSource.MoveFirst();
-            for (int i = 0; i < dgvHocKy.RowCount; i++)
-            {
-                //maHK = dgvHocKy.GetFocusedRowCellDisplayText(col_maHocKy);
-                heSo = int.Parse(dgvHocKy.GetFocusedRowCellDisplayText(col_heSo));
-                //HOCKY_BUS.update(maHK, heSo);
-                bindingNavigatorHocKy.BindingSource.MoveNext();
-            }
-            state = false;
-        }
-
-        private void bindingNavigatorCancelItem_Click(object sender, EventArgs e)
-        {
-            //bindingSourceHocKy.DataSource = HOCKY_BUS.LayTatCaHocKy();
-            state = false;
-        }
+        #region -Form-
 
         private void frmLoaiHinhKT_Load(object sender, EventArgs e)
         {
-            //bindingSourceHocKy.DataSource = HOCKY_BUS.LayTatCaHocKy();
+            bindingSourceLHKT.DataSource = LOAIHINHKIEMTRA_BUS.LayTatCaLHKT();
         }
 
         private void frmLoaiHinhKT_FormClosing(object sender, FormClosingEventArgs e)
@@ -57,6 +34,38 @@ namespace NMCNPM_QLHS.GUI
                 if (XtraMessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     bindingNavigatorSaveItem.PerformClick();
             }
+        }
+
+        #endregion -Form-
+
+        #region  -bingdingNagigatorItem_Click-
+
+        private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            string maLHKT;
+            int heSo;
+            bindingNavigatorHocKy.BindingSource.MoveFirst();
+            for (int i = 0; i < dgvLHKT.RowCount; i++)
+            {
+                maLHKT = dgvLHKT.GetFocusedRowCellDisplayText(col_maLHKT);
+                heSo = int.Parse(dgvLHKT.GetFocusedRowCellDisplayText(col_heSo));
+                LOAIHINHKIEMTRA_BUS.update(maLHKT, heSo);
+                bindingNavigatorHocKy.BindingSource.MoveNext();
+            }
+            state = false;
+        }
+
+        private void bindingNavigatorCancelItem_Click(object sender, EventArgs e)
+        {
+            bindingSourceLHKT.DataSource = LOAIHINHKIEMTRA_BUS.LayTatCaLHKT();
+            state = false;
+        }
+
+        #endregion -bingdingNagigatorItem_Click-
+
+        private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorSaveItem_Click(sender, e);
         }
 
         private void dgvHocKy_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
