@@ -28,20 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNamHoc));
             this.BIThemMoi = new DevExpress.XtraBars.BarButtonItem();
             this.BIXoa = new DevExpress.XtraBars.BarButtonItem();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
             this.BILuuDanhSach = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
-            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
+            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -54,8 +53,8 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorNamHoc = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingSourceNamHoc = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigatorNamHoc = new System.Windows.Forms.BindingNavigator();
+            this.bindingSourceNamHoc = new System.Windows.Forms.BindingSource();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControlNamHoc = new DevExpress.XtraGrid.GridControl();
@@ -65,7 +64,7 @@
             this.col_tenNamHoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_tenNamHoc_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorNamHoc)).BeginInit();
@@ -171,7 +170,7 @@
             // 
             this.btnThem.Caption = "Thêm";
             this.btnThem.Id = 3;
-            this.btnThem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
+            this.btnThem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Add_16px;
             this.btnThem.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
             this.btnThem.Name = "btnThem";
             this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
@@ -180,7 +179,7 @@
             // 
             this.btnXoa.Caption = "Xóa";
             this.btnXoa.Id = 4;
-            this.btnXoa.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
+            this.btnXoa.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Delete_16px;
             this.btnXoa.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);

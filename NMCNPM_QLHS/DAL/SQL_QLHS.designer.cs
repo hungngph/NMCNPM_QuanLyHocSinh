@@ -850,7 +850,7 @@ namespace NMCNPM_QLHS.DAL
 		
 		private System.Nullable<int> _SOLUONGDAT;
 		
-		private System.Nullable<float> _TYLE;
+		private string _TYLE;
 		
 		private EntityRef<HOCKY> _HOCKY;
 		
@@ -868,7 +868,7 @@ namespace NMCNPM_QLHS.DAL
     partial void OnSISOChanged();
     partial void OnSOLUONGDATChanging(System.Nullable<int> value);
     partial void OnSOLUONGDATChanged();
-    partial void OnTYLEChanging(System.Nullable<float> value);
+    partial void OnTYLEChanging(string value);
     partial void OnTYLEChanged();
     #endregion
 		
@@ -967,8 +967,8 @@ namespace NMCNPM_QLHS.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TYLE", DbType="Real")]
-		public System.Nullable<float> TYLE
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TYLE", DbType="VarChar(50)")]
+		public string TYLE
 		{
 			get
 			{
@@ -1310,7 +1310,7 @@ namespace NMCNPM_QLHS.DAL
 		
 		private System.Nullable<int> _SOLUONGDAT;
 		
-		private System.Nullable<float> _TYLE;
+		private string _TYLE;
 		
 		private EntityRef<BAOCAOTONGKETMON> _BAOCAOTONGKETMON;
 		
@@ -1328,7 +1328,7 @@ namespace NMCNPM_QLHS.DAL
     partial void OnSISOChanged();
     partial void OnSOLUONGDATChanging(System.Nullable<int> value);
     partial void OnSOLUONGDATChanged();
-    partial void OnTYLEChanging(System.Nullable<float> value);
+    partial void OnTYLEChanging(string value);
     partial void OnTYLEChanged();
     #endregion
 		
@@ -1427,8 +1427,8 @@ namespace NMCNPM_QLHS.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TYLE", DbType="Real")]
-		public System.Nullable<float> TYLE
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TYLE", DbType="VarChar(50)")]
+		public string TYLE
 		{
 			get
 			{
@@ -1738,6 +1738,8 @@ namespace NMCNPM_QLHS.DAL
 		
 		private string _TENHOCKY;
 		
+		private System.Nullable<int> _HESO;
+		
 		private EntitySet<BAOCAOTONGKETHK> _BAOCAOTONGKETHKs;
 		
 		private EntitySet<BAOCAOTONGKETMON> _BAOCAOTONGKETMONs;
@@ -1752,6 +1754,8 @@ namespace NMCNPM_QLHS.DAL
     partial void OnMAHKChanged();
     partial void OnTENHOCKYChanging(string value);
     partial void OnTENHOCKYChanged();
+    partial void OnHESOChanging(System.Nullable<int> value);
+    partial void OnHESOChanged();
     #endregion
 		
 		public HOCKY()
@@ -1798,6 +1802,26 @@ namespace NMCNPM_QLHS.DAL
 					this._TENHOCKY = value;
 					this.SendPropertyChanged("TENHOCKY");
 					this.OnTENHOCKYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HESO", DbType="Int")]
+		public System.Nullable<int> HESO
+		{
+			get
+			{
+				return this._HESO;
+			}
+			set
+			{
+				if ((this._HESO != value))
+				{
+					this.OnHESOChanging(value);
+					this.SendPropertyChanging();
+					this._HESO = value;
+					this.SendPropertyChanged("HESO");
+					this.OnHESOChanged();
 				}
 			}
 		}
@@ -1916,6 +1940,8 @@ namespace NMCNPM_QLHS.DAL
 		
 		private string _EMAIL;
 		
+		private System.Data.Linq.Binary _ANH;
+		
 		private EntitySet<QUATRINHHOC> _QUATRINHHOCs;
 		
     #region Extensibility Method Definitions
@@ -1934,6 +1960,8 @@ namespace NMCNPM_QLHS.DAL
     partial void OnDIACHIChanged();
     partial void OnEMAILChanging(string value);
     partial void OnEMAILChanged();
+    partial void OnANHChanging(System.Data.Linq.Binary value);
+    partial void OnANHChanged();
     #endregion
 		
 		public HOCSINH()
@@ -2058,6 +2086,26 @@ namespace NMCNPM_QLHS.DAL
 					this._EMAIL = value;
 					this.SendPropertyChanged("EMAIL");
 					this.OnEMAILChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ANH", DbType="Image", UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary ANH
+		{
+			get
+			{
+				return this._ANH;
+			}
+			set
+			{
+				if ((this._ANH != value))
+				{
+					this.OnANHChanging(value);
+					this.SendPropertyChanging();
+					this._ANH = value;
+					this.SendPropertyChanged("ANH");
+					this.OnANHChanged();
 				}
 			}
 		}

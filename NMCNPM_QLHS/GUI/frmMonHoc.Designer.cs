@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMonHoc));
-            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
+            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog();
             this.BIXoa = new DevExpress.XtraBars.BarButtonItem();
             this.BIThemMoi = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
@@ -53,8 +52,8 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMonHoc = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingSourceMonHoc = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigatorMonHoc = new System.Windows.Forms.BindingNavigator();
+            this.bindingSourceMonHoc = new System.Windows.Forms.BindingSource();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControlMonHoc = new DevExpress.XtraGrid.GridControl();
             this.dgvMonHoc = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -63,7 +62,7 @@
             this.col_tenMonHoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_tenMonHoc_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorMonHoc)).BeginInit();
             this.bindingNavigatorMonHoc.SuspendLayout();
@@ -105,8 +104,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 351);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 285);
             // 
             // barManager1
             // 
@@ -129,26 +127,23 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(597, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(512, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 351);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 285);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(597, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(512, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(597, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(512, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 351);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 285);
             // 
             // BILuuDanhSach
             // 
@@ -162,7 +157,7 @@
             // 
             this.btnThem.Caption = "Thêm";
             this.btnThem.Id = 3;
-            this.btnThem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
+            this.btnThem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Add_16px;
             this.btnThem.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
             this.btnThem.Name = "btnThem";
             this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
@@ -171,17 +166,17 @@
             // 
             this.btnXoa.Caption = "Xóa";
             this.btnXoa.Id = 4;
-            this.btnXoa.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
+            this.btnXoa.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Delete_16px;
             this.btnXoa.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
             // 
-            // bindingNavigatorEditItem
+            // bindingNavigatorSaveItem
             // 
-            this.bindingNavigatorSaveItem.Image = global::NMCNPM_QLHS.Properties.Resources.Edit_32px;
+            this.bindingNavigatorSaveItem.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
             this.bindingNavigatorSaveItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
-            this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(61, 28);
+            this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(55, 28);
             this.bindingNavigatorSaveItem.Text = "Lưu";
             this.bindingNavigatorSaveItem.Click += new System.EventHandler(this.bindingNavigatorSaveItem_Click);
             // 
@@ -218,7 +213,7 @@
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(58, 27);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
             this.toolStripTextBox1.Text = "0";
             this.toolStripTextBox1.ToolTipText = "Current position";
             // 
@@ -250,14 +245,14 @@
             this.bindingNavigatorDeleteItem.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(63, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(55, 28);
             this.bindingNavigatorDeleteItem.Text = "Xóa";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(45, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(35, 28);
             this.toolStripLabel1.Text = "of {0}";
             this.toolStripLabel1.ToolTipText = "Total number of items";
             // 
@@ -266,7 +261,7 @@
             this.bindingNavigatorAddNewItem.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(66, 28);
             this.bindingNavigatorAddNewItem.Text = "Thêm";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
@@ -290,14 +285,14 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.bindingNavigatorSaveItem});
-            this.bindingNavigatorMonHoc.Location = new System.Drawing.Point(2, 25);
+            this.bindingNavigatorMonHoc.Location = new System.Drawing.Point(2, 20);
             this.bindingNavigatorMonHoc.MoveFirstItem = this.toolStripButton1;
             this.bindingNavigatorMonHoc.MoveLastItem = this.toolStripButton4;
             this.bindingNavigatorMonHoc.MoveNextItem = this.toolStripButton3;
             this.bindingNavigatorMonHoc.MovePreviousItem = this.toolStripButton2;
             this.bindingNavigatorMonHoc.Name = "bindingNavigatorMonHoc";
             this.bindingNavigatorMonHoc.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigatorMonHoc.Size = new System.Drawing.Size(593, 31);
+            this.bindingNavigatorMonHoc.Size = new System.Drawing.Size(508, 31);
             this.bindingNavigatorMonHoc.TabIndex = 2;
             this.bindingNavigatorMonHoc.Text = "bindingNavigator2";
             // 
@@ -307,7 +302,6 @@
             // 
             // gridView1
             // 
-            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gridControlMonHoc;
             this.gridView1.Name = "gridView1";
             // 
@@ -315,15 +309,13 @@
             // 
             this.gridControlMonHoc.DataSource = this.bindingSourceMonHoc;
             this.gridControlMonHoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlMonHoc.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControlMonHoc.Location = new System.Drawing.Point(2, 56);
+            this.gridControlMonHoc.Location = new System.Drawing.Point(2, 51);
             this.gridControlMonHoc.MainView = this.dgvMonHoc;
-            this.gridControlMonHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlMonHoc.Name = "gridControlMonHoc";
             this.gridControlMonHoc.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.col_maMonHoc_edit,
             this.col_tenMonHoc_edit});
-            this.gridControlMonHoc.Size = new System.Drawing.Size(593, 293);
+            this.gridControlMonHoc.Size = new System.Drawing.Size(508, 232);
             this.gridControlMonHoc.TabIndex = 3;
             this.gridControlMonHoc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvMonHoc,
@@ -335,7 +327,6 @@
             this.dgvMonHoc.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.col_maMonHoc,
             this.col_tenMonHoc});
-            this.dgvMonHoc.DetailHeight = 431;
             this.dgvMonHoc.GridControl = this.gridControlMonHoc;
             this.dgvMonHoc.Name = "dgvMonHoc";
             this.dgvMonHoc.OptionsView.ShowGroupPanel = false;
@@ -346,12 +337,11 @@
             this.col_maMonHoc.Caption = "Mã môn học";
             this.col_maMonHoc.ColumnEdit = this.col_maMonHoc_edit;
             this.col_maMonHoc.FieldName = "MAMONHOC";
-            this.col_maMonHoc.MinWidth = 23;
             this.col_maMonHoc.Name = "col_maMonHoc";
             this.col_maMonHoc.OptionsColumn.ReadOnly = true;
             this.col_maMonHoc.Visible = true;
             this.col_maMonHoc.VisibleIndex = 0;
-            this.col_maMonHoc.Width = 283;
+            this.col_maMonHoc.Width = 243;
             // 
             // col_maMonHoc_edit
             // 
@@ -363,11 +353,10 @@
             this.col_tenMonHoc.Caption = "Tên môn học";
             this.col_tenMonHoc.ColumnEdit = this.col_tenMonHoc_edit;
             this.col_tenMonHoc.FieldName = "TENMONHOC";
-            this.col_tenMonHoc.MinWidth = 23;
             this.col_tenMonHoc.Name = "col_tenMonHoc";
             this.col_tenMonHoc.Visible = true;
             this.col_tenMonHoc.VisibleIndex = 1;
-            this.col_tenMonHoc.Width = 1293;
+            this.col_tenMonHoc.Width = 1108;
             // 
             // col_tenMonHoc_edit
             // 
@@ -380,9 +369,8 @@
             this.groupControl1.Controls.Add(this.bindingNavigatorMonHoc);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(597, 351);
+            this.groupControl1.Size = new System.Drawing.Size(512, 285);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Danh sách môn học";
             // 
@@ -396,15 +384,14 @@
             // 
             // frmMonHoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 351);
+            this.ClientSize = new System.Drawing.Size(512, 285);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMonHoc";
             this.Text = "Môn học";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMonHoc_FormClosing);
