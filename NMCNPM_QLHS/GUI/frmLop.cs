@@ -141,7 +141,6 @@ namespace NMCNPM_QLHS.GUI
             btnHoanTat.Visible = false;
             btnHuyBo.Visible = false;
             txtTenLop.ReadOnly = true;
-            cboNamHoc.EditValue = NAMHOC_BUS.LayNamHocHienTai().MANAMHOC.ToString();
         }
 
         private void cboNamHoc_EditValueChanged(object sender, EventArgs e)

@@ -96,55 +96,55 @@
             // 
             // cboHocKy
             // 
-            this.cboHocKy.Location = new System.Drawing.Point(766, 38);
+            this.cboHocKy.Location = new System.Drawing.Point(752, 42);
             this.cboHocKy.Name = "cboHocKy";
             this.cboHocKy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboHocKy.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENHOCKY", "")});
             this.cboHocKy.Properties.NullText = "";
-            this.cboHocKy.Size = new System.Drawing.Size(179, 20);
+            this.cboHocKy.Size = new System.Drawing.Size(174, 20);
             this.cboHocKy.StyleController = this.layoutControl1;
             this.cboHocKy.TabIndex = 4;
             this.cboHocKy.EditValueChanged += new System.EventHandler(this.cboHocKy_EditValueChanged);
             // 
             // cboLop
             // 
-            this.cboLop.Location = new System.Drawing.Point(520, 38);
+            this.cboLop.Location = new System.Drawing.Point(512, 42);
             this.cboLop.Name = "cboLop";
             this.cboLop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboLop.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENLOP", "")});
             this.cboLop.Properties.NullText = "";
-            this.cboLop.Size = new System.Drawing.Size(194, 20);
+            this.cboLop.Size = new System.Drawing.Size(188, 20);
             this.cboLop.StyleController = this.layoutControl1;
             this.cboLop.TabIndex = 3;
             this.cboLop.EditValueChanged += new System.EventHandler(this.cboLop_EditValueChanged);
             // 
             // cboKhoiLop
             // 
-            this.cboKhoiLop.Location = new System.Drawing.Point(293, 38);
+            this.cboKhoiLop.Location = new System.Drawing.Point(290, 42);
             this.cboKhoiLop.Name = "cboKhoiLop";
             this.cboKhoiLop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboKhoiLop.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENKHOI", "")});
             this.cboKhoiLop.Properties.NullText = "";
-            this.cboKhoiLop.Size = new System.Drawing.Size(175, 20);
+            this.cboKhoiLop.Size = new System.Drawing.Size(170, 20);
             this.cboKhoiLop.StyleController = this.layoutControl1;
             this.cboKhoiLop.TabIndex = 2;
             this.cboKhoiLop.EditValueChanged += new System.EventHandler(this.cboKhoiLop_EditValueChanged);
             // 
             // cboNamHoc
             // 
-            this.cboNamHoc.Location = new System.Drawing.Point(70, 38);
+            this.cboNamHoc.Location = new System.Drawing.Point(72, 42);
             this.cboNamHoc.Name = "cboNamHoc";
             this.cboNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboNamHoc.Properties.PopupSizeable = true;
             this.cboNamHoc.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cboNamHoc.Size = new System.Drawing.Size(171, 20);
+            this.cboNamHoc.Size = new System.Drawing.Size(166, 20);
             this.cboNamHoc.StyleController = this.layoutControl1;
             this.cboNamHoc.TabIndex = 1;
             this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
@@ -156,7 +156,7 @@
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(967, 79);
+            this.Root.Size = new System.Drawing.Size(950, 86);
             this.Root.TextVisible = false;
             // 
             // layoutControlGroup1
@@ -168,7 +168,7 @@
             this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(949, 63);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(930, 66);
             this.layoutControlGroup1.Text = "Thông tin";
             // 
             // layoutControlItem1
@@ -176,34 +176,34 @@
             this.layoutControlItem1.Control = this.cboNamHoc;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(223, 25);
+            this.layoutControlItem1.Size = new System.Drawing.Size(218, 24);
             this.layoutControlItem1.Text = "Năm học:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(45, 13);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.cboKhoiLop;
-            this.layoutControlItem2.Location = new System.Drawing.Point(223, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(218, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(227, 25);
+            this.layoutControlItem2.Size = new System.Drawing.Size(222, 24);
             this.layoutControlItem2.Text = "Khối lớp:";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(45, 13);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.cboLop;
-            this.layoutControlItem3.Location = new System.Drawing.Point(450, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(440, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(246, 25);
+            this.layoutControlItem3.Size = new System.Drawing.Size(240, 24);
             this.layoutControlItem3.Text = "Lớp:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(45, 13);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.cboHocKy;
-            this.layoutControlItem6.Location = new System.Drawing.Point(696, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(680, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(231, 25);
+            this.layoutControlItem6.Size = new System.Drawing.Size(226, 24);
             this.layoutControlItem6.Text = "Học kỳ:";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(45, 13);
             // 

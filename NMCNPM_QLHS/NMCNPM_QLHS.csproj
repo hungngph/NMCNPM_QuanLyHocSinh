@@ -114,6 +114,9 @@
     <Compile Include="DAL\NAMHOC_DAL.cs" />
     <Compile Include="DAL\NGUOIDUNG_DAL.cs" />
     <Compile Include="DAL\QUATRINHHOC_DAL.cs" />
+    <Compile Include="DAL\SQL_QLHS.cs">
+      <DependentUpon>SQL_QLHS.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DAL\SQL_QLHS.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -745,6 +748,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Search_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Login_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Ok_16px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
