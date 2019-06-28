@@ -33,9 +33,6 @@ namespace NMCNPM_QLHS.GUI
         {
             //Load frmSplash
             InitializeComponent();
-            SplashScreenManager.ShowDefaultSplashScreen("Đang mở...", "Phần Mềm Quản lý học sinh");
-            Thread.Sleep(1000);
-            SplashScreenManager.CloseDefaultSplashScreen();
             Permissions();
         }
 
@@ -43,10 +40,6 @@ namespace NMCNPM_QLHS.GUI
         {
             //Load frmSplash
             InitializeComponent();
-            SplashScreenManager.ShowDefaultSplashScreen("Đang mở...", "Phần Mềm Quản lý học sinh");
-            Thread.Sleep(1000);
-            SplashScreenManager.CloseDefaultSplashScreen();
-            Permissions();
             username = tenDangNhap;
         }
         #endregion -Constructor-

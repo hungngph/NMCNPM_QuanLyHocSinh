@@ -528,9 +528,9 @@
             this.btnImport.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Login_16px;
             this.btnImport.Location = new System.Drawing.Point(495, 23);
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(75, 23);
+            this.btnImport.Size = new System.Drawing.Size(114, 23);
             this.btnImport.TabIndex = 3;
-            this.btnImport.Text = "Import";
+            this.btnImport.Text = "Nhập danh sách";
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // gridControlHocSinh

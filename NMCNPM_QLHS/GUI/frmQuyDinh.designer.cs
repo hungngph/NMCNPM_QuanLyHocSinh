@@ -400,7 +400,7 @@
             this.labelDiem.ForeColor = System.Drawing.Color.Red;
             this.labelDiem.Location = new System.Drawing.Point(12, 134);
             this.labelDiem.Name = "labelDiem";
-            this.labelDiem.Size = new System.Drawing.Size(322, 20);
+            this.labelDiem.Size = new System.Drawing.Size(305, 20);
             this.labelDiem.TabIndex = 9;
             // 
             // txtDatHK
@@ -419,7 +419,7 @@
             0,
             0,
             0});
-            this.txtDatHK.Size = new System.Drawing.Size(238, 20);
+            this.txtDatHK.Size = new System.Drawing.Size(221, 20);
             this.txtDatHK.StyleController = this.layoutControl1;
             this.txtDatHK.TabIndex = 8;
             this.txtDatHK.EditValueChanged += new System.EventHandler(this.TextBoxDiem_EditValueChanged);
@@ -440,16 +440,16 @@
             0,
             0,
             0});
-            this.txtDatMon.Size = new System.Drawing.Size(238, 20);
+            this.txtDatMon.Size = new System.Drawing.Size(221, 20);
             this.txtDatMon.StyleController = this.layoutControl1;
             this.txtDatMon.TabIndex = 7;
             this.txtDatMon.EditValueChanged += new System.EventHandler(this.TextBoxDiem_EditValueChanged);
             // 
             // btnHuy3
             // 
-            this.btnHuy3.Location = new System.Drawing.Point(257, 108);
+            this.btnHuy3.Location = new System.Drawing.Point(244, 108);
             this.btnHuy3.Name = "btnHuy3";
-            this.btnHuy3.Size = new System.Drawing.Size(77, 22);
+            this.btnHuy3.Size = new System.Drawing.Size(73, 22);
             this.btnHuy3.StyleController = this.layoutControl1;
             this.btnHuy3.TabIndex = 6;
             this.btnHuy3.Text = "Hủy bỏ";
@@ -457,9 +457,9 @@
             // 
             // btnDongY3
             // 
-            this.btnDongY3.Location = new System.Drawing.Point(179, 108);
+            this.btnDongY3.Location = new System.Drawing.Point(170, 108);
             this.btnDongY3.Name = "btnDongY3";
-            this.btnDongY3.Size = new System.Drawing.Size(74, 22);
+            this.btnDongY3.Size = new System.Drawing.Size(70, 22);
             this.btnDongY3.StyleController = this.layoutControl1;
             this.btnDongY3.TabIndex = 5;
             this.btnDongY3.Text = "Đồng ý";
@@ -481,7 +481,7 @@
             0,
             0,
             0});
-            this.txtDiemToiDa.Size = new System.Drawing.Size(238, 20);
+            this.txtDiemToiDa.Size = new System.Drawing.Size(221, 20);
             this.txtDiemToiDa.StyleController = this.layoutControl1;
             this.txtDiemToiDa.TabIndex = 4;
             this.txtDiemToiDa.EditValueChanged += new System.EventHandler(this.TextBoxDiem_EditValueChanged);
@@ -502,7 +502,7 @@
             0,
             0,
             0});
-            this.txtDiemToiThieu.Size = new System.Drawing.Size(238, 20);
+            this.txtDiemToiThieu.Size = new System.Drawing.Size(221, 20);
             this.txtDiemToiThieu.StyleController = this.layoutControl1;
             this.txtDiemToiThieu.TabIndex = 4;
             this.txtDiemToiThieu.EditValueChanged += new System.EventHandler(this.TextBoxDiem_EditValueChanged);
@@ -521,7 +521,7 @@
             this.layoutControlItem12,
             this.layoutControlItem14});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(346, 166);
+            this.Root.Size = new System.Drawing.Size(329, 166);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
@@ -530,7 +530,7 @@
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 96);
             this.emptySpaceItem1.MinSize = new System.Drawing.Size(104, 24);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(167, 26);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(158, 26);
             this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -539,7 +539,7 @@
             this.layoutControlItem1.Control = this.txtDiemToiDa;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(326, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(309, 24);
             this.layoutControlItem1.Text = "Điểm tối đa:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(81, 13);
             // 
@@ -549,25 +549,25 @@
             this.layout.CustomizationFormText = "layoutControlItem1";
             this.layout.Location = new System.Drawing.Point(0, 0);
             this.layout.Name = "layout";
-            this.layout.Size = new System.Drawing.Size(326, 24);
+            this.layout.Size = new System.Drawing.Size(309, 24);
             this.layout.Text = "Điểm tối thiểu:";
             this.layout.TextSize = new System.Drawing.Size(81, 13);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnDongY3;
-            this.layoutControlItem2.Location = new System.Drawing.Point(167, 96);
+            this.layoutControlItem2.Location = new System.Drawing.Point(158, 96);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(78, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(74, 26);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnHuy3;
-            this.layoutControlItem3.Location = new System.Drawing.Point(245, 96);
+            this.layoutControlItem3.Location = new System.Drawing.Point(232, 96);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(81, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(77, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -576,7 +576,7 @@
             this.layoutControlItem11.Control = this.txtDatMon;
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(326, 24);
+            this.layoutControlItem11.Size = new System.Drawing.Size(309, 24);
             this.layoutControlItem11.Text = "Điểm đạt môn:";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(81, 13);
             // 
@@ -585,7 +585,7 @@
             this.layoutControlItem12.Control = this.txtDatHK;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(326, 24);
+            this.layoutControlItem12.Size = new System.Drawing.Size(309, 24);
             this.layoutControlItem12.Text = "Điểm đạt học kỳ:";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(81, 13);
             // 
@@ -594,7 +594,7 @@
             this.layoutControlItem14.Control = this.labelDiem;
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 122);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(326, 24);
+            this.layoutControlItem14.Size = new System.Drawing.Size(309, 24);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
             // 

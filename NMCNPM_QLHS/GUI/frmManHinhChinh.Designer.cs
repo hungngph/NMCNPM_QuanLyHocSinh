@@ -280,7 +280,7 @@
             // 
             // btnDSHocSinh
             // 
-            this.btnDSHocSinh.Caption = "Danh sách học sinh";
+            this.btnDSHocSinh.Caption = "Tra cứu học sinh";
             this.btnDSHocSinh.Id = 15;
             this.btnDSHocSinh.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.dshocsinh;
             this.btnDSHocSinh.Name = "btnDSHocSinh";
@@ -298,7 +298,7 @@
             // 
             // btnTraCuuHS
             // 
-            this.btnTraCuuHS.Caption = "Tra cứu học sinh";
+            this.btnTraCuuHS.Caption = "Tra cứu quá trình học sinh";
             this.btnTraCuuHS.Id = 17;
             this.btnTraCuuHS.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.tracuuhocsinh;
             this.btnTraCuuHS.Name = "btnTraCuuHS";
@@ -334,7 +334,7 @@
             // 
             // btnTraCuuDiem
             // 
-            this.btnTraCuuDiem.Caption = "Tra cứ điểm học sinh";
+            this.btnTraCuuDiem.Caption = "Tra cứu điểm học sinh";
             this.btnTraCuuDiem.Id = 25;
             this.btnTraCuuDiem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.phancong;
             this.btnTraCuuDiem.Name = "btnTraCuuDiem";
@@ -354,8 +354,6 @@
             // 
             this.btnXemDiem.Caption = "Xem điểm";
             this.btnXemDiem.Id = 28;
-            this.btnXemDiem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.lookup_reference_16x16;
-            this.btnXemDiem.ImageOptions.LargeImage = global::NMCNPM_QLHS.Properties.Resources.lookup_reference_32x32;
             this.btnXemDiem.Name = "btnXemDiem";
             this.btnXemDiem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnXemDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemDiem_ItemClick);
@@ -497,7 +495,6 @@
             // 
             // ribbonPageGroup7
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.btnDSHocSinh);
             this.ribbonPageGroup7.ItemLinks.Add(this.btnDSLopHoc);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Xuất danh sách";
@@ -513,6 +510,7 @@
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.btnTraCuuHS);
             this.ribbonPageGroup8.ItemLinks.Add(this.btnTraCuuDiem);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnDSHocSinh);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Tra cứu";
             // 
@@ -605,7 +603,7 @@
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "Quản Lý Học Sinh";
+            this.Text = "Tra cứu học sinh";
             this.Load += new System.EventHandler(this.frmManHinhChinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
