@@ -57,6 +57,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.bindingSourceLHKT = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlLoaiKT)).BeginInit();
@@ -66,6 +67,7 @@
             this.bindingNavigatorHocKy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLHKT)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -74,18 +76,22 @@
             this.groupControl1.Controls.Add(this.bindingNavigatorHocKy);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(810, 434);
+            this.groupControl1.Size = new System.Drawing.Size(945, 534);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Danh sách loại kiểm tra";
             // 
             // gridControlLoaiKT
             // 
+            this.gridControlLoaiKT.DataSource = this.bindingSourceLHKT;
             this.gridControlLoaiKT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlLoaiKT.Location = new System.Drawing.Point(2, 47);
+            this.gridControlLoaiKT.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControlLoaiKT.Location = new System.Drawing.Point(2, 52);
             this.gridControlLoaiKT.MainView = this.dgvHocKy;
+            this.gridControlLoaiKT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlLoaiKT.Name = "gridControlLoaiKT";
-            this.gridControlLoaiKT.Size = new System.Drawing.Size(806, 385);
+            this.gridControlLoaiKT.Size = new System.Drawing.Size(941, 480);
             this.gridControlLoaiKT.TabIndex = 5;
             this.gridControlLoaiKT.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvHocKy,
@@ -100,48 +106,54 @@
             this.col_ma,
             this.col_tenHocKy,
             this.col_heSo});
+            this.dgvHocKy.DetailHeight = 431;
             this.dgvHocKy.GridControl = this.gridControlLoaiKT;
             this.dgvHocKy.Name = "dgvHocKy";
             this.dgvHocKy.OptionsView.ShowGroupPanel = false;
+            this.dgvHocKy.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.dgvHocKy_CellValueChanged);
             // 
             // col_ma
             // 
             this.col_ma.Caption = "Mã học kỳ";
             this.col_ma.FieldName = "MAHK";
+            this.col_ma.MinWidth = 23;
             this.col_ma.Name = "col_ma";
             this.col_ma.OptionsColumn.AllowEdit = false;
             this.col_ma.Visible = true;
             this.col_ma.VisibleIndex = 0;
-            this.col_ma.Width = 209;
+            this.col_ma.Width = 244;
             // 
             // col_tenHocKy
             // 
             this.col_tenHocKy.Caption = "Tên học kỳ";
             this.col_tenHocKy.FieldName = "TENHOCKY";
+            this.col_tenHocKy.MinWidth = 23;
             this.col_tenHocKy.Name = "col_tenHocKy";
             this.col_tenHocKy.OptionsColumn.AllowEdit = false;
             this.col_tenHocKy.Visible = true;
             this.col_tenHocKy.VisibleIndex = 1;
-            this.col_tenHocKy.Width = 166;
+            this.col_tenHocKy.Width = 194;
             // 
             // col_heSo
             // 
             this.col_heSo.Caption = "Hệ số";
             this.col_heSo.FieldName = "HESO";
-            this.col_heSo.MinWidth = 21;
+            this.col_heSo.MinWidth = 24;
             this.col_heSo.Name = "col_heSo";
             this.col_heSo.Visible = true;
             this.col_heSo.VisibleIndex = 2;
-            this.col_heSo.Width = 169;
+            this.col_heSo.Width = 197;
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gridControlLoaiKT;
             this.gridView1.Name = "gridView1";
             // 
             // bindingNavigatorHocKy
             // 
             this.bindingNavigatorHocKy.AddNewItem = null;
+            this.bindingNavigatorHocKy.BindingSource = this.bindingSourceLHKT;
             this.bindingNavigatorHocKy.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigatorHocKy.DeleteItem = null;
             this.bindingNavigatorHocKy.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -157,21 +169,21 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorSaveItem,
             this.bindingNavigatorCancelItem});
-            this.bindingNavigatorHocKy.Location = new System.Drawing.Point(2, 20);
+            this.bindingNavigatorHocKy.Location = new System.Drawing.Point(2, 25);
             this.bindingNavigatorHocKy.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigatorHocKy.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigatorHocKy.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.bindingNavigatorHocKy.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatorHocKy.Name = "bindingNavigatorHocKy";
             this.bindingNavigatorHocKy.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorHocKy.Size = new System.Drawing.Size(806, 27);
+            this.bindingNavigatorHocKy.Size = new System.Drawing.Size(941, 27);
             this.bindingNavigatorHocKy.TabIndex = 4;
             this.bindingNavigatorHocKy.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -203,7 +215,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(58, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -240,7 +252,7 @@
             this.bindingNavigatorSaveItem.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
             this.bindingNavigatorSaveItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
-            this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(51, 24);
+            this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(57, 24);
             this.bindingNavigatorSaveItem.Text = "Lưu";
             this.bindingNavigatorSaveItem.Click += new System.EventHandler(this.bindingNavigatorSaveItem_Click);
             // 
@@ -249,8 +261,9 @@
             this.bindingNavigatorCancelItem.Image = global::NMCNPM_QLHS.Properties.Resources.Cancel_32px;
             this.bindingNavigatorCancelItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bindingNavigatorCancelItem.Name = "bindingNavigatorCancelItem";
-            this.bindingNavigatorCancelItem.Size = new System.Drawing.Size(70, 24);
+            this.bindingNavigatorCancelItem.Size = new System.Drawing.Size(81, 24);
             this.bindingNavigatorCancelItem.Text = "Hủy bỏ";
+            this.bindingNavigatorCancelItem.Click += new System.EventHandler(this.bindingNavigatorCancelItem_Click);
             // 
             // popupMenu1
             // 
@@ -292,15 +305,17 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(810, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(945, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 434);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 534);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(810, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(945, 0);
             // 
             // barDockControlLeft
             // 
@@ -308,28 +323,37 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 434);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 534);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(810, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(945, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 434);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 534);
+            // 
+            // bindingSourceLHKT
+            // 
+            this.bindingSourceLHKT.DataSource = typeof(NMCNPM_QLHS.DAL.LOAIHINHKIEMTRA);
             // 
             // frmLoaiHinhKT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 434);
+            this.ClientSize = new System.Drawing.Size(945, 534);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLoaiHinhKT";
             this.Text = "Loại hình kiểm tra";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLoaiHinhKT_FormClosing);
+            this.Load += new System.EventHandler(this.frmLoaiHinhKT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -341,6 +365,7 @@
             this.bindingNavigatorHocKy.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLHKT)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,5 +400,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private System.Windows.Forms.BindingSource bindingSourceLHKT;
     }
 }

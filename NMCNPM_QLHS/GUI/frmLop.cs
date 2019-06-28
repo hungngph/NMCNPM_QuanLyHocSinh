@@ -245,7 +245,6 @@ namespace NMCNPM_QLHS.GUI
             if (bindingSourceLop.DataSource != null)
             {
                 DataRow dr = dgvDSLop.GetFocusedDataRow();
-
                 txtMaLop.Text = dr.ItemArray[0].ToString();
                 txtTenLop.Text = dr.ItemArray[1].ToString();
                 cboKhoiLop.EditValue = dr.ItemArray[4].ToString();
