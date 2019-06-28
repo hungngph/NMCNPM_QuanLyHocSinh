@@ -188,7 +188,7 @@ namespace NMCNPM_QLHS.GUI
         {
             dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
             navPanelChucNang.SelectedPage = navNhapLieu;
-
+            navPanelChucNang.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Default;
             bindingNavigatorAddNewItem.Enabled = false;
             btnHoanTat.Visible = true;
             btnHuyBo.Visible = true;
@@ -229,6 +229,7 @@ namespace NMCNPM_QLHS.GUI
         {
             dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
             navPanelChucNang.SelectedPage = navTimKiem;
+            navPanelChucNang.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Default;
         }
 
         #endregion -BindingNavigatorItem_Click-

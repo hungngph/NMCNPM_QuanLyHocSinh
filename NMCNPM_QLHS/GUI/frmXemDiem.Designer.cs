@@ -242,6 +242,7 @@
             this.dockPanelChucNang.ID = new System.Guid("07ab26fc-a124-497c-85be-b440fe56b5b8");
             this.dockPanelChucNang.Location = new System.Drawing.Point(0, 0);
             this.dockPanelChucNang.Name = "dockPanelChucNang";
+            this.dockPanelChucNang.Options.ShowCloseButton = false;
             this.dockPanelChucNang.OriginalSize = new System.Drawing.Size(260, 200);
             this.dockPanelChucNang.Size = new System.Drawing.Size(260, 460);
             this.dockPanelChucNang.Text = "Chức năng";

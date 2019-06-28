@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
             this.groupControlDiemCT = new DevExpress.XtraEditors.GroupControl();
             this.gridControlHocSinh = new DevExpress.XtraGrid.GridControl();
-            this.bindingSourceDiemChiTiet = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDiemChiTiet = new System.Windows.Forms.BindingSource();
             this.dgvDiem = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridColumnMonHoc = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -217,7 +216,7 @@
             // 
             // cboNamHoc
             // 
-            this.cboNamHoc.Location = new System.Drawing.Point(486, 66);
+            this.cboNamHoc.Location = new System.Drawing.Point(486, 42);
             this.cboNamHoc.Name = "cboNamHoc";
             this.cboNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -226,7 +225,7 @@
             this.cboNamHoc.Properties.NullText = "";
             this.cboNamHoc.Size = new System.Drawing.Size(372, 20);
             this.cboNamHoc.StyleController = this.layoutControl1;
-            this.cboNamHoc.TabIndex = 17;
+            this.cboNamHoc.TabIndex = 16;
             this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
             // 
             // cboHocSinh
@@ -246,7 +245,7 @@
             // 
             // cboHocKy
             // 
-            this.cboHocKy.Location = new System.Drawing.Point(486, 42);
+            this.cboHocKy.Location = new System.Drawing.Point(486, 66);
             this.cboHocKy.Name = "cboHocKy";
             this.cboHocKy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -272,8 +271,8 @@
             // 
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem7,
-            this.layoutControlItem1,
-            this.layoutControlItem3});
+            this.layoutControlItem3,
+            this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(862, 91);
@@ -291,9 +290,9 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.cboNamHoc;
-            this.layoutControlItem1.Location = new System.Drawing.Point(414, 24);
+            this.layoutControlItem1.Location = new System.Drawing.Point(414, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(424, 25);
+            this.layoutControlItem1.Size = new System.Drawing.Size(424, 24);
             this.layoutControlItem1.Text = "Năm học:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(45, 13);
             // 
@@ -301,19 +300,19 @@
             // 
             this.layoutControlItem3.Control = this.cboHocKy;
             this.layoutControlItem3.CustomizationFormText = "Học kỳ:";
-            this.layoutControlItem3.Location = new System.Drawing.Point(414, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(414, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(424, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(424, 25);
             this.layoutControlItem3.Text = "Học kỳ:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(45, 13);
             // 
-            // frmNhapDiemChiTiet
+            // frmDiemChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 511);
             this.Controls.Add(this.groupControlDiemCT);
-            this.Name = "frmNhapDiemChiTiet";
+            this.Name = "frmDiemChiTiet";
             this.Text = "Điểm chi tiết";
             this.Load += new System.EventHandler(this.frmNhapDiemChiTiet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
