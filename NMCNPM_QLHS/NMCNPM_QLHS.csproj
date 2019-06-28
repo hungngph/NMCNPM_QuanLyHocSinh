@@ -70,7 +70,9 @@
       <HintPath>..\packages\EPPlus.4.5.3.2\lib\net40\EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -114,9 +116,6 @@
     <Compile Include="DAL\NAMHOC_DAL.cs" />
     <Compile Include="DAL\NGUOIDUNG_DAL.cs" />
     <Compile Include="DAL\QUATRINHHOC_DAL.cs" />
-    <Compile Include="DAL\SQL_QLHS.cs">
-      <DependentUpon>SQL_QLHS.dbml</DependentUpon>
-    </Compile>
     <Compile Include="DAL\SQL_QLHS.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
