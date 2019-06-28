@@ -85,7 +85,7 @@
             this.gridControlLoaiKT.DataSource = this.bindingSourceLHKT;
             this.gridControlLoaiKT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControlLoaiKT.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControlLoaiKT.Location = new System.Drawing.Point(2, 52);
+            this.gridControlLoaiKT.Location = new System.Drawing.Point(2, 47);
             this.gridControlLoaiKT.MainView = this.dgvLHKT;
             this.gridControlLoaiKT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlLoaiKT.Name = "gridControlLoaiKT";
@@ -343,6 +343,8 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmLoaiHinhKT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loại hình kiểm tra";

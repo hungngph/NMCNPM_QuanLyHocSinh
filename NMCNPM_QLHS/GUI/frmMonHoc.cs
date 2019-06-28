@@ -128,7 +128,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            if (XtraMessageBox.Show("Bạn có chắc chắn xóa lớp này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (XtraMessageBox.Show("Bạn có chắc chắn xóa môn này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 string maMonHoc = dgvMonHoc.GetFocusedRowCellDisplayText(col_maMonHoc);
                 dgvMonHoc.DeleteSelectedRows();

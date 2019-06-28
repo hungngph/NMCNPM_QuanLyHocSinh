@@ -89,14 +89,14 @@
             // 
             // cboHocKy
             // 
-            this.cboHocKy.Location = new System.Drawing.Point(404, 10);
+            this.cboHocKy.Location = new System.Drawing.Point(404, 12);
             this.cboHocKy.Name = "cboHocKy";
             this.cboHocKy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboHocKy.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENHOCKY", "")});
             this.cboHocKy.Properties.NullText = "";
-            this.cboHocKy.Size = new System.Drawing.Size(214, 20);
+            this.cboHocKy.Size = new System.Drawing.Size(213, 20);
             this.cboHocKy.StyleController = this.layoutControl1;
             this.cboHocKy.TabIndex = 2;
             this.cboHocKy.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
@@ -104,7 +104,7 @@
             // btnLamMoi
             // 
             this.btnLamMoi.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Refresh_16px;
-            this.btnLamMoi.Location = new System.Drawing.Point(715, 10);
+            this.btnLamMoi.Location = new System.Drawing.Point(714, 12);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(68, 22);
             this.btnLamMoi.StyleController = this.layoutControl1;
@@ -115,7 +115,7 @@
             // btnIn
             // 
             this.btnIn.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Export_16px;
-            this.btnIn.Location = new System.Drawing.Point(622, 10);
+            this.btnIn.Location = new System.Drawing.Point(621, 12);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(89, 22);
             this.btnIn.StyleController = this.layoutControl1;
@@ -125,14 +125,14 @@
             // 
             // cboNamHoc
             // 
-            this.cboNamHoc.Location = new System.Drawing.Point(59, 10);
+            this.cboNamHoc.Location = new System.Drawing.Point(60, 12);
             this.cboNamHoc.Name = "cboNamHoc";
             this.cboNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboNamHoc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNAMHOC", "")});
             this.cboNamHoc.Properties.NullText = "";
-            this.cboNamHoc.Size = new System.Drawing.Size(293, 20);
+            this.cboNamHoc.Size = new System.Drawing.Size(292, 20);
             this.cboNamHoc.StyleController = this.layoutControl1;
             this.cboNamHoc.TabIndex = 1;
             this.cboNamHoc.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
@@ -153,18 +153,18 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnLamMoi;
-            this.layoutControlItem4.Location = new System.Drawing.Point(704, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(702, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(72, 33);
+            this.layoutControlItem4.Size = new System.Drawing.Size(72, 29);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnIn;
-            this.layoutControlItem3.Location = new System.Drawing.Point(611, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(609, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(93, 33);
+            this.layoutControlItem3.Size = new System.Drawing.Size(93, 29);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -173,16 +173,16 @@
             this.layoutControlItem1.Control = this.cboNamHoc;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(345, 33);
+            this.layoutControlItem1.Size = new System.Drawing.Size(344, 29);
             this.layoutControlItem1.Text = "Năm học:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(45, 13);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.cboHocKy;
-            this.layoutControlItem5.Location = new System.Drawing.Point(345, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(344, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(266, 33);
+            this.layoutControlItem5.Size = new System.Drawing.Size(265, 29);
             this.layoutControlItem5.Text = "Học kỳ:";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(45, 13);
             // 
@@ -316,6 +316,8 @@
             this.Controls.Add(this.gridControlBaoCaoHK);
             this.Controls.Add(this.layoutControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmrpHocKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo cáo học kỳ";
