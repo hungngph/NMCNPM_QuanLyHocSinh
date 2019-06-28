@@ -190,8 +190,17 @@ namespace NMCNPM_QLHS.GUI
         }
 
         #endregion -Lưu điểm-
+        private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorSaveItem_Click(sender, e);
+        }
 
+        private void btnXem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorXemDiemItem_Click(sender, e);
+        }
         #endregion -bindingNavigatorItems_Click-
+
 
         #region -comBoBox_EditValueChanged-
 
@@ -245,10 +254,11 @@ namespace NMCNPM_QLHS.GUI
                 bindingSourceDiem.DataSource = null;
         }
 
+
         #endregion -Load-
 
         #endregion -Methods-
 
-        
+
     }
 }

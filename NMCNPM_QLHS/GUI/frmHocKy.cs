@@ -61,5 +61,16 @@ namespace NMCNPM_QLHS.GUI
                     bindingNavigatorSaveItem.PerformClick();
             }
         }
+
+        private void gridControlHocKy_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                popupMenu1.ShowPopup(Control.MousePosition);
+        }
+
+        private void btuLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorSaveItem_Click(sender, e);
+        }
     }
 }

@@ -106,6 +106,11 @@ namespace NMCNPM_QLHS.GUI
         {
 
         }
+        private void gridControlHocSinh_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                popupMenu1.ShowPopup(Control.MousePosition);
+        }
 
         #endregion -Form-
 
@@ -117,7 +122,7 @@ namespace NMCNPM_QLHS.GUI
             // Chuyển sang panel nhập liệu
             dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
             navPanelChucNang.SelectedPage = navNhapLieu;
-            
+            navPanelChucNang.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Default;
             bindingNavigatorAddNewItem.Enabled = false;
             btnHoanTat.Visible = true;
             btnHuyBo.Visible = true;
@@ -145,7 +150,7 @@ namespace NMCNPM_QLHS.GUI
             // Chuyển sang panel nhập liệu
             dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
             navPanelChucNang.SelectedPage = navNhapLieu;
-
+            navPanelChucNang.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Default;
             btnHoanTat.Text = "Hoàn tất";
             btnHuyBo.Visible = true;
             btnHoanTat.Visible = true;
@@ -156,14 +161,16 @@ namespace NMCNPM_QLHS.GUI
         // Lưu thay đổi
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-
+            
         }
-
+        
+        
         // Tìm kiếm học sinh
         private void bindingNavigatorSearchItem_Click(object sender, EventArgs e)
         {
             dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
             navPanelChucNang.SelectedPage = navTimKiem;
+            navPanelChucNang.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Default;
             txtTTTimKiem.Focus();
         }
 
@@ -254,6 +261,20 @@ namespace NMCNPM_QLHS.GUI
             btnHuyBo.Visible = false;
             bindingNavigatorAddNewItem.Enabled = true;
             disableAllTextBox();
+        }
+
+        private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorAddNewItem_Click(sender, e);
+        }
+        private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorDeleteItem_Click(sender, e);
+        }
+
+        private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorEditItem_Click(sender, e);
         }
 
         private void btnImport_Click(object sender, EventArgs e)
@@ -386,7 +407,9 @@ namespace NMCNPM_QLHS.GUI
             }
         }
 
+
         #endregion -Methods-
 
+        
     }
 }
