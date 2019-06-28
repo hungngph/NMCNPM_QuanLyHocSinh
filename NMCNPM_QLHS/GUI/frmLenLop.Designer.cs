@@ -214,7 +214,7 @@
             this.cboKhoiCu.Properties.NullText = "";
             this.cboKhoiCu.Size = new System.Drawing.Size(250, 20);
             this.cboKhoiCu.StyleController = this.layoutControl1;
-            this.cboKhoiCu.TabIndex = 6;
+            this.cboKhoiCu.TabIndex = 2;
             this.cboKhoiCu.EditValueChanged += new System.EventHandler(this.cboKhoiCu_EditValueChanged);
             // 
             // cboLopCu
@@ -228,7 +228,7 @@
             this.cboLopCu.Properties.NullText = "";
             this.cboLopCu.Size = new System.Drawing.Size(250, 20);
             this.cboLopCu.StyleController = this.layoutControl1;
-            this.cboLopCu.TabIndex = 5;
+            this.cboLopCu.TabIndex = 3;
             this.cboLopCu.EditValueChanged += new System.EventHandler(this.cboLopCu_EditValueChanged);
             // 
             // cboNamHocCu
@@ -242,7 +242,7 @@
             this.cboNamHocCu.Properties.NullText = "";
             this.cboNamHocCu.Size = new System.Drawing.Size(250, 20);
             this.cboNamHocCu.StyleController = this.layoutControl1;
-            this.cboNamHocCu.TabIndex = 4;
+            this.cboNamHocCu.TabIndex = 1;
             this.cboNamHocCu.EditValueChanged += new System.EventHandler(this.cboNamHocCu_EditValueChanged);
             // 
             // Root
@@ -358,7 +358,7 @@
             this.cboKhoiMoi.Properties.NullText = "";
             this.cboKhoiMoi.Size = new System.Drawing.Size(242, 20);
             this.cboKhoiMoi.StyleController = this.layoutControl2;
-            this.cboKhoiMoi.TabIndex = 6;
+            this.cboKhoiMoi.TabIndex = 5;
             this.cboKhoiMoi.EditValueChanged += new System.EventHandler(this.cboKhoiMoi_EditValueChanged);
             // 
             // cboNamHocMoi
@@ -386,7 +386,7 @@
             this.cboLopMoi.Properties.NullText = "";
             this.cboLopMoi.Size = new System.Drawing.Size(242, 20);
             this.cboLopMoi.StyleController = this.layoutControl2;
-            this.cboLopMoi.TabIndex = 5;
+            this.cboLopMoi.TabIndex = 6;
             this.cboLopMoi.EditValueChanged += new System.EventHandler(this.cboLopMoi_EditValueChanged);
             // 
             // layoutControlGroup1
@@ -532,7 +532,9 @@
             this.ClientSize = new System.Drawing.Size(762, 467);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.groupControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLenLop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lên lớp";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLenLop_FormClosing);
             this.Load += new System.EventHandler(this.frmLenLop_Load);

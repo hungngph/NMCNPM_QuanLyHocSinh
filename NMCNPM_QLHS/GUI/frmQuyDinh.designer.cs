@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuyDinh));
             this.tabQuyDinh = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabTuoi = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
@@ -165,7 +166,7 @@
             this.btnHuy1.Name = "btnHuy1";
             this.btnHuy1.Size = new System.Drawing.Size(80, 22);
             this.btnHuy1.StyleController = this.layoutControl3;
-            this.btnHuy1.TabIndex = 7;
+            this.btnHuy1.TabIndex = 4;
             this.btnHuy1.Text = "Hủy bỏ";
             this.btnHuy1.Click += new System.EventHandler(this.btnHuyBo1_Click);
             // 
@@ -175,7 +176,7 @@
             this.btnDongY1.Name = "btnDongY1";
             this.btnDongY1.Size = new System.Drawing.Size(76, 22);
             this.btnDongY1.StyleController = this.layoutControl3;
-            this.btnDongY1.TabIndex = 6;
+            this.btnDongY1.TabIndex = 3;
             this.btnDongY1.Text = "Đồng ý";
             this.btnDongY1.Click += new System.EventHandler(this.btnDongY_Click);
             // 
@@ -199,7 +200,7 @@
             0});
             this.txtTuoiToiDa.Size = new System.Drawing.Size(255, 20);
             this.txtTuoiToiDa.StyleController = this.layoutControl3;
-            this.txtTuoiToiDa.TabIndex = 5;
+            this.txtTuoiToiDa.TabIndex = 2;
             this.txtTuoiToiDa.EditValueChanged += new System.EventHandler(this.TextBoxTuoi_EditValueChanged);
             // 
             // txtTuoiToiThieu
@@ -223,7 +224,7 @@
             0});
             this.txtTuoiToiThieu.Size = new System.Drawing.Size(255, 20);
             this.txtTuoiToiThieu.StyleController = this.layoutControl3;
-            this.txtTuoiToiThieu.TabIndex = 4;
+            this.txtTuoiToiThieu.TabIndex = 1;
             this.txtTuoiToiThieu.EditValueChanged += new System.EventHandler(this.TextBoxTuoi_EditValueChanged);
             // 
             // layoutControlGroup2
@@ -641,6 +642,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 175);
             this.Controls.Add(this.tabQuyDinh);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmQuyDinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quy định";

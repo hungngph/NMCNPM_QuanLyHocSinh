@@ -143,7 +143,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENMONHOC", "")});
             this.cboMonHoc.Properties.NullText = "";
             this.cboMonHoc.Size = new System.Drawing.Size(100, 20);
-            this.cboMonHoc.TabIndex = 166;
+            this.cboMonHoc.TabIndex = 4;
             this.cboMonHoc.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
             // 
             // cboLop
@@ -156,7 +156,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENLOP", "")});
             this.cboLop.Properties.NullText = "";
             this.cboLop.Size = new System.Drawing.Size(100, 20);
-            this.cboLop.TabIndex = 165;
+            this.cboLop.TabIndex = 2;
             this.cboLop.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
             // 
             // cboHocKy
@@ -169,7 +169,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENHOCKY", "")});
             this.cboHocKy.Properties.NullText = "";
             this.cboHocKy.Size = new System.Drawing.Size(100, 20);
-            this.cboHocKy.TabIndex = 164;
+            this.cboHocKy.TabIndex = 3;
             this.cboHocKy.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
             // 
             // labelControl5
@@ -214,7 +214,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNAMHOC", "")});
             this.cboNamHoc.Properties.NullText = "";
             this.cboNamHoc.Size = new System.Drawing.Size(100, 20);
-            this.cboNamHoc.TabIndex = 163;
+            this.cboNamHoc.TabIndex = 1;
             this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
             // 
             // dockManager1
@@ -573,7 +573,9 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmXemDiem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xem điểm";
             this.Load += new System.EventHandler(this.frmXemDiem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.navCapNhat)).EndInit();

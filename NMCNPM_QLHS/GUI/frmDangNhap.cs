@@ -40,7 +40,10 @@ namespace NMCNPM_QLHS.GUI
                 this.Hide();
             }
             else
+            {
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+                txtMatKhau.Text = null;
+            }
         }
 
         private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)

@@ -105,7 +105,7 @@
             this.cboHocKy.Properties.NullText = "";
             this.cboHocKy.Size = new System.Drawing.Size(179, 20);
             this.cboHocKy.StyleController = this.layoutControl1;
-            this.cboHocKy.TabIndex = 7;
+            this.cboHocKy.TabIndex = 4;
             this.cboHocKy.EditValueChanged += new System.EventHandler(this.cboHocKy_EditValueChanged);
             // 
             // cboLop
@@ -119,7 +119,7 @@
             this.cboLop.Properties.NullText = "";
             this.cboLop.Size = new System.Drawing.Size(194, 20);
             this.cboLop.StyleController = this.layoutControl1;
-            this.cboLop.TabIndex = 6;
+            this.cboLop.TabIndex = 3;
             this.cboLop.EditValueChanged += new System.EventHandler(this.cboLop_EditValueChanged);
             // 
             // cboKhoiLop
@@ -133,7 +133,7 @@
             this.cboKhoiLop.Properties.NullText = "";
             this.cboKhoiLop.Size = new System.Drawing.Size(175, 20);
             this.cboKhoiLop.StyleController = this.layoutControl1;
-            this.cboKhoiLop.TabIndex = 5;
+            this.cboKhoiLop.TabIndex = 2;
             this.cboKhoiLop.EditValueChanged += new System.EventHandler(this.cboKhoiLop_EditValueChanged);
             // 
             // cboNamHoc
@@ -146,7 +146,7 @@
             this.cboNamHoc.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboNamHoc.Size = new System.Drawing.Size(171, 20);
             this.cboNamHoc.StyleController = this.layoutControl1;
-            this.cboNamHoc.TabIndex = 4;
+            this.cboNamHoc.TabIndex = 1;
             this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
             // 
             // Root
@@ -358,7 +358,9 @@
             this.ClientSize = new System.Drawing.Size(967, 476);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.layoutControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPhanLop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phân lớp";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPhanLop_FormClosing);
             this.Load += new System.EventHandler(this.frmPhanLop_Load);

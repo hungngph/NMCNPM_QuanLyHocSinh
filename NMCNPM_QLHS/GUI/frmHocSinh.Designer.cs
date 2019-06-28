@@ -195,7 +195,7 @@
             this.dockPanelChucNang.Name = "dockPanelChucNang";
             this.dockPanelChucNang.Options.ShowCloseButton = false;
             this.dockPanelChucNang.OriginalSize = new System.Drawing.Size(314, 200);
-            this.dockPanelChucNang.Size = new System.Drawing.Size(314, 750);
+            this.dockPanelChucNang.Size = new System.Drawing.Size(314, 609);
             this.dockPanelChucNang.Text = "Chức năng";
             // 
             // dockPanel1_Container
@@ -205,7 +205,7 @@
             this.dockPanel1_Container.Location = new System.Drawing.Point(5, 25);
             this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(302, 720);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(305, 582);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navPanelChucNang
@@ -220,9 +220,9 @@
             this.navPanelChucNang.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navNhapLieu,
             this.navTimKiem});
-            this.navPanelChucNang.RegularSize = new System.Drawing.Size(302, 720);
+            this.navPanelChucNang.RegularSize = new System.Drawing.Size(305, 582);
             this.navPanelChucNang.SelectedPage = this.navNhapLieu;
-            this.navPanelChucNang.Size = new System.Drawing.Size(302, 720);
+            this.navPanelChucNang.Size = new System.Drawing.Size(305, 582);
             this.navPanelChucNang.TabIndex = 1;
             this.navPanelChucNang.Text = "navigationPane1";
             // 
@@ -254,15 +254,15 @@
             this.navNhapLieu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navNhapLieu.Name = "navNhapLieu";
             this.navNhapLieu.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
-            this.navNhapLieu.Size = new System.Drawing.Size(228, 650);
+            this.navNhapLieu.Size = new System.Drawing.Size(239, 522);
             // 
             // btnHuyBo
             // 
             this.btnHuyBo.Location = new System.Drawing.Point(145, 615);
             this.btnHuyBo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.Size = new System.Drawing.Size(87, 28);
-            this.btnHuyBo.TabIndex = 149;
+            this.btnHuyBo.Size = new System.Drawing.Size(75, 23);
+            this.btnHuyBo.TabIndex = 8;
             this.btnHuyBo.Text = "Hủy bỏ";
             this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
             // 
@@ -271,8 +271,8 @@
             this.btnHoanTat.Location = new System.Drawing.Point(24, 615);
             this.btnHoanTat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHoanTat.Name = "btnHoanTat";
-            this.btnHoanTat.Size = new System.Drawing.Size(87, 28);
-            this.btnHoanTat.TabIndex = 148;
+            this.btnHoanTat.Size = new System.Drawing.Size(75, 23);
+            this.btnHoanTat.TabIndex = 7;
             this.btnHoanTat.Text = "Hoàn tất";
             this.btnHoanTat.Click += new System.EventHandler(this.btnHoanTat_Click);
             // 
@@ -281,8 +281,8 @@
             this.txtEmail.Location = new System.Drawing.Point(23, 574);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(209, 22);
-            this.txtEmail.TabIndex = 147;
+            this.txtEmail.Size = new System.Drawing.Size(179, 20);
+            this.txtEmail.TabIndex = 6;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtDiaChi
@@ -290,8 +290,8 @@
             this.txtDiaChi.Location = new System.Drawing.Point(23, 506);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(209, 22);
-            this.txtDiaChi.TabIndex = 146;
+            this.txtDiaChi.Size = new System.Drawing.Size(179, 20);
+            this.txtDiaChi.TabIndex = 5;
             // 
             // labelControl7
             // 
@@ -307,35 +307,35 @@
             this.labelControl6.Location = new System.Drawing.Point(24, 482);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(45, 17);
+            this.labelControl6.Size = new System.Drawing.Size(45, 13);
             this.labelControl6.TabIndex = 144;
-            this.labelControl6.Text = "Địa chỉ:";
+            this.labelControl6.Text = "* Địa chỉ:";
             // 
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(23, 412);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(53, 17);
+            this.labelControl5.Size = new System.Drawing.Size(51, 13);
             this.labelControl5.TabIndex = 143;
-            this.labelControl5.Text = "Giới tính:";
+            this.labelControl5.Text = "* Giới tính:";
             // 
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(23, 342);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(60, 16);
+            this.labelControl4.Size = new System.Drawing.Size(60, 13);
             this.labelControl4.TabIndex = 142;
-            this.labelControl4.Text = "Ngày sinh:";
+            this.labelControl4.Text = "* Ngày sinh:";
             // 
             // txtHoTen
             // 
             this.txtHoTen.Location = new System.Drawing.Point(24, 304);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(209, 22);
-            this.txtHoTen.TabIndex = 141;
+            this.txtHoTen.Size = new System.Drawing.Size(179, 20);
+            this.txtHoTen.TabIndex = 2;
             this.txtHoTen.TextChanged += new System.EventHandler(this.txtHoTen_TextChanged);
             // 
             // labelControl3
@@ -343,9 +343,9 @@
             this.labelControl3.Location = new System.Drawing.Point(23, 281);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(46, 17);
+            this.labelControl3.Size = new System.Drawing.Size(45, 13);
             this.labelControl3.TabIndex = 140;
-            this.labelControl3.Text = "Họ tên:";
+            this.labelControl3.Text = "* Họ tên:";
             // 
             // txtMaHS
             // 
@@ -353,17 +353,17 @@
             this.txtMaHS.Location = new System.Drawing.Point(23, 249);
             this.txtMaHS.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaHS.Name = "txtMaHS";
-            this.txtMaHS.Size = new System.Drawing.Size(210, 22);
-            this.txtMaHS.TabIndex = 139;
+            this.txtMaHS.Size = new System.Drawing.Size(180, 20);
+            this.txtMaHS.TabIndex = 1;
             // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(23, 225);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(77, 17);
+            this.labelControl2.Size = new System.Drawing.Size(69, 13);
             this.labelControl2.TabIndex = 138;
-            this.labelControl2.Text = "Mã học sinh:";
+            this.labelControl2.Text = "* Mã học sinh:";
             // 
             // dtpNgaySinh
             // 
@@ -376,8 +376,8 @@
             this.dtpNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpNgaySinh.Properties.CalendarTimeProperties.DisplayFormat.FormatString = "dd//MM//yyyy";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(210, 22);
-            this.dtpNgaySinh.TabIndex = 137;
+            this.dtpNgaySinh.Size = new System.Drawing.Size(180, 20);
+            this.dtpNgaySinh.TabIndex = 3;
             // 
             // label13
             // 
@@ -462,8 +462,8 @@
             this.cboGioiTinh.Properties.NullText = "[EditValue is null]";
             this.cboGioiTinh.Properties.PopupSizeable = true;
             this.cboGioiTinh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cboGioiTinh.Size = new System.Drawing.Size(117, 22);
-            this.cboGioiTinh.TabIndex = 0;
+            this.cboGioiTinh.Size = new System.Drawing.Size(100, 20);
+            this.cboGioiTinh.TabIndex = 4;
             // 
             // navTimKiem
             // 
@@ -526,8 +526,8 @@
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 302;
-            this.navBarControl1.Size = new System.Drawing.Size(302, 720);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 305;
+            this.navBarControl1.Size = new System.Drawing.Size(305, 582);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -544,7 +544,7 @@
             this.groupControlHocSinh.Location = new System.Drawing.Point(314, 0);
             this.groupControlHocSinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControlHocSinh.Name = "groupControlHocSinh";
-            this.groupControlHocSinh.Size = new System.Drawing.Size(882, 750);
+            this.groupControlHocSinh.Size = new System.Drawing.Size(711, 609);
             this.groupControlHocSinh.TabIndex = 1;
             this.groupControlHocSinh.Text = "Danh sách học sinh";
             // 
@@ -574,7 +574,7 @@
             this.col_ngaySinh_edit,
             this.col_diaChi_edit,
             this.col_email_edit});
-            this.gridControlHocSinh.Size = new System.Drawing.Size(878, 692);
+            this.gridControlHocSinh.Size = new System.Drawing.Size(707, 556);
             this.gridControlHocSinh.TabIndex = 2;
             this.gridControlHocSinh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvHocSinh});
@@ -737,7 +737,7 @@
             this.bindingNavigatorHocSinh.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatorHocSinh.Name = "bindingNavigatorHocSinh";
             this.bindingNavigatorHocSinh.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorHocSinh.Size = new System.Drawing.Size(878, 31);
+            this.bindingNavigatorHocSinh.Size = new System.Drawing.Size(707, 31);
             this.bindingNavigatorHocSinh.TabIndex = 0;
             this.bindingNavigatorHocSinh.Text = "bindingNavigator1";
             // 
@@ -948,8 +948,10 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmHocSinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Học sinh";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHocSinh_FormClosing);
             this.Load += new System.EventHandler(this.frmHocSinh_Load);

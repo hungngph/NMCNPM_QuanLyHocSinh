@@ -32,6 +32,7 @@ namespace NMCNPM_QLHS.GUI
             //Application.Run(new frmrpHocKy());
             //Application.Run(new frmHocKy());
             //Application.Run(new frmHocSinh());
+            //Application.Run(new frmDoiMatKhau());
         }
     }
 }
