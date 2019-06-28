@@ -47,6 +47,7 @@
             // 
             // btnDongY
             // 
+            this.btnDongY.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Ok_16px;
             this.btnDongY.Location = new System.Drawing.Point(122, 172);
             this.btnDongY.Name = "btnDongY";
             this.btnDongY.Size = new System.Drawing.Size(75, 23);
@@ -129,6 +130,7 @@
             // 
             // btnHuy
             // 
+            this.btnHuy.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Delete_16px;
             this.btnHuy.Location = new System.Drawing.Point(203, 172);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);

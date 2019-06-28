@@ -473,9 +473,29 @@ namespace NMCNPM_QLHS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Login_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Login_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_More_Info_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_More_Info_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Ok_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Ok_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
