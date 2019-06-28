@@ -225,7 +225,7 @@
             this.cboNamHoc.Properties.NullText = "";
             this.cboNamHoc.Size = new System.Drawing.Size(372, 20);
             this.cboNamHoc.StyleController = this.layoutControl1;
-            this.cboNamHoc.TabIndex = 16;
+            this.cboNamHoc.TabIndex = 2;
             this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
             // 
             // cboHocSinh
@@ -240,7 +240,7 @@
             this.cboHocSinh.Properties.NullText = "";
             this.cboHocSinh.Size = new System.Drawing.Size(362, 20);
             this.cboHocSinh.StyleController = this.layoutControl1;
-            this.cboHocSinh.TabIndex = 15;
+            this.cboHocSinh.TabIndex = 1;
             this.cboHocSinh.EditValueChanged += new System.EventHandler(this.cboHocSinh_EditValueChanged);
             // 
             // cboHocKy
@@ -254,7 +254,7 @@
             this.cboHocKy.Properties.NullText = "";
             this.cboHocKy.Size = new System.Drawing.Size(372, 20);
             this.cboHocKy.StyleController = this.layoutControl1;
-            this.cboHocKy.TabIndex = 17;
+            this.cboHocKy.TabIndex = 3;
             this.cboHocKy.EditValueChanged += new System.EventHandler(this.cboHocKy_EditValueChanged);
             // 
             // Root

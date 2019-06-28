@@ -203,7 +203,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENMONHOC", "")});
             this.cboMonHoc.Properties.NullText = "";
             this.cboMonHoc.Size = new System.Drawing.Size(100, 20);
-            this.cboMonHoc.TabIndex = 166;
+            this.cboMonHoc.TabIndex = 3;
             this.cboMonHoc.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
             // 
             // cboLop
@@ -216,7 +216,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENLOP", "")});
             this.cboLop.Properties.NullText = "";
             this.cboLop.Size = new System.Drawing.Size(100, 20);
-            this.cboLop.TabIndex = 165;
+            this.cboLop.TabIndex = 1;
             this.cboLop.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
             // 
             // cboHocKy
@@ -229,7 +229,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENHOCKY", "")});
             this.cboHocKy.Properties.NullText = "";
             this.cboHocKy.Size = new System.Drawing.Size(100, 20);
-            this.cboHocKy.TabIndex = 164;
+            this.cboHocKy.TabIndex = 2;
             this.cboHocKy.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
             // 
             // labelControl5

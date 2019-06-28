@@ -135,7 +135,7 @@
             this.dockPanelChucNang.Location = new System.Drawing.Point(0, 0);
             this.dockPanelChucNang.Name = "dockPanelChucNang";
             this.dockPanelChucNang.OriginalSize = new System.Drawing.Size(282, 200);
-            this.dockPanelChucNang.Size = new System.Drawing.Size(242, 548);
+            this.dockPanelChucNang.Size = new System.Drawing.Size(282, 548);
             this.dockPanelChucNang.Text = "Chức năng";
             // 
             // dockPanel1_Container
@@ -143,7 +143,7 @@
             this.dockPanel1_Container.Controls.Add(this.navPanelChucNang);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(233, 521);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(273, 521);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navPanelChucNang
@@ -157,9 +157,9 @@
             this.navPanelChucNang.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navNhapLieu,
             this.navTimKiem});
-            this.navPanelChucNang.RegularSize = new System.Drawing.Size(233, 521);
+            this.navPanelChucNang.RegularSize = new System.Drawing.Size(273, 521);
             this.navPanelChucNang.SelectedPage = this.navNhapLieu;
-            this.navPanelChucNang.Size = new System.Drawing.Size(233, 521);
+            this.navPanelChucNang.Size = new System.Drawing.Size(273, 521);
             this.navPanelChucNang.TabIndex = 0;
             this.navPanelChucNang.Text = "navigationPane1";
             // 
@@ -179,14 +179,14 @@
             this.navNhapLieu.Controls.Add(this.labelControl2);
             this.navNhapLieu.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
             this.navNhapLieu.Name = "navNhapLieu";
-            this.navNhapLieu.Size = new System.Drawing.Size(167, 461);
+            this.navNhapLieu.Size = new System.Drawing.Size(207, 461);
             // 
             // btnHuyBo
             // 
-            this.btnHuyBo.Location = new System.Drawing.Point(49, 267);
+            this.btnHuyBo.Location = new System.Drawing.Point(114, 228);
             this.btnHuyBo.Name = "btnHuyBo";
             this.btnHuyBo.Size = new System.Drawing.Size(75, 23);
-            this.btnHuyBo.TabIndex = 153;
+            this.btnHuyBo.TabIndex = 6;
             this.btnHuyBo.Text = "Hủy bỏ";
             this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
             // 
@@ -202,10 +202,10 @@
             // 
             // btnHoanTat
             // 
-            this.btnHoanTat.Location = new System.Drawing.Point(49, 227);
+            this.btnHoanTat.Location = new System.Drawing.Point(12, 228);
             this.btnHoanTat.Name = "btnHoanTat";
             this.btnHoanTat.Size = new System.Drawing.Size(75, 23);
-            this.btnHoanTat.TabIndex = 150;
+            this.btnHoanTat.TabIndex = 5;
             this.btnHoanTat.Text = "Hoàn tất";
             this.btnHoanTat.Click += new System.EventHandler(this.btnHoanTat_Click);
             // 
@@ -213,32 +213,32 @@
             // 
             this.txtTenLop.Location = new System.Drawing.Point(12, 202);
             this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(147, 20);
-            this.txtTenLop.TabIndex = 149;
+            this.txtTenLop.Size = new System.Drawing.Size(177, 20);
+            this.txtTenLop.TabIndex = 4;
             // 
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(11, 183);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(39, 13);
+            this.labelControl5.Size = new System.Drawing.Size(48, 13);
             this.labelControl5.TabIndex = 148;
-            this.labelControl5.Text = "Tên lớp:";
+            this.labelControl5.Text = "* Tên lớp:";
             // 
             // txtMaLop
             // 
             this.txtMaLop.Location = new System.Drawing.Point(11, 147);
             this.txtMaLop.Name = "txtMaLop";
             this.txtMaLop.Properties.ReadOnly = true;
-            this.txtMaLop.Size = new System.Drawing.Size(148, 20);
-            this.txtMaLop.TabIndex = 147;
+            this.txtMaLop.Size = new System.Drawing.Size(178, 20);
+            this.txtMaLop.TabIndex = 3;
             // 
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(10, 128);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(35, 13);
+            this.labelControl4.Size = new System.Drawing.Size(44, 13);
             this.labelControl4.TabIndex = 146;
-            this.labelControl4.Text = "Mã lớp:";
+            this.labelControl4.Text = "* Mã lớp:";
             // 
             // cboKhoiLop
             // 
@@ -250,15 +250,15 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENKHOI", "")});
             this.cboKhoiLop.Properties.NullText = "";
             this.cboKhoiLop.Size = new System.Drawing.Size(112, 20);
-            this.cboKhoiLop.TabIndex = 145;
+            this.cboKhoiLop.TabIndex = 2;
             // 
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(10, 78);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(24, 13);
+            this.labelControl3.Size = new System.Drawing.Size(33, 13);
             this.labelControl3.TabIndex = 144;
-            this.labelControl3.Text = "Khối:";
+            this.labelControl3.Text = "* Khối:";
             // 
             // cboNamHoc
             // 
@@ -270,16 +270,16 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNAMHOC", "")});
             this.cboNamHoc.Properties.NullText = "";
             this.cboNamHoc.Size = new System.Drawing.Size(112, 20);
-            this.cboNamHoc.TabIndex = 143;
+            this.cboNamHoc.TabIndex = 1;
             this.cboNamHoc.EditValueChanged += new System.EventHandler(this.cboNamHoc_EditValueChanged);
             // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(10, 22);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(45, 13);
+            this.labelControl2.Size = new System.Drawing.Size(54, 13);
             this.labelControl2.TabIndex = 142;
-            this.labelControl2.Text = "Năm học:";
+            this.labelControl2.Text = "* Năm học:";
             // 
             // navTimKiem
             // 
@@ -337,9 +337,9 @@
             this.groupControlHocSinh.Controls.Add(this.gridControlLop);
             this.groupControlHocSinh.Controls.Add(this.bindingNavigatorLop);
             this.groupControlHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControlHocSinh.Location = new System.Drawing.Point(242, 0);
+            this.groupControlHocSinh.Location = new System.Drawing.Point(282, 0);
             this.groupControlHocSinh.Name = "groupControlHocSinh";
-            this.groupControlHocSinh.Size = new System.Drawing.Size(721, 548);
+            this.groupControlHocSinh.Size = new System.Drawing.Size(681, 548);
             this.groupControlHocSinh.TabIndex = 2;
             this.groupControlHocSinh.Text = "Danh sách lớp";
             // 
@@ -352,7 +352,7 @@
             this.gridControlLop.Name = "gridControlLop";
             this.gridControlLop.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.col_Khoi_edit});
-            this.gridControlLop.Size = new System.Drawing.Size(717, 495);
+            this.gridControlLop.Size = new System.Drawing.Size(677, 495);
             this.gridControlLop.TabIndex = 2;
             this.gridControlLop.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvDSLop});
@@ -465,7 +465,7 @@
             this.bindingNavigatorLop.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatorLop.Name = "bindingNavigatorLop";
             this.bindingNavigatorLop.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorLop.Size = new System.Drawing.Size(717, 31);
+            this.bindingNavigatorLop.Size = new System.Drawing.Size(677, 31);
             this.bindingNavigatorLop.TabIndex = 0;
             this.bindingNavigatorLop.Text = "bindingNavigator1";
             // 

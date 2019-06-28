@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.cboSearchHocSinh = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -38,7 +37,7 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridControlHocSinh = new DevExpress.XtraGrid.GridControl();
-            this.bindingSourceQuaTrinhHoc = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceQuaTrinhHoc = new System.Windows.Forms.BindingSource();
             this.dgvQuaTrinhHoc = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_NamHoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_Lop = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -83,15 +82,15 @@
             // cboSearchHocSinh
             // 
             this.cboSearchHocSinh.EditValue = "";
-            this.cboSearchHocSinh.Location = new System.Drawing.Point(72, 38);
+            this.cboSearchHocSinh.Location = new System.Drawing.Point(74, 42);
             this.cboSearchHocSinh.Name = "cboSearchHocSinh";
             this.cboSearchHocSinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboSearchHocSinh.Properties.NullText = "";
             this.cboSearchHocSinh.Properties.PopupView = this.searchLookUpEdit1View;
-            this.cboSearchHocSinh.Size = new System.Drawing.Size(659, 20);
+            this.cboSearchHocSinh.Size = new System.Drawing.Size(655, 20);
             this.cboSearchHocSinh.StyleController = this.layoutControl1;
-            this.cboSearchHocSinh.TabIndex = 4;
+            this.cboSearchHocSinh.TabIndex = 1;
             this.cboSearchHocSinh.EditValueChanged += new System.EventHandler(this.cboSearchHocSinh_EditValueChanged);
             // 
             // searchLookUpEdit1View
@@ -136,7 +135,7 @@
             this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(735, 73);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(733, 69);
             this.layoutControlGroup1.Text = "Thông tin học sinh";
             // 
             // layoutControlItem1
@@ -144,7 +143,7 @@
             this.layoutControlItem1.Control = this.cboSearchHocSinh;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(713, 35);
+            this.layoutControlItem1.Size = new System.Drawing.Size(709, 27);
             this.layoutControlItem1.Text = "Học sinh: ";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(47, 13);
             // 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.cboHocKy = new DevExpress.XtraEditors.LookUpEdit();
             this.btnLamMoi = new DevExpress.XtraEditors.SimpleButton();
@@ -42,7 +41,7 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridControlBCTKM = new DevExpress.XtraGrid.GridControl();
-            this.bindingSourceBCTKM = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceBCTKM = new System.Windows.Forms.BindingSource();
             this.dgvBCTKM = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_Lop = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_SiSo = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -86,80 +85,74 @@
             this.layoutControl1.Controls.Add(this.cboMonHoc);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1018, 65);
+            this.layoutControl1.Size = new System.Drawing.Size(873, 53);
             this.layoutControl1.TabIndex = 14;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // cboHocKy
             // 
-            this.cboHocKy.Location = new System.Drawing.Point(372, 12);
-            this.cboHocKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboHocKy.Location = new System.Drawing.Point(313, 10);
             this.cboHocKy.Name = "cboHocKy";
             this.cboHocKy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboHocKy.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENHOCKY", "")});
             this.cboHocKy.Properties.NullText = "";
-            this.cboHocKy.Size = new System.Drawing.Size(193, 22);
+            this.cboHocKy.Size = new System.Drawing.Size(171, 20);
             this.cboHocKy.StyleController = this.layoutControl1;
-            this.cboHocKy.TabIndex = 9;
+            this.cboHocKy.TabIndex = 2;
             this.cboHocKy.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
             // 
             // btnLamMoi
             // 
             this.btnLamMoi.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Refresh_16px;
-            this.btnLamMoi.Location = new System.Drawing.Point(926, 12);
-            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLamMoi.Location = new System.Drawing.Point(794, 10);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(80, 27);
+            this.btnLamMoi.Size = new System.Drawing.Size(68, 22);
             this.btnLamMoi.StyleController = this.layoutControl1;
-            this.btnLamMoi.TabIndex = 7;
+            this.btnLamMoi.TabIndex = 5;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnIn
             // 
             this.btnIn.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Export_16px;
-            this.btnIn.Location = new System.Drawing.Point(818, 12);
-            this.btnIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnIn.Location = new System.Drawing.Point(701, 10);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(104, 27);
+            this.btnIn.Size = new System.Drawing.Size(89, 22);
             this.btnIn.StyleController = this.layoutControl1;
-            this.btnIn.TabIndex = 6;
+            this.btnIn.TabIndex = 4;
             this.btnIn.Text = "Tạo báo cáo";
             this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // cboNamHoc
             // 
-            this.cboNamHoc.Location = new System.Drawing.Point(75, 12);
-            this.cboNamHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboNamHoc.Location = new System.Drawing.Point(59, 10);
             this.cboNamHoc.Name = "cboNamHoc";
             this.cboNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboNamHoc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNAMHOC", "")});
             this.cboNamHoc.Properties.NullText = "";
-            this.cboNamHoc.Size = new System.Drawing.Size(230, 22);
+            this.cboNamHoc.Size = new System.Drawing.Size(202, 20);
             this.cboNamHoc.StyleController = this.layoutControl1;
-            this.cboNamHoc.TabIndex = 4;
+            this.cboNamHoc.TabIndex = 1;
             this.cboNamHoc.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
             // 
             // cboMonHoc
             // 
-            this.cboMonHoc.Location = new System.Drawing.Point(632, 12);
-            this.cboMonHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboMonHoc.Location = new System.Drawing.Point(536, 10);
             this.cboMonHoc.Name = "cboMonHoc";
             this.cboMonHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboMonHoc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENMONHOC", "")});
             this.cboMonHoc.Properties.NullText = "";
-            this.cboMonHoc.Size = new System.Drawing.Size(182, 22);
+            this.cboMonHoc.Size = new System.Drawing.Size(161, 20);
             this.cboMonHoc.StyleController = this.layoutControl1;
-            this.cboMonHoc.TabIndex = 10;
+            this.cboMonHoc.TabIndex = 3;
             this.cboMonHoc.EditValueChanged += new System.EventHandler(this.comBoBox_EditValueChanged);
             // 
             // Root
@@ -173,24 +166,24 @@
             this.layoutControlItem5,
             this.layoutControlItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1018, 65);
+            this.Root.Size = new System.Drawing.Size(873, 53);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnLamMoi;
-            this.layoutControlItem4.Location = new System.Drawing.Point(914, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(783, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(84, 45);
+            this.layoutControlItem4.Size = new System.Drawing.Size(72, 37);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnIn;
-            this.layoutControlItem3.Location = new System.Drawing.Point(806, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(690, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(108, 45);
+            this.layoutControlItem3.Size = new System.Drawing.Size(93, 37);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -199,36 +192,34 @@
             this.layoutControlItem1.Control = this.cboNamHoc;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(297, 45);
+            this.layoutControlItem1.Size = new System.Drawing.Size(254, 37);
             this.layoutControlItem1.Text = "Năm học:";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(60, 17);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(45, 13);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.cboHocKy;
-            this.layoutControlItem5.Location = new System.Drawing.Point(297, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(254, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(260, 45);
+            this.layoutControlItem5.Size = new System.Drawing.Size(223, 37);
             this.layoutControlItem5.Text = "Học kỳ:";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 17);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(45, 13);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.cboMonHoc;
-            this.layoutControlItem2.Location = new System.Drawing.Point(557, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(477, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(249, 45);
+            this.layoutControlItem2.Size = new System.Drawing.Size(213, 37);
             this.layoutControlItem2.Text = "Môn học:";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 17);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(45, 13);
             // 
             // gridControlBCTKM
             // 
             this.gridControlBCTKM.DataSource = this.bindingSourceBCTKM;
             this.gridControlBCTKM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlBCTKM.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControlBCTKM.Location = new System.Drawing.Point(0, 65);
+            this.gridControlBCTKM.Location = new System.Drawing.Point(0, 53);
             this.gridControlBCTKM.MainView = this.dgvBCTKM;
-            this.gridControlBCTKM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlBCTKM.Name = "gridControlBCTKM";
             this.gridControlBCTKM.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.col_maHS_edit,
@@ -237,7 +228,7 @@
             this.col_ngaySinh_edit,
             this.col_diaChi_edit,
             this.col_email_edit});
-            this.gridControlBCTKM.Size = new System.Drawing.Size(1018, 456);
+            this.gridControlBCTKM.Size = new System.Drawing.Size(873, 370);
             this.gridControlBCTKM.TabIndex = 15;
             this.gridControlBCTKM.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvBCTKM});
@@ -264,7 +255,6 @@
             this.col_SiSo,
             this.col_SLDat,
             this.col_TyLe});
-            this.dgvBCTKM.DetailHeight = 431;
             this.dgvBCTKM.GridControl = this.gridControlBCTKM;
             this.dgvBCTKM.GroupPanelText = "BÁO CÁO TỔNG KẾT MÔN";
             this.dgvBCTKM.Name = "dgvBCTKM";
@@ -274,41 +264,41 @@
             // 
             this.col_Lop.Caption = "Lớp";
             this.col_Lop.FieldName = "TENLOP";
-            this.col_Lop.MinWidth = 24;
+            this.col_Lop.MinWidth = 21;
             this.col_Lop.Name = "col_Lop";
             this.col_Lop.Visible = true;
             this.col_Lop.VisibleIndex = 0;
-            this.col_Lop.Width = 156;
+            this.col_Lop.Width = 134;
             // 
             // col_SiSo
             // 
             this.col_SiSo.Caption = "Sĩ số";
             this.col_SiSo.FieldName = "SISO";
-            this.col_SiSo.MinWidth = 24;
+            this.col_SiSo.MinWidth = 21;
             this.col_SiSo.Name = "col_SiSo";
             this.col_SiSo.Visible = true;
             this.col_SiSo.VisibleIndex = 1;
-            this.col_SiSo.Width = 205;
+            this.col_SiSo.Width = 176;
             // 
             // col_SLDat
             // 
             this.col_SLDat.Caption = "Số lượng đạt";
             this.col_SLDat.FieldName = "SOLUONGDAT";
-            this.col_SLDat.MinWidth = 24;
+            this.col_SLDat.MinWidth = 21;
             this.col_SLDat.Name = "col_SLDat";
             this.col_SLDat.Visible = true;
             this.col_SLDat.VisibleIndex = 2;
-            this.col_SLDat.Width = 205;
+            this.col_SLDat.Width = 176;
             // 
             // col_TyLe
             // 
             this.col_TyLe.Caption = "Tỷ lệ";
             this.col_TyLe.FieldName = "TYLE";
-            this.col_TyLe.MinWidth = 24;
+            this.col_TyLe.MinWidth = 21;
             this.col_TyLe.Name = "col_TyLe";
             this.col_TyLe.Visible = true;
             this.col_TyLe.VisibleIndex = 3;
-            this.col_TyLe.Width = 205;
+            this.col_TyLe.Width = 176;
             // 
             // col_maHS_edit
             // 
@@ -348,12 +338,11 @@
             // 
             // frmrpMon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 521);
+            this.ClientSize = new System.Drawing.Size(873, 423);
             this.Controls.Add(this.gridControlBCTKM);
             this.Controls.Add(this.layoutControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmrpMon";
             this.Text = "Báo cáo tổng kết môn";
             this.Load += new System.EventHandler(this.frmrpMon_Load);
