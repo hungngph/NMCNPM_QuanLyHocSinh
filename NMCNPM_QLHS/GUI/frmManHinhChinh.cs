@@ -58,6 +58,7 @@ namespace NMCNPM_QLHS.GUI
             staticNamHoc.Caption = "Năm học: " + NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC.ToString();
             staticNguoiDung.Caption = "Người dùng: " + NGUOIDUNG_BUS.LayTenNguoiDung(CurrentUser.Code);
             subNguoiDung.Caption = NGUOIDUNG_BUS.LayTenNguoiDung(CurrentUser.Code) + " đã đăng nhập";
+            Utility.updateAction += UpdateNe;
         }
 
         #endregion -Load-
@@ -84,7 +85,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void frmManHinhChinh_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Utility.updateAction -= UpdateNe;
         }
         #endregion -Lưu trạng thái trước khi rời khỏi Ch.trình
 
@@ -616,5 +617,24 @@ namespace NMCNPM_QLHS.GUI
 
         #endregion -Show form-
 
+        private void frmManHinhChinh_Activated(object sender, EventArgs e)
+        {
+            //staticNamHoc.Caption = staticNamHoc.Caption = "Năm học: " + NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC.ToString();
+        }
+
+        private void frmManHinhChinh_Validated(object sender, EventArgs e)
+        {
+            //staticNamHoc.Caption = staticNamHoc.Caption = "Năm học: " + NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC.ToString();
+        }
+
+        private void frmManHinhChinh_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void UpdateNe()
+        {
+            staticNamHoc.Caption = staticNamHoc.Caption = "Năm học: " + NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC.ToString();
+        }
     }
 }

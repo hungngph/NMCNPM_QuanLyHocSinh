@@ -10,6 +10,7 @@ namespace NMCNPM_QLHS
 {
     class Utility
     {
+        public static Action updateAction;
         //Tính tuổi
         public static int TinhTuoi(DateTime birthday)
         {

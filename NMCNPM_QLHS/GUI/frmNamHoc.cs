@@ -89,6 +89,8 @@ namespace NMCNPM_QLHS.GUI
         {
             NAMHOC_BUS.Insert();
             load_DSNamHoc();
+            if (Utility.updateAction != null)
+                Utility.updateAction();
         }
 
         private void btnDeletebindingNavigatorDelete_Click(object sender, EventArgs e)
@@ -98,6 +100,8 @@ namespace NMCNPM_QLHS.GUI
                 string maNamHoc = dgvNamHoc.GetFocusedRowCellDisplayText(col_maNamHoc);
                 NAMHOC_BUS.Delete(maNamHoc);
                 load_DSNamHoc();
+                if (Utility.updateAction != null)
+                    Utility.updateAction();
             }
         }
 

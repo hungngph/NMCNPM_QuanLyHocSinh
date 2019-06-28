@@ -30,7 +30,6 @@ namespace NMCNPM_QLHS.GUI
         private void frmThemNguoiDung_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.OpenForms["frmNguoiDung"].Enabled = true;
-            Application.OpenForms["frmNguoiDung"].Refresh();
         }
 
         private void load_cboLoaiND()
@@ -40,7 +39,23 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (Utility.isPassword(txtTenNguoiDung.Text))
+            {
+                XtraMessageBox.Show("Tên người dùng không đúng định dạng");
+                return;
+            }
+            if (Utility.isPassword(txtTenTaiKhoan.Text))
+            {
+                XtraMessageBox.Show("Tên đăng nhập không đúng định dạng");
+                return;
+            }
+            if(NGUOIDUNG_BUS.KiemTraTenDangNhap(txtTenTaiKhoan.Text))
+            {
+                XtraMessageBox.Show("Tên đăng nhập đã tồn tại.");
+                return;
+            }
             actionHandle(txtMaNguoiDung.Text, txtTenNguoiDung.Text, cboLoaiNguoiDung.EditValue.ToString(), txtTenTaiKhoan.Text);
+            this.Close();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -51,6 +66,37 @@ namespace NMCNPM_QLHS.GUI
         private void frmThemNguoiDung_Load(object sender, EventArgs e)
         {
             load_cboLoaiND();
+            cboLoaiNguoiDung.EditValue = "LND001";
         }
+
+        private void txtTenTaiKhoan_TextChanged(object sender, EventArgs e)
+        {
+            if (!Utility.isTen(txtTenTaiKhoan.Text))
+            {
+                errTenTK.SetError(txtTenTaiKhoan, "Tên đăng nhập không đúng định dạng");
+            }
+            else
+            {
+                errTenTK.Dispose();
+                if (NGUOIDUNG_BUS.KiemTraTenDangNhap(txtTenTaiKhoan.Text))
+                {
+                    errTenTK.SetError(txtTenTaiKhoan, "Tên đăng nhập đã tồn tại");
+                }
+                else
+                    errTenTK.Dispose();
+            }
+        }
+
+        private void txtTenNguoiDung_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!Utility.isTen(txtTenNguoiDung.Text))
+            {
+                errTenTK.SetError(txtTenNguoiDung, "Tên người dùng không đúng định dạng");
+            }
+            else
+            {
+                errTenTK.Dispose();
+            }
+            }
     }
 }
