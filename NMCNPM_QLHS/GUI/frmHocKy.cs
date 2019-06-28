@@ -82,8 +82,13 @@ namespace NMCNPM_QLHS.GUI
         {
             bindingNavigatorSaveItem_Click(sender, e);
         }
-
+        private void gridControlHocKy_MouseUp_1(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                popupMenu1.ShowPopup(Control.MousePosition);
+        }
         #endregion -Events-
+
 
     }
 }

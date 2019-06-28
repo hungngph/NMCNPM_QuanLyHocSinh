@@ -61,6 +61,7 @@ namespace NMCNPM_QLHS.GUI
             // Disable các button
             dockPanelChucNang.Visible = true;
             bindingNavigatorSaveItem.Enabled = true;
+            btnLuu.Enabled = true;
         }
 
         public void IsBGH()
@@ -82,6 +83,7 @@ namespace NMCNPM_QLHS.GUI
             {
                 col.OptionsColumn.AllowEdit = false;
             }
+            btnLuu.Enabled = true;
         }
 
         #endregion -Phân quyền-

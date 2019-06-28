@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXemDiem));
             this.navCapNhat = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
@@ -40,12 +39,12 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.cboNamHoc = new DevExpress.XtraEditors.LookUpEdit();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
             this.dockPanelChucNang = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.groupControlHocSinh = new DevExpress.XtraEditors.GroupControl();
             this.gridDiemControl = new DevExpress.XtraGrid.GridControl();
-            this.bindingSourceDiem = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDiem = new System.Windows.Forms.BindingSource();
             this.dgvDiem = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_maHS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_maHS_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
@@ -59,7 +58,7 @@
             this.col_diem1Tiet_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_diemThi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_diemThi_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.bindingNavigatorDiem = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorDiem = new System.Windows.Forms.BindingNavigator();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -70,6 +69,13 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorXemDiemItem = new System.Windows.Forms.ToolStripButton();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
+            this.btnXemDiem = new DevExpress.XtraBars.BarButtonItem();
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             ((System.ComponentModel.ISupportInitialize)(this.navCapNhat)).BeginInit();
             this.navCapNhat.SuspendLayout();
             this.navigationPage2.SuspendLayout();
@@ -93,6 +99,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.col_diemThi_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorDiem)).BeginInit();
             this.bindingNavigatorDiem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // navCapNhat
@@ -104,9 +112,9 @@
             this.navCapNhat.PageProperties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.Image;
             this.navCapNhat.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationPage2});
-            this.navCapNhat.RegularSize = new System.Drawing.Size(214, 433);
+            this.navCapNhat.RegularSize = new System.Drawing.Size(251, 433);
             this.navCapNhat.SelectedPage = this.navigationPage2;
-            this.navCapNhat.Size = new System.Drawing.Size(214, 433);
+            this.navCapNhat.Size = new System.Drawing.Size(251, 433);
             this.navCapNhat.TabIndex = 0;
             this.navCapNhat.Text = "navigationPane1";
             // 
@@ -123,7 +131,7 @@
             this.navigationPage2.Controls.Add(this.cboNamHoc);
             this.navigationPage2.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Update_32px;
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(148, 373);
+            this.navigationPage2.Size = new System.Drawing.Size(185, 373);
             // 
             // cboMonHoc
             // 
@@ -235,7 +243,7 @@
             this.dockPanelChucNang.Location = new System.Drawing.Point(0, 0);
             this.dockPanelChucNang.Name = "dockPanelChucNang";
             this.dockPanelChucNang.OriginalSize = new System.Drawing.Size(260, 200);
-            this.dockPanelChucNang.Size = new System.Drawing.Size(223, 460);
+            this.dockPanelChucNang.Size = new System.Drawing.Size(260, 460);
             this.dockPanelChucNang.Text = "Chức năng";
             // 
             // dockPanel1_Container
@@ -243,7 +251,7 @@
             this.dockPanel1_Container.Controls.Add(this.navCapNhat);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(214, 433);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(251, 433);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // groupControlHocSinh
@@ -251,9 +259,9 @@
             this.groupControlHocSinh.Controls.Add(this.gridDiemControl);
             this.groupControlHocSinh.Controls.Add(this.bindingNavigatorDiem);
             this.groupControlHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControlHocSinh.Location = new System.Drawing.Point(223, 0);
+            this.groupControlHocSinh.Location = new System.Drawing.Point(260, 0);
             this.groupControlHocSinh.Name = "groupControlHocSinh";
-            this.groupControlHocSinh.Size = new System.Drawing.Size(604, 460);
+            this.groupControlHocSinh.Size = new System.Drawing.Size(567, 460);
             this.groupControlHocSinh.TabIndex = 3;
             this.groupControlHocSinh.Text = "Danh sách điểm";
             // 
@@ -271,10 +279,11 @@
             this.col_diem15Phut_edit,
             this.col_diem1Tiet_edit,
             this.col_diemThi_edit});
-            this.gridDiemControl.Size = new System.Drawing.Size(600, 407);
+            this.gridDiemControl.Size = new System.Drawing.Size(563, 407);
             this.gridDiemControl.TabIndex = 2;
             this.gridDiemControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvDiem});
+            this.gridDiemControl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gridDiemControl_MouseUp);
             // 
             // bindingSourceDiem
             // 
@@ -413,7 +422,7 @@
             this.bindingNavigatorDiem.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatorDiem.Name = "bindingNavigatorDiem";
             this.bindingNavigatorDiem.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorDiem.Size = new System.Drawing.Size(600, 31);
+            this.bindingNavigatorDiem.Size = new System.Drawing.Size(563, 31);
             this.bindingNavigatorDiem.TabIndex = 0;
             this.bindingNavigatorDiem.Text = "bindingNavigator1";
             // 
@@ -493,6 +502,65 @@
             this.bindingNavigatorXemDiemItem.Text = "Xem điểm";
             this.bindingNavigatorXemDiemItem.Click += new System.EventHandler(this.bindingNavigatorXemDiemItem_Click);
             // 
+            // popupMenu1
+            // 
+            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnXemDiem)});
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
+            // 
+            // btnXemDiem
+            // 
+            this.btnXemDiem.Caption = "Xem điểm";
+            this.btnXemDiem.Id = 0;
+            this.btnXemDiem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Search_16px;
+            this.btnXemDiem.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O));
+            this.btnXemDiem.Name = "btnXemDiem";
+            this.btnXemDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemDiem_ItemClick);
+            // 
+            // barManager1
+            // 
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btnXemDiem});
+            this.barManager1.MaxItemId = 1;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(827, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 460);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(827, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 460);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(827, 0);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 460);
+            // 
             // frmXemDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,6 +568,10 @@
             this.ClientSize = new System.Drawing.Size(827, 460);
             this.Controls.Add(this.groupControlHocSinh);
             this.Controls.Add(this.dockPanelChucNang);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.Name = "frmXemDiem";
             this.Text = "Xem điểm";
             this.Load += new System.EventHandler(this.frmXemDiem_Load);
@@ -529,7 +601,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorDiem)).EndInit();
             this.bindingNavigatorDiem.ResumeLayout(false);
             this.bindingNavigatorDiem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -575,5 +650,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn col_diemThi;
         private System.Windows.Forms.BindingSource bindingSourceDiem;
         private DevExpress.XtraEditors.LookUpEdit cboNamHoc;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.BarButtonItem btnXemDiem;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -37,7 +36,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNguoiDung));
             this.groupControlNguoiDung = new DevExpress.XtraEditors.GroupControl();
             this.gridControlHocSinh = new DevExpress.XtraGrid.GridControl();
-            this.bindingSourceNguoiDung = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceNguoiDung = new System.Windows.Forms.BindingSource();
             this.dgvNguoiDung = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_maNguoiDung = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_maHS_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
@@ -52,7 +51,7 @@
             this.col_gioiTinh_edit = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.col_ngaySinh_edit = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.col_email_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.bindingNavigatorNguoiDung = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorNguoiDung = new System.Windows.Forms.BindingNavigator();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -66,10 +65,10 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSearchItem = new System.Windows.Forms.ToolStripButton();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -100,9 +99,8 @@
             this.groupControlNguoiDung.Controls.Add(this.bindingNavigatorNguoiDung);
             this.groupControlNguoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControlNguoiDung.Location = new System.Drawing.Point(0, 0);
-            this.groupControlNguoiDung.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControlNguoiDung.Name = "groupControlNguoiDung";
-            this.groupControlNguoiDung.Size = new System.Drawing.Size(833, 443);
+            this.groupControlNguoiDung.Size = new System.Drawing.Size(714, 360);
             this.groupControlNguoiDung.TabIndex = 2;
             this.groupControlNguoiDung.Text = "Danh sách người dùng";
             // 
@@ -110,10 +108,10 @@
             // 
             this.gridControlHocSinh.DataSource = this.bindingSourceNguoiDung;
             this.gridControlHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlHocSinh.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.gridControlHocSinh.Location = new System.Drawing.Point(2, 56);
+            this.gridControlHocSinh.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControlHocSinh.Location = new System.Drawing.Point(2, 51);
             this.gridControlHocSinh.MainView = this.dgvNguoiDung;
-            this.gridControlHocSinh.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.gridControlHocSinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlHocSinh.Name = "gridControlHocSinh";
             this.gridControlHocSinh.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.col_maHS_edit,
@@ -124,7 +122,7 @@
             this.col_email_edit,
             this.btnReset,
             this.col_loaiNguoiDung_edit});
-            this.gridControlHocSinh.Size = new System.Drawing.Size(829, 385);
+            this.gridControlHocSinh.Size = new System.Drawing.Size(710, 307);
             this.gridControlHocSinh.TabIndex = 2;
             this.gridControlHocSinh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvNguoiDung});
@@ -151,7 +149,7 @@
             this.col_LoaiNguoiDung,
             this.col_TenDangNhap,
             this.col_MatKhau});
-            this.dgvNguoiDung.DetailHeight = 530;
+            this.dgvNguoiDung.DetailHeight = 431;
             this.dgvNguoiDung.GridControl = this.gridControlHocSinh;
             this.dgvNguoiDung.GroupPanelText = "DANH SÁCH NGƯỜI DÙNG";
             this.dgvNguoiDung.Name = "dgvNguoiDung";
@@ -163,12 +161,12 @@
             this.col_maNguoiDung.Caption = "Mã người dùng";
             this.col_maNguoiDung.ColumnEdit = this.col_maHS_edit;
             this.col_maNguoiDung.FieldName = "MAND";
-            this.col_maNguoiDung.MinWidth = 24;
+            this.col_maNguoiDung.MinWidth = 21;
             this.col_maNguoiDung.Name = "col_maNguoiDung";
             this.col_maNguoiDung.OptionsColumn.ReadOnly = true;
             this.col_maNguoiDung.Visible = true;
             this.col_maNguoiDung.VisibleIndex = 0;
-            this.col_maNguoiDung.Width = 161;
+            this.col_maNguoiDung.Width = 138;
             // 
             // col_maHS_edit
             // 
@@ -180,11 +178,11 @@
             this.col_TenNguoiDung.Caption = "Tên người dùng";
             this.col_TenNguoiDung.ColumnEdit = this.col_hoTen_edit;
             this.col_TenNguoiDung.FieldName = "TENNGUOIDUNG";
-            this.col_TenNguoiDung.MinWidth = 24;
+            this.col_TenNguoiDung.MinWidth = 21;
             this.col_TenNguoiDung.Name = "col_TenNguoiDung";
             this.col_TenNguoiDung.Visible = true;
             this.col_TenNguoiDung.VisibleIndex = 1;
-            this.col_TenNguoiDung.Width = 161;
+            this.col_TenNguoiDung.Width = 138;
             // 
             // col_hoTen_edit
             // 
@@ -196,11 +194,11 @@
             this.col_LoaiNguoiDung.Caption = "Loại người dùng";
             this.col_LoaiNguoiDung.ColumnEdit = this.col_loaiNguoiDung_edit;
             this.col_LoaiNguoiDung.FieldName = "MALND";
-            this.col_LoaiNguoiDung.MinWidth = 28;
+            this.col_LoaiNguoiDung.MinWidth = 24;
             this.col_LoaiNguoiDung.Name = "col_LoaiNguoiDung";
             this.col_LoaiNguoiDung.Visible = true;
             this.col_LoaiNguoiDung.VisibleIndex = 2;
-            this.col_LoaiNguoiDung.Width = 161;
+            this.col_LoaiNguoiDung.Width = 138;
             // 
             // col_loaiNguoiDung_edit
             // 
@@ -219,12 +217,12 @@
             this.col_TenDangNhap.Caption = "Tên tài khoản";
             this.col_TenDangNhap.ColumnEdit = this.col_diaChi_edit;
             this.col_TenDangNhap.FieldName = "TENDANGNHAP";
-            this.col_TenDangNhap.MinWidth = 24;
+            this.col_TenDangNhap.MinWidth = 21;
             this.col_TenDangNhap.Name = "col_TenDangNhap";
             this.col_TenDangNhap.OptionsColumn.ReadOnly = true;
             this.col_TenDangNhap.Visible = true;
             this.col_TenDangNhap.VisibleIndex = 3;
-            this.col_TenDangNhap.Width = 248;
+            this.col_TenDangNhap.Width = 213;
             // 
             // col_diaChi_edit
             // 
@@ -234,11 +232,11 @@
             // col_MatKhau
             // 
             this.col_MatKhau.ColumnEdit = this.btnReset;
-            this.col_MatKhau.MinWidth = 24;
+            this.col_MatKhau.MinWidth = 21;
             this.col_MatKhau.Name = "col_MatKhau";
             this.col_MatKhau.Visible = true;
             this.col_MatKhau.VisibleIndex = 4;
-            this.col_MatKhau.Width = 78;
+            this.col_MatKhau.Width = 67;
             // 
             // btnReset
             // 
@@ -293,21 +291,21 @@
             this.bindingNavigatorDeleteItem,
             this.bindingNavigatorSaveItem,
             this.bindingNavigatorSearchItem});
-            this.bindingNavigatorNguoiDung.Location = new System.Drawing.Point(2, 25);
+            this.bindingNavigatorNguoiDung.Location = new System.Drawing.Point(2, 20);
             this.bindingNavigatorNguoiDung.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigatorNguoiDung.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigatorNguoiDung.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.bindingNavigatorNguoiDung.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatorNguoiDung.Name = "bindingNavigatorNguoiDung";
             this.bindingNavigatorNguoiDung.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorNguoiDung.Size = new System.Drawing.Size(829, 31);
+            this.bindingNavigatorNguoiDung.Size = new System.Drawing.Size(710, 31);
             this.bindingNavigatorNguoiDung.TabIndex = 0;
             this.bindingNavigatorNguoiDung.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -339,7 +337,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(58, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -376,7 +374,7 @@
             this.bindingNavigatorAddNewItem.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(66, 28);
             this.bindingNavigatorAddNewItem.Text = "Thêm";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
@@ -385,7 +383,7 @@
             this.bindingNavigatorDeleteItem.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(63, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(55, 28);
             this.bindingNavigatorDeleteItem.Text = "Xóa";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
@@ -394,7 +392,7 @@
             this.bindingNavigatorSaveItem.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
             this.bindingNavigatorSaveItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
-            this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(61, 28);
+            this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(55, 28);
             this.bindingNavigatorSaveItem.Text = "Lưu";
             this.bindingNavigatorSaveItem.Click += new System.EventHandler(this.bindingNavigatorSaveItem_Click);
             // 
@@ -403,7 +401,7 @@
             this.bindingNavigatorSearchItem.Image = global::NMCNPM_QLHS.Properties.Resources.Search_32px;
             this.bindingNavigatorSearchItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bindingNavigatorSearchItem.Name = "bindingNavigatorSearchItem";
-            this.bindingNavigatorSearchItem.Size = new System.Drawing.Size(98, 28);
+            this.bindingNavigatorSearchItem.Size = new System.Drawing.Size(85, 28);
             this.bindingNavigatorSearchItem.Text = "Tìm kiếm";
             // 
             // popupMenu1
@@ -418,7 +416,7 @@
             // 
             this.btnThem.Caption = "Thêm";
             this.btnThem.Id = 0;
-            this.btnThem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
+            this.btnThem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Add_16px;
             this.btnThem.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
             this.btnThem.Name = "btnThem";
             this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
@@ -427,7 +425,7 @@
             // 
             this.btnXoa.Caption = "Xóa";
             this.btnXoa.Id = 1;
-            this.btnXoa.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Delete_32px;
+            this.btnXoa.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Delete_16px;
             this.btnXoa.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
@@ -450,17 +448,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(833, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(714, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 443);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 360);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(833, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(714, 0);
             // 
             // barDockControlLeft
             // 
@@ -468,29 +464,26 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 443);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 360);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(833, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(714, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 443);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 360);
             // 
             // frmNguoiDung
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 443);
+            this.ClientSize = new System.Drawing.Size(714, 360);
             this.Controls.Add(this.groupControlNguoiDung);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmNguoiDung";
             this.Text = "Quản lý người dùng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNguoiDung_FormClosing);

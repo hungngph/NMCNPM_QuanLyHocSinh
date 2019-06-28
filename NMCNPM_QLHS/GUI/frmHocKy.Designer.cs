@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHocKy));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlHocKy = new DevExpress.XtraGrid.GridControl();
-            this.bindingSourceHocKy = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceHocKy = new System.Windows.Forms.BindingSource();
             this.dgvHocKy = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_maHocKy = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_tenHocKy = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_heSo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.bindingNavigatorHocKy = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorHocKy = new System.Windows.Forms.BindingNavigator();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -51,15 +50,15 @@
             this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCancelItem = new System.Windows.Forms.ToolStripButton();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.BIThemMoi = new DevExpress.XtraBars.BarButtonItem();
             this.BIXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btuLuu = new DevExpress.XtraBars.BarButtonItem();
-            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHocKy)).BeginInit();
@@ -88,15 +87,16 @@
             this.gridControlHocKy.DataSource = this.bindingSourceHocKy;
             this.gridControlHocKy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControlHocKy.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControlHocKy.Location = new System.Drawing.Point(2, 52);
+            this.gridControlHocKy.Location = new System.Drawing.Point(2, 47);
             this.gridControlHocKy.MainView = this.dgvHocKy;
             this.gridControlHocKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlHocKy.Name = "gridControlHocKy";
-            this.gridControlHocKy.Size = new System.Drawing.Size(653, 388);
+            this.gridControlHocKy.Size = new System.Drawing.Size(559, 310);
             this.gridControlHocKy.TabIndex = 5;
             this.gridControlHocKy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvHocKy,
             this.gridView1});
+            this.gridControlHocKy.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gridControlHocKy_MouseUp_1);
             // 
             // bindingSourceHocKy
             // 
@@ -334,7 +334,7 @@
             // 
             this.btuLuu.Caption = "Lưu";
             this.btuLuu.Id = 2;
-            this.btuLuu.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
+            this.btuLuu.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Save_16px;
             this.btuLuu.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.btuLuu.Name = "btuLuu";
             this.btuLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btuLuu_ItemClick);

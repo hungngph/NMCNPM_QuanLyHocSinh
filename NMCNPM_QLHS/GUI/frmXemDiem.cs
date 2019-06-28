@@ -156,5 +156,16 @@ namespace NMCNPM_QLHS.GUI
             load_cboLop();
             load_BangDiem();
         }
+
+        private void btnXemDiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bindingNavigatorXemDiemItem_Click(sender, e);
+        }
+
+        private void gridDiemControl_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                popupMenu1.ShowPopup(Control.MousePosition);
+        }
     }
 }

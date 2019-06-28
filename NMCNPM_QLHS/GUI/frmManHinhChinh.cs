@@ -500,7 +500,17 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnDSLopHoc_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            Form frm = this.KiemTraTonTai(typeof(frmrpDanhSachLop));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmrpDanhSachLop f = new frmrpDanhSachLop
+                {
+                    MdiParent = this
+                };
+                f.Show();
+            }
         }
 
         #endregion

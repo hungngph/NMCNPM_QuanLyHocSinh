@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhapDiemChung));
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
             this.dockPanelChucNang = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.navCapNhat = new DevExpress.XtraBars.Navigation.NavigationPane();
@@ -45,7 +44,7 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.groupControlHocSinh = new DevExpress.XtraEditors.GroupControl();
             this.gridDiemControl = new DevExpress.XtraGrid.GridControl();
-            this.bindingSourceDiem = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDiem = new System.Windows.Forms.BindingSource();
             this.dgvDiem = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_maHS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_maHS_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
@@ -59,7 +58,7 @@
             this.col_diem1Tiet_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_diemThi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_diemThi_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.bindingNavigatorDiem = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorDiem = new System.Windows.Forms.BindingNavigator();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -71,10 +70,10 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorXemDiemItem = new System.Windows.Forms.ToolStripButton();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
             this.btnLuu = new DevExpress.XtraBars.BarButtonItem();
             this.btnXem = new DevExpress.XtraBars.BarButtonItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -524,7 +523,7 @@
             // 
             this.btnLuu.Caption = "Lưu";
             this.btnLuu.Id = 1;
-            this.btnLuu.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Save_32px;
+            this.btnLuu.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Save_16px;
             this.btnLuu.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLuu_ItemClick);
@@ -533,7 +532,7 @@
             // 
             this.btnXem.Caption = "Xem điểm";
             this.btnXem.Id = 0;
-            this.btnXem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Search_32px;
+            this.btnXem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Search_16px;
             this.btnXem.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O));
             this.btnXem.Name = "btnXem";
             this.btnXem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXem_ItemClick);
