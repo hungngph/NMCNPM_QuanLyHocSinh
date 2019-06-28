@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManHinhChinh));
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.staticNamHoc = new DevExpress.XtraBars.BarStaticItem();
@@ -85,8 +84,8 @@
             this.repositoryItemTextEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
@@ -431,6 +430,7 @@
             this.btnLoaiHinhKiemTra.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.sectionbreakslist_evenpage_16x16;
             this.btnLoaiHinhKiemTra.ImageOptions.LargeImage = global::NMCNPM_QLHS.Properties.Resources.sectionbreakslist_evenpage_32x32;
             this.btnLoaiHinhKiemTra.Name = "btnLoaiHinhKiemTra";
+            this.btnLoaiHinhKiemTra.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoaiHinhKiemTra_ItemClick);
             // 
             // ribbonPageQuanLy
             // 

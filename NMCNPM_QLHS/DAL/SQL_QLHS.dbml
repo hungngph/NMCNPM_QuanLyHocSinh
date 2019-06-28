@@ -17,6 +17,17 @@
       <Column Name="GIATRI" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.BAOCAOTONGKETHK" Member="BAOCAOTONGKETHKs">
+    <Type Name="BAOCAOTONGKETHK">
+      <Column Name="MAHK" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MALOP" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SISO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SOLUONGDAT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TYLE" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Association Name="HOCKY_BAOCAOTONGKETHK" Member="HOCKY" ThisKey="MAHK" OtherKey="MAHK" Type="HOCKY" IsForeignKey="true" />
+      <Association Name="LOP_BAOCAOTONGKETHK" Member="LOP" ThisKey="MALOP" OtherKey="MALOP" Type="LOP" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.BAOCAOTONGKETMON" Member="BAOCAOTONGKETMONs">
     <Type Name="BAOCAOTONGKETMON">
       <Column Name="MABCTKMON" Type="System.String" DbType="Char(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -27,24 +38,13 @@
       <Association Name="MONHOC_BAOCAOTONGKETMON" Member="MONHOC" ThisKey="MAMONHOC" OtherKey="MAMONHOC" Type="MONHOC" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.BAOCAOTONGKETHK" Member="BAOCAOTONGKETHKs">
-    <Type Name="BAOCAOTONGKETHK">
-      <Column Name="MAHK" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MALOP" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="SISO" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="SOLUONGDAT" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TYLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="HOCKY_BAOCAOTONGKETHK" Member="HOCKY" ThisKey="MAHK" OtherKey="MAHK" Type="HOCKY" IsForeignKey="true" />
-      <Association Name="LOP_BAOCAOTONGKETHK" Member="LOP" ThisKey="MALOP" OtherKey="MALOP" Type="LOP" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.CT_BCTKMON" Member="CT_BCTKMONs">
     <Type Name="CT_BCTKMON">
       <Column Name="MABCTKMON" Type="System.String" DbType="Char(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MALOP" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="SISO" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SOLUONGDAT" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TYLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TYLE" Type="System.Single" DbType="Real" CanBeNull="true" />
       <Association Name="BAOCAOTONGKETMON_CT_BCTKMON" Member="BAOCAOTONGKETMON" ThisKey="MABCTKMON" OtherKey="MABCTKMON" Type="BAOCAOTONGKETMON" IsForeignKey="true" />
       <Association Name="LOP_CT_BCTKMON" Member="LOP" ThisKey="MALOP" OtherKey="MALOP" Type="LOP" IsForeignKey="true" />
     </Type>
@@ -62,9 +62,8 @@
     <Type Name="HOCKY">
       <Column Name="MAHK" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TENHOCKY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="HESO" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="HOCKY_BAOCAOTONGKETMON" Member="BAOCAOTONGKETMONs" ThisKey="MAHK" OtherKey="MAHOCKY" Type="BAOCAOTONGKETMON" />
       <Association Name="HOCKY_BAOCAOTONGKETHK" Member="BAOCAOTONGKETHKs" ThisKey="MAHK" OtherKey="MAHK" Type="BAOCAOTONGKETHK" />
+      <Association Name="HOCKY_BAOCAOTONGKETMON" Member="BAOCAOTONGKETMONs" ThisKey="MAHK" OtherKey="MAHOCKY" Type="BAOCAOTONGKETMON" />
       <Association Name="HOCKY_QUATRINHHOC" Member="QUATRINHHOCs" ThisKey="MAHK" OtherKey="MAHK" Type="QUATRINHHOC" />
     </Type>
   </Table>
@@ -76,7 +75,6 @@
       <Column Name="NGAYSINH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="DIACHI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="EMAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="ANH" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="HOCSINH_QUATRINHHOC" Member="QUATRINHHOCs" ThisKey="MAHS" OtherKey="MAHS" Type="QUATRINHHOC" />
     </Type>
   </Table>
