@@ -62,6 +62,7 @@ namespace NMCNPM_QLHS.GUI
                 HOCKY_BUS.update(maHK, heSo);
                 bindingNavigatorHocKy.BindingSource.MoveNext();
             }
+            XtraMessageBox.Show("Lưu thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             state = false;
         }
 

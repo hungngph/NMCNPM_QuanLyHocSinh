@@ -77,7 +77,10 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-
+            cboMonHoc.EditValue = null;
+            cboHocKy.EditValue = null;
+            cboNamHoc.EditValue = null;
+            bindingSourceBCTKM.DataSource = null;
         }
     }
 }

@@ -92,7 +92,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnDeletebindingNavigatorDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc chắn xóa lớp này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (XtraMessageBox.Show("Bạn có chắc chắn xóa lớp này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 string maNamHoc = dgvNamHoc.GetFocusedRowCellDisplayText(col_maNamHoc);
                 NAMHOC_BUS.Delete(maNamHoc);
