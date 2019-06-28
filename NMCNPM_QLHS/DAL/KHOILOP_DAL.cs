@@ -82,5 +82,17 @@ namespace NMCNPM_QLHS.DAL
                 return db.KHOILOPs.Where(a => a.MANAM == maNamHoc && a.TENKHOI == tenKhoiLop).ToList();
             }
         }
+
+        // Lấy số lớp của khối
+        public static int LaySoLop(string maKhoi)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                KHOILOP kl = db.KHOILOPs.Where(a => a.MAKHOI == maKhoi).FirstOrDefault();
+                if(kl != null)
+                    return kl.SOLOP.Value;
+                return 0;
+            }
+        }
     }
 }

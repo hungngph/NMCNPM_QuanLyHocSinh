@@ -68,15 +68,17 @@ namespace NMCNPM_QLHS.DAL
             return lst;
         }
 
-        // Lấy năm học tiếp theo
-        public static List<NAMHOC> LayNamHocTiepTheo(string maNamHocCu)
+        // Lấy năm học trước
+        public static NAMHOC LayNamHocTruoc(string maNamHocHienTai)
         {
-            List<NAMHOC> namHoc = new List<NAMHOC>();
+            NAMHOC namHoc = new NAMHOC();
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                NAMHOC namHocCu = db.NAMHOCs.Where(a => a.MANAMHOC == maNamHocCu).FirstOrDefault();
-                int nam = namHocCu.NAM1.Value;
-                namHoc = db.NAMHOCs.Where(a => a.NAM1 == nam + 1).ToList();
+                NAMHOC namHocHienTai = db.NAMHOCs.Where(a => a.MANAMHOC == maNamHocHienTai).FirstOrDefault();
+                int nam = namHocHienTai.NAM1.Value;
+                namHoc = db.NAMHOCs.Where(a => a.NAM1 == nam - 1).FirstOrDefault();
+                if (namHoc == null)
+                    return null;
             }
             return namHoc;
         }

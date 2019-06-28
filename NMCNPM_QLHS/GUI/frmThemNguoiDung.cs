@@ -39,14 +39,14 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (Utility.isPassword(txtTenNguoiDung.Text))
+            if (!Utility.isTen(txtTenNguoiDung.Text))
             {
                 XtraMessageBox.Show("Tên người dùng không đúng định dạng");
                 return;
             }
-            if (Utility.isPassword(txtTenTaiKhoan.Text))
+            if (!Utility.isPassword(txtTenTaiKhoan.Text))
             {
-                XtraMessageBox.Show("Tên đăng nhập không đúng định dạng");
+                XtraMessageBox.Show("Tên đăng nhập không hợp lệ");
                 return;
             }
             if(NGUOIDUNG_BUS.KiemTraTenDangNhap(txtTenTaiKhoan.Text))
@@ -71,9 +71,9 @@ namespace NMCNPM_QLHS.GUI
 
         private void txtTenTaiKhoan_TextChanged(object sender, EventArgs e)
         {
-            if (!Utility.isTen(txtTenTaiKhoan.Text))
+            if (!Utility.isPassword(txtTenTaiKhoan.Text))
             {
-                errTenTK.SetError(txtTenTaiKhoan, "Tên đăng nhập không đúng định dạng");
+                errTenTK.SetError(txtTenTaiKhoan, "Tên đăng nhập phải chứa ít nhất 8 kí tự và không được chứa kí tự đặc biệt");
             }
             else
             {

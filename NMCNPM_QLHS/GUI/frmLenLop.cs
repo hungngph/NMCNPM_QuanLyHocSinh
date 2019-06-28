@@ -95,22 +95,31 @@ namespace NMCNPM_QLHS.GUI
 
         #region -Load ComBoBox-
 
-        #region -Lên lớp-
-
-        #region -Năm học cũ-
+        #region -Năm học-
 
         private void load_cboNamHocCu()
         {
-            cboNamHocCu.Properties.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
-            cboNamHocCu.Properties.DisplayMember = "TENNAMHOC";
-            cboNamHocCu.Properties.ValueMember = "MANAMHOC";
+            cboNamHocCu.Text = NAMHOC_BUS.LayNamHocTruoc(NAMHOC_BUS.LayNamHocHienTai().MANAMHOC).TENNAMHOC;
         }
+
+        private void load_cboNamHocMoi()
+        {
+            cboNamHocMoi.Text = NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC.ToString();
+        }
+
+        #endregion -Năm học-
+
+        #region -Khối lớp-
+
+        #region -Lên lớp-
+
+        #region -Khối lớp cũ-
 
         private void load_cboKhoiLopCu()
         {
             if (cboNamHocCu.Text != "")
             {
-                string maNamHoc = cboNamHocCu.EditValue.ToString();
+                string maNamHoc = NAMHOC_BUS.LayNamHocTruoc(NAMHOC_BUS.LayNamHocHienTai().MANAMHOC).MANAMHOC;
                 cboKhoiCu.Properties.DataSource = KHOILOP_BUS.LayKhoi1011(maNamHoc);
                 cboKhoiCu.Properties.DisplayMember = "TENKHOI";
                 cboKhoiCu.Properties.ValueMember = "MAKHOI";
@@ -120,6 +129,79 @@ namespace NMCNPM_QLHS.GUI
                 cboKhoiCu.Properties.DataSource = null;
             cboKhoiCu.EditValue = null;
         }
+
+        #endregion -Khối lớp cũ-
+
+        #region -Khối lớp mới-
+
+        private void load_cboKhoiLopMoi()
+        {
+            if (cboKhoiCu.Text != "")
+            {
+                string maNamHoc = NAMHOC_BUS.LayNamHocHienTai().MANAMHOC.ToString();
+                cboKhoiMoi.Properties.DataSource = KHOILOP_BUS.LayKhoiLopTiepTheo(cboKhoiCu.Text, maNamHoc);
+                cboKhoiMoi.Properties.DisplayMember = "TENKHOI";
+                cboKhoiMoi.Properties.ValueMember = "MAKHOI";
+                //cboKhoiMoi.EditValue = null;
+            }
+            else
+                cboKhoiMoi.Properties.DataSource = null;
+
+            cboKhoiMoi.EditValue = null;
+        }
+
+        #endregion -Khối lớp mới-
+
+        #endregion -Lên lớp-
+
+        #region -Học lại-
+
+        #region -Khối lớp cũ-
+
+        private void load_cboKhoiLopCu1()
+        {
+            if (cboNamHocCu.Text != "")
+            {
+                string maNamHoc = NAMHOC_BUS.LayNamHocTruoc(NAMHOC_BUS.LayNamHocHienTai().MANAMHOC).MANAMHOC;
+                cboKhoiCu.Properties.DataSource = KHOILOP_BUS.LayKhoiTheoNamHoc(maNamHoc);
+                cboKhoiCu.Properties.DisplayMember = "TENKHOI";
+                cboKhoiCu.Properties.ValueMember = "MAKHOI";
+                //cboKhoiCu.EditValue = null;
+            }
+            else
+                cboKhoiCu.Properties.DataSource = null;
+            cboKhoiCu.EditValue = null;
+        }
+
+        #endregion -Khối lớp cũ-
+
+        #region -Khối lớp mới-
+
+        private void load_cboKhoiLopMoi1()
+        {
+            if (cboNamHocMoi.Text != "" && cboKhoiCu.Text != "")
+            {
+                string maNamHoc = NAMHOC_BUS.LayNamHocHienTai().MANAMHOC;
+                cboKhoiMoi.Properties.DataSource = KHOILOP_BUS.LayCungKhoiLopNamSau(cboKhoiCu.Text, maNamHoc);
+                cboKhoiMoi.Properties.DisplayMember = "TENKHOI";
+                cboKhoiMoi.Properties.ValueMember = "MAKHOI";
+                //cboKhoiMoi.EditValue = null;
+            }
+            else
+                cboKhoiMoi.Properties.DataSource = null;
+            cboKhoiMoi.EditValue = null;
+        }
+
+        #endregion -Khối lớp mới-
+
+        #endregion -Học lại-
+
+
+        #endregion -Khối lớp
+
+        #region -Lớp-
+
+        #region -Lớp cũ-
 
         private void load_cboLopCu()
         {
@@ -136,40 +218,9 @@ namespace NMCNPM_QLHS.GUI
             cboLopCu.EditValue = null;
         }
 
-        #endregion - Năm học cũ-
+        #endregion -Lớp cũ-
 
-        #region -Năm học mới-
-
-        private void load_cboNamHocMoi()
-        {
-            if (cboNamHocCu.Text != "")
-            {
-                string maNamHocCu = cboNamHocCu.EditValue.ToString();
-                cboNamHocMoi.Properties.DataSource = NAMHOC_BUS.LayNamHocTiepTheo(maNamHocCu);
-                cboNamHocMoi.Properties.DisplayMember = "TENNAMHOC";
-                cboNamHocMoi.Properties.ValueMember = "MANAMHOC";
-                //cboNamHocMoi.EditValue = null;
-            }
-            else
-                cboNamHocMoi.Properties.DataSource = null;
-            cboNamHocMoi.EditValue = null;
-        }
-
-        private void load_cboKhoiLopMoi()
-        {
-            if (cboNamHocMoi.Text != "" && cboKhoiCu.Text != "")
-            {
-                string maNamHoc = cboNamHocMoi.EditValue.ToString();
-                cboKhoiMoi.Properties.DataSource = KHOILOP_BUS.LayKhoiLopTiepTheo(cboKhoiCu.Text, maNamHoc);
-                cboKhoiMoi.Properties.DisplayMember = "TENKHOI";
-                cboKhoiMoi.Properties.ValueMember = "MAKHOI";
-                //cboKhoiMoi.EditValue = null;
-            }
-            else
-                cboKhoiMoi.Properties.DataSource = null;
-
-            cboKhoiMoi.EditValue = null;
-        }
+        #region -Lớp mới-
 
         private void load_cboLopMoi()
         {
@@ -186,63 +237,9 @@ namespace NMCNPM_QLHS.GUI
             cboLopMoi.EditValue = null;
         }
 
-        #endregion - Năm học mới-
+        #endregion -Lớp mới-
 
-        #endregion -Lên lớp-
-
-        #region -Học lại-
-
-        #region -Năm học cũ-
-
-        //load_cboNamHocCu
-
-        private void load_cboKhoiLopCu1()
-        {
-            if (cboNamHocCu.Text != "")
-            {
-                string maNamHoc = cboNamHocCu.EditValue.ToString();
-                cboKhoiCu.Properties.DataSource = KHOILOP_BUS.LayKhoiTheoNamHoc(maNamHoc);
-                cboKhoiCu.Properties.DisplayMember = "TENKHOI";
-                cboKhoiCu.Properties.ValueMember = "MAKHOI";
-                //cboKhoiCu.EditValue = null;
-            }
-            else
-                cboKhoiCu.Properties.DataSource = null;
-            cboKhoiCu.EditValue = null;
-        }
-
-        //load_cboLopCu
-
-        #endregion -Năm học cũ-
-
-        #region -Năm học mới-
-
-        //load_cboNamHocMoi
-
-        private void load_cboKhoiLopMoi1()
-        {
-            if (cboNamHocMoi.Text != "" && cboKhoiCu.Text != "")
-            {
-                string maNamHoc = cboNamHocMoi.EditValue.ToString();
-                cboKhoiMoi.Properties.DataSource = KHOILOP_BUS.LayCungKhoiLopNamSau(cboKhoiCu.Text, maNamHoc);
-                cboKhoiMoi.Properties.DisplayMember = "TENKHOI";
-                cboKhoiMoi.Properties.ValueMember = "MAKHOI";
-                //cboKhoiMoi.EditValue = null;
-            }
-            else
-                cboKhoiMoi.Properties.DataSource = null;
-            cboKhoiMoi.EditValue = null;
-        }
-
-        //load_cboLopMoi()
-
-        #endregion -Năm học mới-
-
-        #region - Học lại-
-
-        #endregion -Load ComBoBox-
-
-        #endregion -Methods-
+        #endregion -Lớp-
 
         #endregion -Load ComBoBox-
 
@@ -257,6 +254,7 @@ namespace NMCNPM_QLHS.GUI
         private void frmLenLop_Load(object sender, EventArgs e)
         {
             load_cboNamHocCu();
+            load_cboNamHocMoi();
             btnChuyen.Enabled = false;
         }
 
@@ -265,7 +263,7 @@ namespace NMCNPM_QLHS.GUI
             if (state == true)
             {
                 if (MessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    btnLuu.PerformClick();
+                    this.btnLuu_Click(this.btnLuu, e);
             }
         }
         private void btnThemNam_Click(object sender, EventArgs e)
@@ -311,20 +309,16 @@ namespace NMCNPM_QLHS.GUI
         #region -ComBoBox_editValueChanged-
 
         #region -Năm học cũ-
-
-        private void cboNamHocCu_EditValueChanged(object sender, EventArgs e)
-        {
-            load_cboNamHocMoi();
-            if (rbtnLenLop.Checked == true)
-                load_cboKhoiLopCu();
-            else
-                load_cboKhoiLopCu1();
-            //load_cboLopCu();
-            load_DSHSCu();
-        }
-
+        
         private void cboKhoiCu_EditValueChanged(object sender, EventArgs e)
         {
+            if (state == true)
+            {
+                if (XtraMessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    this.btnLuu_Click(btnLuu, e);
+                else
+                    state = false;
+            }
             if (rbtnLenLop.Checked == true)
                 load_cboKhoiLopMoi();
             else
@@ -335,23 +329,23 @@ namespace NMCNPM_QLHS.GUI
 
         private void cboLopCu_EditValueChanged(object sender, EventArgs e)
         {
+            if (state == true)
+            {
+                if (XtraMessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    this.btnLuu_Click(btnLuu, e);
+                else
+                {
+                    load_DSHSMoi();
+                    state = false;
+                }
+            }
             load_DSHSCu();
         }
 
         #endregion -Năm học cũ-
 
         #region -Năm học mới-
-
-        private void cboNamHocMoi_EditValueChanged(object sender, EventArgs e)
-        {
-            if (rbtnLenLop.Checked == true)
-                load_cboKhoiLopMoi();
-            else
-                load_cboKhoiLopMoi1();
-            load_cboLopMoi();
-            load_DSHSMoi();
-        }
-
+        
         private void cboKhoiMoi_EditValueChanged(object sender, EventArgs e)
         {
             load_cboLopMoi();
@@ -360,6 +354,16 @@ namespace NMCNPM_QLHS.GUI
 
         private void cboLopMoi_EditValueChanged(object sender, EventArgs e)
         {
+            if (state == true)
+            {
+                if (XtraMessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    this.btnLuu_Click(btnLuu, e);
+                else
+                {
+                    load_DSHSCu();
+                    state = false;
+                }
+            }
             load_DSHSMoi();
         }
 
@@ -374,14 +378,16 @@ namespace NMCNPM_QLHS.GUI
             if (state == true)
             {
                 if (MessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    btnLuu.PerformClick();
+                    this.btnLuu_Click(btnLuu, e);
                 else
                 {
                     state = false;
                 }
             }
-            cboNamHocCu.EditValue = null;
-            load_cboNamHocCu();
+            if (rbtnLenLop.Checked == true)
+                load_cboKhoiLopCu();
+            else
+                load_cboKhoiLopCu1();
         }
 
         #endregion -radioButton_CheckedChanged-
@@ -390,7 +396,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnChuyen_Click(object sender, EventArgs e)
         {
-            if (QUATRINHHOC_BUS.KiemTraSiSo(cboLopMoi.EditValue.ToString(), "HK01", lstvDSHSCu.SelectedItems.Count) == true)
+            if (QUATRINHHOC_BUS.KiemTraSiSo(cboLopMoi.EditValue.ToString(), "HK01", lstvDSHSCu.SelectedItems.Count, lstvDSHSMoi.Items.Count) == true)
             {
                 IEnumerator ie = lstvDSHSCu.SelectedItems.GetEnumerator();
                 if (lstvDSHSCu.SelectedItems.Count != 0)
@@ -437,16 +443,31 @@ namespace NMCNPM_QLHS.GUI
             }
         }
 
-
-        #endregion -Button_Click-
-
-        #endregion -Events-
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
             load_DSHSCu();
             load_DSHSMoi();
             state = false;
+        }
+
+        #endregion -Button_Click-
+
+        #endregion -Events-
+
+        private void btnHuyPhanLop_Click(object sender, EventArgs e)
+        {
+            IEnumerator ie = lstvDSHSMoi.SelectedItems.GetEnumerator();
+            while (ie.MoveNext())
+            {
+                ListViewItem olditem = (ListViewItem)ie.Current;
+                ListViewItem newitem = new ListViewItem();
+                if (!QUATRINHHOC_BUS.KiemTraTonTai(olditem.SubItems[0].Text, cboLopMoi.EditValue.ToString(), "HK01"))
+                {
+                    newitem = olditem;
+                    lstvDSHSMoi.Items.Remove(olditem);
+                    lstvDSHSCu.Items.Add(newitem);
+                }
+            }
         }
     }
 }

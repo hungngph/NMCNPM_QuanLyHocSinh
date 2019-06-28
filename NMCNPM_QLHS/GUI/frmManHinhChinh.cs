@@ -610,21 +610,6 @@ namespace NMCNPM_QLHS.GUI
 
         #endregion -Show form-
 
-        private void frmManHinhChinh_Activated(object sender, EventArgs e)
-        {
-            //staticNamHoc.Caption = staticNamHoc.Caption = "Năm học: " + NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC.ToString();
-        }
-
-        private void frmManHinhChinh_Validated(object sender, EventArgs e)
-        {
-            //staticNamHoc.Caption = staticNamHoc.Caption = "Năm học: " + NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC.ToString();
-        }
-
-        private void frmManHinhChinh_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void UpdateNe()
         {
             staticNamHoc.Caption = staticNamHoc.Caption = "Năm học: " + NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC.ToString();

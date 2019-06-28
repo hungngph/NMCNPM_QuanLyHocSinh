@@ -164,13 +164,6 @@ namespace NMCNPM_QLHS.GUI
             enableAllTextBox();
             txtHoTen.Focus();
         }
-
-        // Lưu thay đổi
-        private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-        
         
         // Tìm kiếm học sinh
         private void bindingNavigatorSearchItem_Click(object sender, EventArgs e)
@@ -279,6 +272,8 @@ namespace NMCNPM_QLHS.GUI
             btnHuyBo.Visible = false;
             bindingNavigatorAddNewItem.Enabled = true;
             disableAllTextBox();
+            if (btnHoanTat.Text == "Lưu")
+                bindingNavigatorHocSinh.BindingSource.MoveFirst();
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

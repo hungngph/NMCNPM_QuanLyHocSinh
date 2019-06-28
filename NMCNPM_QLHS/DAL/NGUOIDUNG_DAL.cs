@@ -116,7 +116,7 @@ namespace NMCNPM_QLHS.DAL
                 NGUOIDUNG nd = db.NGUOIDUNGs.Where(a => a.MAND == maND).FirstOrDefault();
                 if (nd == null)
                     return;
-                nd.MATKHAU = "12345";
+                nd.MATKHAU = "12345678";
                 db.SubmitChanges();
             }
         }
@@ -131,7 +131,7 @@ namespace NMCNPM_QLHS.DAL
                 nd.TENNGUOIDUNG = tenNguoiDung;
                 nd.MALND = maLND;
                 nd.TENDANGNHAP = tenDangNhap;
-                nd.MATKHAU = "12345";
+                nd.MATKHAU = "12345678";
 
                 db.NGUOIDUNGs.InsertOnSubmit(nd);
                 db.SubmitChanges();
@@ -181,7 +181,7 @@ namespace NMCNPM_QLHS.DAL
         public static bool ThemNguoiDung(string taikhoan, string ten, string loaiquyen) {
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                string matkhau = "12345";
+                string matkhau = "12345678";
                 if (KiemTraTonTai(taikhoan))
                     return false;
                 if (!db.LOAINGUOIDUNGs.Any(kind => kind.MALND == loaiquyen))

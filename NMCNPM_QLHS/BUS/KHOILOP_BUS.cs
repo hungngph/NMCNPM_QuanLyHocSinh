@@ -42,5 +42,14 @@ namespace NMCNPM_QLHS.BUS
             return KHOILOP_DAL.LayKhoiTheoMaKhoiMaNam(tenKhoiLopCu, maNamHoc);
         }
 
+        // Kiểm tra số lượng lớp
+        public static bool kiemTraSoLuongLop(string makhoi)
+        {
+            int soLopToiDa = int.Parse(THAMSO_BUS.LayThamSo("SOLUONGLOP").ToString());
+            if (KHOILOP_DAL.LaySoLop(makhoi) == soLopToiDa)
+                return false;
+            return true;
+        }
+
     }
 }

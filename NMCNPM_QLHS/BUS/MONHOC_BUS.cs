@@ -49,5 +49,14 @@ namespace NMCNPM_QLHS.BUS
                 maxID = "MH" + max.ToString();
             return maxID;
         }
+
+        // Kiểm tra số lượng môn học
+        public static bool KiemtraSoLuongMonHoc(GridView dgv)
+        {
+            int soLuongMHToiDa = int.Parse(THAMSO_BUS.LayThamSo("SOLUONGMONHOC").ToString());
+            if (dgv.RowCount == soLuongMHToiDa)
+                return false;
+            return true;
+        }
     }
 }
