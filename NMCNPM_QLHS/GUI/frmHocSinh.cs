@@ -14,6 +14,7 @@ using System.Globalization;
 using System.IO;
 using System.Drawing.Imaging;
 using System.Data.Linq;
+using DevExpress.XtraEditors.DXErrorProvider;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -223,6 +224,10 @@ namespace NMCNPM_QLHS.GUI
             string gioiTinh = cboGioiTinh.Text;
             DateTime ngaySinh = DateTime.ParseExact(dtpNgaySinh.Text.ToString(), "dd/MM/yyyy", CultureInfo.CreateSpecificCulture("en-GB"));
             string email = txtEmail.Text;
+            if (!Utility.isEmail(email))
+            {
+                return;
+            }
             string diaChi = txtDiaChi.Text;
             //Convert image to byte[] array
             byte[] image_byte;
@@ -421,8 +426,31 @@ namespace NMCNPM_QLHS.GUI
         }
 
 
+
         #endregion -Methods-
 
-        
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (!Utility.isEmail(txtEmail.Text))
+            {
+                errEmail.SetError(txtEmail, "Email không hợp lệ");
+            }
+            else
+            {
+                errEmail.Dispose();
+            }
+        }
+
+        private void txtHoTen_TextChanged(object sender, EventArgs e)
+        {
+            if (!Utility.isTen(txtHoTen.Text))
+            {
+                errHoTen.SetError(txtHoTen, "Tên không hợp lệ");
+            }
+            else
+            {
+                errHoTen.Dispose();
+            }
+        }
     }
 }
