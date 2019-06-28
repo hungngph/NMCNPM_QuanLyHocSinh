@@ -283,7 +283,7 @@
             // 
             // btnDSHocSinh
             // 
-            this.btnDSHocSinh.Caption = "Danh sách học sinh";
+            this.btnDSHocSinh.Caption = "Tra cứu học sinh";
             this.btnDSHocSinh.Id = 15;
             this.btnDSHocSinh.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.dshocsinh;
             this.btnDSHocSinh.Name = "btnDSHocSinh";
@@ -301,7 +301,7 @@
             // 
             // btnTraCuuHS
             // 
-            this.btnTraCuuHS.Caption = "Tra cứu học sinh";
+            this.btnTraCuuHS.Caption = "Tra cứu quá trình học sinh";
             this.btnTraCuuHS.Id = 17;
             this.btnTraCuuHS.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.tracuuhocsinh;
             this.btnTraCuuHS.Name = "btnTraCuuHS";
@@ -337,7 +337,7 @@
             // 
             // btnTraCuuDiem
             // 
-            this.btnTraCuuDiem.Caption = "Tra cứ điểm học sinh";
+            this.btnTraCuuDiem.Caption = "Tra cứu điểm học sinh";
             this.btnTraCuuDiem.Id = 25;
             this.btnTraCuuDiem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.phancong;
             this.btnTraCuuDiem.Name = "btnTraCuuDiem";
@@ -498,7 +498,6 @@
             // 
             // ribbonPageGroup7
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.btnDSHocSinh);
             this.ribbonPageGroup7.ItemLinks.Add(this.btnDSLopHoc);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Xuất danh sách";
@@ -514,6 +513,7 @@
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.btnTraCuuHS);
             this.ribbonPageGroup8.ItemLinks.Add(this.btnTraCuuDiem);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnDSHocSinh);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Tra cứu";
             // 

@@ -556,9 +556,9 @@
             this.btnImport.Location = new System.Drawing.Point(577, 28);
             this.btnImport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(87, 28);
+            this.btnImport.Size = new System.Drawing.Size(114, 23);
             this.btnImport.TabIndex = 3;
-            this.btnImport.Text = "Import";
+            this.btnImport.Text = "Nhập danh sách";
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // gridControlHocSinh
