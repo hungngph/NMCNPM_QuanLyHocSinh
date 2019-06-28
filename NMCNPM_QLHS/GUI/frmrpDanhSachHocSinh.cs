@@ -52,7 +52,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void cboLop_EditValueChanged(object sender, EventArgs e)
         {
-            if (cboLop.Text != null)
+            if (cboLop.Text != "")
                 bindingSourceDiemTongKet.DataSource = HOCTAP_BUS.LayDiemHocSinhTheoLop(cboLop.EditValue.ToString());
             else
                 bindingSourceDiemTongKet.DataSource = null;

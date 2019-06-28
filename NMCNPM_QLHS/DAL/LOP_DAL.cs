@@ -127,15 +127,12 @@ namespace NMCNPM_QLHS.DAL
         }
 
         // Lấy sĩ số lớp
-        public static int LaySiSoLop(string maLop)
+        public static int LaySiSoLop(string maLop, string maHocKy)
         {
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                LOP lop = db.LOPs.Where(a => a.MALOP == maLop).FirstOrDefault();
-                if (lop != null)
-                    return lop.SISO.Value;
-                else
-                    return 0;
+                int siSo = db.QUATRINHHOCs.Where(a => a.MALOP == maLop && a.MAHK == maHocKy).Count();
+                return siSo;
             }
         }
 

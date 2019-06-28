@@ -109,6 +109,56 @@ namespace NMCNPM_QLHS.DAL
                 return "unknown";
             }
         }
+
+        public static void ResetMK(string maND)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                NGUOIDUNG nd = db.NGUOIDUNGs.Where(a => a.MAND == maND).FirstOrDefault();
+                nd.MATKHAU = "123456789";
+                db.SubmitChanges();
+            }
+        }
+
+        // Thêm người dùng
+        public static void insert(string maND, string tenNguoiDung, string maLND, string tenDangNhap)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                NGUOIDUNG nd = new NGUOIDUNG();
+                nd.MAND = maND;
+                nd.TENNGUOIDUNG = tenNguoiDung;
+                nd.MALND = maLND;
+                nd.TENDANGNHAP = tenDangNhap;
+                nd.MATKHAU = "123456789";
+
+                db.NGUOIDUNGs.InsertOnSubmit(nd);
+                db.SubmitChanges();
+            }
+        }
+
+        // Sửa người dùng
+        public static void update(string maND, string tenNguoiDung, string maLND)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                NGUOIDUNG nd = db.NGUOIDUNGs.Where(a => a.MAND == maND).FirstOrDefault();
+                nd.TENNGUOIDUNG = tenNguoiDung;
+                nd.MALND = maLND;
+                db.SubmitChanges();
+            }
+        }
+
+        // Xóa người dùng
+        public static void delete(string maND)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                NGUOIDUNG nd = db.NGUOIDUNGs.Where(a => a.MAND == maND).FirstOrDefault();
+                db.NGUOIDUNGs.DeleteOnSubmit(nd);
+                db.SubmitChanges();
+            }
+        }
         public static bool DoiMatKhau(string code, string matkhaumoi)
         {
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())

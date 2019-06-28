@@ -219,8 +219,15 @@ namespace NMCNPM_QLHS.GUI
             string email = txtEmail.Text;
             string diaChi = txtDiaChi.Text;
             //Convert image to byte[] array
-            byte[] image_byte = imageToByteArray(picHocSinh.Image);
-            Binary image_binary = new Binary(image_byte);
+            byte[] image_byte;
+            Binary image_binary;
+            if (picHocSinh.Image != null)
+            {
+                image_byte = imageToByteArray(picHocSinh.Image);
+                image_binary = new Binary(image_byte);
+            }
+            else
+                image_binary = null;
 
             if (HOCSINH_BUS.KiemTraTuoi(ngaySinh) == true)
             {

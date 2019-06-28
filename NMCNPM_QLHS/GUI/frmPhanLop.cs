@@ -105,7 +105,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnChuyen_Click(object sender, EventArgs e)
         {
-            if (QUATRINHHOC_BUS.KiemTraSiSo(cboLop.EditValue.ToString(), lstvDSHS.SelectedItems.Count) == true)
+            if (QUATRINHHOC_BUS.KiemTraSiSo(cboLop.EditValue.ToString(),cboHocKy.EditValue.ToString(), lstvDSHS.SelectedItems.Count) == true)
             {
                 IEnumerator ie = lstvDSHS.SelectedItems.GetEnumerator();
                 if (lstvDSHS.SelectedItems.Count != 0)
@@ -249,7 +249,9 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-
+            load_DSHS();
+            load_DSLop();
+            state = false;
         }
     }
 }

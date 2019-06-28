@@ -34,7 +34,8 @@ namespace NMCNPM_QLHS.GUI
             }
             if (NGUOIDUNG_BUS.DangNhap(txtTaiKhoan.Text, txtMatKhau.Text))
             {
-                frmManHinhChinh frm = new frmManHinhChinh();
+                string tenDangNhap = txtTaiKhoan.Text;
+                frmManHinhChinh frm = new frmManHinhChinh(tenDangNhap);
                 frm.Show();
                 this.Hide();
             }

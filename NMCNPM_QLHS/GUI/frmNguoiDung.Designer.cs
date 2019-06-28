@@ -38,7 +38,7 @@
             this.groupControlNguoiDung = new DevExpress.XtraEditors.GroupControl();
             this.gridControlHocSinh = new DevExpress.XtraGrid.GridControl();
             this.bindingSourceNguoiDung = new System.Windows.Forms.BindingSource(this.components);
-            this.dgvHocSinh = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvNguoiDung = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_maNguoiDung = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_maHS_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.col_TenNguoiDung = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,7 +52,7 @@
             this.col_gioiTinh_edit = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.col_ngaySinh_edit = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.col_email_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.bindingNavigatorHocSinh = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorNguoiDung = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -80,7 +80,7 @@
             this.groupControlNguoiDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHocSinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceNguoiDung)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_maHS_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_hoTen_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_loaiNguoiDung_edit)).BeginInit();
@@ -90,8 +90,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.col_ngaySinh_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_ngaySinh_edit.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_email_edit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocSinh)).BeginInit();
-            this.bindingNavigatorHocSinh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorNguoiDung)).BeginInit();
+            this.bindingNavigatorNguoiDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
@@ -99,7 +99,7 @@
             // groupControlNguoiDung
             // 
             this.groupControlNguoiDung.Controls.Add(this.gridControlHocSinh);
-            this.groupControlNguoiDung.Controls.Add(this.bindingNavigatorHocSinh);
+            this.groupControlNguoiDung.Controls.Add(this.bindingNavigatorNguoiDung);
             this.groupControlNguoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControlNguoiDung.Location = new System.Drawing.Point(0, 0);
             this.groupControlNguoiDung.Name = "groupControlNguoiDung";
@@ -111,8 +111,10 @@
             // 
             this.gridControlHocSinh.DataSource = this.bindingSourceNguoiDung;
             this.gridControlHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlHocSinh.Location = new System.Drawing.Point(2, 51);
-            this.gridControlHocSinh.MainView = this.dgvHocSinh;
+            this.gridControlHocSinh.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControlHocSinh.Location = new System.Drawing.Point(2, 56);
+            this.gridControlHocSinh.MainView = this.dgvNguoiDung;
+            this.gridControlHocSinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlHocSinh.Name = "gridControlHocSinh";
             this.gridControlHocSinh.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.col_maHS_edit,
@@ -126,33 +128,34 @@
             this.gridControlHocSinh.Size = new System.Drawing.Size(710, 307);
             this.gridControlHocSinh.TabIndex = 2;
             this.gridControlHocSinh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvHocSinh});
+            this.dgvNguoiDung});
             // 
             // bindingSourceNguoiDung
             // 
             this.bindingSourceNguoiDung.DataSource = typeof(NMCNPM_QLHS.DAL.NGUOIDUNG);
             // 
-            // dgvHocSinh
+            // dgvNguoiDung
             // 
-            this.dgvHocSinh.Appearance.GroupPanel.BackColor = System.Drawing.Color.Transparent;
-            this.dgvHocSinh.Appearance.GroupPanel.BackColor2 = System.Drawing.Color.Transparent;
-            this.dgvHocSinh.Appearance.GroupPanel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.dgvHocSinh.Appearance.GroupPanel.ForeColor = System.Drawing.Color.Black;
-            this.dgvHocSinh.Appearance.GroupPanel.Options.UseBackColor = true;
-            this.dgvHocSinh.Appearance.GroupPanel.Options.UseFont = true;
-            this.dgvHocSinh.Appearance.GroupPanel.Options.UseForeColor = true;
-            this.dgvHocSinh.Appearance.GroupPanel.Options.UseTextOptions = true;
-            this.dgvHocSinh.Appearance.GroupPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dgvHocSinh.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.dgvNguoiDung.Appearance.GroupPanel.BackColor = System.Drawing.Color.Transparent;
+            this.dgvNguoiDung.Appearance.GroupPanel.BackColor2 = System.Drawing.Color.Transparent;
+            this.dgvNguoiDung.Appearance.GroupPanel.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.dgvNguoiDung.Appearance.GroupPanel.ForeColor = System.Drawing.Color.Black;
+            this.dgvNguoiDung.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.dgvNguoiDung.Appearance.GroupPanel.Options.UseFont = true;
+            this.dgvNguoiDung.Appearance.GroupPanel.Options.UseForeColor = true;
+            this.dgvNguoiDung.Appearance.GroupPanel.Options.UseTextOptions = true;
+            this.dgvNguoiDung.Appearance.GroupPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvNguoiDung.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.col_maNguoiDung,
             this.col_TenNguoiDung,
             this.col_LoaiNguoiDung,
             this.col_TenDangNhap,
             this.col_MatKhau});
-            this.dgvHocSinh.GridControl = this.gridControlHocSinh;
-            this.dgvHocSinh.GroupPanelText = "DANH SÁCH NGƯỜI DÙNG";
-            this.dgvHocSinh.Name = "dgvHocSinh";
-            this.dgvHocSinh.OptionsView.ShowFooter = true;
+            this.dgvNguoiDung.DetailHeight = 431;
+            this.dgvNguoiDung.GridControl = this.gridControlHocSinh;
+            this.dgvNguoiDung.GroupPanelText = "DANH SÁCH NGƯỜI DÙNG";
+            this.dgvNguoiDung.Name = "dgvNguoiDung";
+            this.dgvNguoiDung.OptionsView.ShowFooter = true;
             // 
             // col_maNguoiDung
             // 
@@ -191,8 +194,8 @@
             // 
             this.col_LoaiNguoiDung.Caption = "Loại người dùng";
             this.col_LoaiNguoiDung.ColumnEdit = this.col_loaiNguoiDung_edit;
-            this.col_LoaiNguoiDung.FieldName = "MALND";
-            this.col_LoaiNguoiDung.MinWidth = 21;
+            this.col_LoaiNguoiDung.FieldName = "LOAINGUOIDUNG.MALND";
+            this.col_LoaiNguoiDung.MinWidth = 24;
             this.col_LoaiNguoiDung.Name = "col_LoaiNguoiDung";
             this.col_LoaiNguoiDung.Visible = true;
             this.col_LoaiNguoiDung.VisibleIndex = 2;
@@ -267,14 +270,14 @@
             this.col_email_edit.Name = "col_email_edit";
             this.col_email_edit.UseSystemPasswordChar = true;
             // 
-            // bindingNavigatorHocSinh
+            // bindingNavigatorNguoiDung
             // 
-            this.bindingNavigatorHocSinh.AddNewItem = null;
-            this.bindingNavigatorHocSinh.BindingSource = this.bindingSourceNguoiDung;
-            this.bindingNavigatorHocSinh.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigatorHocSinh.DeleteItem = null;
-            this.bindingNavigatorHocSinh.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorHocSinh.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorNguoiDung.AddNewItem = null;
+            this.bindingNavigatorNguoiDung.BindingSource = this.bindingSourceNguoiDung;
+            this.bindingNavigatorNguoiDung.CountItem = this.bindingNavigatorCountItem;
+            this.bindingNavigatorNguoiDung.DeleteItem = null;
+            this.bindingNavigatorNguoiDung.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorNguoiDung.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -289,16 +292,16 @@
             this.bindingNavigatorEditItem,
             this.bindingNavigatorSaveItem,
             this.bindingNavigatorSearchItem});
-            this.bindingNavigatorHocSinh.Location = new System.Drawing.Point(2, 20);
-            this.bindingNavigatorHocSinh.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigatorHocSinh.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigatorHocSinh.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigatorHocSinh.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigatorHocSinh.Name = "bindingNavigatorHocSinh";
-            this.bindingNavigatorHocSinh.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorHocSinh.Size = new System.Drawing.Size(710, 31);
-            this.bindingNavigatorHocSinh.TabIndex = 0;
-            this.bindingNavigatorHocSinh.Text = "bindingNavigator1";
+            this.bindingNavigatorNguoiDung.Location = new System.Drawing.Point(2, 25);
+            this.bindingNavigatorNguoiDung.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bindingNavigatorNguoiDung.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bindingNavigatorNguoiDung.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bindingNavigatorNguoiDung.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bindingNavigatorNguoiDung.Name = "bindingNavigatorNguoiDung";
+            this.bindingNavigatorNguoiDung.PositionItem = this.bindingNavigatorPositionItem;
+            this.bindingNavigatorNguoiDung.Size = new System.Drawing.Size(829, 31);
+            this.bindingNavigatorNguoiDung.TabIndex = 0;
+            this.bindingNavigatorNguoiDung.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
@@ -401,6 +404,7 @@
             this.bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
             this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(55, 28);
             this.bindingNavigatorSaveItem.Text = "Lưu";
+            this.bindingNavigatorSaveItem.Click += new System.EventHandler(this.bindingNavigatorSaveItem_Click);
             // 
             // bindingNavigatorSearchItem
             // 
@@ -508,7 +512,7 @@
             this.groupControlNguoiDung.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHocSinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceNguoiDung)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_maHS_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_hoTen_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_loaiNguoiDung_edit)).EndInit();
@@ -518,9 +522,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.col_ngaySinh_edit.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_ngaySinh_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.col_email_edit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocSinh)).EndInit();
-            this.bindingNavigatorHocSinh.ResumeLayout(false);
-            this.bindingNavigatorHocSinh.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorNguoiDung)).EndInit();
+            this.bindingNavigatorNguoiDung.ResumeLayout(false);
+            this.bindingNavigatorNguoiDung.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
@@ -532,7 +536,7 @@
 
         private DevExpress.XtraEditors.GroupControl groupControlNguoiDung;
         private DevExpress.XtraGrid.GridControl gridControlHocSinh;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgvHocSinh;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvNguoiDung;
         private DevExpress.XtraGrid.Columns.GridColumn col_maNguoiDung;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_maHS_edit;
         private DevExpress.XtraGrid.Columns.GridColumn col_TenNguoiDung;
@@ -544,7 +548,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn col_MatKhau;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit col_email_edit;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit col_ngaySinh_edit;
-        private System.Windows.Forms.BindingNavigator bindingNavigatorHocSinh;
+        private System.Windows.Forms.BindingNavigator bindingNavigatorNguoiDung;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;

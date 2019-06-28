@@ -23,6 +23,7 @@ namespace NMCNPM_QLHS.GUI
         //frmDangNhap m_FrmLogin = null;
         //frmNguoiDung m_FrmNguoiDung = null;
         //frmConnection m_Connection = null;
+        string username;
         #endregion -Fields-
 
         #region -frmMain-
@@ -36,6 +37,17 @@ namespace NMCNPM_QLHS.GUI
             Thread.Sleep(1000);
             SplashScreenManager.CloseDefaultSplashScreen();
             Permissions();
+        }
+
+        public frmManHinhChinh(string tenDangNhap)
+        {
+            //Load frmSplash
+            InitializeComponent();
+            SplashScreenManager.ShowDefaultSplashScreen("Đang mở...", "Phần Mềm Quản lý học sinh");
+            Thread.Sleep(1000);
+            SplashScreenManager.CloseDefaultSplashScreen();
+            Permissions();
+            username = tenDangNhap;
         }
         #endregion -Constructor-
 

@@ -87,15 +87,16 @@
             // 
             this.gridControlHocKy.DataSource = this.bindingSourceHocKy;
             this.gridControlHocKy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlHocKy.Location = new System.Drawing.Point(2, 47);
+            this.gridControlHocKy.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControlHocKy.Location = new System.Drawing.Point(2, 52);
             this.gridControlHocKy.MainView = this.dgvHocKy;
+            this.gridControlHocKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlHocKy.Name = "gridControlHocKy";
-            this.gridControlHocKy.Size = new System.Drawing.Size(559, 310);
+            this.gridControlHocKy.Size = new System.Drawing.Size(653, 388);
             this.gridControlHocKy.TabIndex = 5;
             this.gridControlHocKy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvHocKy,
             this.gridView1});
-            this.gridControlHocKy.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gridControlHocKy_MouseUp);
             // 
             // bindingSourceHocKy
             // 
@@ -109,6 +110,7 @@
             this.col_maHocKy,
             this.col_tenHocKy,
             this.col_heSo});
+            this.dgvHocKy.DetailHeight = 431;
             this.dgvHocKy.GridControl = this.gridControlHocKy;
             this.dgvHocKy.Name = "dgvHocKy";
             this.dgvHocKy.OptionsView.ShowGroupPanel = false;
@@ -117,34 +119,37 @@
             // 
             this.col_maHocKy.Caption = "Mã học kỳ";
             this.col_maHocKy.FieldName = "MAHK";
+            this.col_maHocKy.MinWidth = 23;
             this.col_maHocKy.Name = "col_maHocKy";
             this.col_maHocKy.OptionsColumn.AllowEdit = false;
             this.col_maHocKy.Visible = true;
             this.col_maHocKy.VisibleIndex = 0;
-            this.col_maHocKy.Width = 209;
+            this.col_maHocKy.Width = 244;
             // 
             // col_tenHocKy
             // 
             this.col_tenHocKy.Caption = "Tên học kỳ";
             this.col_tenHocKy.FieldName = "TENHOCKY";
+            this.col_tenHocKy.MinWidth = 23;
             this.col_tenHocKy.Name = "col_tenHocKy";
             this.col_tenHocKy.OptionsColumn.AllowEdit = false;
             this.col_tenHocKy.Visible = true;
             this.col_tenHocKy.VisibleIndex = 1;
-            this.col_tenHocKy.Width = 166;
+            this.col_tenHocKy.Width = 194;
             // 
             // col_heSo
             // 
             this.col_heSo.Caption = "Hệ số";
             this.col_heSo.FieldName = "HESO";
-            this.col_heSo.MinWidth = 21;
+            this.col_heSo.MinWidth = 25;
             this.col_heSo.Name = "col_heSo";
             this.col_heSo.Visible = true;
             this.col_heSo.VisibleIndex = 2;
-            this.col_heSo.Width = 169;
+            this.col_heSo.Width = 197;
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gridControlHocKy;
             this.gridView1.Name = "gridView1";
             // 

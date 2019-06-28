@@ -259,6 +259,9 @@ namespace NMCNPM_QLHS.GUI
 
         #endregion -Methods-
 
-
+        private void dgvDiem_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            state = true;
+        }
     }
 }

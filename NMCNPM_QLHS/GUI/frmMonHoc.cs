@@ -13,7 +13,8 @@ using NMCNPM_QLHS.BUS;
 namespace NMCNPM_QLHS.GUI
 {
     public partial class frmMonHoc : DevExpress.XtraEditors.XtraForm
-    {
+    {   
+        List<string> lst = new List<string>();
         public frmMonHoc()
         {
             InitializeComponent();
@@ -47,7 +48,7 @@ namespace NMCNPM_QLHS.GUI
             // False 
             // Disable các button
             bindingNavigatorAddNewItem.Enabled = true;
-            bindingNavigatorEditItem.Enabled = true;
+            bindingNavigatorSaveItem.Enabled = true;
             bindingNavigatorDeleteItem.Enabled = true;
         }
 
@@ -61,7 +62,7 @@ namespace NMCNPM_QLHS.GUI
         {
             // Enable, Disable các button
             bindingNavigatorAddNewItem.Enabled = false;
-            bindingNavigatorEditItem.Enabled = false;
+            bindingNavigatorSaveItem.Enabled = false;
             bindingNavigatorDeleteItem.Enabled = false;
         }
 
@@ -77,37 +78,56 @@ namespace NMCNPM_QLHS.GUI
         private void frmMonHoc_Load(object sender, EventArgs e)
         {
             bindingSourceMonHoc.DataSource = MONHOC_BUS.LayTatCaMonHoc();
+            lst = null;
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-
+            string maMonHoc = MONHOC_BUS.autoID(dgvMonHoc);
+            dgvMonHoc.AddNewRow();
+            int rowHandle = dgvMonHoc.GetRowHandle(dgvMonHoc.DataRowCount);
+            if (dgvMonHoc.IsNewItemRow(rowHandle))
+            {
+                dgvMonHoc.SetRowCellValue(rowHandle, col_maMonHoc, maMonHoc);
+            }
         }
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-
+            if (XtraMessageBox.Show("Bạn có chắc chắn xóa lớp này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string maMonHoc = dgvMonHoc.GetFocusedRowCellDisplayText(col_maMonHoc);
+                dgvMonHoc.DeleteSelectedRows();
+                lst.Add(maMonHoc);
+            }
         }
-        private void bindingNavigatorEditItem_Click(object sender, EventArgs e)
+
+        private void dgvMonHoc_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-
+            //col_tenMonHoc.OptionsColumn.AllowEdit = false;
         }
-        private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+
+        private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            bindingNavigatorAddNewItem_Click(sender, e);
+            string maMonHoc, tenMonHoc;
+            bindingNavigatorMonHoc.BindingSource.MoveFirst();
+            // Thêm, sửa môn học
+            for (int i = 0; i < dgvMonHoc.RowCount; i++)
+            {
+                maMonHoc = dgvMonHoc.GetFocusedRowCellDisplayText(col_maMonHoc);
+                tenMonHoc = dgvMonHoc.GetFocusedRowCellDisplayText(col_tenMonHoc);
+                if (MONHOC_BUS.LayTatCaMonHoc().Any(a => a.MAMONHOC == maMonHoc) == true)
+                    MONHOC_BUS.update(maMonHoc, tenMonHoc);
+                else
+                    MONHOC_BUS.insert(maMonHoc, tenMonHoc);
+                bindingNavigatorMonHoc.BindingSource.MoveNext();
+            }
+            // Xóa môn học
+            if (lst != null)
+            {
+                for (int i = 0; i < lst.Count; i++)
+                    MONHOC_BUS.delete(lst[i]);
+            }
         }
-
-        private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            bindingNavigatorDeleteItem_Click(sender, e);
-        }
-
-        private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            bindingNavigatorEditItem_Click(sender, e);
-        }
-
-       
     }
-
 }

@@ -29,9 +29,9 @@ namespace NMCNPM_QLHS.BUS
         }
 
         // Kiểm tra sĩ số
-        public static bool KiemTraSiSo(string maLop, int soHS)
+        public static bool KiemTraSiSo(string maLop, string maHK, int soHS)
         {
-            int siSoHienTai = LOP_DAL.LaySiSoLop(maLop);
+            int siSoHienTai = LOP_DAL.LaySiSoLop(maLop, maHK);
             double siSoToiDa = THAMSO_BUS.LayThamSo("SISOTOIDA");
             if (siSoHienTai + soHS > siSoToiDa)
                 return false;
