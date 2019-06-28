@@ -26,7 +26,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void frmThongTinNguoiDung_Load(object sender, EventArgs e)
         {
-            lbChucVu.Text = NGUOIDUNG_BUS.LayQuyen(CurrentUser.Code);
+            lbChucVu.Text = NGUOIDUNG_BUS.LayTenQuyen(CurrentUser.Code);
             lbTenNgDung.Text = NGUOIDUNG_BUS.LayTenNguoiDung(CurrentUser.Code);
             lbTenTaiKhoan.Text = NGUOIDUNG_BUS.LayTenDangNhap(CurrentUser.Code);
         }

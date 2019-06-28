@@ -23,7 +23,7 @@ namespace NMCNPM_QLHS.GUI
 
         public void Permissions()
         {
-            switch (CurrentUser.Code)
+            switch (NGUOIDUNG_BUS.LayMaQuyen(CurrentUser.Code))
             {
                 case "LND002":      // Giao diện đăng nhập với quyền BGH
                     IsBGH();

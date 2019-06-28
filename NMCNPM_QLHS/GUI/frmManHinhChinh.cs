@@ -82,7 +82,7 @@ namespace NMCNPM_QLHS.GUI
 
         public void Permissions()
         {
-            switch (CurrentUser.Code)
+            switch (NGUOIDUNG_BUS.LayMaQuyen(CurrentUser.Code))
             {
                 case "LND002":      // Giao diện đăng nhập với quyền BGH
                     IsBGH();
@@ -110,7 +110,7 @@ namespace NMCNPM_QLHS.GUI
             btnLenLop.Visibility = BarItemVisibility.Always;
             btnNhapDiem.Visibility = BarItemVisibility.Always;
             ribbonPageQuyDinh.Visible = true;
-            btnNguoiDung.Visibility = BarItemVisibility.Always;
+            ribbonPageGroup11.Visible = true;
         }
 
         public void IsBGH()
@@ -119,7 +119,6 @@ namespace NMCNPM_QLHS.GUI
             btnPhanLop.Visibility = BarItemVisibility.Never;
             btnLenLop.Visibility = BarItemVisibility.Never;
             ribbonPageThongKe.Visible = false;
-            btnNguoiDung.Visibility = BarItemVisibility.Never;
         }
 
         public void IsGiaoVien()
@@ -128,7 +127,7 @@ namespace NMCNPM_QLHS.GUI
             btnPhanLop.Visibility = BarItemVisibility.Never;
             btnLenLop.Visibility = BarItemVisibility.Never;
             ribbonPageQuyDinh.Visible = false;
-            btnNguoiDung.Visibility = BarItemVisibility.Never;
+            ribbonPageGroup11.Visible = false;
         }
 
         public void IsGiaoVu()
@@ -136,6 +135,7 @@ namespace NMCNPM_QLHS.GUI
             // Enable, Disable các button
             btnNhapDiem.Visibility = BarItemVisibility.Never;
             btnNguoiDung.Visibility = BarItemVisibility.Never;
+            ribbonPageGroup11.Visible = false;
         }
 
 

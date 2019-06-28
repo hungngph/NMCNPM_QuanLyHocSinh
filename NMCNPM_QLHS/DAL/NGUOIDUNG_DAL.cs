@@ -76,13 +76,24 @@ namespace NMCNPM_QLHS.DAL
                 return "unknown";
             }
         }
-        public static string LayQuyen(string code)
+        public static string LayTenQuyen(string code)
         {
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
                 if (db.NGUOIDUNGs.Any(u => u.MAND == code))
                 {
                     return db.NGUOIDUNGs.First(u => u.MAND == code).LOAINGUOIDUNG.TENLOAIND;
+                }
+                return "unknown";
+            }
+        }
+        public static string LayMaQuyen(string code)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                if (db.NGUOIDUNGs.Any(u => u.MAND == code))
+                {
+                    return db.NGUOIDUNGs.First(u => u.MAND == code).MALND;
                 }
                 return "unknown";
             }
