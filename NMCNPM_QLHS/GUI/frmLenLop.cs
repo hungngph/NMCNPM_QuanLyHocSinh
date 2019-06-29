@@ -459,10 +459,6 @@ namespace NMCNPM_QLHS.GUI
             state = false;
         }
 
-        #endregion -Button_Click-
-
-        #endregion -Events-
-
         private void btnHuyPhanLop_Click(object sender, EventArgs e)
         {
             IEnumerator ie = lstvDSHSMoi.SelectedItems.GetEnumerator();
@@ -478,5 +474,10 @@ namespace NMCNPM_QLHS.GUI
                 }
             }
         }
+
+        #endregion -Button_Click-
+
+        #endregion -Events-
+
     }
 }

@@ -148,6 +148,22 @@ namespace NMCNPM_QLHS.GUI
             state = false;
         }
 
+        private void btnHuyPhanLop_Click(object sender, EventArgs e)
+        {
+            IEnumerator ie = lstvDSLop.SelectedItems.GetEnumerator();
+            while (ie.MoveNext())
+            {
+                ListViewItem olditem = (ListViewItem)ie.Current;
+                ListViewItem newitem = new ListViewItem();
+                if (!QUATRINHHOC_BUS.KiemTraTonTai(olditem.SubItems[0].Text, cboLop.EditValue.ToString(), cboHocKy.EditValue.ToString()))
+                {
+                    newitem = olditem;
+                    lstvDSLop.Items.Remove(olditem);
+                    lstvDSHS.Items.Add(newitem);
+                }
+            }
+        }
+
         #endregion -button_click-
 
         #endregion -Events-
@@ -242,21 +258,5 @@ namespace NMCNPM_QLHS.GUI
         #endregion -Load-
 
         #endregion -Methods-
-
-        private void btnHuyPhanLop_Click(object sender, EventArgs e)
-        {
-            IEnumerator ie = lstvDSLop.SelectedItems.GetEnumerator();
-            while (ie.MoveNext())
-            {
-                ListViewItem olditem = (ListViewItem)ie.Current;
-                ListViewItem newitem = new ListViewItem();
-                if (!QUATRINHHOC_BUS.KiemTraTonTai(olditem.SubItems[0].Text, cboLop.EditValue.ToString(), cboHocKy.EditValue.ToString()))
-                {
-                    newitem = olditem;
-                    lstvDSLop.Items.Remove(olditem);
-                    lstvDSHS.Items.Add(newitem);
-                }
-            }
-        }
     }
 }

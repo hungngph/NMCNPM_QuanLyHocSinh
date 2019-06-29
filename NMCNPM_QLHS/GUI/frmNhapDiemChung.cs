@@ -192,6 +192,7 @@ namespace NMCNPM_QLHS.GUI
         }
 
         #endregion -Lưu điểm-
+
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bindingNavigatorSaveItem_Click(sender, e);
@@ -202,7 +203,6 @@ namespace NMCNPM_QLHS.GUI
             bindingNavigatorXemDiemItem_Click(sender, e);
         }
         #endregion -bindingNavigatorItems_Click-
-
 
         #region -comBoBox_EditValueChanged-
 
@@ -267,6 +267,7 @@ namespace NMCNPM_QLHS.GUI
             if (e.Button == MouseButtons.Right)
                 popupMenu1.ShowPopup(Control.MousePosition);
         }
+
         private void dgvDiem_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
             state = true;

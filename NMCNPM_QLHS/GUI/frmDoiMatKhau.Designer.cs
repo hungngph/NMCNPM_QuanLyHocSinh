@@ -68,7 +68,7 @@
             this.txtMatKhauMoi.Properties.UseSystemPasswordChar = true;
             this.txtMatKhauMoi.Size = new System.Drawing.Size(180, 22);
             this.txtMatKhauMoi.TabIndex = 2;
-            this.txtMatKhauMoi.EditValueChanged += new System.EventHandler(this.txtMatKhauMoi_EditValueChanged);
+            this.txtMatKhauMoi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_KeyDown);
             // 
             // label2
             // 
@@ -89,6 +89,7 @@
             this.txtMatKhau.Properties.UseSystemPasswordChar = true;
             this.txtMatKhau.Size = new System.Drawing.Size(180, 22);
             this.txtMatKhau.TabIndex = 1;
+            this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_KeyDown);
             // 
             // label1
             // 
@@ -108,6 +109,7 @@
             this.txtNhapLai.Properties.UseSystemPasswordChar = true;
             this.txtNhapLai.Size = new System.Drawing.Size(180, 22);
             this.txtNhapLai.TabIndex = 3;
+            this.txtNhapLai.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_KeyDown);
             // 
             // label3
             // 

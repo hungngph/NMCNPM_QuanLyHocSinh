@@ -14,11 +14,16 @@ namespace NMCNPM_QLHS.GUI
 {
     public partial class frmKhoilop : DevExpress.XtraEditors.XtraForm
     {
+
+        #region -Constructor-
+
         public frmKhoilop()
         {
             InitializeComponent();
             Permissions();
         }
+        #endregion -Constructor-
+
         #region -Phân quyền-
 
         public void Permissions()
@@ -84,18 +89,10 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnXemLop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (Application.OpenForms["frmLop"] == null)
-            {
-                frmLop f = new frmLop
-                {
-                    MdiParent = Application.OpenForms["frmManHinhChinh"]
-                };
+            string maKhoi = dgvKhoiLop.GetFocusedRowCellDisplayText(col_maKhoi);
+
+            frmLop f = new frmLop(maKhoi);
                 f.Show();
-            }
-            else
-            {
-                Application.OpenForms["frmLop"].Focus();
-            }
         }
 
         private void gridControlKhoiLop_MouseUp(object sender, MouseEventArgs e)

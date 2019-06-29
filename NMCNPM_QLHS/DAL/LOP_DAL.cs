@@ -106,24 +106,53 @@ namespace NMCNPM_QLHS.DAL
         }
 
         // Lấy ds lớp theo Khối
-        public static List<LOP> LayLopTheoKhoi(string maKhoi)
+        public static DataTable LayLopTheoKhoi(string maKhoi)
         {
-            List<LOP> lst = new List<LOP>();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("MALOP", typeof(string));
+            dt.Columns.Add("TENLOP", typeof(string));
+            dt.Columns.Add("SISO", typeof(int));
+            dt.Columns.Add("TENKHOI", typeof(string));
+            dt.Columns.Add("MAKHOI", typeof(string));
+            dt.Columns.Add("TENNAMHOC", typeof(string));
 
             using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
             {
-                var ds = db.LOPs.Where(a => a.MAKHOI == maKhoi).ToList();
-                foreach (var x in ds)
+                var ds = from lop in db.LOPs
+                         from khoi in db.KHOILOPs
+                         from namhoc in db.NAMHOCs
+                         where lop.MAKHOI == khoi.MAKHOI && khoi.MANAM == namhoc.MANAMHOC
+                         && khoi.MAKHOI == maKhoi
+                         select new
+                         {
+                             MALOP = lop.MALOP,
+                             TENLOP = lop.TENLOP,
+                             SISO = lop.SISO,
+                             TENKHOI = khoi.TENKHOI,
+                             MAKHOI = khoi.MAKHOI,
+                             TENNAMHOC = namhoc.TENNAMHOC
+                         };
+                foreach (var i in ds)
                 {
-                    LOP lop = new LOP();
-                    {
-                        lop.MALOP = x.MALOP;
-                        lop.TENLOP = x.TENLOP;
-                        lst.Add(lop);
-                    }
+                    DataRow r = dt.NewRow();
+                    if (i.MALOP != null)
+                        r["MALOP"] = i.MALOP;
+                    if (i.TENLOP != null)
+                        r["TENLOP"] = i.TENLOP;
+                    if (i.SISO != null)
+                        r["SISO"] = i.SISO.Value;
+                    if (i.TENKHOI != null)
+                        r["TENKHOI"] = i.TENKHOI;
+                    if (i.MAKHOI != null)
+                        r["MAKHOI"] = i.MAKHOI;
+                    if (i.TENNAMHOC != null)
+                        r["TENNAMHOC"] = i.TENNAMHOC;
+                    dt.Rows.Add(r);
                 }
             }
-            return lst;
+            if (dt.Rows.Count == 0)
+                return null;
+            return dt;
         }
 
         // Lấy sĩ số lớp

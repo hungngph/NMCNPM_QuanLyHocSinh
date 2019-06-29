@@ -108,7 +108,8 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 358);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 441);
             // 
             // barManager1
             // 
@@ -130,23 +131,26 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(650, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(758, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 358);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 441);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(650, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(758, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(650, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(758, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 358);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 441);
             // 
             // BILuuDanhSach
             // 
@@ -175,8 +179,9 @@
             this.groupControl1.Controls.Add(this.bindingNavigatorKhoiLop);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(650, 358);
+            this.groupControl1.Size = new System.Drawing.Size(758, 441);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Danh sách khối lớp";
             // 
@@ -184,15 +189,17 @@
             // 
             this.gridControlKhoiLop.DataSource = this.bindingSourceKhoiLop;
             this.gridControlKhoiLop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlKhoiLop.Location = new System.Drawing.Point(2, 51);
+            this.gridControlKhoiLop.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControlKhoiLop.Location = new System.Drawing.Point(2, 56);
             this.gridControlKhoiLop.MainView = this.dgvKhoiLop;
+            this.gridControlKhoiLop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlKhoiLop.Name = "gridControlKhoiLop";
             this.gridControlKhoiLop.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.col_maKhoi_edit,
             this.col_tenKhoi_edit,
             this.col_soLop_edit,
             this.col_namHoc_edit});
-            this.gridControlKhoiLop.Size = new System.Drawing.Size(646, 305);
+            this.gridControlKhoiLop.Size = new System.Drawing.Size(754, 383);
             this.gridControlKhoiLop.TabIndex = 4;
             this.gridControlKhoiLop.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvKhoiLop,
@@ -206,6 +213,7 @@
             this.col_TenKhoi,
             this.col_SoLop,
             this.col_namHoc});
+            this.dgvKhoiLop.DetailHeight = 431;
             this.dgvKhoiLop.GridControl = this.gridControlKhoiLop;
             this.dgvKhoiLop.Name = "dgvKhoiLop";
             this.dgvKhoiLop.OptionsBehavior.Editable = false;
@@ -218,20 +226,22 @@
             // 
             this.col_maKhoi.Caption = "Mã khối";
             this.col_maKhoi.FieldName = "MAKHOI";
+            this.col_maKhoi.MinWidth = 23;
             this.col_maKhoi.Name = "col_maKhoi";
             this.col_maKhoi.Visible = true;
             this.col_maKhoi.VisibleIndex = 1;
-            this.col_maKhoi.Width = 160;
+            this.col_maKhoi.Width = 187;
             // 
             // col_TenKhoi
             // 
             this.col_TenKhoi.Caption = "Khối lớp";
             this.col_TenKhoi.ColumnEdit = this.col_tenKhoi_edit;
             this.col_TenKhoi.FieldName = "TENKHOI";
+            this.col_TenKhoi.MinWidth = 23;
             this.col_TenKhoi.Name = "col_TenKhoi";
             this.col_TenKhoi.Visible = true;
             this.col_TenKhoi.VisibleIndex = 2;
-            this.col_TenKhoi.Width = 172;
+            this.col_TenKhoi.Width = 201;
             // 
             // col_tenKhoi_edit
             // 
@@ -245,10 +255,11 @@
             this.col_SoLop.Caption = "Số lớp";
             this.col_SoLop.ColumnEdit = this.col_soLop_edit;
             this.col_SoLop.FieldName = "SOLOP";
+            this.col_SoLop.MinWidth = 23;
             this.col_SoLop.Name = "col_SoLop";
             this.col_SoLop.Visible = true;
             this.col_SoLop.VisibleIndex = 3;
-            this.col_SoLop.Width = 876;
+            this.col_SoLop.Width = 1022;
             // 
             // col_soLop_edit
             // 
@@ -260,11 +271,11 @@
             this.col_namHoc.Caption = "Năm học";
             this.col_namHoc.ColumnEdit = this.col_namHoc_edit;
             this.col_namHoc.FieldName = "MANAM";
-            this.col_namHoc.MinWidth = 21;
+            this.col_namHoc.MinWidth = 24;
             this.col_namHoc.Name = "col_namHoc";
             this.col_namHoc.Visible = true;
             this.col_namHoc.VisibleIndex = 0;
-            this.col_namHoc.Width = 143;
+            this.col_namHoc.Width = 167;
             // 
             // col_namHoc_edit
             // 
@@ -285,6 +296,7 @@
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gridControlKhoiLop;
             this.gridView1.Name = "gridView1";
             // 
@@ -306,21 +318,21 @@
             this.toolStripButton4,
             this.toolStripSeparator3,
             this.cboNamHoc});
-            this.bindingNavigatorKhoiLop.Location = new System.Drawing.Point(2, 20);
+            this.bindingNavigatorKhoiLop.Location = new System.Drawing.Point(2, 25);
             this.bindingNavigatorKhoiLop.MoveFirstItem = this.toolStripButton1;
             this.bindingNavigatorKhoiLop.MoveLastItem = this.toolStripButton4;
             this.bindingNavigatorKhoiLop.MoveNextItem = this.toolStripButton3;
             this.bindingNavigatorKhoiLop.MovePreviousItem = this.toolStripButton2;
             this.bindingNavigatorKhoiLop.Name = "bindingNavigatorKhoiLop";
             this.bindingNavigatorKhoiLop.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigatorKhoiLop.Size = new System.Drawing.Size(646, 31);
+            this.bindingNavigatorKhoiLop.Size = new System.Drawing.Size(754, 31);
             this.bindingNavigatorKhoiLop.TabIndex = 2;
             this.bindingNavigatorKhoiLop.Text = "bindingNavigator2";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(35, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(45, 28);
             this.toolStripLabel1.Text = "of {0}";
             this.toolStripLabel1.ToolTipText = "Total number of items";
             // 
@@ -352,7 +364,7 @@
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(58, 27);
             this.toolStripTextBox1.Text = "0";
             this.toolStripTextBox1.ToolTipText = "Current position";
             // 
@@ -398,15 +410,16 @@
             // 
             // frmKhoilop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 358);
+            this.ClientSize = new System.Drawing.Size(758, 441);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmKhoilop";

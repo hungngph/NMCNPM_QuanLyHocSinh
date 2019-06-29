@@ -71,15 +71,11 @@ namespace NMCNPM_QLHS.GUI
             }
         }
 
-        private void txtMatKhauMoi_EditValueChanged(object sender, EventArgs e)
+        private void txt_KeyDown(object sender, KeyEventArgs e)
         {
-            if (!Utility.isPassword(txtMatKhauMoi.Text))
+            if (e.KeyCode == Keys.Enter)
             {
-                errMatKhau.SetError(txtMatKhauMoi, "Mật khẩu phải chứa ít nhất 8 kí tự và không được chứa kí tự đặc biệt");
-            }
-            else
-            {
-                errMatKhau.Dispose();
+                this.btnDongY_Click(btnDongY, e);
             }
         }
     }
