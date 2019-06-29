@@ -46,5 +46,13 @@ namespace NMCNPM_QLHS.BUS
         {
             return NAMHOC_DAL.LayNamHocHienTai();
         }
+        // Lấy mã năm học theo tên năm học
+        public static string LayMaNamHocTheoTen(string tenNH)
+        {
+            if (NAMHOC_DAL.LayNamHocTheoTen(tenNH) != null)
+                return NAMHOC_DAL.LayNamHocTheoTen(tenNH).MANAMHOC.ToString();
+            else
+                return null;
+        }
     }
 }

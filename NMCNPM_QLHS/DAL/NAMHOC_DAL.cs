@@ -98,5 +98,16 @@ namespace NMCNPM_QLHS.DAL
             }
             return namHoc;
         }
+
+        // Lấy mã năm học theo tên năm học
+        public static NAMHOC LayNamHocTheoTen(string tenNH)
+        {
+            NAMHOC namHoc = new NAMHOC();
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                namHoc = db.NAMHOCs.Where(a => a.TENNAMHOC == tenNH).FirstOrDefault();
+            }
+            return namHoc;
+        }
     }
 }
