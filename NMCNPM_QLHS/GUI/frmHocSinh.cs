@@ -15,6 +15,7 @@ using System.IO;
 using System.Drawing.Imaging;
 using System.Data.Linq;
 using DevExpress.XtraEditors.DXErrorProvider;
+using System.Threading;
 
 namespace NMCNPM_QLHS.GUI
 {
@@ -212,56 +213,71 @@ namespace NMCNPM_QLHS.GUI
         
         private void btnHoanTat_Click(object sender, EventArgs e)
         {
-            string maHS = txtMaHS.Text;
-            string hoTen = txtHoTen.Text;
-            string gioiTinh = cboGioiTinh.Text;
-            DateTime ngaySinh = DateTime.ParseExact(dtpNgaySinh.Text.ToString(), "dd/MM/yyyy", CultureInfo.CreateSpecificCulture("en-GB"));
-            string email = txtEmail.Text;
-            if (!Utility.isEmail(email))
+            if (!Utility.isEmail(txtEmail.Text))
             {
-                return;
+                XtraMessageBox.Show("email không hợp lệ");
             }
-            string diaChi = txtDiaChi.Text;
-            //Convert image to byte[] array
-            byte[] image_byte;
-            Binary image_binary;
-            if (picHocSinh.Image != null)
+            else if (!Utility.isTen(txtHoTen.Text))
             {
-                image_byte = imageToByteArray(picHocSinh.Image);
-                image_binary = new Binary(image_byte);
+                XtraMessageBox.Show("Họ tên không hợp lệ");
             }
             else
-                image_binary = null;
+            {
+                string maHS = txtMaHS.Text;
+                string hoTen = txtHoTen.Text;
+                string gioiTinh = cboGioiTinh.Text;
+                CultureInfo culture = (CultureInfo)CultureInfo.CurrentCulture.Clone();
+                culture.DateTimeFormat.ShortDatePattern = "dd/MM/yyyy";
+                culture.DateTimeFormat.LongDatePattern = "dd MMMM, yyyy";
+                Thread.CurrentThread.CurrentCulture = culture;
+                DateTime ngaySinh = DateTime.ParseExact(dtpNgaySinh.Text.ToString(), "dd/MM/yyyy", CultureInfo.CreateSpecificCulture("en-GB"));
+                string email = txtEmail.Text;
+                if (!Utility.isEmail(email))
+                {
+                    return;
+                }
+                string diaChi = txtDiaChi.Text;
+                //Convert image to byte[] array
+                byte[] image_byte;
+                Binary image_binary;
+                if (picHocSinh.Image != null)
+                {
+                    image_byte = imageToByteArray(picHocSinh.Image);
+                    image_binary = new Binary(image_byte);
+                }
+                else
+                    image_binary = null;
 
-            if (HOCSINH_BUS.KiemTraTuoi(ngaySinh) == true)
-            {
-                try
+                if (HOCSINH_BUS.KiemTraTuoi(ngaySinh) == true)
                 {
-                    if (btnHoanTat.Text == "Lưu")
+                    try
                     {
-                        HOCSINH_BUS.Insert(maHS, hoTen, gioiTinh, ngaySinh, diaChi, email, image_binary);
-                        load_dgvHocSinh();
-                        bindingNavigatorHocSinh.BindingSource.MoveLast();
+                        if (btnHoanTat.Text == "Lưu")
+                        {
+                            HOCSINH_BUS.Insert(maHS, hoTen, gioiTinh, ngaySinh, diaChi, email, image_binary);
+                            load_dgvHocSinh();
+                            bindingNavigatorHocSinh.BindingSource.MoveLast();
+                        }
+                        else
+                        {
+                            HOCSINH_BUS.Update(maHS, hoTen, gioiTinh, ngaySinh, diaChi, email, image_binary);
+                            load_dgvHocSinh();
+                        }
+                        btnHoanTat.Visible = false;
+                        btnHuyBo.Visible = false;
+                        disableAllTextBox();
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        HOCSINH_BUS.Update(maHS, hoTen, gioiTinh, ngaySinh, diaChi, email, image_binary);
-                        load_dgvHocSinh();
+                        MessageBox.Show(ex.Message);
                     }
-                    btnHoanTat.Visible = false;
-                    btnHuyBo.Visible = false;
-                    disableAllTextBox();
+                    bindingNavigatorAddNewItem.Enabled = true;
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Tuổi không hợp lệ", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dtpNgaySinh.Focus();
                 }
-                bindingNavigatorAddNewItem.Enabled = true;
-            }
-            else
-            {
-                MessageBox.Show("Tuổi không hợp lệ", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dtpNgaySinh.Focus();
             }
         }
 

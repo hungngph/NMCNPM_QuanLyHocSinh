@@ -77,6 +77,7 @@
             this.bindingNavigatorEditItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSearchItem = new System.Windows.Forms.ToolStripButton();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnXemDSHS = new DevExpress.XtraBars.BarButtonItem();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnSua = new DevExpress.XtraBars.BarButtonItem();
@@ -85,7 +86,6 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.btnXemDSHS = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanelChucNang.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -168,6 +168,7 @@
             this.navPanelChucNang.RegularSize = new System.Drawing.Size(270, 644);
             this.navPanelChucNang.SelectedPage = this.navNhapLieu;
             this.navPanelChucNang.Size = new System.Drawing.Size(270, 644);
+            this.navPanelChucNang.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Collapsed;
             this.navPanelChucNang.TabIndex = 0;
             this.navPanelChucNang.Text = "navigationPane1";
             // 
@@ -625,6 +626,14 @@
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
+            // btnXemDSHS
+            // 
+            this.btnXemDSHS.Caption = "Xem danh sách học sinh";
+            this.btnXemDSHS.Id = 3;
+            this.btnXemDSHS.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Search_16px;
+            this.btnXemDSHS.Name = "btnXemDSHS";
+            this.btnXemDSHS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemDSHS_ItemClick);
+            // 
             // btnThem
             // 
             this.btnThem.Caption = "Thêm";
@@ -701,14 +710,6 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 674);
-            // 
-            // btnXemDSHS
-            // 
-            this.btnXemDSHS.Caption = "Xem danh sách học sinh";
-            this.btnXemDSHS.Id = 3;
-            this.btnXemDSHS.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Search_16px;
-            this.btnXemDSHS.Name = "btnXemDSHS";
-            this.btnXemDSHS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemDSHS_ItemClick);
             // 
             // frmLop
             // 
