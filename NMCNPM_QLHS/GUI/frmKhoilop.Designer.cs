@@ -39,6 +39,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.BILuuDanhSach = new DevExpress.XtraBars.BarButtonItem();
+            this.btnXemLop = new DevExpress.XtraBars.BarButtonItem();
             this.bindingSourceKhoiLop = new System.Windows.Forms.BindingSource(this.components);
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlKhoiLop = new DevExpress.XtraGrid.GridControl();
@@ -63,7 +64,7 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.btnXemLop = new DevExpress.XtraBars.BarButtonItem();
+            this.cboNamHoc = new System.Windows.Forms.ToolStripComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceKhoiLop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -154,6 +155,15 @@
             this.BILuuDanhSach.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.save;
             this.BILuuDanhSach.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.BILuuDanhSach.Name = "BILuuDanhSach";
+            // 
+            // btnXemLop
+            // 
+            this.btnXemLop.Caption = "Xem lớp";
+            this.btnXemLop.Id = 3;
+            this.btnXemLop.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Search_16px;
+            this.btnXemLop.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O));
+            this.btnXemLop.Name = "btnXemLop";
+            this.btnXemLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemLop_ItemClick);
             // 
             // bindingSourceKhoiLop
             // 
@@ -294,7 +304,8 @@
             this.toolStripSeparator2,
             this.toolStripButton3,
             this.toolStripButton4,
-            this.toolStripSeparator3});
+            this.toolStripSeparator3,
+            this.cboNamHoc});
             this.bindingNavigatorKhoiLop.Location = new System.Drawing.Point(2, 20);
             this.bindingNavigatorKhoiLop.MoveFirstItem = this.toolStripButton1;
             this.bindingNavigatorKhoiLop.MoveLastItem = this.toolStripButton4;
@@ -380,14 +391,10 @@
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
-            // btnXemLop
+            // cboNamHoc
             // 
-            this.btnXemLop.Caption = "Xem lớp";
-            this.btnXemLop.Id = 3;
-            this.btnXemLop.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Search_16px;
-            this.btnXemLop.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O));
-            this.btnXemLop.Name = "btnXemLop";
-            this.btnXemLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemLop_ItemClick);
+            this.cboNamHoc.Name = "cboNamHoc";
+            this.cboNamHoc.Size = new System.Drawing.Size(75, 31);
             // 
             // frmKhoilop
             // 
@@ -463,5 +470,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit col_namHoc_edit;
         private DevExpress.XtraBars.BarButtonItem btnXemLop;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private System.Windows.Forms.ToolStripComboBox cboNamHoc;
     }
 }
