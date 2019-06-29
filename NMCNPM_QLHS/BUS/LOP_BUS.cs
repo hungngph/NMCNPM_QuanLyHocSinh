@@ -41,7 +41,7 @@ namespace NMCNPM_QLHS.BUS
         }
 
         // Lấy ds lớp theo Khối
-        public static List<LOP> LayLopTheoKhoi(string maKhoi)
+        public static DataTable LayLopTheoKhoi(string maKhoi)
         {
             return LOP_DAL.LayLopTheoKhoi(maKhoi);
         }

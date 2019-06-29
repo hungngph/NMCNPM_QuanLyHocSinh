@@ -20,7 +20,6 @@ namespace NMCNPM_QLHS.GUI
             InitializeComponent();
         }
 
-
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             if(txtTaiKhoan.Text =="")

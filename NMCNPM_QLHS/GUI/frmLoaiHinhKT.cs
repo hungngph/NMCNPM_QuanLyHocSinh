@@ -119,12 +119,12 @@ namespace NMCNPM_QLHS.GUI
             state = false;
         }
 
-        #endregion -bingdingNagigatorItem_Click-
-
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bindingNavigatorSaveItem_Click(sender, e);
         }
+
+        #endregion -bingdingNagigatorItem_Click-
 
         private void dgvHocKy_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {

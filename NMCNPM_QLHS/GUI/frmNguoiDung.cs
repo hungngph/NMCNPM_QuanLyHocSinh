@@ -16,6 +16,7 @@ namespace NMCNPM_QLHS.GUI
     {
         #region -Fields-
 
+        static int n = 0;
         Action<string, string, string, string> action;
         static bool state = false;
         List<string> lst = new List<string>();
@@ -36,6 +37,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void frmNguoiDung_Load(object sender, EventArgs e)
         {
+            n++;
             load_colNguoiDung();
             bindingSourceNguoiDung.DataSource = NGUOIDUNG_BUS.LayTatCaNguoiDung();
         }
@@ -120,7 +122,8 @@ namespace NMCNPM_QLHS.GUI
 
         private void dgvNguoiDung_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            state = true;
+            if(n>0)
+                state = true;
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -133,7 +136,6 @@ namespace NMCNPM_QLHS.GUI
         {
             col_loaiNguoiDung_edit.DataSource = LOAINGUOIDUNG_BUS.LayTatCaLoaiNguoiDung();
         }
-
 
         private void gridControlHocSinh_MouseUp(object sender, MouseEventArgs e)
         {
