@@ -70,5 +70,17 @@ namespace NMCNPM_QLHS.GUI
                 Application.OpenForms["frmManHinhChinh"].Enabled = true;
             }
         }
+
+        private void txtMatKhauMoi_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!Utility.isPassword(txtMatKhauMoi.Text))
+            {
+                errMatKhau.SetError(txtMatKhauMoi, "Mật khẩu phải chứa ít nhất 8 kí tự và không được chứa kí tự đặc biệt");
+            }
+            else
+            {
+                errMatKhau.Dispose();
+            }
+        }
     }
 }

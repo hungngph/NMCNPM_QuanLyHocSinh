@@ -51,5 +51,15 @@ namespace NMCNPM_QLHS.DAL
                     db.sp_ThemQTH(maHS, maLop);
             }
         }
+
+        // Kiểm tra tồn tại qth học sinh trong lớp, học kỳ
+        public static bool KiemTraTonTai(string maHS, string maLop, string maHocKy)
+        {
+            using (SQL_QLHSDataContext db = new SQL_QLHSDataContext())
+            {
+                return db.QUATRINHHOCs.Any(a => a.MAHS == maHS && a.MALOP == maLop && a.MAHK == maHocKy);
+            }
+        }
+
     }
 }

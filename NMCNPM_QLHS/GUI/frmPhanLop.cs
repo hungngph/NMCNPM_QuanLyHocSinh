@@ -39,6 +39,7 @@ namespace NMCNPM_QLHS.GUI
         {
             load_DSHS();
             load_cboNamHoc();
+            load_cboKhoiLop();
             load_cboHocKy();
             btnChuyen.Enabled = false;
         }
@@ -56,15 +57,18 @@ namespace NMCNPM_QLHS.GUI
 
         #region -comBoBox_editValueChanged-
 
-        private void cboNamHoc_EditValueChanged(object sender, EventArgs e)
-        {
-            load_cboKhoiLop();
-            load_cboLop();
-            load_DSLop();
-        }
-
         private void cboKhoiLop_EditValueChanged(object sender, EventArgs e)
         {
+            if (state == true)
+            {
+                if (MessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    this.btnLuu_Click(btnLuu, e);
+                else
+                {
+                    load_DSHS();
+                    state = false;
+                }
+            }
             load_cboLop();
             load_DSLop();
         }
@@ -74,7 +78,7 @@ namespace NMCNPM_QLHS.GUI
             if (state == true)
             {
                 if (MessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    btnLuu.PerformClick();
+                    this.btnLuu_Click(btnLuu, e);
                 else
                 {
                     load_DSHS();
@@ -89,7 +93,7 @@ namespace NMCNPM_QLHS.GUI
             if (state == true)
             {
                 if (MessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    btnLuu.PerformClick();
+                    this.btnLuu_Click(btnLuu, e);
                 else
                 {
                     load_DSHS();
@@ -105,7 +109,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnChuyen_Click(object sender, EventArgs e)
         {
-            if (QUATRINHHOC_BUS.KiemTraSiSo(cboLop.EditValue.ToString(),cboHocKy.EditValue.ToString(), lstvDSHS.SelectedItems.Count) == true)
+            if (QUATRINHHOC_BUS.KiemTraSiSo(cboLop.EditValue.ToString(), cboHocKy.EditValue.ToString(), lstvDSHS.SelectedItems.Count, lstvDSLop.Items.Count) == true)
             {
                 IEnumerator ie = lstvDSHS.SelectedItems.GetEnumerator();
                 if (lstvDSHS.SelectedItems.Count != 0)
@@ -137,19 +141,11 @@ namespace NMCNPM_QLHS.GUI
             }
         }
 
-        private void btnDanhSach_Click(object sender, EventArgs e)
+        private void btnHuy_Click(object sender, EventArgs e)
         {
-            lstvDSLop.Items.Clear();
-            string maLop = cboLop.EditValue.ToString();
-            string maHocKy = cboHocKy.EditValue.ToString();
-            var lst = HOCSINH_BUS.LayHocSinhTheoLop(maLop, maHocKy);
-            foreach (var i in lst)
-            {
-                ListViewItem item = new ListViewItem();
-                item.Text = i.MAHS;
-                item.SubItems.Add(i.HOTEN);
-                lstvDSLop.Items.Add(item);
-            }
+            load_DSHS();
+            load_DSLop();
+            state = false;
         }
 
         #endregion -button_click-
@@ -247,11 +243,20 @@ namespace NMCNPM_QLHS.GUI
 
         #endregion -Methods-
 
-        private void btnHuy_Click(object sender, EventArgs e)
+        private void btnHuyPhanLop_Click(object sender, EventArgs e)
         {
-            load_DSHS();
-            load_DSLop();
-            state = false;
+            IEnumerator ie = lstvDSLop.SelectedItems.GetEnumerator();
+            while (ie.MoveNext())
+            {
+                ListViewItem olditem = (ListViewItem)ie.Current;
+                ListViewItem newitem = new ListViewItem();
+                if (!QUATRINHHOC_BUS.KiemTraTonTai(olditem.SubItems[0].Text, cboLop.EditValue.ToString(), cboHocKy.EditValue.ToString()))
+                {
+                    newitem = olditem;
+                    lstvDSLop.Items.Remove(olditem);
+                    lstvDSHS.Items.Add(newitem);
+                }
+            }
         }
     }
 }

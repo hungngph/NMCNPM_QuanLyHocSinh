@@ -116,13 +116,20 @@ namespace NMCNPM_QLHS.GUI
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            dgvMonHoc.FocusInvalidRow();
-            string maMonHoc = MONHOC_BUS.autoID(dgvMonHoc);
-            dgvMonHoc.AddNewRow();
-            int rowHandle = dgvMonHoc.GetRowHandle(dgvMonHoc.DataRowCount);
-            if (dgvMonHoc.IsNewItemRow(rowHandle))
+            if (MONHOC_BUS.KiemtraSoLuongMonHoc(dgvMonHoc))
             {
-                dgvMonHoc.SetRowCellValue(rowHandle, col_maMonHoc, maMonHoc);
+                dgvMonHoc.FocusInvalidRow();
+                string maMonHoc = MONHOC_BUS.autoID(dgvMonHoc);
+                dgvMonHoc.AddNewRow();
+                int rowHandle = dgvMonHoc.GetRowHandle(dgvMonHoc.DataRowCount);
+                if (dgvMonHoc.IsNewItemRow(rowHandle))
+                {
+                    dgvMonHoc.SetRowCellValue(rowHandle, col_maMonHoc, maMonHoc);
+                }
+            }
+            else
+            {
+                XtraMessageBox.Show("Vượt quá số lượng môn học tối đa", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
