@@ -187,7 +187,7 @@
             this.dockPanelChucNang.OriginalSize = new System.Drawing.Size(350, 200);
             this.dockPanelChucNang.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanelChucNang.SavedIndex = 0;
-            this.dockPanelChucNang.Size = new System.Drawing.Size(300, 495);
+            this.dockPanelChucNang.Size = new System.Drawing.Size(350, 609);
             this.dockPanelChucNang.Text = "Chức năng";
             this.dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
@@ -195,9 +195,9 @@
             // 
             this.dockPanel1_Container.Controls.Add(this.navPanelChucNang);
             this.dockPanel1_Container.Controls.Add(this.navBarControl1);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 20);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(292, 473);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(341, 582);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navPanelChucNang
@@ -213,7 +213,7 @@
             this.navTimKiem});
             this.navPanelChucNang.RegularSize = new System.Drawing.Size(341, 582);
             this.navPanelChucNang.SelectedPage = this.navNhapLieu;
-            this.navPanelChucNang.Size = new System.Drawing.Size(292, 473);
+            this.navPanelChucNang.Size = new System.Drawing.Size(341, 582);
             this.navPanelChucNang.TabIndex = 1;
             this.navPanelChucNang.Text = "navigationPane1";
             // 
@@ -244,7 +244,7 @@
             this.navNhapLieu.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
             this.navNhapLieu.Name = "navNhapLieu";
             this.navNhapLieu.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
-            this.navNhapLieu.Size = new System.Drawing.Size(226, 413);
+            this.navNhapLieu.Size = new System.Drawing.Size(275, 522);
             // 
             // btnHuyBo
             // 
@@ -497,8 +497,8 @@
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 292;
-            this.navBarControl1.Size = new System.Drawing.Size(292, 473);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 341;
+            this.navBarControl1.Size = new System.Drawing.Size(341, 582);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 

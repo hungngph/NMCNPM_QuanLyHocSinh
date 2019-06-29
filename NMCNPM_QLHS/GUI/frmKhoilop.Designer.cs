@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhoilop));
-            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog();
+            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             this.BIXoa = new DevExpress.XtraBars.BarButtonItem();
             this.BIThemMoi = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.BILuuDanhSach = new DevExpress.XtraBars.BarButtonItem();
-            this.bindingSourceKhoiLop = new System.Windows.Forms.BindingSource();
+            this.bindingSourceKhoiLop = new System.Windows.Forms.BindingSource(this.components);
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlKhoiLop = new DevExpress.XtraGrid.GridControl();
             this.dgvKhoiLop = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -51,7 +52,7 @@
             this.col_namHoc_edit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.col_maKhoi_edit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.bindingNavigatorKhoiLop = new System.Windows.Forms.BindingNavigator();
+            this.bindingNavigatorKhoiLop = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -61,6 +62,8 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnXemLop = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceKhoiLop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -74,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorKhoiLop)).BeginInit();
             this.bindingNavigatorKhoiLop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraOpenFileDialog1
@@ -115,8 +119,9 @@
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.BIThemMoi,
             this.BIXoa,
-            this.BILuuDanhSach});
-            this.barManager1.MaxItemId = 3;
+            this.BILuuDanhSach,
+            this.btnXemLop});
+            this.barManager1.MaxItemId = 4;
             // 
             // barDockControlTop
             // 
@@ -182,6 +187,7 @@
             this.gridControlKhoiLop.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvKhoiLop,
             this.gridView1});
+            this.gridControlKhoiLop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gridControlKhoiLop_MouseUp);
             // 
             // dgvKhoiLop
             // 
@@ -367,6 +373,22 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
+            // popupMenu1
+            // 
+            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnXemLop)});
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
+            // 
+            // btnXemLop
+            // 
+            this.btnXemLop.Caption = "Xem lớp";
+            this.btnXemLop.Id = 3;
+            this.btnXemLop.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Search_16px;
+            this.btnXemLop.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O));
+            this.btnXemLop.Name = "btnXemLop";
+            this.btnXemLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemLop_ItemClick);
+            // 
             // frmKhoilop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,6 +421,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorKhoiLop)).EndInit();
             this.bindingNavigatorKhoiLop.ResumeLayout(false);
             this.bindingNavigatorKhoiLop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,5 +461,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit col_namHoc_edit;
+        private DevExpress.XtraBars.BarButtonItem btnXemLop;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
     }
 }
