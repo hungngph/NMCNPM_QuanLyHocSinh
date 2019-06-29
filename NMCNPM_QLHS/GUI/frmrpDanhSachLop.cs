@@ -15,6 +15,19 @@ namespace NMCNPM_QLHS.GUI
 {
     public partial class frmrpDanhSachLop : DevExpress.XtraEditors.XtraForm
     {
+        public frmrpDanhSachLop(string maLop, string maNamHoc)
+        {
+            InitializeComponent();
+            load_cboNamHoc();
+            cboNamHoc.EditValue = maNamHoc;
+            cboLop.EditValue = maLop;
+            cboHocKy.EditValue = "HK01";
+            bindingSourceDSHS.DataSource = HOCSINH_BUS.LayHocSinhTheoLop(maLop, "HK01");
+            cboNamHoc.ReadOnly = true;
+            cboLop.ReadOnly = true;
+            btnLamMoi.Enabled = false;
+        }
+
         public frmrpDanhSachLop()
         {
             InitializeComponent();
@@ -29,7 +42,7 @@ namespace NMCNPM_QLHS.GUI
 
         private void load_cboLop()
         {
-            if (cboNamHoc.Text != "")
+            if (cboNamHoc.EditValue != null)
             {
                 cboLop.Properties.DataSource = LOP_BUS.LayLopTheoNamHoc(cboNamHoc.EditValue.ToString());
                 cboLop.Properties.DisplayMember = "TENLOP";

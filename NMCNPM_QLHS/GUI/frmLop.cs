@@ -389,17 +389,12 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnXemDSHS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(Application.OpenForms["frmrpDanhSachHocSinh"] == null)
+            if (txtMaLop.Text != "")
             {
-                frmrpDanhSachHocSinh f = new frmrpDanhSachHocSinh
-                {
-                    MdiParent = Application.OpenForms["frmManHinhChinh"]
-                };
+                string maLop = txtMaLop.Text;
+                string maNamHoc = NAMHOC_BUS.LayMaNamHocTheoTen(dgvDSLop.GetFocusedRowCellDisplayText(col_Nam));
+                frmrpDanhSachLop f = new frmrpDanhSachLop(maLop, maNamHoc);
                 f.Show();
-            }
-            else
-            {
-                Application.OpenForms["frmNamHoc"].Focus();
             }
         }
     }
