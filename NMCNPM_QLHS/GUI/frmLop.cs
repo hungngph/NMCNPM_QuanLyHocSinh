@@ -266,33 +266,43 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnHoanTat_Click(object sender, EventArgs e)
         {
-            string maLop = txtMaLop.Text;
-            string tenLop = txtTenLop.Text;
-            string maKhoi = cboKhoiLop.EditValue.ToString();
-            try
+            if (cboKhoiLop.Text != "" && txtTenLop.Text != "")
             {
-                if (btnHoanTat.Text == "Lưu")
+                string maLop = txtMaLop.Text;
+                string tenLop = txtTenLop.Text;
+                string maKhoi = cboKhoiLop.EditValue.ToString();
+                try
                 {
-                    LOP_BUS.Insert(maLop, tenLop, maKhoi);
-                    load_DSLop();
-                    bindingNavigatorLop.BindingSource.MoveLast();
+                    if (btnHoanTat.Text == "Lưu")
+                    {
+                        LOP_BUS.Insert(maLop, tenLop, maKhoi);
+                        load_DSLop();
+                        bindingNavigatorLop.BindingSource.MoveLast();
+                    }
+                    else
+                    {
+                        LOP_BUS.Update(maLop, tenLop, maKhoi);
+                        load_DSLop();
+                    }
+                    btnHoanTat.Visible = false;
+                    btnHuyBo.Visible = false;
+                    txtTenLop.ReadOnly = true;
+                    gridControlLop.Enabled = true;
+                    cboKhoiLop.ReadOnly = false;
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                bindingNavigatorAddNewItem.Enabled = true;
+            }
+            else
+            {
+                if (cboKhoiLop.Text == "")
+                    XtraMessageBox.Show("Chưa chọn khối lớp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                {
-                    LOP_BUS.Update(maLop, tenLop, maKhoi);
-                    load_DSLop();
-                }
-                btnHoanTat.Visible = false;
-                btnHuyBo.Visible = false;
-                txtTenLop.ReadOnly = true;
-                gridControlLop.Enabled = true;
-                cboKhoiLop.ReadOnly = false;
+                    XtraMessageBox.Show("Chưa nhập tên lớp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            bindingNavigatorAddNewItem.Enabled = true;
         }
 
         private void btnHuyBo_Click(object sender, EventArgs e)
