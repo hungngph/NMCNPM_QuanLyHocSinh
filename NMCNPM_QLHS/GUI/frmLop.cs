@@ -91,7 +91,7 @@ namespace NMCNPM_QLHS.GUI
         public void IsGiaoVien()
         {
             // Enable, Disable các button
-            navNhapLieu.PageVisible = false;
+            //navNhapLieu.PageVisible = false;
             //bindingNavigatorAddNewItem.Enabled = false;
             bindingNavigatorAddNewItem.Visible = false;
             bindingNavigatorDeleteItem.Enabled = false;
