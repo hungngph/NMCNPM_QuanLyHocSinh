@@ -81,5 +81,27 @@ namespace NMCNPM_QLHS.GUI
         {
             col_namHoc_edit.DataSource = NAMHOC_BUS.LayTatCaNamHoc();
         }
+
+        private void btnXemLop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Application.OpenForms["frmLop"] == null)
+            {
+                frmLop f = new frmLop
+                {
+                    MdiParent = Application.OpenForms["frmManHinhChinh"]
+                };
+                f.Show();
+            }
+            else
+            {
+                Application.OpenForms["frmLop"].Focus();
+            }
+        }
+
+        private void gridControlKhoiLop_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                popupMenu1.ShowPopup(Control.MousePosition);
+        }
     }
 }

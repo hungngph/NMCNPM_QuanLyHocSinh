@@ -42,6 +42,7 @@ namespace NMCNPM_QLHS.GUI
         public frmManHinhChinh(string tenDangNhap)
         {
             //Load frmSplash
+
             Thread t = new Thread(new ThreadStart(Start));
             t.Start();
             Thread.Sleep(3000);

@@ -158,14 +158,17 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnThemNam_Click(object sender, EventArgs e)
         {
-            var frm = new frmNamHoc();
-            if (Application.OpenForms[frm.Name] == null)
+            if (Application.OpenForms["frmNamHoc"] == null)
             {
-                frm.Show();
+                frmNamHoc f = new frmNamHoc
+                {
+                    MdiParent = Application.OpenForms["frmManHinhChinh"]
+                };
+                f.Show();
             }
             else
             {
-                Application.OpenForms[frm.Name].Focus();
+                Application.OpenForms["frmNamHoc"].Focus();
             }
         }
 

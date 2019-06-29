@@ -268,40 +268,49 @@ namespace NMCNPM_QLHS.GUI
         }
         private void btnThemNam_Click(object sender, EventArgs e)
         {
-            var frm = new frmNamHoc();
-            if (Application.OpenForms[frm.Name] == null)
+            if (Application.OpenForms["frmNamHoc"] == null)
             {
-                frm.Show();
+                frmNamHoc f = new frmNamHoc
+                {
+                    MdiParent = Application.OpenForms["frmManHinhChinh"]
+                };
+                f.Show();
             }
             else
             {
-                Application.OpenForms[frm.Name].Focus();
+                Application.OpenForms["frmNamHoc"].Focus();
             }
         }
 
         private void btnThemKhoi_Click(object sender, EventArgs e)
         {
-            var frm = new frmKhoilop();
-            if (Application.OpenForms[frm.Name] == null)
+            if (Application.OpenForms["frmKhoilop"] == null)
             {
-                frm.Show();
+                frmKhoilop f = new frmKhoilop
+                {
+                    MdiParent = Application.OpenForms["frmManHinhChinh"]
+                };
+                f.Show();
             }
             else
             {
-                Application.OpenForms[frm.Name].Focus();
+                Application.OpenForms["frmKhoilop"].Focus();
             }
         }
 
         private void btnThemLop_Click(object sender, EventArgs e)
         {
-            var frm = new frmLop();
-            if (Application.OpenForms[frm.Name] == null)
+            if (Application.OpenForms["frmLop"] == null)
             {
-                frm.Show();
+                frmLop f = new frmLop
+                {
+                    MdiParent = Application.OpenForms["frmManHinhChinh"]
+                };
+                f.Show();
             }
             else
             {
-                Application.OpenForms[frm.Name].Focus();
+                Application.OpenForms["frmLop"].Focus();
             }
         }
         #endregion -Form-
