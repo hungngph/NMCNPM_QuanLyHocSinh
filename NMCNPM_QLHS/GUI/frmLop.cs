@@ -350,7 +350,7 @@ namespace NMCNPM_QLHS.GUI
             }
             else
             {
-                Application.OpenForms["frmrpDanhSachHocSinh"].Focus();
+                Application.OpenForms["frmNamHoc"].Focus();
             }
         }
     }
