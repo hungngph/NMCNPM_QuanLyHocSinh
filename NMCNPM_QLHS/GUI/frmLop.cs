@@ -338,5 +338,20 @@ namespace NMCNPM_QLHS.GUI
                 popupMenu1.ShowPopup(Control.MousePosition);
         }
 
+        private void btnXemDSHS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if(Application.OpenForms["frmrpDanhSachHocSinh"] == null)
+            {
+                frmrpDanhSachHocSinh f = new frmrpDanhSachHocSinh
+                {
+                    MdiParent = Application.OpenForms["frmManHinhChinh"]
+                };
+                f.Show();
+            }
+            else
+            {
+                Application.OpenForms["frmrpDanhSachHocSinh"].Focus();
+            }
+        }
     }
 }

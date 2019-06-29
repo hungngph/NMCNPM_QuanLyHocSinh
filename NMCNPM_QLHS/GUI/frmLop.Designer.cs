@@ -86,6 +86,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.btnXemDSHS = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.hideContainerLeft.SuspendLayout();
             this.dockPanelChucNang.SuspendLayout();
@@ -609,7 +610,8 @@
             this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnThem),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnXoa),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnSua)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnSua),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnXemDSHS)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -650,8 +652,9 @@
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnThem,
             this.btnXoa,
-            this.btnSua});
-            this.barManager1.MaxItemId = 3;
+            this.btnSua,
+            this.btnXemDSHS});
+            this.barManager1.MaxItemId = 4;
             // 
             // barDockControlTop
             // 
@@ -684,6 +687,14 @@
             this.barDockControlRight.Location = new System.Drawing.Point(963, 0);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 548);
+            // 
+            // btnXemDSHS
+            // 
+            this.btnXemDSHS.Caption = "Xem danh sách học sinh";
+            this.btnXemDSHS.Id = 3;
+            this.btnXemDSHS.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.icons8_Search_16px;
+            this.btnXemDSHS.Name = "btnXemDSHS";
+            this.btnXemDSHS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemDSHS_ItemClick);
             // 
             // frmLop
             // 
@@ -794,5 +805,6 @@
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerLeft;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit col_namHoc_edit;
+        private DevExpress.XtraBars.BarButtonItem btnXemDSHS;
     }
 }
