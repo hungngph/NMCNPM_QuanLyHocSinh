@@ -389,9 +389,9 @@ namespace NMCNPM_QLHS.GUI
 
         private void btnXemDSHS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(Application.OpenForms["frmrpDanhSachHocSinh"] == null)
+            if(Application.OpenForms["frmrpDanhSachLop"] == null)
             {
-                frmrpDanhSachHocSinh f = new frmrpDanhSachHocSinh
+                frmrpDanhSachLop f = new frmrpDanhSachLop
                 {
                     MdiParent = Application.OpenForms["frmManHinhChinh"]
                 };
@@ -399,7 +399,7 @@ namespace NMCNPM_QLHS.GUI
             }
             else
             {
-                Application.OpenForms["frmNamHoc"].Focus();
+                Application.OpenForms["frmrpDanhSachLop"].Focus();
             }
         }
     }
