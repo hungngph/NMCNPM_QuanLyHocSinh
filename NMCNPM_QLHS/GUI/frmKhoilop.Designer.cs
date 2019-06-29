@@ -64,7 +64,6 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.cboNamHoc = new System.Windows.Forms.ToolStripComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceKhoiLop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -304,8 +303,7 @@
             this.toolStripSeparator2,
             this.toolStripButton3,
             this.toolStripButton4,
-            this.toolStripSeparator3,
-            this.cboNamHoc});
+            this.toolStripSeparator3});
             this.bindingNavigatorKhoiLop.Location = new System.Drawing.Point(2, 20);
             this.bindingNavigatorKhoiLop.MoveFirstItem = this.toolStripButton1;
             this.bindingNavigatorKhoiLop.MoveLastItem = this.toolStripButton4;
@@ -391,11 +389,6 @@
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
-            // cboNamHoc
-            // 
-            this.cboNamHoc.Name = "cboNamHoc";
-            this.cboNamHoc.Size = new System.Drawing.Size(75, 31);
-            // 
             // frmKhoilop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,6 +463,5 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit col_namHoc_edit;
         private DevExpress.XtraBars.BarButtonItem btnXemLop;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
-        private System.Windows.Forms.ToolStripComboBox cboNamHoc;
     }
 }
