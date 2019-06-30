@@ -36,6 +36,7 @@ namespace NMCNPM_QLHS.GUI
             t.Start();
             Thread.Sleep(3000);
             InitializeComponent();
+            Permissions();
             t.Abort();
         }
 
@@ -47,6 +48,7 @@ namespace NMCNPM_QLHS.GUI
             t.Start();
             Thread.Sleep(3000);
             InitializeComponent();
+            Permissions();
             t.Abort();
             username = tenDangNhap;
         }
