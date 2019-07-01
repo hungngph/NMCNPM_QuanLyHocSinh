@@ -140,8 +140,8 @@
             this.dockPanelChucNang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockPanelChucNang.Name = "dockPanelChucNang";
             this.dockPanelChucNang.Options.ShowCloseButton = false;
-            this.dockPanelChucNang.OriginalSize = new System.Drawing.Size(282, 200);
-            this.dockPanelChucNang.Size = new System.Drawing.Size(282, 674);
+            this.dockPanelChucNang.OriginalSize = new System.Drawing.Size(335, 200);
+            this.dockPanelChucNang.Size = new System.Drawing.Size(335, 674);
             this.dockPanelChucNang.Text = "Chức năng";
             // 
             // dockPanel1_Container
@@ -150,7 +150,7 @@
             this.dockPanel1_Container.Location = new System.Drawing.Point(5, 25);
             this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(270, 644);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(323, 644);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navPanelChucNang
@@ -167,8 +167,8 @@
             this.navTimKiem});
             this.navPanelChucNang.RegularSize = new System.Drawing.Size(270, 644);
             this.navPanelChucNang.SelectedPage = this.navNhapLieu;
-            this.navPanelChucNang.Size = new System.Drawing.Size(270, 644);
-            this.navPanelChucNang.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Collapsed;
+            this.navPanelChucNang.Size = new System.Drawing.Size(323, 644);
+            this.navPanelChucNang.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Expanded;
             this.navPanelChucNang.TabIndex = 0;
             this.navPanelChucNang.Text = "navigationPane1";
             // 
@@ -189,7 +189,7 @@
             this.navNhapLieu.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Add_32px;
             this.navNhapLieu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navNhapLieu.Name = "navNhapLieu";
-            this.navNhapLieu.Size = new System.Drawing.Size(196, 574);
+            this.navNhapLieu.Size = new System.Drawing.Size(249, 574);
             // 
             // btnHuyBo
             // 
@@ -366,10 +366,10 @@
             this.groupControlHocSinh.Controls.Add(this.gridControlLop);
             this.groupControlHocSinh.Controls.Add(this.bindingNavigatorLop);
             this.groupControlHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControlHocSinh.Location = new System.Drawing.Point(282, 0);
+            this.groupControlHocSinh.Location = new System.Drawing.Point(335, 0);
             this.groupControlHocSinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControlHocSinh.Name = "groupControlHocSinh";
-            this.groupControlHocSinh.Size = new System.Drawing.Size(841, 674);
+            this.groupControlHocSinh.Size = new System.Drawing.Size(788, 674);
             this.groupControlHocSinh.TabIndex = 2;
             this.groupControlHocSinh.Text = "Danh sách lớp";
             // 
@@ -385,7 +385,7 @@
             this.gridControlLop.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.col_Khoi_edit,
             this.col_namHoc_edit});
-            this.gridControlLop.Size = new System.Drawing.Size(837, 616);
+            this.gridControlLop.Size = new System.Drawing.Size(784, 616);
             this.gridControlLop.TabIndex = 2;
             this.gridControlLop.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvDSLop});
@@ -509,7 +509,7 @@
             this.bindingNavigatorLop.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatorLop.Name = "bindingNavigatorLop";
             this.bindingNavigatorLop.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorLop.Size = new System.Drawing.Size(837, 31);
+            this.bindingNavigatorLop.Size = new System.Drawing.Size(784, 31);
             this.bindingNavigatorLop.TabIndex = 0;
             this.bindingNavigatorLop.Text = "bindingNavigator1";
             // 
