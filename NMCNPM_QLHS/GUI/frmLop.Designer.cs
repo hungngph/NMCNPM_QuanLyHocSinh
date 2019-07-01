@@ -168,7 +168,7 @@
             this.navPanelChucNang.RegularSize = new System.Drawing.Size(270, 644);
             this.navPanelChucNang.SelectedPage = this.navNhapLieu;
             this.navPanelChucNang.Size = new System.Drawing.Size(270, 644);
-            this.navPanelChucNang.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Collapsed;
+            this.navPanelChucNang.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Expanded;
             this.navPanelChucNang.TabIndex = 0;
             this.navPanelChucNang.Text = "navigationPane1";
             // 

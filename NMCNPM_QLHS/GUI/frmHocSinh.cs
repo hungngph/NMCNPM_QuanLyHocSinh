@@ -223,9 +223,11 @@ namespace NMCNPM_QLHS.GUI
             }
             else
             {
+                String.Format("{0:d}", dtpNgaySinh.EditValue);
                 string maHS = txtMaHS.Text;
                 string hoTen = txtHoTen.Text;
                 string gioiTinh = cboGioiTinh.Text;
+                //System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern();
                 CultureInfo culture = (CultureInfo)CultureInfo.CurrentCulture.Clone();
                 culture.DateTimeFormat.ShortDatePattern = "dd/MM/yyyy";
                 culture.DateTimeFormat.LongDatePattern = "dd MMMM, yyyy";
