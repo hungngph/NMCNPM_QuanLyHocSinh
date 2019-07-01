@@ -32,6 +32,7 @@ namespace NMCNPM_QLHS.GUI
             btnThem.Enabled = false;
             btnThemNam.Enabled = false;
             cboNamHoc.Enabled = true;
+            dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
             navPanelChucNang.Hide();
         }
 
@@ -180,6 +181,7 @@ namespace NMCNPM_QLHS.GUI
             dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
             navPanelChucNang.SelectedPage = navNhapLieu;
             navPanelChucNang.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Default;
+            navTimKiem.PageVisible = false;
 
             gridControlLop.Enabled = false;
             cboNamHoc.EditValue = NAMHOC_BUS.LayNamHocHienTai().MANAMHOC;
@@ -221,6 +223,7 @@ namespace NMCNPM_QLHS.GUI
                 // Chuyển sang panel nhập liệu
                 dockPanelChucNang.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
                 navPanelChucNang.SelectedPage = navNhapLieu;
+                navTimKiem.PageVisible = false;
 
                 btnHoanTat.Text = "Hoàn tất";
                 btnHoanTat.Visible = true;
@@ -295,6 +298,7 @@ namespace NMCNPM_QLHS.GUI
                     MessageBox.Show(ex.Message);
                 }
                 bindingNavigatorAddNewItem.Enabled = true;
+                navTimKiem.PageVisible = true;
             }
             else
             {
@@ -313,6 +317,7 @@ namespace NMCNPM_QLHS.GUI
             cboNamHoc.ReadOnly = false;
             cboKhoiLop.ReadOnly = false;
             txtTenLop.ReadOnly = true;
+            navTimKiem.PageVisible = true;
             bindingNavigatorAddNewItem.Enabled = true;
             if (btnHoanTat.Text == "Lưu")
                 bindingNavigatorLop.BindingSource.MoveFirst();
