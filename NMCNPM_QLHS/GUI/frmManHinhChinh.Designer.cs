@@ -414,6 +414,7 @@
             this.btnThongTinPhanMem.ImageOptions.Image = global::NMCNPM_QLHS.Properties.Resources.Info_52px;
             this.btnThongTinPhanMem.Name = "btnThongTinPhanMem";
             this.btnThongTinPhanMem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnThongTinPhanMem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThongTinPhanMem_ItemClick);
             // 
             // btnNguoiDung
             // 
