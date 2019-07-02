@@ -54,7 +54,15 @@ namespace NMCNPM_QLHS.GUI
         }
         public void Start()
         {
-            Application.Run(new frmSplash());
+            try
+            {
+                frmSplash frm = new frmSplash();
+                Application.Run(frm);
+            }
+            catch (ThreadAbortException ex)
+            {
+                Thread.ResetAbort();
+            }
         }
         #endregion -Constructor-
 
@@ -627,6 +635,13 @@ namespace NMCNPM_QLHS.GUI
         private void UpdateNe()
         {
             staticNamHoc.Caption = staticNamHoc.Caption = "Năm học: " + NAMHOC_BUS.LayNamHocHienTai().TENNAMHOC.ToString();
+        }
+
+        private void btnThongTinPhanMem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var frm = new frmThongTin();
+            frm.Show();
+            this.Enabled = false;
         }
     }
 }

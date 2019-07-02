@@ -17,5 +17,10 @@ namespace NMCNPM_QLHS.GUI
         {
             InitializeComponent();
         }
+
+        private void frmThongTin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms["frmManHinhChinh"].Enabled = true;
+        }
     }
 }

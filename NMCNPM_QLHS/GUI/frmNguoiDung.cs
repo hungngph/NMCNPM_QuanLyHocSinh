@@ -129,7 +129,16 @@ namespace NMCNPM_QLHS.GUI
         private void btnReset_Click(object sender, EventArgs e)
         {
             string maND = dgvNguoiDung.GetFocusedRowCellDisplayText(col_maNguoiDung);
-            NGUOIDUNG_BUS.ResetMK(maND);
+            try
+            {
+
+                NGUOIDUNG_BUS.ResetMK(maND);
+                XtraMessageBox.Show("Reset mật khẩu thành công. Mật khẩu mặc định: 12345678", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Reset mật khẩu thất bại");
+            }
         }
 
         void load_colNguoiDung()
