@@ -160,18 +160,18 @@ namespace NMCNPM_QLHS.GUI
             double diemDatHocKy = double.Parse(txtDatHK.EditValue.ToString());
             
             if (THAMSO_BUS.KiemTraTuoi(tuoiToiThieu, tuoiToiDa) == false)
-                MessageBox.Show("Tuổi không hợp lệ", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Tuổi không hợp lệ", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 switch (THAMSO_BUS.KiemTraDiem(diemToiThieu, diemToiDa, diemDatMon, diemDatHocKy))
                 {
                     case 1:
                         THAMSO_BUS.LuuQuyDinh(tuoiToiThieu, tuoiToiDa, siSoToiDa, diemToiThieu, diemToiDa, diemDatMon, diemDatHocKy);
-                        MessageBox.Show("Đã lưu quy định");
+                        XtraMessageBox.Show("Đã lưu quy định");
                         state = false;
                         break;
                     case 2:case 3:
-                        MessageBox.Show("Điểm không hợp lệ", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        XtraMessageBox.Show("Điểm không hợp lệ", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     default:
                         break;

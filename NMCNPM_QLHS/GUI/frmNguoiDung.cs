@@ -137,7 +137,7 @@ namespace NMCNPM_QLHS.GUI
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Reset mật khẩu thất bại");
+                XtraMessageBox.Show("Reset mật khẩu thất bại");
             }
         }
 

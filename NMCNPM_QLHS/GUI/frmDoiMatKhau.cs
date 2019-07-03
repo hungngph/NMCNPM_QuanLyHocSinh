@@ -39,33 +39,33 @@ namespace NMCNPM_QLHS.GUI
         {
             if (txtMatKhauMoi.Text != txtNhapLai.Text)
             {
-                MessageBox.Show("Nhập lại không trùng");
+                XtraMessageBox.Show("Nhập lại không trùng");
                 txtMatKhauMoi.Text = null;
                 txtNhapLai.Text = null;
             }
             else if (NGUOIDUNG_BUS.LayMatKhau(CurrentUser.Code) != txtMatKhau.Text)
             {
-                MessageBox.Show("Mật khẩu cũ sai");
+                XtraMessageBox.Show("Mật khẩu cũ sai");
                 txtMatKhau.Text = null;
                 txtMatKhauMoi.Text = null;
                 txtNhapLai.Text = null;
             }
             else if (txtMatKhau.Text == txtMatKhauMoi.Text)
             {
-                MessageBox.Show("Mật khẩu mới trùng mật khẩu cũ");
+                XtraMessageBox.Show("Mật khẩu mới trùng mật khẩu cũ");
                 txtMatKhau.Text = null;
                 txtMatKhauMoi.Text = null;
                 txtNhapLai.Text = null;
             }
             else if (!NGUOIDUNG_BUS.DoiMatKhau(CurrentUser.Code, txtMatKhau.Text, txtMatKhauMoi.Text))
             {
-                MessageBox.Show("Đổi mật khẩu không thành công");
+                XtraMessageBox.Show("Đổi mật khẩu không thành công");
                 Application.OpenForms["frmDoiMatKhau"].Close();
                 Application.OpenForms["frmManHinhChinh"].Enabled = true;
             }
             else
             {
-                MessageBox.Show("Đổi mật khẩu thành công");
+                XtraMessageBox.Show("Đổi mật khẩu thành công");
                 Application.OpenForms["frmDoiMatKhau"].Close();
                 Application.OpenForms["frmManHinhChinh"].Enabled = true;
             }

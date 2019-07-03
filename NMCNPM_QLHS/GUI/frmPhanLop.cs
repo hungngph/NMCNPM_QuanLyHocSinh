@@ -125,7 +125,7 @@ namespace NMCNPM_QLHS.GUI
                 }
             }
             else
-                MessageBox.Show("Vượt quá sĩ số tối đa", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Vượt quá sĩ số tối đa", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -136,7 +136,7 @@ namespace NMCNPM_QLHS.GUI
                 string maNamHoc = cboNamHoc.EditValue.ToString();
                 string maHocKy = cboHocKy.EditValue.ToString();
                 QUATRINHHOC_BUS.LuuPhanLopHS(lstvDSLop, maLop, maHocKy);
-                MessageBox.Show("Đã lưu vào bảng phân lớp!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("Đã lưu vào bảng phân lớp!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 state = false;
             }
         }

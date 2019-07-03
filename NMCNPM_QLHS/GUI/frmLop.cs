@@ -295,7 +295,7 @@ namespace NMCNPM_QLHS.GUI
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    XtraMessageBox.Show(ex.Message);
                 }
                 bindingNavigatorAddNewItem.Enabled = true;
                 navTimKiem.PageVisible = true;
@@ -320,7 +320,10 @@ namespace NMCNPM_QLHS.GUI
             navTimKiem.PageVisible = true;
             bindingNavigatorAddNewItem.Enabled = true;
             if (btnHoanTat.Text == "Lưu")
+            {
                 bindingNavigatorLop.BindingSource.MoveFirst();
+                txtTenLop.Text = dgvDSLop.GetRowCellDisplayText(0, col_TenLop);
+            }
         }
 
         #endregion -Nhập liệu-

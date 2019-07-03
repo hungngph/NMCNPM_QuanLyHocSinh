@@ -386,7 +386,7 @@ namespace NMCNPM_QLHS.GUI
         {
             if (state == true)
             {
-                if (MessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (XtraMessageBox.Show("Bạn có muốn lưu thay đổi không?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     this.btnLuu_Click(btnLuu, e);
                 else
                 {
@@ -422,7 +422,7 @@ namespace NMCNPM_QLHS.GUI
                     {
                         if (item.SubItems[0].Text == olditem.SubItems[0].Text)
                         {
-                            MessageBox.Show("Học sinh " + olditem.SubItems[1].Text + " hiện đã được phân vào lớp " + cboLopMoi.Text, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            XtraMessageBox.Show("Học sinh " + olditem.SubItems[1].Text + " hiện đã được phân vào lớp " + cboLopMoi.Text, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             stateHS = true;
                             goto Cont;
                         }
@@ -447,7 +447,7 @@ namespace NMCNPM_QLHS.GUI
             {
                 string maLop = cboLopMoi.EditValue.ToString();
                 QUATRINHHOC_BUS.LuuPhanLopHS(lstvDSHSMoi, maLop, "HK01");
-                MessageBox.Show("Đã lưu vào bảng phân lớp!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("Đã lưu vào bảng phân lớp!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 state = false;
             }
         }
