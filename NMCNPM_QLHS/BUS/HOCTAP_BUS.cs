@@ -58,5 +58,15 @@ namespace NMCNPM_QLHS.BUS
 
             return true;
         }
+
+        // Kiểm tra điểm hợp lệ
+        public static bool KiemTraDiem(double diem)
+        {
+            double diemToiDa = THAMSO_BUS.LayThamSo("DIEMTOIDA");
+            double diemToiThieu = THAMSO_BUS.LayThamSo("DIEMTOITHIEU");
+            if (diem <= diemToiDa && diem >= diemToiThieu)
+                return true;
+            return false;
+        }
     }
 }

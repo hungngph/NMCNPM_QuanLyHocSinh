@@ -48,34 +48,6 @@ namespace NMCNPM_QLHS.GUI
 
         #endregion -Form-
 
-        #region -button_Click-
-
-        #region -Lưu điểm-
-
-        private void btnLuuDiem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        #endregion -Lưu điểm-
-
-        #region -Xem điểm-
-
-        private void btnXemDiem_Click(object sender, EventArgs e)
-        {
-            if (cboHocSinh.Text != "" && cboHocKy.Text != "" && cboNamHoc.Text != "")
-            {
-                string maHS = cboHocSinh.EditValue.ToString();
-                string maHocKy = cboHocKy.EditValue.ToString();
-                string maNamHoc = cboNamHoc.EditValue.ToString();
-                bindingSourceDiemChiTiet.DataSource = HOCTAP_BUS.LayDiemChiTietHocSinh(maHS, maHocKy, maNamHoc);
-            }
-        }
-
-        #endregion -Xem điểm-
-
-        #endregion -button_Click-
-
         #region -comBoBox_EditValueChanged-
 
         private void cboHocSinh_EditValueChanged(object sender, EventArgs e)

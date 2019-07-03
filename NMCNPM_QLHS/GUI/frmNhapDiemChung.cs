@@ -98,6 +98,10 @@ namespace NMCNPM_QLHS.GUI
             load_cboMonHoc();
             load_cboHocKy();
             load_cboLop();
+            load_colDiemMieng();
+            load_colDiem15P();
+            load_colDiem1Tiet();
+            load_colDiemThi();
         }
 
         private void frmNhapDiemChung_FormClosing(object sender, FormClosingEventArgs e)
@@ -271,6 +275,27 @@ namespace NMCNPM_QLHS.GUI
         private void dgvDiem_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
             state = true;
+        }
+
+        void load_colDiemMieng()
+        {
+            col_diemMieng1edit.MinValue = int.Parse(THAMSO_BUS.LayThamSo("DIEMTOITHIEU").ToString());
+            col_diemMieng1edit.MaxValue = int.Parse(THAMSO_BUS.LayThamSo("DIEMTOIDA").ToString());
+        }
+        void load_colDiem15P()
+        {
+            col_diem15Phut1_edit.MinValue = int.Parse(THAMSO_BUS.LayThamSo("DIEMTOITHIEU").ToString());
+            col_diem15Phut1_edit.MaxValue = int.Parse(THAMSO_BUS.LayThamSo("DIEMTOIDA").ToString());
+        }
+        void load_colDiem1Tiet()
+        {
+            col_diem1Tiet1_edit.MinValue = int.Parse(THAMSO_BUS.LayThamSo("DIEMTOITHIEU").ToString());
+            col_diem1Tiet1_edit.MaxValue = int.Parse(THAMSO_BUS.LayThamSo("DIEMTOIDA").ToString());
+        }
+        void load_colDiemThi()
+        {
+            col_diemThi1_edit.MinValue = int.Parse(THAMSO_BUS.LayThamSo("DIEMTOITHIEU").ToString());
+            col_diemThi1_edit.MaxValue = int.Parse(THAMSO_BUS.LayThamSo("DIEMTOIDA").ToString());
         }
     }
 }
