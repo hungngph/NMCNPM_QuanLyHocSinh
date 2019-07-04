@@ -148,6 +148,9 @@
   <data name="Save_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Save_32px_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="connection" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connection.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -213,6 +216,9 @@
   </data>
   <data name="icons8_Export_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Export_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_Ok_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Ok_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,11 +337,17 @@
   <data name="xeploai" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xeploai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hocsinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hocsinh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="saoluudulieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saoluudulieu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ketqua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ketqua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\print.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="icons8_Add_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Add_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -360,6 +372,9 @@
   </data>
   <data name="pupils" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pupils.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cachnhapdiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cachnhapdiem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="phancong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\phancong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

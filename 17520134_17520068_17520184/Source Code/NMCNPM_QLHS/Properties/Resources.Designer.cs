@@ -19,7 +19,7 @@ namespace NMCNPM_QLHS.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -113,6 +113,26 @@ namespace NMCNPM_QLHS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cachnhapdiem {
+            get {
+                object obj = ResourceManager.GetObject("cachnhapdiem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cancel_32px {
             get {
                 object obj = ResourceManager.GetObject("Cancel_32px", resourceCulture);
@@ -146,6 +166,16 @@ namespace NMCNPM_QLHS.Properties {
         internal static System.Drawing.Bitmap closephanlop {
             get {
                 object obj = ResourceManager.GetObject("closephanlop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap connection {
+            get {
+                object obj = ResourceManager.GetObject("connection", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +386,16 @@ namespace NMCNPM_QLHS.Properties {
         internal static System.Drawing.Bitmap hocluc {
             get {
                 object obj = ResourceManager.GetObject("hocluc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hocsinh {
+            get {
+                object obj = ResourceManager.GetObject("hocsinh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -707,6 +747,16 @@ namespace NMCNPM_QLHS.Properties {
             get {
                 object obj = ResourceManager.GetObject("phuchoidulieu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage print {
+            get {
+                object obj = ResourceManager.GetObject("print", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
         
