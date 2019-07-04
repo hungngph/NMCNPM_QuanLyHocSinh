@@ -1,0 +1,23 @@
+- Lớp: SE104.J21
+- Giảng viên hướng dẫn:  Th.S Đỗ Thị Thanh Tuyền
+- Đồ án Quản lý học sinh
+- Thông tin nhóm: 
+	+ Lê Quốc Phương 17520134
+	+Nguyễn Phi Hùng 17520068
+	+Huỳnh Quốc Trung 17520184
+- Cách cài đặt chương trình: <có trong thư mục Setup>
+	Bước 1: Cài đặt phần mềm
+	+Chạy file CaiDat_QLHS.msi để cài đặt phần mềm
+
+	Bước 2: Kết nối Database
+	+Truy cập vào thư mục vừa cài đặt, sau đó copy đường dẫn của file QLHS.sql
+ 	Ví dụ: C:\Program Files (x86)\PhanMemQuanLyHocSinh\QLHS.sql
+	+ Mở cmd của máy, chạy dòng lệnh:
+	 sqlcmd -E -S (local) -i <đường dẫn file QLHS.sql của bạn>
+	 Ví dụ: sqlcmd -E -S (local) -i C:\Program Files (x86)\PhanMemQuanLyHocSinh\QLHS.sql
+	
+	Bước 3: Chạy phần mềm
+	+Truy cập vào thư mục vừa cài đặt, chạy file NMCNPM_QLHS.exe 
+	với Tài khoản: admin  
+                        Mật khẩu: admin
+
