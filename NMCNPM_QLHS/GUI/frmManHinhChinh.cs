@@ -32,37 +32,37 @@ namespace NMCNPM_QLHS.GUI
         public frmManHinhChinh()
         {
             //Load frmSplash
-            Thread t = new Thread(new ThreadStart(Start));
-            t.Start();
-            Thread.Sleep(3000);
+            //Thread t = new Thread(new ThreadStart(Start));
+            //t.Start();
+            //Thread.Sleep(3000);
             InitializeComponent();
             Permissions();
-            t.Abort();
+            //t.Abort();
         }
 
         public frmManHinhChinh(string tenDangNhap)
         {
             //Load frmSplash
 
-            Thread t = new Thread(new ThreadStart(Start));
-            t.Start();
-            Thread.Sleep(3000);
+            //Thread t = new Thread(new ThreadStart(Start));
+            //t.Start();
+            //Thread.Sleep(3000);
             InitializeComponent();
             Permissions();
-            t.Abort();
+            //t.Abort();
             username = tenDangNhap;
         }
         public void Start()
         {
-            try
-            {
-                frmSplash frm = new frmSplash();
-                Application.Run(frm);
-            }
-            catch (ThreadAbortException ex)
-            {
-                Thread.ResetAbort();
-            }
+            //try
+            //{
+            //    frmSplash frm = new frmSplash();
+            //    Application.Run(frm);
+            //}
+            //catch (ThreadAbortException ex)
+            //{
+            //    Thread.ResetAbort();
+            //}
         }
         #endregion -Constructor-
 
