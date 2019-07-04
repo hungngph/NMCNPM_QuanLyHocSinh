@@ -161,36 +161,42 @@ namespace NMCNPM_QLHS.GUI
 
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            string maHS, maMonHoc, maHocKy, maLop;
-            float diemMieng, diem15P, diem1Tiet, diemThi;
-            maMonHoc = cboMonHoc.EditValue.ToString();
-            maHocKy = cboHocKy.EditValue.ToString();
-            maLop = cboLop.EditValue.ToString();
-            bindingNavigatorDiem.BindingSource.MoveFirst();
-            for (int i = 0; i < dgvDiem.RowCount; i++)
+            try
             {
-                //maHS, maMon, mahocky, maNamHoc, diemMieng, diem15P, diem1Tiet, diemThi
-                maHS = dgvDiem.GetFocusedRowCellDisplayText(col_maHS);
-                if (dgvDiem.GetFocusedRowCellDisplayText(col_diemMieng) != "")
-                    diemMieng = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diemMieng));
-                else
-                    diemMieng = -1;
-                if (dgvDiem.GetFocusedRowCellDisplayText(col_diem15Phut) != "")
-                    diem15P = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diem15Phut));
-                else
-                    diem15P = -1;
-                if (dgvDiem.GetFocusedRowCellDisplayText(col_diem15Phut) != "")
-                    diem1Tiet = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diem1Tiet));
-                else
-                    diem1Tiet = -1;
-                if (dgvDiem.GetFocusedRowCellDisplayText(col_diemThi) != "")
-                    diemThi = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diemThi));
-                else
-                    diemThi = -1;
-                HOCTAP_BUS.SuaDiem(maHS, maMonHoc, maHocKy, maLop, diemMieng, diem15P, diem1Tiet, diemThi);
-                bindingNavigatorDiem.BindingSource.MoveNext();
+                string maHS, maMonHoc, maHocKy, maLop;
+                float diemMieng, diem15P, diem1Tiet, diemThi;
+                maMonHoc = cboMonHoc.EditValue.ToString();
+                maHocKy = cboHocKy.EditValue.ToString();
+                maLop = cboLop.EditValue.ToString();
+                bindingNavigatorDiem.BindingSource.MoveFirst();
+                for (int i = 0; i < dgvDiem.RowCount; i++)
+                {
+                    //maHS, maMon, mahocky, maNamHoc, diemMieng, diem15P, diem1Tiet, diemThi
+                    maHS = dgvDiem.GetFocusedRowCellDisplayText(col_maHS);
+                    if (dgvDiem.GetFocusedRowCellDisplayText(col_diemMieng) != "")
+                        diemMieng = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diemMieng));
+                    else
+                        diemMieng = -1;
+                    if (dgvDiem.GetFocusedRowCellDisplayText(col_diem15Phut) != "")
+                        diem15P = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diem15Phut));
+                    else
+                        diem15P = -1;
+                    if (dgvDiem.GetFocusedRowCellDisplayText(col_diem1Tiet) != "")
+                        diem1Tiet = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diem1Tiet));
+                    else
+                        diem1Tiet = -1;
+                    if (dgvDiem.GetFocusedRowCellDisplayText(col_diemThi) != "")
+                        diemThi = float.Parse(dgvDiem.GetFocusedRowCellDisplayText(col_diemThi));
+                    else
+                        diemThi = -1;
+                    HOCTAP_BUS.SuaDiem(maHS, maMonHoc, maHocKy, maLop, diemMieng, diem15P, diem1Tiet, diemThi);
+                    bindingNavigatorDiem.BindingSource.MoveNext();
+                }
+                state = false;
             }
-            state = false;
+            catch {
+                MessageBox.Show("Nhập liệu không đúng định dạng", "Thông báo");
+            }
             //string maLop = cboLop.SelectedValue.ToString();
             //bindingSourceDiem.DataSource = HOCTAP_BUS.LayDiemMonHocTheoLop(maLop, maMonHoc, maHocKy, maNamHoc);
         }
