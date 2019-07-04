@@ -193,6 +193,7 @@ namespace NMCNPM_QLHS.GUI
                     bindingNavigatorDiem.BindingSource.MoveNext();
                 }
                 state = false;
+                XtraMessageBox.Show("Lưu thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch {
                 MessageBox.Show("Nhập liệu không đúng định dạng", "Thông báo");
